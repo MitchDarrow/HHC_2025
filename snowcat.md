@@ -102,6 +102,8 @@ cat /tmp/keys.txt
 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6
 8ade723d-9968-45c9-9c33-7606c49c2201
 ```
+The first key listed is the one used with the temperature binary. The second key is not used by snowcat.
+
 **Answer: 8ade723d-9968-45c9-9c33-7606c49c2201**
 
 </details>
