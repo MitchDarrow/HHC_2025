@@ -1,4 +1,4 @@
-[Previous Objective](https://mitchdarrow.github.io/HackaGnome.html)        [Table of Contents](https://mitchdarrow.github.io/index.html)        [Next Objective](https://mitchdarrow.github.io/Schrödinger'sScope.html)
+[Previous Objective](https://mitchdarrow.github.io/HHC_2025_Template/HackaGnome.html)        [Table of Contents](https://mitchdarrow.github.io/HHC_2025_Template/index.html)        [Next Objective](https://mitchdarrow.github.io/HHC_2025_Template/SchrödingersScope.html)
 
 | Snowcat RCE and Privilege Escalation    | Difficulty Level: 3 |
 | ----------------------- | -------------------------- |
@@ -19,7 +19,7 @@ Using an account with minimal access to the system, the website was found to be 
 <details>
 <summary>Click to expand</summary>
 Using a nonexistent URL, an error message was triggered revealing that the system is vulnerable. [Non Existant URL](https://localhostnonexistant)  
-![Tomcat Version Evidence](https://mitchdarrow.github.io/images/snowcat_version.jpg) 
+![Tomcat Version Evidence](https://mitchdarrow.github.io/HHC_2025_Template/images/snowcat_version.jpg) 
 
 Testing began with the CommonsCollections6 gadget to determine if a payload could effectively be delivered. The initial approach is to simply touch a file in the /tmp directory.
 Payload details:
@@ -31,7 +31,7 @@ curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 ls -la /tmp/pwned 2>/dev/null && echo "SUCCESS with touch!" || echo "Failed"
 ```
 The initial payload was delivered and successful:
-![Tomcat Initial Payload Evidence](https://mitchdarrow.github.io/images/snowcat_initialpayload.jpg) 
+![Tomcat Initial Payload Evidence](https://mitchdarrow.github.io/HHC_2025_Template/images/snowcat_initialpayload.jpg) 
 
 To achieve a remote shell, the following approach was used:
 1. Setup a linux machine in linode, and start a netcat listener on port 4444
@@ -68,7 +68,7 @@ curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 ---
 
 This resulted in access as the identity running the web service:
-![Snowcat Service Account User](https://mitchdarrow.github.io/images/snowcat_serviceaccount.jpg) 
+![Snowcat Service Account User](https://mitchdarrow.github.io/HHC_2025_Template/images/snowcat_serviceaccount.jpg) 
 
 Three binaries were discovered that the service account has access to with the SUID set:
 These binaries have SUID set:
@@ -82,7 +82,7 @@ The commands are run with a valid key:
 /usr/local/weather/pressure 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6
 
 The weather user has access to the /usr/local/weather/keys directory. This was our target:
-![Keys Directory](https://mitchdarrow.github.io/images/snowcat_keys.jpg)  
+![Keys Directory](https://mitchdarrow.github.io/HHC_2025_Template/images/snowcat_keys.jpg)  
 
 The following command was injected into the binary command line to create a file containing the contents of the keys folder and change the file permissions:
 ```
@@ -115,4 +115,4 @@ cat /tmp/keys.txt
 | Santa | If you're feeling adventurous, maybe you can become root to figure out more about the attacker's plans. |
 | Thomas Hessman | We've lost access to the neighborhood weather monitoring station. There are a couple of vulnerabilities in the snowcat and weather monitoring services that we haven't gotten around to fixing. Can you help me exploit the vulnerabilities and retrieve the other application's authorization key? Enter the other application's authorization key into the badge. If Frosty's plan works and everything freezes over, our customers won't be having the best possible experience—they'll be having the coldest possible experience! We need to stop this before the whole neighborhood becomes one giant freezer.|
 
-[Previous Objective](https://mitchdarrow.github.io/HackaGnome.html)        [Table of Contents](https://mitchdarrow.github.io/index.html)        [Next Objective](https://mitchdarrow.github.io/Schrödinger'sScope.html)
+[Previous Objective](https://mitchdarrow.github.io/HHC_2025_Template/HackaGnome.html)        [Table of Contents](https://mitchdarrow.github.io/HHC_2025_Template/index.html)        [Next Objective](https://mitchdarrow.github.io/HHC_2025_Template/SchrödingersScope.html)
