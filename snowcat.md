@@ -108,7 +108,7 @@ The first key listed is the one used with the temperature binary. The second key
 
 </details>
 
-## References
+## Tools Reference
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
@@ -116,7 +116,7 @@ The first key listed is the one used with the temperature binary. The second key
 | Linux Linode System | Ubuntu 24.04 LTS |
 | netcat | v1.10-50 | 
 
-## Hints
+## Hints Reference
 | Provided By         | Hint |
 | :-----------------------: | :--------------------------------: |
 | Santa | Snowcat is closely related to Tomcat. Maybe the recent Tomcat Remote Code Execution vulnerability (CVE-2025-24813) will work here. |
