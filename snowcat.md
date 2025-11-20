@@ -12,7 +12,7 @@ Using an account with minimal access to the system, the website was found to be 
 | Method Used             | MITRE ATT&CK Framework Method |
 | :-----------------------: | :--------------------------------: |
 | Leverage Unauthenticated Remote Code Execution (RCE) in Apache Tomcat (CVE-2025-24815) | Initial Access: T1190 |
-| Abuse SUID privilege | Abuse Elevation Control Mechanism: Setuid and Setgid: T1548.001 |
+| Abuse SUID binaries | Abuse Elevation Control Mechanism: Setuid and Setgid: T1548.001 |
 | Command Injection leading to Privilege Escalation   | Command and Scripting Interpreter : T1059|
 
 
