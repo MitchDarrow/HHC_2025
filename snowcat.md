@@ -1,7 +1,7 @@
 [Previous Objective](https://mitchdarrow.github.io/HHC_2025_Template/HackaGnome.html)                                          [Table of Contents](https://mitchdarrow.github.io/HHC_2025_Template/index.html)                                                 [Next Objective](https://mitchdarrow.github.io/HHC_2025_Template/SchrödingersScope.html)
 
 | Snowcat RCE and Privilege Escalation    | Difficulty Level: 3 |
-| ----------------------- | -------------------------- |
+| :-----------------------: | :--------------------------: |
 | Tom, in the hotel, found a wild Snowcat bug. Help him chase down the RCE! Recover and submit the API key not being used by snowcat. | Grand Hotel  |
 
 ## Objective Overview
@@ -9,7 +9,7 @@
 Using an account with minimal access to the system, the website was found to be running Apache Tomcat version 9.0.90. This version is susceptable to a remote code execution vulnerability. This vulnerability was exploited to gain the privileges of the web application service account. Three binaries were discovered with SUID (Set User ID), a special permission in Unix/Linux systems that allows a file to run with the privileges of the file owner rather than the user executing it. These files were suscept to command injection, allowing commands to be executed as a user with higher privileges. This enabled access to the authorized_keys file.
 
 | Method Used             | MITRE ATT&CK Framework Method |
-| ----------------------- | -------------------------------- |
+| :-----------------------: | :--------------------------------: |
 | Leverage Unauthenticated Remote Code Execution (RCE) in Apache Tomcat (CVE-2025-24815) | Initial Access: T1190 |
 | Abuse SUID privilege | Abuse Elevation Control Mechanism: Setuid and Setgid: T1548.001 |
 | Command Injection leading to Privilege Escalation   | Command and Scripting Interpreter : T1059|
@@ -107,14 +107,14 @@ cat /tmp/keys.txt
 ## References
 
 | Tools Used           | Tool Version |
-| ----------------------- | -------------------------------- |
+| :-----------------------: | :--------------------------------: |
 | ysoserial | Version: v0.0.6 Release Date: June 28, 2022 | 
 | Linux Linode System | Ubuntu 24.04 LTS |
 | netcat | v1.10-50 | 
 
 ## Hints
 | Provided By         | Hint |
-| ----------------------- | -------------------------------- |
+| :-----------------------: | :--------------------------------: |
 | Santa | Snowcat is closely related to Tomcat. Maybe the recent Tomcat Remote Code Execution vulnerability (CVE-2025-24813) will work here. |
 | Santa | Maybe we can inject commands into the calls to the temperature, humidity, and pressure monitoring services. |
 | Santa | If you're feeling adventurous, maybe you can become root to figure out more about the attacker's plans. |
