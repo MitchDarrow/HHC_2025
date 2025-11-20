@@ -1,4 +1,4 @@
-|[Previous Objective](https://mitchdarrow.github.io/HHC_2025_Template/HackaGnome.html)  |   [Table of Contents](https://mitchdarrow.github.io/HHC_2025_Template/index.html) | [Next Objective](https://mitchdarrow.github.io/HHC_2025_Template/SchrödingersScope.html)
+|[Previous Objective](/HackaGnome.html)  |   [Table of Contents](/index.html) | [Next Objective](/SchrödingersScope.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Snowcat RCE and Privilege Escalation    | Difficulty Level: 3 |
