@@ -88,6 +88,7 @@ The commands are run with a valid key:
 /usr/local/weather/pressure 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6
 
 The weather user has access to the /usr/local/weather/keys directory. This was our target:
+
 ![Keys Directory](/images/snowcat_keys.jpg)  
 
 The following command was injected into the binary command line to create a file containing the contents of the keys folder and change the file permissions:
