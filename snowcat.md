@@ -25,7 +25,7 @@ Using a nonexistent URL, an error message was triggered revealing that the syste
   
 ![Tomcat Version Evidence](/images/snowcat_version.jpg) 
 
-Testing identified the CommonsCollections6 gadget could effectively deliver a payload. The initial approach is to simply touch a file in the /tmp directory.
+Testing identified the CommonsCollections6 gadget could effectively deliver a payload. The initial approach was to touch a file in the /tmp directory to confirm a successful attack.
 Payload details:
 ```sh
 java -jar /home/user/ysoserial.jar CommonsCollections6 'touch /tmp/pwned' > payload.bin
