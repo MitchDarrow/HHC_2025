@@ -109,7 +109,7 @@ cat /tmp/keys.txt
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| ysoserial | Version: v0.0.6 Release Date: June 28, 2022 | 
+| ysoserial.jar | Version: v0.0.6 Release Date: June 28, 2022 | 
 | Linux Linode System | Ubuntu 24.04 LTS |
 | netcat | v1.10-50 | 
 
