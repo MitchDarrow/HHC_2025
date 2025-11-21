@@ -71,9 +71,13 @@ http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_notes/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_todos
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_todos/
-)
 ```
+Exploring the endpoints revealed several pages of notes, two that were within the scope.
+The first enpoint found: /register/dev/dev_todos
+![Developer Information To Do List](/images/shroedingers_devtodos.jpg) 
 
+The second endpoint found: /register/dev/dev_notes
+![Developer Information Notes](/images/shroedingers_devnotes.jpg) 
 
 ```sh
 bash script code block
