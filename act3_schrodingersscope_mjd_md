@@ -9,12 +9,14 @@
 
 High level executive summary of how the objective was solved. Details belong in the detail section.
 
-| Methods Used             | MITRE ATT&CK Framework Methods |
-| :-----------------------: | :--------------------------------: |
-|   |   |
-|   |   |
-|   |   |
-
+| Activity           | Primary Tactic | Technique ID             | Technique Name |
+| :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
+| Developer info disclosure | Reconnaissance | T1592.004 | Gather Credentials |
+| X-Forwarded-For exploit | Initial Access | T1190 | Exploit Public-Facing Application |
+| Found commented code | Reconnaissance | T1595.002 | Vulnerability Scanning |
+| SQL Injection | Initial Access | T1190 | Exploit Public-Facing Application |
+| Unauthorized content | Discovery | T1083 | File and Directory Discovery |
+| Cookie prediction | Credential Access | T1539 | Steal Web Session Cookie |
 
 ## Detailed Solution
 <details>
