@@ -74,20 +74,25 @@ http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/
 ```
 Exploring the endpoints revealed several pages of notes, two that were within the scope.
 The first enpoint found: /register/dev/dev_todos
+
 ![Developer Information To Do List](/images/shroedingers_devtodos.jpg) 
 
 The second endpoint found: /register/dev/dev_notes
+
 ![Developer Information Notes](/images/shroedingers_devnotes.jpg) 
 
 Locating both of these files construct the Developer information disclosure vulnerability discovered.
+
 **Answer: Developer information disclosure**
 
 With the information the developer left behind, it is possible to attack the login page. Providing the credentials from the note results in an Invalid Forwarding IP error. The X-Forwarded-For header is meant to preserve the true client IP across proxies. But because it can be manually set by clients, it’s vulnerable to spoofing. To bypass this error, we will set the header to 127.0.0.1 in an attempt to trick the web server into believing the request originated from itself. 
+
 ![Spoofing the X-Forwarder Header](/images/shroedingers_xforwarder.jpg) 
 
 The login "testuser" with the password "2025h0L1d4y5" succeeds, and the /register/courses node is now accessible.
 
 Spoofing the X-Forwarded-For header and authenticating as testuser achieves the second vulnerability.
+
 **Answer: X-Forwarded-For exploit**
 
 
