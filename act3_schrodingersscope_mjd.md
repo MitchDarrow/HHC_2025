@@ -103,31 +103,17 @@ Using a snippet of code from the register/js/registerCourses.js in the developer
 
 ```js
 function checkAndReportCourseSearch() {
-
   const courseList = document.getElementById('courseSearch');
-
   if (courseList && !courseList.dataset.trapTriggered) {
-
     courseList.dataset.trapTriggered = "true";
-
-
-
     fetch('/register/courseSearchUnlocked', {
-
       method: 'POST',
-
       headers: { 'Content-Type': 'application/json' },
-
       body: JSON.stringify({
-
         message: 'Course search was uncommented!',
-
         timestamp: Date.now(),
-
         linkCount: courseList.querySelectorAll('a').length
-
       })
-
     })
 
 ```
