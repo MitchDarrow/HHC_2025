@@ -11,7 +11,7 @@ High level executive summary of how the objective was solved. Details belong in 
 
 | Activity           | Primary Tactic | Technique ID             | Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-| Developer info disclosure | Reconnaissance | T1592.004 | Gather Credentials |
+| Developer information disclosure | Reconnaissance | T1592.004 | Gather Credentials |
 | X-Forwarded-For exploit | Initial Access | T1190 | Exploit Public-Facing Application |
 | Found commented code | Reconnaissance | T1595.002 | Vulnerability Scanning |
 | SQL Injection | Initial Access | T1190 | Exploit Public-Facing Application |
