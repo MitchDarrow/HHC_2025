@@ -3,8 +3,7 @@
 
 | Snowcat RCE and Privilege Escalation    | Difficulty Level: 3 |
 | :-----------------------: | :--------------------------: |
-| Tom, in the hotel, found a wild Snowcat bug. Help him chase down the RCE! Recover and submit the 
-API key not being used by snowcat. | Grand Hotel  |
+| Tom, in the hotel, found a wild Snowcat bug. Help him chase down the RCE! Recover and submit the API key not being used by snowcat. | Grand Hotel  |
 
 ## Solution Overview
 
