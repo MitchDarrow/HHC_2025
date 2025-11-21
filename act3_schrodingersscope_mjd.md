@@ -95,9 +95,41 @@ Spoofing the X-Forwarded-For header and authenticating as testuser achieves the 
 
 **Answer: X-Forwarded-For exploit**
 
+Examining the source code for the courses page, a commented secion of code is discovered.
 
-```sh
-bash script code block
+![Commented Search Feature](/images/shroedingers_commentedsearch.jpg) 
+
+Using a snippet of code from the register/js/registerCourses.js in the developer console this feature can be enabled:
+
+```js
+function checkAndReportCourseSearch() {
+
+  const courseList = document.getElementById('courseSearch');
+
+  if (courseList && !courseList.dataset.trapTriggered) {
+
+    courseList.dataset.trapTriggered = "true";
+
+
+
+    fetch('/register/courseSearchUnlocked', {
+
+      method: 'POST',
+
+      headers: { 'Content-Type': 'application/json' },
+
+      body: JSON.stringify({
+
+        message: 'Course search was uncommented!',
+
+        timestamp: Date.now(),
+
+        linkCount: courseList.querySelectorAll('a').length
+
+      })
+
+    })
+
 ```
 
 Ordered list:
