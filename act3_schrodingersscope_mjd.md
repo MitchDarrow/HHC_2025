@@ -115,8 +115,18 @@ function checkAndReportCourseSearch() {
         linkCount: courseList.querySelectorAll('a').length
       })
     })
-
 ```
+Executing the following code in the Developer Console activates the code:
+
+```js
+fetch('/register/courseSearchUnlocked', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: 'Course search was uncommented!', timestamp: Date.now(), linkCount: 1 }) }).then(r => r.text()).then(console.log)
+```
+
+This activates the search feature in the application:
+
+![Activeated Search Feature](/images/shroedingers_activatededsearch.jpg) 
+
+**Answer: Found commented code**
 
 Ordered list:
 1. Item 1
