@@ -78,13 +78,19 @@ This resulted in access as the identity running the web service:
 
 Three binaries were discovered that the service account has access to with the SUID set:
 These binaries have SUID set:
+
 /usr/local/weather/humidity
+
 /usr/local/weather/pressure
+
 /usr/local/weather/temperature
 
 The commands are run with a valid key:
+
 /usr/local/weather/temperature 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6
+
 /usr/local/weather/humidity 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6
+
 /usr/local/weather/pressure 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6
 
 The weather user has access to the /usr/local/weather/keys directory. This was our target:
