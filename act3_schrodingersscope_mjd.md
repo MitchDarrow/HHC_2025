@@ -128,6 +128,13 @@ This activates the search feature in the application:
 
 **Answer: Found commented code**
 
+Testing the search interface for SQL Injection (SQLi), the application was found to be vulnerable.  An OR injection (' OR '1'='1) was utilized to list all course entries in the database.
+
+![Search SQL Injection](/images/shroedingers_searchsqli.jpg) 
+
+**Answer: SQL Injection**
+
+
 Ordered list:
 1. Item 1
 2. Item 2
