@@ -124,7 +124,7 @@ fetch('/register/courseSearchUnlocked', { method: 'POST', headers: { 'Content-Ty
 
 This activates the search feature in the application:
 
-![Activeated Search Feature](/images/shroedingers_activatededsearch.jpg) 
+![Activated Search Feature](/images/shroedingers_activatedsearch.jpg) 
 
 **Answer: Found commented code**
 
