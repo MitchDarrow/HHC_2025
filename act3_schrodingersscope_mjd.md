@@ -22,9 +22,9 @@ High level executive summary of how the objective was solved. Details belong in 
 <details>
 <summary>Click to expand</summary>
 
-Step by step solution complete with any code used
+The initial step was to identify the bot responsible for the additional scope violations
   
-![Sample image alt text](/images/objectivename_purpose.jpg) 
+![Identification of Bot](/images/shroedingersscope_webbot.jpg) 
 
 
 ```sh
