@@ -9,7 +9,7 @@
 
 The objective is to conduct a penetration test of a Neighborhood College Registration system. The test is scoped to a specific path of the application, accessing other paths is limited by an active monitoring system. When a threshold is reached, the engagement is reset. This resets the cookies that track the session and achievements. When this occurs, any vulnerabilities achieved are no longer logged and must be redone. The testing begins with reconnaisance of the application. Vulnerabilities are tested and exploited if possible.
 
-| Activity           | Primary Tactic | Technique ID             | Technique Name |
+| Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
 | Developer information disclosure | Reconnaissance | T1592.004 | Gather Credentials |
 | X-Forwarded-For exploit | Initial Access | T1190 | Exploit Public-Facing Application |
