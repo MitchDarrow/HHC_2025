@@ -31,6 +31,48 @@ Selecting "Network Request Blocking" from the More Tools menu. The pattern to bl
 
 ![Blocking of WebBot](/images/shroedingers_webbotblock.jpg) 
 
+Reconnaisance began with examining the contents of the sitemap for the application.
+The sitemap was located at: flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/sitemap/?id=2328f6ee-8810-4052-aa3d-f5c75b5cb934
+
+```
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/admin
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/admin
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/admin/console
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/admin/console
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/admin/logs
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/admin/logs
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/auth
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/auth
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/auth/register
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/auth/register
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/auth/register/login
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/auth/register/login
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/login
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/login
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/reset
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/reset/ 
+>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/sitemap
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/sitemap/
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/status_report
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/status_report/
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/search
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/search/
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/search/student_lookup
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/search/student_lookup
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/ 
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_notes
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_notes/
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_todos
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_todos/
+)
+```
 
 
 ```sh
