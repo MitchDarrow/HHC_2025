@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-Using an account with minimal access to the system, the website was found to be running Apache Tomcat version 9.0.90. This version is susceptable to a Remote Code Execution (RCE) vulnerability. This vulnerability was exploited to gain the privileges of the web application service account. Three binaries were discovered with Set User ID (SUID), a special permission in Unix/Linux systems that allows a file to run with the privileges of the file owner rather than the user executing it. These files were susceptable to command injection, allowing commands to be executed as a user with higher privileges. This enabled access to the authorized_keys file.
+Starting with an account with minimal access to the system, the website was found to be running Apache Tomcat version 9.0.90. This version is susceptable to a Remote Code Execution (RCE) vulnerability. This vulnerability was exploited to gain the privileges of the web application service account. Three binaries were discovered with Set User ID (SUID), a special permission in Unix/Linux systems that allows a file to run with the privileges of the file owner rather than the user executing it. These files were susceptable to command injection, allowing commands to be executed as a user with higher privileges. This enabled access to the authorized_keys file.
 
 | Method Used             | MITRE ATT&CK Framework Method |
 | :-----------------------: | :--------------------------------: |
