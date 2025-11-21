@@ -1,9 +1,9 @@
 |[Previous Objective](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
-| Objective: Objective name    | Difficulty Level: # |
+| Objective: Schrödinger's Scope   | Difficulty Level: 3 |
 | :-----------------------: | :--------------------------: |
-| Official Description | Location:   |
+| Kevin in the Retro Store ponders pentest paradoxes—can you solve Schrödinger's Scope?| Location: Retro Store  |
 
 ## Solution Overview
 
@@ -49,23 +49,24 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-|  |  | 
-|  |  |
+| Edge Developer Tools |  | 
+| Burpsuite Community Edition |  |
 |  |  | 
 
 ## Hints Reference
 | Provided By         | Hint |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Santa | Though it might be more interesting to start off trying clever techniques and exploits, always start with the simple stuff first, such as reviewing HTML source code and basic SQLi. |
+| Santa | Watch out for tiny, pesky gnomes who may be violating your progess. If you find one, figure out how they are getting into things and consider matching and replacing them out of your way. |
+| Santa | As you test this with a tool like Burp Suite, resist temptations and stay true to the instructed path. |
+| Santa | During any kind of penetration test, always be on the lookout for items which may be predictable from the available information, such as application endpoints. Things like a sitemap can be helpful, even if it is old or incomplete. Other predictable values to look for are things like token and cookie values |
+| Santa | Pay close attention to the instructions and be very wary of advice from the tongues of gnomes! Perhaps not ignore everything, but be careful! |
 
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
+| khesperus |  |
+| eucrates |  |
 
 
 |[Previous Objective](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
