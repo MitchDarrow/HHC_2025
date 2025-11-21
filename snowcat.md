@@ -19,6 +19,7 @@ Using an account with minimal access to the system, the website was found to be 
 ## Detailed Solution
 <details>
 <summary>Click to expand</summary>
+
 Using a nonexistent URL, an error message was triggered revealing that the system is running a potentially vulnerable version of Tomcat.
   
 [Non Existant URL](https://localhostnonexistant)
