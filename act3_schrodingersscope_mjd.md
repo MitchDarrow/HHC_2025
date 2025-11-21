@@ -24,7 +24,13 @@ High level executive summary of how the objective was solved. Details belong in 
 
 The initial step was to identify the bot responsible for the additional scope violations
   
-![Identification of Bot](/images/shroedingersscope_webbot.jpg) 
+![Identification of WebBot](/images/shroedingers_webbot.jpg) 
+
+With the object pattern identified, it is possible to use browser Developer Tools to block the request.
+Selecting "Network Request Blocking" from the More Tools menu. The pattern to block is "*gnomeU*"
+
+![Blocking of WebBot](/images/shroedingers_webbotblock.jpg) 
+
 
 
 ```sh
