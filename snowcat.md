@@ -20,9 +20,7 @@ Using an account with minimal access to the system, the website was found to be 
 <details>
 <summary>Click to expand</summary>
 
-Using a nonexistent URL, an error message was triggered revealing that the system is running a potentially vulnerable version of Tomcat.
-  
-[Non Existant URL](https://localhostnonexistant)
+Using a nonexistent URL (https://localhost/nonexistant), an error message was triggered revealing that the system is running a potentially vulnerable version of Tomcat.
   
 ![Tomcat Version Evidence](/images/snowcat_version.jpg) 
 
