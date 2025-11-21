@@ -79,6 +79,11 @@ The first enpoint found: /register/dev/dev_todos
 The second endpoint found: /register/dev/dev_notes
 ![Developer Information Notes](/images/shroedingers_devnotes.jpg) 
 
+Locating both of these files construct the Developer information disclosure vulnerability discovered.
+**Answer: Developer information disclosure**
+
+W
+
 ```sh
 bash script code block
 ```
