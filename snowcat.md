@@ -39,7 +39,7 @@ The initial payload was delivered and successful:
 
 To achieve a remote shell, the following approach was used:
 1. Setup a linux machine in linode, and start a netcat listener on port 4444
-2. As the low level user, create a shell file in the /tmp directory
+2. As the low level user, create a shell code in the /tmp directory
 3. Change permissions on the file to allow other users to access and execute
 4. Send a payload to set the SUID on the shell file
 5. Send a payload that uses setsid to detach the process completely from the invoking script and run the shell
