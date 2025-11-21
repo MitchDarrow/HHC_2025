@@ -1,7 +1,7 @@
 |[Previous Objective](HHC_2025_Template/HackaGnome.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/SchrödingersScope.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
-| Snowcat RCE and Privilege Escalation    | Difficulty Level: 3 |
+| Objective: Snowcat RCE and Privilege Escalation    | Difficulty Level: 3 |
 | :-----------------------: | :--------------------------: |
 | Tom, in the hotel, found a wild Snowcat bug. Help him chase down the RCE! Recover and submit the API key not being used by snowcat. | Grand Hotel  |
 
