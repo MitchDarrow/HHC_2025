@@ -149,33 +149,19 @@ The final hint suggests that a token or cookie may be weak. The error message wh
 Looking at the registration values generated:
 
 registration	eb72a05369dcb44d
-
 registration	eb72a05369dcb44d
-
 registration	eb72a05369dcb455
-
 registration	eb72a05369dcb453
-
 registration	eb72a05369dcb451
-
 registration	eb72a05369dcb454
-
 registration	eb72a05369dcb444
-
 registration	eb72a05369dcb445
-
 registration	eb72a05369dcb447
-
 registration	eb72a05369dcb449
-
 registration	eb72a05369dcb456
-
 registration	eb72a05369dcb448
-
 registration	eb72a05369dcb452
-
 registration	eb72a05369dcb44a
-
 registration	eb72a05369dcb443
 
 Only the last two digits change, this indicates there are only 256 variations.
