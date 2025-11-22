@@ -223,9 +223,9 @@ Hijacking this session token, the document in wip is accessed.
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| Edge Developer Tools |  | 
-| Burpsuite Community Edition |  |
-|  |  | 
+| Edge Developer Tools | Version 142.0.3595.53 | 
+| Burpsuite Community Edition | v2024.11.2 |
+
 
 ## Hints Reference
 | Provided By         | Hint |
@@ -239,8 +239,8 @@ Hijacking this session token, the document in wip is accessed.
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-| khesperus |  |
-| eucrates |  |
+| khesperus | Provided a sanity check by confirming that I had all the elements to solve the objective |
+| eucrates | Provided feedback on scope and avoiding rabbit holes |
 
 
 |[Previous Objective](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
