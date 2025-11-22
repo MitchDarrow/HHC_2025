@@ -148,6 +148,7 @@ The final hint suggests that a token or cookie may be weak. The error message wh
 
 Looking at the registration values generated:
 
+```
 registration	eb72a05369dcb44d
 registration	eb72a05369dcb44d
 registration	eb72a05369dcb455
@@ -163,6 +164,7 @@ registration	eb72a05369dcb448
 registration	eb72a05369dcb452
 registration	eb72a05369dcb44a
 registration	eb72a05369dcb443
+```
 
 Only the last two digits change, this indicates there are only 256 variations.
 The TestUser needs to be logged in to test the registration values. 
