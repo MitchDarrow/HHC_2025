@@ -147,6 +147,7 @@ The final hint suggests that a token or cookie may be weak. The error message wh
 ![Registration Value](/images/shroedingers_wipermissions.jpg) 
 
 Looking at the registration values generated:
+
 registration	eb72a05369dcb44d
 registration	eb72a05369dcb44d
 registration	eb72a05369dcb455
