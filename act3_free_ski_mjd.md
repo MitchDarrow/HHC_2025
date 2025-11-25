@@ -1,9 +1,9 @@
-|[Previous Objective](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
+|[Previous Objective](act3_frosty_snowglobe_machine_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snow_blind_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
-| Objective: Objective name    | Difficulty Level: # |
+| Objective: Free Ski    | Difficulty Level: 4 |
 | :-----------------------: | :--------------------------: |
-| Official Description | Location:   |
+| Go to the retro store and help Goose Olivia ski down the mountain and collect all five treasure chests to reveal the hidden flag in this classic SkiFree-inspired challenge. | Location: Retro Store  |
 
 ## Solution Overview
 
