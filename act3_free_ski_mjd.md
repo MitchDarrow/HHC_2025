@@ -35,11 +35,11 @@ make
 ```
 Copy the extracted folder into the /pycdc folder
 
-![pydcdc folder](/images/freeskipycdcfolder.jpg) 
+![pydcdc folder](/images/freeskipycdcfolder.png) 
 
 Extract the code: ./pycdas ~/pycdc/FreeSki.exe_extracted/FreeSki.pyc
 
-![Free Ski Source Code](/images/freeskicode.txt) 
+![Free Ski Source Code](/images/FreeSkiCode.txt) 
 
 Flag Decoding Process (in SetFlag function):
 1.	Product Calculation: Takes the 5 collected treasure values and combines them:
