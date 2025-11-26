@@ -11,7 +11,7 @@ Reverse engineer an executable to reveal hidden information.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-| Decodmpile execytable file  | Defense Evasion | T1027 |Obfuscated Files or Information |
+| Decompile execytable file  | Defense Evasion | T1027 |Obfuscated Files or Information |
 | Decode hidden payload | Defense Evasion | T1140 | Deobfuscate/Decode Files or Information |
 
 
