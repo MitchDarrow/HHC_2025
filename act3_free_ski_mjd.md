@@ -35,7 +35,7 @@ make
 ```
 Copy the extracted folder into the /pycdc folder
 
-![pydcdc folder](/images/freeski_pycdcfolder.png) 
+[pydcdc folder](/images/freeski_pycdcfolder.png) 
 
 Extract the code: ./pycdas ~/pycdc/FreeSki.exe_extracted/FreeSki.pyc
 
