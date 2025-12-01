@@ -19,7 +19,7 @@ Reverse engineer an executable to reveal hidden information.
 <details>
 <summary>Click to expand</summary>
 
-Git clone both repositories to my kaliu machine.
+Git clone both repositories to my kali machine.
 git clone https://github.com/extremecoders-re/pyinstxtractor.git
 git clone https://github.com/zrax/pycdc.git     
 
