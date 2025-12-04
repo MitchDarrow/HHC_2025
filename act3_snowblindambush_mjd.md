@@ -56,7 +56,9 @@ Initial discovery activities of the website uncovered the following:
     
 ##Step Two: Explore SSTI and achieve RCE : Insecure Software
 The hint indicates that the application is using Flask. There are two helpful resources for understanding SSTI:
+
 [Server Side Template Injections with Jinja2](https://onsecurity.io/article/server-side-template-injection-with-jinja2/)
+
 [Server Side Template Injection - Python - Payloads All The Things](https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/Python/#summary) 
 
 A basic test to see if this is possible is {{7*7}}, because the expression evaluates on the page, then SSTI is possible.
@@ -112,7 +114,15 @@ Trial and error testing revealed the following filters and the obfuscations need
 │   → Sandbox hardening present  │
 └───────────────────────────────┘
 ```
+This script was used to enumerate the indexes and evaluate if RCE is possible. The initial command used was a simple 'whoami".
 
+[Enumeration Script](/resources/snowblind_enumeration2.py)
+
+![SSTI Enumeration](/images/snowblind_sstienumeration1.jpg) 
+
+The following indexes where discovered that would allow RCE:
+
+![SSTI Enumeration](/images/snowblind_sstienumeration2.jpg) 
 
 Step Three: Achieve Shell Access : Insecure File Upload
 Step Four: Exfilitrate Data : Insecure processes / Data Leakage
