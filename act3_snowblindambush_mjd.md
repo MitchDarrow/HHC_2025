@@ -1,4 +1,4 @@
-|[Previous Objective:Act3 Freeski](HHC_2025_Template/act3_freeski_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [About BerryDunn](HHC_2025_Template/hhc_2025_berrydunn.html)
+|[Previous Objective: Act3 Freeski](HHC_2025_Template/act3_freeski_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [About BerryDunn](HHC_2025_Template/hhc_2025_berrydunn.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Snowblind Ambush    | Difficulty Level: 5 |
