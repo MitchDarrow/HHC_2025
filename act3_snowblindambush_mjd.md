@@ -9,12 +9,15 @@
 
 High level executive summary of how the objective was solved. Details belong in the detail section.
 
-| Methods Used             | MITRE ATT&CK Framework Methods |
-| :-----------------------: | :--------------------------------: |
-|   |   |
-|   |   |
-|   |   |
-
+| Methods Used             | MITRE ATT&CK Framework Methods | Methods Used             | MITRE ATT&CK Framework Methods |
+| :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
+| Gain Access to web application: Leak Sensitive Information | Reconnaissance | T1589 | Gather Victim Identity Information |
+| Explore SSTI and achieve RCE: Insecure Software | Execution | T1190 | Exploit Public-Facing Application |
+| Achieve Shell Access: Insecure File Upload	Resource | Development | T1608.001 | Upload Malware |
+| Exfiltrate Data | Exfiltration | T1041 | Exfiltration Over C2 Channel |
+| Decode PNG file | Defense Evasion | T1140 | Deobfuscate/Decode Files or Information |
+| Crack hash for Root | Credential Access | T1110.002 | Password Cracking |
+| Escalate Privileges | Privilege Escalation | T1548 | Abuse Elevation Control Mechanism |
 
 ## Detailed Solution
 <details>
