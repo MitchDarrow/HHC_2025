@@ -41,8 +41,7 @@ Initial discovery activities of the website uncovered the following:
   
    **admin password: an_elf_and_password_on_a_bird**
    
-    
-    ![Admin Password](/images/snowblind_adminpassword.jpg)
+![Admin Password](/images/snowblind_adminpassword.jpg)
 
  
   - File upload mechanism
