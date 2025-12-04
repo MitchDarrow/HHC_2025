@@ -1,4 +1,4 @@
-|[Previous Objective](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
+|[Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](HHC_2025_Template/act3_snowglobe_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 Free Ski](HHC_2025_Template/act3_free_ski_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Objective name    | Difficulty Level: # |
@@ -9,11 +9,11 @@
 
 High level executive summary of how the objective was solved. Details belong in the detail section.
 
-| Methods Used             | MITRE ATT&CK Framework Methods |
-| :-----------------------: | :--------------------------------: |
-|   |   |
-|   |   |
-|   |   |
+| Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
+| :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
 
 
 ## Detailed Solution
@@ -68,5 +68,5 @@ Unordered list:
 |  |  |
 
 
-|[Previous Objective](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
+|[Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](HHC_2025_Template/act3_snowglobe_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 Free Ski](HHC_2025_Template/act3_free_ski_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
