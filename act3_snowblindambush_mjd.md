@@ -118,11 +118,11 @@ This script was used to enumerate the indexes and evaluate if RCE is possible. T
 
 [Enumeration Script](/resources/snowblind_enumeration2.py)
 
-![SSTI Enumeration](/images/snowblind_sstienumeration1.jpg) 
+![SSTI Enumeration](/images/snowblind_enumeration1.jpg) 
 
 The following indexes where discovered that would allow RCE:
 
-![SSTI Enumeration](/images/snowblind_sstienumeration2.jpg) 
+![SSTI Enumeration](/images/snowblind_enumeration2.jpg) 
 
 Step Three: Achieve Shell Access : Insecure File Upload
 Step Four: Exfilitrate Data : Insecure processes / Data Leakage
