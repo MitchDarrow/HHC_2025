@@ -39,9 +39,11 @@ Initial discovery activities of the website uncovered the following:
    
    Conversations with the chatbot revealed that it had information about the application admin account in the form of hints. Some of the hints are conflicting, making them unreliable. The chatbot redacts phrases, so it knows the password. The chatbot reveals the information when prompted to spell the password one character per line, defeating the redaction mechanisms. The password works for login, and additional functionality is available to explore. The left and right hint works as well. The chatbot will spell the password in reverse order.
   
-   admin password: an_elf_and_password_on_a_bird
+   **admin password: an_elf_and_password_on_a_bird**
    
+    
     ![Admin Password](/images/snowblind_adminpassword.jpg)
+
  
   - File upload mechanism
     The profile page contains a file upload mechanism. While the page indicates only allowed filetypes, it is possible to upload a file that contains script code. Upon upload, the file is renamed to admin_XXXXXXXXXXXXXXXX.png, with the placeholder changing with every upload. This is a way to get a payload into the application, but not a way to trigger it.
