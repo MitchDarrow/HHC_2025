@@ -54,7 +54,66 @@ Initial discovery activities of the website uncovered the following:
 
       ![Redirect Parameter](/images/snowblind_parameter.jpg)
     
-Step Two: Explore SSTI and achieve RCE : Insecure Software
+##Step Two: Explore SSTI and achieve RCE : Insecure Software
+The hint indicates that the application is using Flask. There are two helpful resources for understanding SSTI:
+[Server Side Template Injections with Jinja2](https://onsecurity.io/article/server-side-template-injection-with-jinja2/)
+[Server Side Template Injection - Python - Payloads All The Things](https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/Python/#summary) 
+
+A basic test to see if this is possible is {{7*7}}, because the expression evaluates on the page, then SSTI is possible.
+
+![SSTI Test](/images/snowblind_sstitest.jpg) 
+
+Trial and error testing revealed the following filters and the obfuscations needed to bypass.
+```
+┌───────────────────────────────┐
+│ 1. Payload Construction        │
+│   - Bracket access             │
+│   - Escaped underscores (\u005f, \137) 
+│   - Reversed strings ('ssalc'|reverse) │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ 2. WAF Bypass                 │
+│   - Literal "_" stripped       │
+│   - Escapes reconstruct "_"    │
+│   - Reverse evades keyword ban │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ 3. Dunder Reconstruction      │
+│   - __class__ rebuilt          │
+│   - __mro__ rebuilt            │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ 4. Traversal into Internals   │
+│   - attr('__subclasses__')()  │
+│   - Returns real class list    │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ 5. Subclass Enumeration       │
+│   - collections.OrderedDict    │
+│   - enum._EnumDict             │
+│   - werkzeug.datastructures... │
+│   - flask.config.Config        │
+│   ...                          │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ 6. Patched Routes             │
+│   - object.__subclasses__() → 500
+│   - mro()[0].__subclasses__() → 500
+│   → Sandbox hardening present  │
+└───────────────────────────────┘
+```
+
+
 Step Three: Achieve Shell Access : Insecure File Upload
 Step Four: Exfilitrate Data : Insecure processes / Data Leakage
 Step Five:  Decode PNG file : Leak Sensitive Information
