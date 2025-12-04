@@ -186,7 +186,7 @@ With the password hash, salt, and the algorithm used, we can attempt to crack th
 
 With root password, it is a simple matter to escalate privileges using the su command. Once root, there is a bash script in the /root directory. Executing the script reveals the flag.
   
-![Privilege Escalation](/images/snowblind_privilege_escalation.jpg) 
+![Privilege Escalation](/images/snowblind_privilegeescalation.jpg) 
 
 
 **Answer: hhc25{Frostify_The_World_c05730b46d0f30c9d068343e9d036f80}**
