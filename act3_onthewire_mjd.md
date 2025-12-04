@@ -58,22 +58,21 @@ Unordered list:
 | :-----------------------: | :--------------------------------: |
 | Santa | Protocols
 Key concept - Clock vs. Data signals:
-•	Some protocols have separate clock and data lines (like SPI and I2C)
-•	For clocked protocols, you need to sample the data line at specific moments defined by the clock
-•	The clock signal tells you when to read the data signal
+-Some protocols have separate clock and data lines (like SPI and I2C)
+-For clocked protocols, you need to sample the data line at specific moments defined by the clock
+-The clock signal tells you when to read the data signal
 For 1-Wire (no separate clock):
-•	Information is encoded in pulse widths (how long the signal stays low or high)
-•	Different pulse widths represent different bit values
-•	Look for patterns in the timing between transitions
+-Information is encoded in pulse widths (how long the signal stays low or high)
+-Different pulse widths represent different bit values
+-Look for patterns in the timing between transitions
 For SPI and I2C:
-•	Identify which line is the clock (SCL for I2C, SCK for SPI)
-•	Data is typically valid/stable when the clock is in a specific state (high or low)
-•	You need to detect clock edges (transitions) and sample data at those moments
+-Identify which line is the clock (SCL for I2C, SCK for SPI)
+-Data is typically valid/stable when the clock is in a specific state (high or low)
+-You need to detect clock edges (transitions) and sample data at those moments
 Technical approach:
-•	Sort frames by timestamp
-•	Detect rising edges (0→1) and falling edges (1→0) on the clock line
-•	Sample the data line's value at each clock edge
-|
+-Sort frames by timestamp
+-Detect rising edges (0→1) and falling edges (1→0) on the clock line
+-Sample the data line's value at each clock edge |
 | Santa | Structure
 What you're dealing with:
 •	You have access to WebSocket endpoints that stream digital signal data
