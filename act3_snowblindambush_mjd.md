@@ -3,7 +3,7 @@
 
 | Objective: Snowblind Ambush    | Difficulty Level: 5 |
 | :-----------------------: | :--------------------------: |
-| Head to the Hotel to stop Frosty's plan. Torkel is waiting at the Grand Web Terminal. | Location: Hotel |
+| Head to the Hotel to stop Frosty's plan. Torkel is waiting at the Grand Web Terminal. | Location: Grand Hotel |
 
 ## Solution Overview
 
