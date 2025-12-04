@@ -25,20 +25,31 @@ High level executive summary of how the objective was solved. Details belong in 
 ##Step One: Gain Access to web application : Leak Sensitive Information
   
 Initial discovery activities of the website uncovered the following:
-
+   
   - The landing page code included a javascript file that was not actually loaded, egg.js
     
     ![Landing Page Code](/images/snowblind_egg.js.jpg)
      
   - Reviewing the code gives a hint: "AI Gnomes do not know the difference between left and right"
     
-    ![Egg Javascript](/images/snowblind_egghint.jpg)
+    ![Chatbot Admin Password](/images/snowblind_egghint.jpg)
     
+   - AI chatbot gives redacted and conflicting hints about the password for the application login
+   
+   Conversations with the chatbot revealed that it had information about the application admin account in the form of hints. Some of the hints are conflicting, making them unreliable. The chatbot redacts phrases, so it knows the password. The chatbot reveals the information when prompted to spell the password one character per line, defeating the redaction mechanisms. The password works for login, and additional functionality is available to explore. The left and right hint works as well. The chatbot will spell the password in reverse order.
+   *admin password: an_elf_and_password_on_a_bird*
+   
+    ![Landing Page Code](/images/snowblind_adminpassword.jpg)
+ 
   - File upload mechanism
+    The profile page contains a file upload mechanism. While the page indicates only allowed filetypes, it is possible to upload a file that contains script code. Upon upload, the file is renamed to admin_XXXXXXXXXXXXXXXX.png, with the placeholder changing with every upload. This is a way to get a payload into the application, but not a way to trigger it.
+
+    ![File Upload](/images/snowblind_fileupload.jpg)
     
   - Parameter used after file upload
-    
-  - AI chatbot gives redacted and conflicting hints about the password for the application login
+  After upload the page redirects and uses a parameter username.
+
+      ![Redirect Parameter](/images/snowblind_parameter.jpg)
     
 Step Two: Explore SSTI and achieve RCE : Insecure Software
 Step Three: Achieve Shell Access : Insecure File Upload
