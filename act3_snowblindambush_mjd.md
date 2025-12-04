@@ -116,7 +116,7 @@ Trial and error testing revealed the following filters and the obfuscations need
 ```
 This script was used to enumerate the indexes and evaluate if RCE is possible. The initial command used was a simple 'whoami".
 
-[Enumeration Script](/resources/snowblind_enumeration2.py)
+The enumeration script source code is located here: [Enumeration Script](/resources/snowblind_enumeration2.py)
 
 ![SSTI Enumeration](/images/snowblind_enumeration1.jpg) 
 
