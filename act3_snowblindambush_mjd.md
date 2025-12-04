@@ -23,6 +23,14 @@ High level executive summary of how the objective was solved. Details belong in 
 <details>
 <summary>Click to expand</summary>
 Step One: Gain Access to web application : Leak Sensitive Information
+Initial discovery activities of the website uncovered the following:
+  - The landing page code included a javascript file that was not actually loaded, egg.js
+    ![Landing Page Code](/images/snowblind_egg.js.jpg) 
+  - Reviewing the code gives a hint: "AI Gnomes do not know the difference between left and right"
+    ![Egg Javascript](/images/snowblind_egghint.jpg) 
+  - File upload mechanism
+  - Parameter used after file upload
+  - AI chatbot gives redacted and conflicting hints about the password for the application login
 Step Two: Explore SSTI and achieve RCE : Insecure Software
 Step Three: Achieve Shell Access : Insecure File Upload
 Step Four: Exfilitrate Data : Insecure processes / Data Leakage
@@ -58,7 +66,7 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| john |  | 
+| John the Ripper | 1.9.0-jumbo-1+bleeding-aec1328d6c | 
 |  |  |
 |  |  | 
 
