@@ -33,13 +33,13 @@ Initial discovery activities of the website uncovered the following:
      
   - Reviewing the code gives a hint: "AI Gnomes do not know the difference between left and right"
     
-    ![Chatbot Admin Password](/images/snowblind_egghint.jpg)
+    ![Chatbot Script Hint](/images/snowblind_egghint.jpg)
     
    - AI chatbot gives redacted and conflicting hints about the password for the application login
    
    Conversations with the chatbot revealed that it had information about the application admin account in the form of hints. Some of the hints are conflicting, making them unreliable. The chatbot redacts phrases, so it knows the password. The chatbot reveals the information when prompted to spell the password one character per line, defeating the redaction mechanisms. The password works for login, and additional functionality is available to explore. The left and right hint works as well. The chatbot will spell the password in reverse order.
   
-   **admin password: an_elf_and_password_on_a_bird**
+   admin password: an_elf_and_password_on_a_bird
    
     ![Admin Password](/images/snowblind_adminpassword.jpg)
  
