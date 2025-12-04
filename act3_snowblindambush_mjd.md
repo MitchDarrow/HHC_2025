@@ -198,8 +198,7 @@ With root password, it is a simple matter to escalate privileges using the su co
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
 | John the Ripper | 1.9.0-jumbo-1+bleeding-aec1328d6c | 
-|  |  |
-|  |  | 
+
 
 ## Hints Reference
 | Provided By         | Hint |
