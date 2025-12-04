@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+Starting with only public access to the web application, reconnaisance was conducted to determine weaknesses. The chatbot was exploited to recover the admin password to the website. Once logged in, a file upload mechanism was discovered that allowed for abuse. A redirect used a parameter, that was discovered to allow Server Side Template Injection (SSTI). This was exploited to achieve Remote Code Execution (RCE) and access as the web application service account. A cron job was discovered that ran as root, and under specific conditions would exfiltrate an encrypted copy of the /etc/shadow file. With this file, the password for the root user was obtained. This was used to elevate permissions and obtain the flag.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
