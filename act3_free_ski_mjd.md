@@ -1,4 +1,4 @@
-|[Previous Objective](HHC_2025_Template/act3_onthewire_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_snow_blind_mjd.html)
+|[Previous Objective: Act3 On The Wire](HHC_2025_Template/act3_onthewire_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 SnowBlind Ambush](HHC_2025_Template/act3_snow_blind_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Free Ski    | Difficulty Level: 4 |
@@ -102,6 +102,7 @@ Script: [Solve Free Ski](act3_solvefreeski.py)
 | :-----------------------: | :--------------------------------: |
 | Santa | Many Python decompilers don't understand Python 3.13, but Decompyle++ does! |
 | Santa | Have you ever used PyInstaller Extractor? |
+| Olivia Goose | This game looks simple enough, doesn't it? Almost too simple. But between you and me... it seems nearly impossible to win fair and square. My advice? If you ain't cheatin', you ain't tryin'. wink Now get out there and show that mountain who's boss!|
 
 ## Acknowledgements
 | Provided By         | Notes |
@@ -110,6 +111,6 @@ Script: [Solve Free Ski](act3_solvefreeski.py)
 
 
 
-|[Previous Objective](HHC_2025_Template/act3_onthewire_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_snow_blind_mjd.html)
+|[Previous Objective: Act3 On The Wire](HHC_2025_Template/act3_onthewire_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 SnowBlind Ambush](HHC_2025_Template/act3_snow_blind_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
