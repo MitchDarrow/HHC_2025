@@ -28,9 +28,10 @@ Initial discovery activities of the website uncovered the following:
 
   - The landing page code included a javascript file that was not actually loaded, egg.js
     
-    ![Landing Page Code](/images/snowblind_egg.js.jpg)
+    ![Landing Page Code](/HHC_2025_Template/images/snowblind_egg.js.jpg)
      
   - Reviewing the code gives a hint: "AI Gnomes do not know the difference between left and right"
+    
     ![Egg Javascript](/images/snowblind_egghint.jpg)
     
   - File upload mechanism
