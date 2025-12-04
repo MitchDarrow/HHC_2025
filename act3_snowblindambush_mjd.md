@@ -22,7 +22,7 @@ High level executive summary of how the objective was solved. Details belong in 
 ## Detailed Solution
 <details>
 <summary>Click to expand</summary>
-Step One: Gain Access to web application : Leak Sensitive Information
+##Step One: Gain Access to web application : Leak Sensitive Information
   
 Initial discovery activities of the website uncovered the following:
 
@@ -35,8 +35,11 @@ Initial discovery activities of the website uncovered the following:
     ![Egg Javascript](/images/snowblind_egghint.jpg)
     
   - File upload mechanism
+    
   - Parameter used after file upload
+    
   - AI chatbot gives redacted and conflicting hints about the password for the application login
+    
 Step Two: Explore SSTI and achieve RCE : Insecure Software
 Step Three: Achieve Shell Access : Insecure File Upload
 Step Four: Exfilitrate Data : Insecure processes / Data Leakage
