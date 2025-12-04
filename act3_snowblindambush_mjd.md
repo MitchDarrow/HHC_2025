@@ -22,7 +22,8 @@ High level executive summary of how the objective was solved. Details belong in 
 ## Detailed Solution
 <details>
 <summary>Click to expand</summary>
-##Step One: Gain Access to web application : Leak Sensitive Information
+
+  ##Step One: Gain Access to web application : Leak Sensitive Information
   
 Initial discovery activities of the website uncovered the following:
    
@@ -40,7 +41,7 @@ Initial discovery activities of the website uncovered the following:
   
    **admin password: an_elf_and_password_on_a_bird**
    
-    ![Landing Page Code](/images/snowblind_adminpassword.jpg)
+    ![Admin Password](/images/snowblind_adminpassword.jpg)
  
   - File upload mechanism
     The profile page contains a file upload mechanism. While the page indicates only allowed filetypes, it is possible to upload a file that contains script code. Upon upload, the file is renamed to admin_XXXXXXXXXXXXXXXX.png, with the placeholder changing with every upload. This is a way to get a payload into the application, but not a way to trigger it.
