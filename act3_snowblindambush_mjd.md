@@ -9,7 +9,7 @@
 
 High level executive summary of how the objective was solved. Details belong in the detail section.
 
-| Methods Used             | MITRE ATT&CK Framework Methods | Methods Used             | MITRE ATT&CK Framework Methods |
+| Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
 | Gain Access to web application: Leak Sensitive Information | Reconnaissance | T1589 | Gather Victim Identity Information |
 | Explore SSTI and achieve RCE: Insecure Software | Execution | T1190 | Exploit Public-Facing Application |
