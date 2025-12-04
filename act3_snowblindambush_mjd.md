@@ -23,11 +23,16 @@ High level executive summary of how the objective was solved. Details belong in 
 <details>
 <summary>Click to expand</summary>
 Step One: Gain Access to web application : Leak Sensitive Information
+  
 Initial discovery activities of the website uncovered the following:
+
   - The landing page code included a javascript file that was not actually loaded, egg.js
-    ![Landing Page Code](/images/snowblind_egg.js.jpg) 
+    
+    ![Landing Page Code](/images/snowblind_egg.js.jpg)
+     
   - Reviewing the code gives a hint: "AI Gnomes do not know the difference between left and right"
-    ![Egg Javascript](/images/snowblind_egghint.jpg) 
+    ![Egg Javascript](/images/snowblind_egghint.jpg)
+    
   - File upload mechanism
   - Parameter used after file upload
   - AI chatbot gives redacted and conflicting hints about the password for the application login
