@@ -16,7 +16,7 @@ High level executive summary of how the objective was solved. Details belong in 
 | Achieve Shell Access: Insecure File Upload	Resource | Development | T1608.001 | Upload Malware |
 | Exfiltrate Data | Exfiltration | T1041 | Exfiltration Over C2 Channel |
 | Decode PNG file | Defense Evasion | T1140 | Deobfuscate/Decode Files or Information |
-| Crack hash for Root | Credential Access | T1110.002 | Password Cracking |
+| Crack hashed password for Root | Credential Access | T1110.002 | Password Cracking |
 | Escalate Privileges | Privilege Escalation | T1548 | Abuse Elevation Control Mechanism |
 
 ## Detailed Solution
