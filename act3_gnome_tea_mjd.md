@@ -11,8 +11,10 @@ High level executive summary of how the objective was solved. Details belong in 
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-| Gain Access to web application: Leak Sensitive Information | Reconnaissance | T1589 | Gather Victim Identity Information |
-
+| Developer information disclosure | Reconnaissance | T1593 | Search Open Websites |
+| Found commented code | Reconnaissance | T1595.002 | Vulnerability Scanning |
+| Gain access to web application: Leak Sensitive Information | Reconnaissance | T1589 | Gather Victim Identity Information |
+| Gain admin access to application | Privilege Escalation | T1548 | Abuse elevation control mechanism |
 
 
 ## Detailed Solution
