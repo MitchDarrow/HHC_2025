@@ -1,4 +1,4 @@
-|[Previous Objective Act2 Going in Revrese](HHC_2025_Template/act2_goinginreverse_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective Act3 Hack-a-Gnome](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
+|[Previous Objective: Act2 Going in Revrese](HHC_2025_Template/act2_goinginreverse_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 Hack-a-Gnome](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Gnome Tea    | Difficulty Level: 3 |
@@ -69,4 +69,4 @@ Unordered list:
 | Eucrates | Introduced me to Claude.ai |
 
 
-|[Previous Objective Act2 Going in Revrese](HHC_2025_Template/act2_goinginreverse_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective Act3 Hack-a-Gnome](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
+|[Previous Objective: Act2 Going in Revrese](HHC_2025_Template/act2_goinginreverse_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 Hack-a-Gnome](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
