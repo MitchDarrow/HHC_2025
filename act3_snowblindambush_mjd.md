@@ -61,7 +61,7 @@ The hint indicates that the application is using Flask. There are two helpful re
 
 [Server Side Template Injection - Python - Payloads All The Things](https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/Python/#summary) 
 
-A basic test to see if this is possible is {{7*7}}, because the expression evaluates on the page, then SSTI is possible.
+A basic test to see if SSTI is possible is {{7*7}}. Because the application evaluates the expression and displays the results on the page, the application is likely vulnerable.
 
 ![SSTI Test](/images/snowblind_sstitest.jpg) 
 
