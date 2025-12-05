@@ -57,20 +57,7 @@ Unordered list:
 | Provided By         | Hint |
 | :-----------------------: | :--------------------------------: |
 | Santa |Protocols<br>Key concept - Clock vs. Data signals:<br>-Some protocols have separate clock and data lines (like SPI and I2C)<br>-For clocked protocols, you need to sample the data line at specific moments defined by the clock<br>-The clock signal tells you when to read the data signal<br>For 1-Wire (no separate clock):<br>-Information is encoded in pulse widths (how long the signal stays low or high)<br>-Different pulse widths represent different bit values<br>-Look for patterns in the timing between transitions<br>For SPI and I2C:<br>-Identify which line is the clock (SCL for I2C, SCK for SPI)<br>-Data is typically valid/stable when the clock is in a specific state (high or low)<br>-You need to detect clock edges (transitions) and sample data at those moments<br>Technical approach:<br>-Sort frames by timestamp<br>-Detect rising edges (0→1) and falling edges (1→0) on the clock line<br>-Sample the data line's value at each clock edge |
-| Santa | Structure
-What you're dealing with:
-•	You have access to WebSocket endpoints that stream digital signal data
-•	Each endpoint represents a physical wire in a hardware communication system
-•	The data comes as JSON frames with three properties: line (wire name), t (timestamp), and v (value: 0 or 1)
-•	The server continuously broadcasts signal data in a loop - you can connect at any time
-•	This is a multi-stage challenge where solving one stage reveals information needed for the next
-Where to start:
-•	Connect to a WebSocket endpoint and observe the data format
-•	The server automatically sends data every few seconds - just wait and collect
-•	Look for documentation on the protocol types mentioned (1-Wire, SPI, I2C)
-•	Consider that hardware protocols encode information in the timing and sequence of signal transitions, not just the values themselves
-•	Consider capturing the WebSocket frames to a file so you can work offline
-|
+| Santa | Structure<br>What you're dealing with:<br>-You have access to WebSocket endpoints that stream digital signal data<br>-Each endpoint represents a physical wire in a hardware communication system<br>-The data comes as JSON frames with three properties: line (wire name), t (timestamp), and v (value: 0 or 1)<br>-The server continuously broadcasts signal data in a loop - you can connect at any time<br>-This is a multi-stage challenge where solving one stage reveals information needed for the next<br>Where to start:<br>-Connect to a WebSocket endpoint and observe the data format<br>-The server automatically sends data every few seconds - just wait and collect<br>-Look for documentation on the protocol types mentioned (1-Wire, SPI, I2C)<br>-Consider that hardware protocols encode information in the timing and sequence of signal transitions, not just the values themselves<br>-Consider capturing the WebSocket frames to a file so you can work offlineclock edge|
 | Santa | On Rails
 Stage-by-stage approach
 1.	Connect to the captured wire files or endpoints for the relevant wires.
