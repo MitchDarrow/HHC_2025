@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+Starting with only public access to the web application, reconnaisance was conducted to identify weaknesses. A comment was found in the page code that indicated some collections may allow insecure access. Probing those collections identified a clue to a user's password that would lead to the password. The username was identified in a collection. The password was decoded from  the latitude and longitude data contained in the image metadata. Once logged into the application as the user, code that determined if a user should have admin access was identified and abused, resulting in identifing the secret passphrase.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
