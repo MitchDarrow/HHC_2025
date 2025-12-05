@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-Starting with only public access to the web application, reconnaisance was conducted to determine weaknesses. The chatbot was exploited to recover the admin password to the website. Once logged in, a file upload mechanism was discovered that allowed for abuse. A redirect used a parameter, that was discovered to allow Server Side Template Injection (SSTI). This was exploited to achieve Remote Code Execution (RCE) and access as the web application service account. A cron job was discovered that ran as root, and under specific conditions would exfiltrate an encrypted copy of the /etc/shadow file. With this file, the password for the root user was obtained. This was used to elevate permissions and obtain the flag.
+Starting with only public access to the web application, reconnaisance was conducted to identify weaknesses. The chatbot was exploited to recover the admin password to the website. Once logged in, a file upload mechanism was discovered that allowed for abuse. The redirect after file upload used a parameter, that allowed Server Side Template Injection (SSTI). This was exploited to achieve Remote Code Execution (RCE) and access to the application as the www-data identity. A scheduled job was discovered that ran in the context of the root user. Under specific conditions this job would exfiltrate an encrypted copy of the /etc/shadow file. From this file, the password for the root user was obtained. This was used to elevate permissions and obtain the flag.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
@@ -200,6 +200,8 @@ With root password, it is a simple matter to escalate privileges using the su co
 | John the Ripper | 1.9.0-jumbo-1+bleeding-aec1328d6c | 
 | Linux Linode | System	Ubuntu 24.04 LTS |
 | netcat	| v1.10-50 |
+| Edge Developer Tools |   |
+| BurpeSuite |   | 
 
 ## Hints Reference
 | Provided By         | Hint |
