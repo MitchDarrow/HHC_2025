@@ -210,7 +210,7 @@ With root password, it is a simple matter to escalate privileges using the su co
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-| Fluffme | Helped to identify flaws in my method that I was using for RCE. My shell was deficient. |
+| Fluffme | My initial "shell" was more of a SSTI command pipeline. This was not the right approach. |
 | Khesperus | Sanity checks on achieving shell and on decrypting the png file. |
 
 
