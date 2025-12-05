@@ -1,4 +1,4 @@
-|[Previous Objective: Act3 Freeski](HHC_2025_Template/act3_freeski_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [About BerryDunn](HHC_2025_Template/hhc_2025_berrydunn.html)
+|[Previous Objective: Act3 Free Ski](HHC_2025_Template/act3_freeski_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [About BerryDunn](HHC_2025_Template/hhc_2025_berrydunn.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Snowblind Ambush    | Difficulty Level: 5 |
@@ -216,5 +216,5 @@ With root password, it is a simple matter to escalate privileges using the su co
 | Khesperus | Sanity checks on achieving shell and on decrypting the png file. |
 
 
-|[Previous Objective: Act3 Freeski](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
+|[Previous Objective: Act3 Free Ski](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
