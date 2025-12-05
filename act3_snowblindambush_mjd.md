@@ -182,7 +182,7 @@ With the password hash, salt, and the algorithm used, we can attempt to crack th
 
 **root password: jollyboy**
 
-## Step Seven: Escalate privileges : Escalate privileges
+## Step Seven: Escalate privileges 
 
 With root password, it is a simple matter to escalate privileges using the su command. Once root, there is a bash script in the /root directory. Executing the script reveals the flag.
   
