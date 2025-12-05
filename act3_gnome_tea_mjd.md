@@ -49,10 +49,10 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| BurpSuite |  |
-| exiftool |  | 
-| Google Earth |  |
-| Edge Developer Tools |  | 
+| BurpSuite | 2024.11.2 |
+| exiftool | N/A | 
+| Google Earth | N/A |
+| Edge Developer Tools | Version 142.0.3595.94 | 
 
 ## Hints Reference
 | Provided By         | Hint |
