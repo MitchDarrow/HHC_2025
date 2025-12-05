@@ -1,16 +1,18 @@
-#SANS Holiday Hack Challenge 2025: Revenge of the Gnome(s) 
+# SANS Holiday Hack Challenge 2025: Revenge of the Gnome(s) 
 
-##BerryDunn Solution Report
+## BerryDunn Solution Report
 
-###About the Holiday Hack Challenge
+### About the Holiday Hack Challenge
+
+This year’s challenge covers the following topics, including grand challenges provided by Microsoft and Google: defanging IOCs, using SUDO, port discovery, forensic analysis, basic networking, firewall basics, Nmap basics, CURL basics, IDOR challenge, using POCs, Java deserialization, Quantum computing, reverse engineering, hacking SQLI, Linux and PrivEsc, and WebApp Pentesting.
+
+### Act 1 Objectives:
 
 
+### Act 2 Objectives:
 
-###Act 1 Objectives:
 
-###Act 2 Objectives:
-
-###Act 3 Objectives:
+### Act 3 Objectives:
 
 [Gnome Tea](https://mitchdarrow.github.io/HHC_2025_Template/act3_gnometea_mjd.html)
 
