@@ -1,4 +1,4 @@
-|[Previous Objective](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
+|[Previous Objective: Act3 Snowcat RCE abd Privilege Escalation](HHC_2025_Template/act3_snowcat_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Schrödinger's Scope   | Difficulty Level: 3 |
@@ -238,6 +238,7 @@ Hijacking this session token, the document in wip is accessed.
 | Santa | As you test this with a tool like Burp Suite, resist temptations and stay true to the instructed path. |
 | Santa | During any kind of penetration test, always be on the lookout for items which may be predictable from the available information, such as application endpoints. Things like a sitemap can be helpful, even if it is old or incomplete. Other predictable values to look for are things like token and cookie values |
 | Santa | Pay close attention to the instructions and be very wary of advice from the tongues of gnomes! Perhaps not ignore everything, but be careful! |
+| Kevin | The Neighborhood College Course Registration System has been getting some updates lately and I'm wondering if you might help me improve its security by performing a small web application penetration test of the site. For any web application test, one of the most important things for the test is the 'scope', that is, what one is permitted to test and what one should not. While hacking is fun and cool, professional integrity means respecting scope boundaries, especially when there are tempting targets outside our permitted scope. Thankfully, the Neighborhood College has provided a very concise set of 'Instructions' which are accessible via a link provided on the site you will be testing. Do not overlook or dismiss the instructions! Following them is key to successfully completing the test. Unfortunately, those pesky gnomes have found their way into the site and have been causing some mischief as well. Be wary of their presence and anything they may have to say as you are testing. Can you help me demonstrate to the Neighborhood College that we know what responsible penetration testing looks like? |
 
 ## Acknowledgements
 | Provided By         | Notes |
@@ -246,5 +247,4 @@ Hijacking this session token, the document in wip is accessed.
 | eucrates | Provided feedback on scope and avoiding rabbit holes |
 
 
-|[Previous Objective](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
-| :----------------------- | :--------------------------------: | --------------------------------: |
+|[Previous Objective: Act3 Snowcat RCE abd Privilege Escalation](HHC_2025_Template/act3_snowcat_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
