@@ -122,6 +122,7 @@ The first key listed is the one used with the temperature binary. The second key
 | ysoserial.jar | Version: v0.0.6 Release Date: June 28, 2022 | 
 | Linux Linode System | Ubuntu 24.04 LTS |
 | netcat | v1.10-50 | 
+| curl |  | 
 
 ## Hints Reference
 | Provided By         | Hint |
