@@ -49,8 +49,8 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| Google Earth |  | 
-|  |  |
+| exiftool |  | 
+| Google Earth |  |
 |  |  | 
 
 ## Hints Reference
