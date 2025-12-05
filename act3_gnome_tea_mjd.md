@@ -22,7 +22,7 @@ High level executive summary of how the objective was solved. Details belong in 
 
 Using Edge's developer tools, the application code is reviewed. An interesting comment is found on the page:
   
-![Interesting Comment](/images/act3_gnometea_interestingcomment.jpg) 
+![Interesting Comment](/images/gnometea_interestingcomment.jpg) 
 
 The API key is part of the URL:
 
@@ -55,7 +55,7 @@ Looking in the dms collection contains a lot of messages. Searching for the stri
 curl -X GET \
   https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk | grep "password"
 
-![Password Hint](/images/act3_gnometea_password.jpg) 
+![Password Hint](/images/gnometea_password.jpg) 
 
 Searching the gnomes collection reveals Barnabies email address. This is needed for login.
 
@@ -67,7 +67,7 @@ The correct URL to obtain Barnaby's image is: https://firebasestorage.googleapis
 
 curl "https://firebasestorage.googleapis.com/v0/b/holidayhack2025.firebasestorage.app/o/gnome-documents%2Fl7VS01K9GKV5ir5S8suDcwOFEpp2_drivers_license.jpeg?alt=media" -o drivers_license.jpeg
 
-![Image Exifdata](/images/act3_gnometea_exifdata.jpg) 
+![Image Exifdata](/images/gnometea_exifdata.jpg) 
 
 The image was taken at: 33 deg 27' 53.85" S, 115 deg 54' 37.62" E
 
@@ -75,11 +75,11 @@ Converting the Latitude and Longitude into a format for Google Maps:
 
 https://www.google.com/maps?q=-33.464958,115.910450
 
-![Barnaby's Password](/images/act3_gnometea_password.jpg) 
+![Barnaby's Password](/images/gnometea_password.jpg) 
 
 With valid credentials, login is achieved as Barnaby.
 
-![Gnome Tea Login](/images/act3_gnometea_login.jpg) 
+![Gnome Tea Login](/images/gnometea_login.jpg) 
 
 Following the hint about client side controls, the source code now available is reviewed, and admin access is hard coded into the source.
 
@@ -101,7 +101,7 @@ Following the hint about client side controls, the source code now available is 
 
 Using the console in Edge's developer tools, admin access is achieved by setting T to 3loaihgxP0VwCTKmkHHFLe6FZ4m2
 
-![Gnome Tea Solution](/images/act3_gnometea_solution.jpg) 
+![Gnome Tea Solution](/images/gnometea_solution.jpg) 
 
 **Answer: GigGigglesGiggler**
 
