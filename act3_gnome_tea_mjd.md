@@ -52,7 +52,7 @@ Unordered list:
 | BurpSuite |  |
 | exiftool |  | 
 | Google Earth |  |
-|  |  | 
+| Edge Developer Tools |  | 
 
 ## Hints Reference
 | Provided By         | Hint |
