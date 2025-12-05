@@ -43,12 +43,13 @@ Collection contains messages, gnome names, and sender UIDS
 
 curl -X GET \
   https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/tea?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
-Contains avatars, authids, 
+
+Collection contains avatars, authids, 
 
 curl -X GET \
 https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/gnomes?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
 
-contains email addresses, notes and jpeg pictures
+Collection contains email addresses, notes and jpeg pictures
 
 Looking in the dms collection contains a lot of messages. Searching for the string "password" reveals that Barnaby's image file contains location data that will identify his password.
 
