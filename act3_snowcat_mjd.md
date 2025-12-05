@@ -11,7 +11,7 @@ Starting with an account with minimal access to the system, the website was foun
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-|  |  |  |  |
+| Error message leaks version information | Reconnaissance | T1593 | Search Open Websites/Domains |
 | Leverage Unauthenticated Remote Code Execution (RCE) in Apache Tomcat (CVE-2025-24815) | Initial Access | T1190 | Exploit Public-Facing Application |
 | Abuse SUID binaries | Privelege Escalation | T1548.001 | Abuse Elevation Control Mechanism: Setuid and Setgid |
 | Command Injection leading to Privilege Escalation | Execution  | T1059.004| Command and Scripting Interpreter : Unix Shell |
