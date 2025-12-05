@@ -56,13 +56,13 @@ Looking in the dms collection contains a lot of messages. Searching for the stri
 curl -X GET \
   https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk | grep "password"
 
-![Password Hint](/images/gnometea_password.jpg) 
+![Password Hint](/images/gnometea_passwordhint.jpg) 
 
 Searching the gnomes collection reveals Barnabies email address. This is needed for login.
 
-![Barnaby's Username](/images/act3_gnometea_username.jpg) 
+![Barnaby's Username](/images/gnometea_username.jpg) 
 
-**Username: barnabybriefcase@gnomemail.dosis:barnabybriefcase@gnomemail.dosis**
+**Username: barnabybriefcase@gnomemail.dosis**
 
 The correct URL to obtain Barnaby's image is: https://firebasestorage.googleapis.com/v0/b/holidayhack2025.firebasestorage.app/o/gnome-documents%2Fl7VS01K9GKV5ir5S8suDcwOFEpp2_drivers_license.jpeg
 
