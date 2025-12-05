@@ -1,4 +1,4 @@
-|[Previous Objective: Act 3 Hack-a-Gnome ](HHC_2025_Template/HackaGnome.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Schrodinger's Scope](HHC_2025_Template/SchrödingersScope.html)
+|[Previous Objective: Act3 Hack-a-Gnome ](HHC_2025_Template/HackaGnome.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 Schrodinger's Scope](HHC_2025_Template/SchrödingersScope.html)|
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Snowcat RCE and Privilege Escalation    | Difficulty Level: 3 |
@@ -131,5 +131,6 @@ The first key listed is the one used with the temperature binary. The second key
 | Santa | If you're feeling adventurous, maybe you can become root to figure out more about the attacker's plans. |
 | Thomas Hessman | We've lost access to the neighborhood weather monitoring station. There are a couple of vulnerabilities in the snowcat and weather monitoring services that we haven't gotten around to fixing. Can you help me exploit the vulnerabilities and retrieve the other application's authorization key? Enter the other application's authorization key into the badge. If Frosty's plan works and everything freezes over, our customers won't be having the best possible experience—they'll be having the coldest possible experience! We need to stop this before the whole neighborhood becomes one giant freezer.|
 
-|[Previous Objective](https://mitchdarrow.github.io/HHC_2025_Template/HackaGnome.html)  |   [Table of Contents](https://mitchdarrow.github.io/HHC_2025_Template/index.html) | [Next Objective](https://mitchdarrow.github.io/HHC_2025_Template/SchrödingersScope.html)
+|[Previous Objective: Act3 Hack-a-Gnome ](HHC_2025_Template/HackaGnome.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 Schrodinger's Scope](HHC_2025_Template/SchrödingersScope.html)|
 | :----------------------- | :--------------------------------: | --------------------------------: |
+
