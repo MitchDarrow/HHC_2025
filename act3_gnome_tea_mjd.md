@@ -1,5 +1,8 @@
-|[Previous Objective: Act2 Going in Reverse](HHC_2025_Template/act2_goinginreverse_mjd.html)  |   |  [Table of Contents](HHC_2025_Template/index.html) | ![BerryDunn Logo](/images/bdlogo.png) | [Next Objective: Act3 Hack-a-Gnome](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
-| :----------------------- | :--------------------------------: | :--------------------------------: |:--------------------------------: | --------------------------------: |
+<table>
+  <tr style="background-color:#003a5d; color:white;">
+<td>[Previous Objective: Act2 Going in Reverse](HHC_2025_Template/act2_goinginreverse_mjd.html) </td> <td> </td> <td> [Table of Contents](HHC_2025_Template/index.html)</td> <td>![BerryDunn Logo](/images/bdlogo.png)</td> <td>[Next Objective: Act3 Hack-a-Gnome](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)</td>
+  </tr>
+</table>
 
 | Objective: Gnome Tea    | Difficulty Level: 3 |
 | :-----------------------: | :--------------------------: |
