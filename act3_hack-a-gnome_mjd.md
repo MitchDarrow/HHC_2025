@@ -20,6 +20,68 @@ High level executive summary of how the objective was solved. Details belong in 
 <details>
 <summary>Click to expand</summary>
 
+Starting with the login page, tested several injections attempting to identify the backend database. This nosql injection {“$ne”: null} creates an error:
+
+![Hack-a-Gnome Database Error](/images/hack-a-gnome_dberror.jpg) 
+
+The error message indicates the application is using Azure Cosmos DB!
+
+Key Indicators:
+
+1.	Microsoft.Azure.Documents.Common/2.14.0 - This is the Azure Cosmos DB SDK
+   
+2.	ActivityId - Cosmos DB uses ActivityIds for tracking queries
+   
+3.	Error code SC1010 - Cosmos DB-specific error code
+   
+4.	"invalid token '$'" - You likely triggered a syntax error in Cosmos DB's SQL-like query language
+
+About Cosmos DB:
+
+- Microsoft's NoSQL database service
+
+- Uses a SQL-like query language (not standard SQL)
+
+- Supports multiple APIs (SQL API, MongoDB API, Cassandra, etc.)
+
+- This appears to be using the SQL API based on the error
+
+Using the register functionality, it is possible to search for users using the syntax '" OR STARTWITH(c.username, "b") by observing the system response. If username starts with the string, the error message is "Username is taken". If it doesnt startwith the string, then the message is "Username is available". This pattern can be used to identify two users: bruce and harold.
+
+![Hack-a-Gnome User Identification](/images/hack-a-gnome_user_identification.jpg) 
+
+Using similar injection techniques, it is possible to map the database structure.  
+
+- 'harold" AND IS_DEFINED(c.id)--' is used to identify the field ID  (harold is ID=1, bruce is ID=2)
+- 'harold" AND IS_DEFINED(c.digest)--' is used to identify the field were the password digest is stored.
+
+Using trial and error, the length of the digest can be determined using the injection: 'harold" AND Length(c.digest) = 32--' 
+
+![Hack-a-Gnome Password Digest Length](/images/hack-a-gnome_digest_length.jpg) 
+
+The digest can only consist of a limited number of characters: 0-9 and a-f. 
+
+Using the injection 'harold" AND STARTSWITH(c.digest) = "0"', it is possible to retrieve both digests.
+
+![Hack-a-Gnome Password Digest](/images/hack-a-gnome_digest.jpg) 
+
+Bruce digest: d0a9ba00f80cbc56584ef245ffc56b9e
+Harold digest: 07f456ae6a94cb68d740df548847f459
+
+Usiong crackstation.net, it is possible to crack both hashes.
+
+![Hack-a-Gnome Password Digest Crack](/images/hack-a-gnome_digest_crack.jpg) 
+
+Bruce password: oatmeal12
+Harold password: oatmeal!!
+
+Once logged in we are presented with the Smart Gnome Control Center as Bruce:
+
+The hint indicates that we should be attempting prototype pollution of the statistics panel.
+
+the following reference is helpful for understanding prototye polution: https://www.youtube.com/watch?v=W9_x8pc_bh8
+
+
 Step by step solution complete with any code used
   
 ![Sample image alt text](/images/objectivename_purpose.jpg) 
@@ -49,9 +111,9 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-|  |  | 
-|  |  |
-|  |  | 
+| crackstation.net |  | 
+| Burpsuite Community Edition |  |
+| Claude.ai |  | 
 
 ## Hints Reference
 | Provided By         | Hint |
