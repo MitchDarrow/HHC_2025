@@ -138,7 +138,7 @@ Using Firefox developer tools, the SPI data signal is captrued and exported to t
 The following decoder was written in Powershell decoder: [SPI Decoder](HHC_2025_Template/resources/onthewire_spidecoder.ps1.txt")
 
 Running the decoder:
-~~~powershell
+```powershell
 
 Found 14019 WebSocket messages
 
@@ -156,21 +156,29 @@ Raw bytes (hex): 1b 06 18 0d 43 18 07 07 59 0d 06 1a 1b 1a 09 1d 43 0d 01 06 59 
 
 read and decrypt the I2C bus data using the XOR key: bananza. the temperature sensor address is 0x3C
 
-~~~
+```
 
 **read and decrypt the I2C bus data using the XOR key: bananza. the temperature sensor address is 0x3C**
 
 ### Part 3: I2C Decoding
 
-Lets start by identifying the unique markers in the data structure:
+The following data file was collected using Edge's Developer Tools:  [I2C Data](HHC_2025_Template/resources/onthewire_i2cdataV2.json")
 
+The data file contains markers, but due to the volume of data, a script was used to identify the unique markers in the data structure. 
+
+[I2C Unique Markers](HHC_2025_Template/resources/onthewire_i2cuniquemarkers.ps1.txt")
+
+These are the unigue markers:
+
+```
 === UNIQUE MARKERS ===
 
 SCL markers: bus-idle, clock-low, address-sample, address-hold, ack-sample, ack-hold, data-sample, data-hold, stop-setup, gap-start
 
 SDA markers: bus-idle, start, address-bit, ack-bit, ack-release, data-bit, stop, gap-start
 
-The following data file was collected using Edge's Developer Tools:  [I2C Data](HHC_2025_Template/resources/onthewire_i2cdataV2.json")
+```
+
 
 The following decoder was written in Powershell decoder: [I2C Decoder](HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt")
 
