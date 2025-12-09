@@ -135,7 +135,7 @@ SPI has the following characteristics:
 
 Using Firefox developer tools, the SPI data signal is captrued and exported to the following json file: [SPI Data](HHC_2025_Template/resources/onthewire_spidata.xml")
 
-The following decoder was written in Powershell decoder: [SPI Decoder](HHC_2025_Template/resources/onthewire_spidecoder.ps1.txt")
+The following decoder was written in Powershell: [SPI Decoder](HHC_2025_Template/resources/onthewire_spidecoder.ps1.txt")
 
 Running the decoder:
 ```powershell
@@ -180,7 +180,7 @@ SDA markers: bus-idle, start, address-bit, ack-bit, ack-release, data-bit, stop,
 ```
 
 
-The following decoder was written in Powershell decoder: [I2C Decoder](HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt")
+The following decoder was written in Powershell: [I2C Decoder](HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt")
 
 Script Workflow
 
