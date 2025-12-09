@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-The code on the outside of the building is binary and decodes to "imanok" which is konami spelled backwards. The konami code gives the door choice for each room after the first room.
+The code on the outside of the building is binary and decodes to "imanok" which is konami spelled backwards. Konami code is a classic cheat sequence (↑ ↑ ↓ ↓ ← → ← → B A) often repurposed in games and puzzles.  Because the word is inverted, the code sequence is likely inverted as well (Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑).  The konami code gives the choice for working doorways in each room.  All doors work in the first room, and is designated the start. 
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
@@ -36,7 +36,7 @@ Decoding the patterns gives:
 
 01001011 = 75 = 'k'
 
-Converting letters to their integer position in the alphabet makes no sense. Neither does trying to convert them to compass directions. So it must be something simpler. This looks like konami spelled in reverse. A quick google explains:
+Converting letters to their integer position in the alphabet makes no sense in the context. Neither does trying to convert them to compass directions. So it must be something simpler. This looks like konami spelled in reverse. A quick google explains:
 
 
 Konami code is a classic cheat sequence (↑ ↑ ↓ ↓ ← → ← → B A) often repurposed in games and puzzles.  Because the word is inverted, the code sequence is likely inverted as well.
@@ -50,7 +50,7 @@ Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑
 -	Orientation: Keep North up
 
 
-Trail and error reveals that all doors in room one work. Room 2 testing shows that all A labeled doors work. Room 3 testing indicates that all B labeled doors work.  This confirms that the pattern is a reversed konami code. Finishing the sequence:
+Trial and error reveals that all doors in room 1 work. Room 2 testing shows that all A labeled doors work. Room 3 testing indicates that all B labeled doors work.  This confirms that the pattern is a reversed konami code. Finishing the sequence:
 
 | Room | Valid Exits | Konami Position | Pattern |
 |------|-------------|-----------------|---------|
