@@ -1,4 +1,4 @@
-|[Previous Objective](HHC_2025_Template/act3_shrodingersscope_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_onthewire_mjd.html)
+|[Previous Objective: Schrodingers Scope](/act3_shrodingersscope_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective](/act3_onthewire_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Find and Shutdown Frosty's Snowglobe Machine  | Difficulty Level: 3 |
@@ -89,5 +89,5 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 | None | None |
 
 
-|[Previous Objective](HHC_2025_Template/act3_shrodingersscope_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_onthewire_mjd.html)
+|[Previous Objective: Schrodingers Scope](/act3_shrodingersscope_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective](/act3_onthewire_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
