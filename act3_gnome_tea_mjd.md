@@ -1,4 +1,4 @@
-|[Previous Objective: Act2 Going in Reverse](/act2_goinginreverse_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Hack-a-Gnome](/act3_hack-a-gnome_mjd.md)
+|[Previous Objective: Act2 Going in Reverse](/act2_going_in_reverse_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Hack-a-Gnome](/act3_hack-a-gnome_mjd.md)
 | :-----------------------: | :--------------------------------: |  :--------------------------------: |
 
 | Objective: Gnome Tea    | Difficulty Level: 3 |
@@ -133,5 +133,5 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 | Eucrates | Introduced me to Claude.ai |
 
 
-|[Previous Objective: Act2 Going in Reverse](/act2_goinginreverse_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Hack-a-Gnome](/act3_hack-a-gnome_mjd.md)
+|[Previous Objective: Act2 Going in Reverse](/act2_going_in_reverse_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Hack-a-Gnome](/act3_hack-a-gnome_mjd.md)
 | :-----------------------: | :--------------------------------: |  :--------------------------------: |
