@@ -9,11 +9,16 @@
 
 High level executive summary of how the objective was solved. Details belong in the detail section.
 
-| Methods Used             | MITRE ATT&CK Framework Methods |
-| :-----------------------: | :--------------------------------: |
-|   |   |
-|   |   |
-|   |   |
+
+
+| Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
+| :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
+| Determine database type using SQL injection | Discovery | T1596.005  | 	Application Layer Protocol: SQL |
+| Determine database structure using SQL injection | Discovery | T1596.005 | Application Layer Protocol: SQL (used to enumerate schema, tables, columns) |
+| Determine usernames and password hashes using SQL injection | Credential Access | T1078 (Valid Accounts) | Credentials from Databases |
+| Crack password hashes	| Credential Access | T1110.002 | Password Cracking |
+| Remote code execution from prototype pollution | Execution |T1203 | Exploitation for Client Execution |
+| Decode CAN bus signals | Discovery | T1595  |	Protocol Analysis  |
 
 
 ## Detailed Solution
