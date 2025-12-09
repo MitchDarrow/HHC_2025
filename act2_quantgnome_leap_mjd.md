@@ -7,14 +7,12 @@
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+Reconnaissance located ssh keys that belonged to another user. These keys were used to move laterally in the system and gain access to another user. This was repeated until admin level access was achieved. The flag was located under the directory where the SSH daemon was running.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-
+| Locating poorly secured SSH keys | Credential Access | T1552.004 | Unsecured Credentials: Private Keys |
+| Using keys to gain unauthorized access | Persistence / Lateral Movement | T1078.004 | Valid Accounts: SSH |
 
 ## Detailed Solution
 <details>
