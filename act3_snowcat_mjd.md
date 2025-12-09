@@ -1,4 +1,4 @@
-|[Previous Objective: Act3 Hack-a-Gnome ](/HackaGnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Schrodinger's Scope](/SchrodingersScope_mjd.md)|
+|[Previous Objective: Act3 Hack-a-Gnome ](/HackaGnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Schrodinger's Scope](/schrodingersscope_mjd.md)|
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Snowcat RCE and Privilege Escalation    | Difficulty Level: 3 |
@@ -138,5 +138,5 @@ The first key listed is the one used with the temperature binary. The second key
 |  |  |
 |  |  |
 
-|[Previous Objective: Act3 Hack-a-Gnome ](/HackaGnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Schrodinger's Scope](/SchrodingersScope_mjd.md)|
+|[Previous Objective: Act3 Hack-a-Gnome ](/HackaGnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Schrodinger's Scope](/schrodingersscope_mjd.md)|
 | :----------------------- | :--------------------------------: | --------------------------------: |
