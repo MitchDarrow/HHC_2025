@@ -57,10 +57,10 @@ Trail and error reveals that all doors in room one work. Room 2 testing shows th
 | 1 | All 12 doors | Start | All doors |
 | 2 | A doors: 3, 6, 7, 10 | **A** | All A-type |
 | 3 | B doors: 1, 4, 9, 12 | **B** | All B-type |
-| 4 | West: 10, 11, 12 | **←** Left | West wall |
-| 5 | East: 4, 5, 6 | **→** Right | East wall |
-| 6 | West: 10, 11, 12 | **←** Left | West wall |
-| 7 | East: 4, 5, 6 | **→** Right | East wall |
+| 4 | East: 4, 5, 6 | **→** Right | East wall |
+| 5 | West: 10, 11, 12 | **←** Left | West wall |
+| 6 | East: 4, 5, 6 | **→** Right | East wall |
+| 7 | West: 10, 11, 12 | **←** Left | West wall |
 | 8 | South: 7, 8, 9 | **↓** Down | South wall |
 | 9 | South: 7, 8, 9 | **↓** Down | South wall |
 | 10 | North: 1, 2, 3 | **↑** Up | North wall |
