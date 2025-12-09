@@ -1,4 +1,4 @@
-|[Previous Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 3 Name](/act3_gnome_tea_mjd.md)
+|[Previous Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 3 Gnome Tea](/act3_gnome_tea_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Going in Reverse    | Difficulty Level: 2 |
@@ -86,5 +86,5 @@ Write-Output $decoded
 | None | None |
 
 
-|[Previous Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 3 Name](/act3_gnome_tea_mjd.md)
+|[Previous Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 3 Gnome Tea](/act3_gnome_tea_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
