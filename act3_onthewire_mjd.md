@@ -70,9 +70,9 @@ The data contains the following markers:
 In 1-Wire, data is encoded using pulse width modulation:
 
 - Write/Read 0: Long low pulse (~60µs)
-- 
+
 - Write/Read 1: Short low pulse (~6µs)
-- 
+
 Decode the signal after the presence pulse by measuring the low-pulse widths:
 
 Time slot analysis (from t=701 onwards):
@@ -105,15 +105,15 @@ Decoded bits (grouped by byte, LSB first):
    
 4. 01101001 → 0x69 → 'i
    
-5. .01110011 → 0x73 → 's'
+5. 01110011 → 0x73 → 's'
    
 6. 01110100 → 0x74 → 't'
     
-7.	01101101 → 0x6D → 'm'
+7.  01101101 → 0x6D → 'm'
 
-8.01100001 → 0x61 → 'a'
+8. 01100001 → 0x61 → 'a'
 
-9.01110011 → 0x73 → 's'
+9. 01110011 → 0x73 → 's'
 
 Decoded Message
 
