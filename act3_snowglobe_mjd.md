@@ -49,8 +49,7 @@ Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑
 -	Door Numbers per Walls: North 1–3, East 4–6, South 7–9, West 10–12
 
 -	Orientation: Keep North up
-  
--	Sequence per room: A, B, Right, Left, Right, Left, Down, Down, Up, Up
+
 
 Trail and error reveals that all doors in room one work. Room 2 testing shows that all A labeled doors work. Room 3 testing indicates that all B labeled doors work.  This confirms that the pattern is a reversed konami code. Finishing the sequence:
 
