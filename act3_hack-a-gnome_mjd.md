@@ -7,9 +7,7 @@
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
-
-
+Structure Query Language (SQL) injection was used to identify the database type, and then map the structure and contents of the table. This yielded two users and the associated password hashes. The hashes were known and were cracked using crackstation.net. This allowed for login to the application. The hint indicated that the statistics panel used a template. Node.js was identified using server response headers. EJS is the most popular template package for use with node.js, and it is vulnerable to remote code execution (RCE) from prototype pollution. Polluting the prototype with a remote shell payload gave access to the server. Once connected, a README.md file was located that mapped the code structure of the CAN bus. Assuming that the direction commands were in their own command range, and that the range started at the beginning of either the 2XX or 5XX range (because they were adjacent to the defined ranges). This allowed for the identification of the correct codes. Once corrected, the robot was manuevered through the maze to the power switch and the factory was powered down.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
@@ -209,8 +207,7 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
+| fluffme | Gave me clues about where to find prototype pollutions and what to look for |
 
 
 |[Previous Objective](HHC_2025_Template/act3_gnome_tea_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_snowcat_mjd.html)
