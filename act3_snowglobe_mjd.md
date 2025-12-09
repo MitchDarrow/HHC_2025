@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-The code on the outside of the building is binary and decodes to "imanok" which is konami spellled backwards. The konami code gives the door choice for each room after the first room.
+The code on the outside of the building is binary and decodes to "imanok" which is konami spelled backwards. The konami code gives the door choice for each room after the first room.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
