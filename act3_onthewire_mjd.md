@@ -18,6 +18,47 @@ High level executive summary of how the objective was solved. Details belong in 
 <details>
 <summary>Click to expand</summary>
 
+# Part One: 1-Wire
+
+The following python script connects to the web socket and collects the data into a csv file:
+
+```python
+import websocket
+import csv
+
+# Open CSV file once at the start
+f = open("ws_data.csv", "w", newline="", encoding="utf-8")
+writer = csv.writer(f)
+
+def on_message(ws, message):
+    print("Received:", message)  # See messages in console
+    writer.writerow([message])
+    f.flush()  # Ensure data is written immediately
+
+def on_error(ws, error):
+    print("Error:", error)
+
+def on_close(ws, close_status_code, close_msg):
+    print("Connection closed")
+    f.close()
+
+def on_open(ws):
+    print("Connection opened")
+
+# Replace with your actual WebSocket URL
+url = "wss://signals.holidayhackchallenge.com/wire/dq"
+ws = websocket.WebSocketApp(url,
+                            on_open=on_open,
+                            on_message=on_message,
+                            on_error=on_error,
+                            on_close=on_close)
+
+ws.run_forever()
+```
+
+The data file collected: [1-wire data](HHC_2025_Template/resources/OntheWire_1wire.csv
+
+
 Step by step solution complete with any code used
   
 ![Sample image alt text](/images/objectivename_purpose.jpg) 
