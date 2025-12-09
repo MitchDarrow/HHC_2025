@@ -1,27 +1,5 @@
-<table>
-  <tr style="background-color:#003a5d; color:white;">
-    <td>
-      <a href="HHC_2025_Template/act2_goinginreverse_mjd.html" style="color:white; text-decoration:none;">
-        Previous Objective: Act2 Going in Reverse
-      </a>
-    </td>
-    <td></td>
-    <td>
-      <a href="HHC_2025_Template/index.html" style="color:white; text-decoration:none;">
-        Table of Contents
-      </a>
-    </td>
-    <td>
-      <img src="/images/bdlogo.png" alt="BerryDunn Logo">
-    </td>
-    <td>
-      <a href="HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html" style="color:white; text-decoration:none;">
-        Next Objective: Act3 Hack-a-Gnome
-      </a>
-    </td>
-  </tr>
-</table>
-
+|[Previous Objective: Act2 Going in Reverse](/act2_goinginreverse_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Hack-a-Gnome](/act3_frosty_snowglobe_machine_mjd.md)
+| :-----------------------: | :--------------------------------: |  :--------------------------------: |
 
 | Objective: Gnome Tea    | Difficulty Level: 3 |
 | :-----------------------: | :--------------------------: |
@@ -155,4 +133,5 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 | Eucrates | Introduced me to Claude.ai |
 
 
-|[Previous Objective: Act2 Going in Reverse](HHC_2025_Template/act2_goinginreverse_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 Hack-a-Gnome](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
+|[Previous Objective: Act2 Going in Reverse](/act2_goinginreverse_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Hack-a-Gnome](/act3_frosty_snowglobe_machine_mjd.md)
+| :-----------------------: | :--------------------------------: |  :--------------------------------: |
