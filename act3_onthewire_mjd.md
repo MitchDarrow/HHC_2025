@@ -1,4 +1,4 @@
-|[Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](HHC_2025_Template/act3_snowglobe_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 Free Ski](HHC_2025_Template/act3_free_ski_mjd.html)
+|[Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Free Ski](/act3_free_ski_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: On The Wire   | Difficulty Level: 4 |
@@ -271,5 +271,5 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 | none | none |
 
 
-|[Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](HHC_2025_Template/act3_snowglobe_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 Free Ski](HHC_2025_Template/act3_free_ski_mjd.html)
+|[Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Free Ski](/act3_free_ski_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
