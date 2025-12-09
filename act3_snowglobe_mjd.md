@@ -22,6 +22,7 @@ Viewing the exterior wall of the datacenter, there is a pattern in the bricks th
   
 ![snowglobe code](/images/snowglobe_code.jpg) 
 
+Decoding the patterns gives:
 
 01101001 = 105 = 'i'
 
