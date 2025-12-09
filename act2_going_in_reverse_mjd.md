@@ -7,11 +7,10 @@
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+Clicking on the BASIC program downloads it into the browser window. Reviewing the source code contains an encoded flag (line 30) and that the code applies a bitwise XOR (-bxor) with the number 7. The PowerShell script applies this logic to decode the encoded text.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-| Recover deleted file | Collection (adversaries attempt to gather data from target systems) | T1005	 | Data from Local System |
 | Decode encoded information | Defense Evasion (adversaries attempt to avoid detection or obfuscate activity) | T1140 | Deobfuscate/Decode Files or Information |
 
 
