@@ -1,0 +1,174 @@
+﻿# XOR decryption function
+function Invoke-XorDecrypt {
+    param(
+        [byte[]]$EncryptedBytes,
+        [string]$Key
+    )
+    $result = @()
+    for ($i = 0; $i -lt $EncryptedBytes.Count; $i++) {
+        $keyChar = [int][char]$Key[$i % $Key.Length]
+        $result += ($EncryptedBytes[$i] -bxor $keyChar)
+    }
+    return $result
+}
+
+# Assemble byte MSB-first
+function Convert-BitsToByte-MSBFirst {
+    param([int[]]$Bits8)
+    $b = 0
+    for ($j = 0; $j -lt 8; $j++) { $b = ($b -shl 1) -bor ($Bits8[$j] -band 1) }
+    return [byte]$b
+}
+
+function Invoke-DecodeI2CData {
+    param(
+        [string]$Filename = "yourpathhere\i2cdatav2.json",
+        [byte]$TargetAddress = 0x3C,
+        [string]$XorKey = "bananza."
+    )
+
+    Write-Host "Reading file: $Filename`n"
+    $fileContent = Get-Content -Path $Filename -Raw
+    $data = $fileContent | ConvertFrom-Json
+
+    # Extract WebSocket messages
+    $messages = @()
+    if ($data._webSocketMessages) { $messages = $data._webSocketMessages }
+    elseif ($data -is [array])    { $messages = $data }
+    elseif ($data.log.entries)    { foreach ($entry in $data.log.entries) { if ($entry._webSocketMessages) { $messages += $entry._webSocketMessages } } }
+
+    Write-Host "Found $($messages.Count) WebSocket messages"
+
+    # Parse frames
+    $frames = @()
+    foreach ($msg in $messages) {
+        if ($msg.type -eq "receive" -and $msg.data) {
+            try {
+                $frameData = $msg.data | ConvertFrom-Json
+                if ($frameData.line -and $null -ne $frameData.t -and $null -ne $frameData.v) {
+                    $frames += [PSCustomObject]@{
+                        line   = $frameData.line
+                        t      = [double]$frameData.t
+                        v      = [int]$frameData.v
+                        marker = $frameData.marker
+                    }
+                }
+            } catch { }
+        }
+    }
+
+    Write-Host "Extracted $($frames.Count) signal frames"
+
+    # Separate SDA frames
+    $sdaFrames = $frames | Where-Object { $_.line -match '^(sda|SDA)$' }
+
+    # Group transactions by START/STOP markers
+    $transactions = @()
+    $currentBits  = @()
+    $currentStart = $null
+
+    foreach ($f in $sdaFrames) {
+        switch ($f.marker) {
+            "start" {
+                # Begin new transaction
+                if ($currentBits.Count -gt 0) {
+                    $transactions += [PSCustomObject]@{ start=$currentStart; bits=$currentBits }
+                }
+                $currentBits  = @()
+                $currentStart = $f.t
+            }
+            "stop" {
+                # End transaction
+                if ($currentBits.Count -gt 0) {
+                    $transactions += [PSCustomObject]@{ start=$currentStart; bits=$currentBits }
+                    $currentBits = @()
+                }
+            }
+            "address-bit" { $currentBits += $f.v }
+            "data-bit"    { $currentBits += $f.v }
+            "ack-bit"     { } # ignore ACK
+            default       { }
+        }
+    }
+    # Flush last transaction
+    if ($currentBits.Count -gt 0) {
+        $transactions += [PSCustomObject]@{ start=$currentStart; bits=$currentBits }
+    }
+
+    Write-Host "`nTotal transactions: $($transactions.Count)"
+
+    # Decode transactions
+    $decodedTx = @()
+    foreach ($tx in $transactions) {
+        if ($tx.bits.Count -lt 8) { continue }
+        $addrByte = Convert-BitsToByte-MSBFirst -Bits8 $tx.bits[0..7]
+        $address  = $addrByte -shr 1
+        $isRead   = $addrByte -band 1
+
+        $dataBytes = @()
+        $bitIndex  = 8
+        while ($bitIndex + 8 -le $tx.bits.Count) {
+            $byte = Convert-BitsToByte-MSBFirst -Bits8 $tx.bits[$bitIndex..($bitIndex+7)]
+            $dataBytes += [byte]$byte
+            $bitIndex += 8
+        }
+
+        $decodedTx += [PSCustomObject]@{
+            start   = $tx.start
+            address = $address
+            isRead  = $isRead
+            data    = $dataBytes
+        }
+    }
+
+    # Report transactions
+    foreach ($t in $decodedTx) {
+        $hexBytes = $t.data | ForEach-Object { $_.ToString("X2") }
+        Write-Host "`nTransaction: Address=0x$($t.address.ToString('X2')), R/W=$($t.isRead)"
+        Write-Host "  Data bytes: $($hexBytes -join ' ')"
+    }
+
+    # Iteration analysis for target address
+    $targetTx = $decodedTx | Where-Object { $_.address -eq [int]$TargetAddress }
+    $iterationTimes = $targetTx | ForEach-Object { $_.start } | Sort-Object
+    Write-Host "`n=== ITERATION ANALYSIS (0x$($TargetAddress.ToString('X2'))) ==="
+    Write-Host "Total iterations: $($iterationTimes.Count)"
+    if ($iterationTimes.Count -gt 1) {
+        $deltas = @()
+        for ($i=1; $i -lt $iterationTimes.Count; $i++) { $deltas += ($iterationTimes[$i] - $iterationTimes[$i-1]) }
+        Write-Host "Intervals between iterations (ms): $($deltas -join ', ')"
+    }
+
+    # Aggregate READ and WRITE separately
+    $reads  = $targetTx | Where-Object { $_.isRead -eq 1 }
+    $writes = $targetTx | Where-Object { $_.isRead -eq 0 }
+
+    Write-Host "`n=== DEVICE 0x$($TargetAddress.ToString('X2')) READ DATA ==="
+    if ($reads.Count -gt 0) {
+        $readBytes = @()
+        foreach ($tx in $reads) { $readBytes += $tx.data }
+        Write-Host "Total bytes (READ): $($readBytes.Count)"
+        Write-Host "Raw (hex): $((-join ($readBytes | ForEach-Object { $_.ToString('X2') + ' ' })).Trim())"
+        $dec = Invoke-XorDecrypt -EncryptedBytes $readBytes -Key $XorKey
+        Write-Host "XOR-decrypted (hex): $((-join ($dec | ForEach-Object { $_.ToString('X2') + ' ' })).Trim())"
+    } else {
+        Write-Host "No READ transactions found for 0x$($TargetAddress.ToString('X2'))."
+    }
+
+    Write-Host "`n=== DEVICE 0x$($TargetAddress.ToString('X2')) WRITE DATA ==="
+    if ($writes.Count -gt 0) {
+        $writeBytes = @()
+        foreach ($tx in $writes) { $writeBytes += $tx.data }
+        Write-Host "Total bytes (WRITE): $($writeBytes.Count)"
+        Write-Host "Raw (hex): $((-join ($writeBytes | ForEach-Object { $_.ToString('X2') + ' ' })).Trim())"
+        $decW = Invoke-XorDecrypt -EncryptedBytes $writeBytes -Key $XorKey
+        Write-Host "XOR-decrypted (hex): $((-join ($decW | ForEach-Object { $_.ToString('X2') + ' ' })).Trim())"
+    } else {
+        Write-Host "No WRITE transactions found for 0x$($TargetAddress.ToString('X2'))."
+    }
+}
+
+# Run the decoder
+$filename = if ($args.Count -gt 0) { $args[0] } else { "yourpathhere\i2cdatav2.json" }
+Invoke-DecodeI2CData -Filename $filename -TargetAddress 0x3C -XorKey "banan"
+Write-Host "`nDecoding complete!"

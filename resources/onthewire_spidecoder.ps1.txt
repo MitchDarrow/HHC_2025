@@ -1,0 +1,148 @@
+﻿# XOR decryption function
+function Invoke-XorDecrypt {
+    param(
+        [string]$Encrypted,
+        [string]$Key
+    )
+    
+    $result = ""
+    for ($i = 0; $i -lt $Encrypted.Length; $i++) {
+        $encryptedChar = [int][char]$Encrypted[$i]
+        $keyChar = [int][char]$Key[$i % $Key.Length]
+        $result += [char]($encryptedChar -bxor $keyChar)
+    }
+    return $result
+}
+
+# Parse WebSocket messages and decode SPI data
+function Invoke-DecodeSPIData {
+    param(
+        [string]$Filename = "Yourpathhere\spidata.json"
+    )
+    
+    try {
+        Write-Host "Reading file: $Filename`n"
+        
+        # Read and parse JSON file
+        $fileContent = Get-Content -Path $Filename -Raw
+        $data = $fileContent | ConvertFrom-Json
+        
+        # Extract WebSocket messages
+        $messages = @()
+        
+        if ($data._webSocketMessages) {
+            $messages = $data._webSocketMessages
+        }
+        elseif ($data -is [array]) {
+            $messages = $data
+        }
+        elseif ($data.log.entries) {
+            # HAR format
+            foreach ($entry in $data.log.entries) {
+                if ($entry._webSocketMessages) {
+                    $messages += $entry._webSocketMessages
+                }
+            }
+        }
+        
+        Write-Host "Found $($messages.Count) WebSocket messages"
+        
+        # Parse frames from WebSocket data
+        $frames = @()
+        foreach ($msg in $messages) {
+            if ($msg.type -eq "receive" -and $msg.data) {
+                try {
+                    $frameData = $msg.data | ConvertFrom-Json
+                    # Skip welcome messages and only process signal frames
+                    if ($frameData.line -and $null -ne $frameData.t -and $null -ne $frameData.v) {
+                        $frames += [PSCustomObject]@{
+                            line = $frameData.line
+                            t = [double]$frameData.t
+                            v = [int]$frameData.v
+                            marker = $frameData.marker
+                        }
+                    }
+                }
+                catch {
+                    # Skip non-JSON messages
+                }
+            }
+        }
+        
+        Write-Host "Extracted $($frames.Count) signal frames"
+        
+        # Sort frames by timestamp
+        $frames = $frames | Sort-Object -Property t
+        
+        # Separate clock (SCK) and data (MOSI) lines
+        $sckFrames = $frames | Where-Object { $_.line -eq "sck" }
+        $mosiFrames = $frames | Where-Object { $_.line -eq "mosi" }
+        
+        Write-Host "Clock frames: $($sckFrames.Count), Data frames: $($mosiFrames.Count)"
+        
+        # Decode bits on clock rising edges
+        $bits = @()
+        $mosiIndex = 0
+        
+        for ($i = 1; $i -lt $sckFrames.Count; $i++) {
+            # Detect rising edge (0 -> 1)
+            if ($sckFrames[$i-1].v -eq 0 -and $sckFrames[$i].v -eq 1) {
+                $clockTime = $sckFrames[$i].t
+                
+                # Find MOSI value at this time
+                while ($mosiIndex -lt ($mosiFrames.Count - 1) -and $mosiFrames[$mosiIndex + 1].t -le $clockTime) {
+                    $mosiIndex++
+                }
+                
+                if ($mosiIndex -lt $mosiFrames.Count) {
+                    $bits += $mosiFrames[$mosiIndex].v
+                }
+            }
+        }
+        
+        Write-Host "Decoded $($bits.Count) bits"
+        
+        # Assemble bits into bytes (MSB-first for SPI)
+        $bytes = @()
+        for ($i = 0; $i -lt $bits.Count; $i += 8) {
+            if (($i + 8) -le $bits.Count) {
+                $byte = 0
+                for ($j = 0; $j -lt 8; $j++) {
+                    $byte = ($byte -shl 1) -bor $bits[$i + $j]
+                }
+                $bytes += $byte
+            }
+        }
+        
+        Write-Host "Assembled $($bytes.Count) bytes"
+        
+        # Display raw bytes in hex
+        $hexBytes = $bytes | ForEach-Object { $_.ToString("x2") }
+        Write-Host "Raw bytes (hex): $($hexBytes -join ' ')"
+        
+        # Convert bytes to string
+        $encrypted = -join ($bytes | ForEach-Object { [char]$_ })
+        
+        # Decrypt with XOR key
+        $key = "icy"
+        $decrypted = Invoke-XorDecrypt -Encrypted $encrypted -Key $key
+        
+        Write-Host "`n=== ENCRYPTED DATA (first 100 chars) ==="
+        Write-Host $encrypted.Substring(0, [Math]::Min(100, $encrypted.Length))
+        
+        Write-Host "`n=== DECRYPTED DATA ==="
+        Write-Host $decrypted
+        
+        return $decrypted
+    }
+    catch {
+        Write-Error "Error: $($_.Exception.Message)"
+        Write-Error $_.ScriptStackTrace
+        throw
+    }
+}
+
+# Run the decoder
+$filename = if ($args.Count -gt 0) { $args[0] } else { "Yourpathhere\spidata.json" }
+Invoke-DecodeSPIData -Filename $filename
+Write-Host "`nDecoding complete!"
