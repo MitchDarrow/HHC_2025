@@ -1,25 +1,13 @@
-# SANS Holiday Hack Challenge 2025: Revenge of the Gnome(s) 
+# BerryDunn Solution Report
 
-## BerryDunn Solution Report
+## SANS Holiday Hack Challenge 2025: Revenge of the Gnome(s) 
 
 ### About the Holiday Hack Challenge
+The SANS Holiday Hack Challenge is a free, annual cybersecurity competition designed to help participants strengthen their technical skills through practical, hands-on challenges. At its core, the event is a large-scale capture-the-flag (CTF) exercise where players engage in penetration testing, reverse engineering, cryptography, network analysis, and other security disciplines. Each challenge is crafted to simulate real-world scenarios, giving participants the opportunity to practice problem-solving and apply security concepts in a safe environment. Since its early beginnings in the 2000s, the challenge has steadily evolved, incorporating increasingly sophisticated puzzles and interactive environments that encourage both individual learning and team collaboration. Its primary purpose is to make skill development accessible to all levels of expertise, from students just starting out to seasoned professionals looking to refine their techniques. By offering a structured yet engaging platform, the Holiday Hack Challenge has become a respected training ground in the cybersecurity community, fostering growth, knowledge sharing, and the advancement of practical defensive and offensive security skills.
 
-ACT I
+The BerryDunn IT Security Consulting team has participated in this event the last several years. The team uses this for honing skills and developing staff members. Each participant works independently. The team gathers once a week for a social hour where we are able to coach colleagues. The list below is a curated list: what the team has determined to be the best of class solution for each objective. Every write up for each objective may be found [All Writeups](https://mitchdarrow.github.io/HHC_2025_Template/allwriteups.html)
 
-The Counter Hack crew is in the Neighborhood festively preparing for the holidays when they are suddenly overrun by lively Gnomes in Your Home! There must have been some magic in those Gnomes, because, due to some unseen spark, some haunting hocus pocus, they have come to life and are now scurrying around the Neighborhood.
-
-ACT II
-
-The Gnomes’ nefarious plot seems to involve stealing refrigerator parts. But why?
-
-ACT III
-
-The Gnomes want to transform the neighborhood so that it’s frozen solid year-round, an environmental disaster. But who is the mastermind behind the Gnomes’ wickedness?
-
-The Counter Hack crew discovers Frosty is behind the Gnome uprising and stops his freezing plot! Santa's compassionate offer to Frosty melts more than just snow, it melts hearts, saving the Neighborhood and proving that kindness conquers all.
-
-This year’s challenge covers the following topics, including grand challenges provided by Microsoft and Google: defanging IOCs, using SUDO, port discovery, forensic analysis, basic networking, firewall basics, Nmap basics, CURL basics, IDOR challenge, using POCs, Java deserialization, Quantum computing, reverse engineering, hacking SQLI, Linux and PrivEsc, and WebApp Pentesting.
-
+The following are the BerryDunn IT Security team's official solutions to this year's objectives: 
 ### Act 1 Objectives:
 
 
