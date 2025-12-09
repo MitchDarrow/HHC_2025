@@ -175,6 +175,7 @@ The following data file was collected using Edge's Developer Tools:  [I2C Data](
 The following decoder was written in Powershell decoder: [I2C Decoder](HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt")
 
 Script Workflow
+
 Load and parse the capture file
 
 - Reads the JSON file containing WebSocket messages.
