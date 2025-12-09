@@ -20,7 +20,7 @@ Total Players Starting HHC Act3: 814
 
 Total players completing HHC: 191
 
-BerryDunn's IT Security Consulting team has participated in this event the last several years. The team uses this for honing skills and developing staff members. Each participant works independently. The team gathers once a week for a social hour where we are able to coach colleagues. The list below is a curated list: what the team has determined to be the best of class solution for each objective. A complete write up matrix for each objective may be found here: [All Writeups](/allwriteups.md)
+Members of BerryDunn's IT Security Consulting team have participated in this event the last several years. The team uses this for honing skills and developing staff members. Each participant works independently. The team gathers once a week for a social hour where we are able to coach colleagues. The list below is a curated list: what the team has determined to be the best of class solution for each objective. A complete write up matrix for each objective may be found here: [All Writeups](/allwriteups.md)
 
 The following are the BerryDunn IT Security team's official solutions to this year's HHC objectives: 
 
