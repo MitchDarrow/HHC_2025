@@ -1,4 +1,4 @@
-|[Previous Objective](HHC_2025_Template/act3_gnome_tea_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_snowcat_mjd.html)
+|[Previous Objective: Act3 Gnome Tea](/act3_gnome_tea_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Snowcat RCE and Privilege Escalation](/act3_snowcat_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Hack-a-Gnome    | Difficulty Level: 3 |
@@ -209,6 +209,5 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 | :-----------------------: | :--------------------------------: |
 | fluffme | Gave me clues about using server side java for prototype pollution. Suggested using Webhook and Linode for testing connections and then establishing them. This allowed me to solve the challenge without changing my machine's security posture. |
 
-
-|[Previous Objective](HHC_2025_Template/act3_gnome_tea_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_snowcat_mjd.html)
+|[Previous Objective: Act3 Gnome Tea](/act3_gnome_tea_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Snowcat RCE and Privilege Escalation](/act3_snowcat_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
