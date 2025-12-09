@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-Using browser developer tools, the data for each signal is captured. The data is analyzed using powershell and python scripts and decoded, leveraging the signal descriptions contained in the hints. Decoding each signal enables the decoding of the next signal. These protocols are board-level or device-level buses.
+Using browser developer tools, the data for each signal is captured. The data is analyzed using powershell and python scripts and decoded, leveraging the signal descriptions contained in the hints. Decoding each signal enables the decoding of the next signal. The protocols are dq, SPI, and I2C, which are board-level or device-level buses.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
