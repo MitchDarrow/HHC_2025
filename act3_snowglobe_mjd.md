@@ -1,4 +1,4 @@
-|[Previous Objective: Act3 Schrodingers Scope](/act3_shrodingersscope_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 On the Wire3](/act3_onthewire_mjd.md)
+|[Previous Objective: Act3 Schrodingers Scope](/act3_schrodingersscope_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 On the Wire3](/act3_onthewire_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Find and Shutdown Frosty's Snowglobe Machine  | Difficulty Level: 3 |
