@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-Using Browser developer tools, the data for each signal is captured. The data is analyzed using powershell and python scripts and decoded, leveraging the signal descriptions contained in the hints.
+Using browser developer tools, the data for each signal is captured. The data is analyzed using powershell and python scripts and decoded, leveraging the signal descriptions contained in the hints.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
