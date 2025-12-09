@@ -133,19 +133,12 @@ SPI has the following characteristics:
 
 - Data is valid on clock edges (rising or falling)
 
-Using Firefox developer tools, the SPI data signal is captrued and exported to the following json file: [SPI ata](HHC_2025_Template/resources/onthewire_spidata.json")
+Using Firefox developer tools, the SPI data signal is captrued and exported to the following json file: [SPI Data](HHC_2025_Template/resources/onthewire_spidata.xml")
 
-The following decoder was written in Powershell decoder: [SPI Decoder](HHC_2025_Template/resources/onthewire_spidecoder.txt")
+The following decoder was written in Powershell decoder: [SPI Decoder](HHC_2025_Template/resources/onthewire_spidecoder.ps1.txt")
 
 Running the decoder:
 ~~~powershell
-$filename = if ($args.Count -gt 0) { $args[0] } else { "C:\Users\1792\OneDrive - BerryDunn\Desktop\My Projects\HHC\spidata.xml" }
-
-Invoke-DecodeSPIData -Filename $filename
-
-Write-Host "`nDecoding complete!"
-
-Reading file: C:\Users\1792\OneDrive - BerryDunn\Desktop\My Projects\HHC\spidata.xml
 
 Found 14019 WebSocket messages
 
@@ -167,28 +160,79 @@ read and decrypt the I2C bus data using the XOR key: bananza. the temperature se
 
 **read and decrypt the I2C bus data using the XOR key: bananza. the temperature sensor address is 0x3C**
 
-Step by step solution complete with any code used
+### Part 3: I2C Decoding
+
+Lets start by identifying the unique markers in the data structure:
+
+=== UNIQUE MARKERS ===
+
+SCL markers: bus-idle, clock-low, address-sample, address-hold, ack-sample, ack-hold, data-sample, data-hold, stop-setup, gap-start
+
+SDA markers: bus-idle, start, address-bit, ack-bit, ack-release, data-bit, stop, gap-start
+
+The following data file was collected using Edge's Developer Tools:  [I2C Data](HHC_2025_Template/resources/onthewire_i2cdataV2.json")
+
+The following decoder was written in Powershell decoder: [I2C Decoder](HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt")
+
+Script Workflow
+Load and parse the capture file
+
+- Reads the JSON file containing WebSocket messages.
+
+- Extracts frames with line, time (t), value (v), and marker.
   
-![Sample image alt text](/images/objectivename_purpose.jpg) 
+Use markers instead of raw edge detection
+
+- SDA frames are annotated with markers like start, stop, address-bit, data-bit, ack-bit.
+
+- These markers tell us exactly what each bit represents, so we don’t need to reconstruct timing from SCL edges.
+
+Group transactions
+
+- A start marker begins a new transaction.
+
+- A stop marker ends the transaction.
+
+- Between start/stop, collect only address-bit and data-bit values.
+
+- Ignore ack-bit and ack-release markers (ACKs are not part of data).
+
+Decode transaction contents
+
+- First 8 bits → device address (7 bits) + R/W bit.
+
+    - Address = upper 7 bits.
+
+    - R/W = lowest bit (0 = write, 1 = read).
+
+- Remaining bits grouped into 8 bit chunks → data bytes (MSB first).
+
+Report transactions
+
+- Prints each transaction with address, R/W flag, and decoded data bytes in hex.
+
+Iteration analysis
+
+- Counts how many transactions involve the target address (default 0x3C).
+
+- Uses the start timestamps to calculate intervals between successive transactions.
+
+- Confirms whether the device is broadcasting on a ~2000 ms loop.
+
+Separate READ vs WRITE
+
+- Filters decoded transactions by R/W bit.
+
+- Aggregates all READ data and all WRITE data separately.
+
+- Prints totals, raw hex, and XOR decrypted values using the provided key.
+
+XOR key “banaz”
 
 
-```sh
-bash script code block
-```
+33 32 2E 38 34 converts to ASCII 32.84
 
-Ordered list:
-1. Item 1
-2. Item 2
-3. Item 3
-
-Unordered list:
-
-- Item
-- Item
-- Item
-/usr/local/weather/temperature
-
-**Answer: Flag or Answer**
+**Answer: 32.84**
 
 </details>
 
@@ -197,6 +241,10 @@ Unordered list:
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
 | claude.ai | 4.5 | 
+| Edge Developer Tools |  | 
+| Firefox Developer Tools |  | 
+| Powershell |  | 
+| Python |  | 
 
 ## Hints Reference
 | Provided By         | Hint |
