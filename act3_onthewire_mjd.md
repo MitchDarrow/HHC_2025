@@ -245,7 +245,7 @@ XOR key “banaz”
 | claude.ai | 4.5 | 
 | Edge Developer Tools |  | 
 | Firefox Developer Tools |  | 
-| Powershell |  | 
+| Powershell | 5.1.26100.6899 | 
 | Python |  | 
 
 ## Hints Reference
