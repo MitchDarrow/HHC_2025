@@ -26,13 +26,13 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 
 | Act 1 Official Solutions | Act 2 Official Solutions | Act 3 Official Solutions |
 | :----------------------- | :-------------------------- | :-------------------------- |
-|    |  [Act2 Retro Recovery](/act2_retro_recovery_mjd.md)   | [Gnome Tea](/act3_gnome_tea_mjd.md) |
-|    |  [Act2 Mail Detective](/act2_mail_detective_mjd.md) | [Hack-a-Gnome](/act3_hack-a-gnomesnowcat_mjd.md) |
-|    |  [Act2 IDORable Bistro ](/act2_idorable_bistro_mjd.md)  | [Snowcat RCE and Command Injection](/act3_snowcat_mjd.md) |
-|    |  [Act2 Dosis Network Down](/act2_idorable_bistro_mjd.md)  | [Schrodinger's Scope](/act3_schrodingersscope_mjd.md) |
-|    |  [Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md) | [Find and Shutdown Frosty's Snow Globe](/act3_snowglobe_mjd.md) |
-|    |  [Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)   | [On The Wire](/act3_onthewire_mjd.md) |
-|    |  [Act2 Going in Reverse](/act2_going_in_reverse_mjd.md)   | [Free Ski](/act3_free_ski_mjd.md) |
+|    |  [Retro Recovery](/act2_retro_recovery_mjd.md)   | [Gnome Tea](/act3_gnome_tea_mjd.md) |
+|    |  [Mail Detective](/act2_mail_detective_mjd.md) | [Hack-a-Gnome](/act3_hack-a-gnomesnowcat_mjd.md) |
+|    |  [IDORable Bistro ](/act2_idorable_bistro_mjd.md)  | [Snowcat RCE and Command Injection](/act3_snowcat_mjd.md) |
+|    |  [Dosis Network Down](/act2_idorable_bistro_mjd.md)  | [Schrodinger's Scope](/act3_schrodingersscope_mjd.md) |
+|    |  [Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md) | [Find and Shutdown Frosty's Snow Globe](/act3_snowglobe_mjd.md) |
+|    |  [Quantgnome Leap](/act2_quantgnome_leap_mjd.md)   | [On The Wire](/act3_onthewire_mjd.md) |
+|    |  [Going in Reverse](/act2_going_in_reverse_mjd.md)   | [Free Ski](/act3_free_ski_mjd.md) |
 |    |     | [SnowBlind Ambush](/act3_snowblindambush_mjd.md) |
 
 For more information about BerryDunn [URL Here]
