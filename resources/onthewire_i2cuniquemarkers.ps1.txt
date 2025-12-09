@@ -1,0 +1,70 @@
+﻿function Get-UniqueI2CMarkers {
+    param(
+        [string]$Filename = "yourpathhere\i2cdatav2.json"
+    )
+
+    try {
+        Write-Host "Reading file: $Filename`n"
+        $fileContent = Get-Content -Path $Filename -Raw
+        $data = $fileContent | ConvertFrom-Json
+
+        # Extract WebSocket messages
+        $messages = @()
+        if ($data._webSocketMessages) {
+            $messages = $data._webSocketMessages
+        }
+        elseif ($data -is [array]) {
+            $messages = $data
+        }
+        elseif ($data.log.entries) {
+            foreach ($entry in $data.log.entries) {
+                if ($entry._webSocketMessages) {
+                    $messages += $entry._webSocketMessages
+                }
+            }
+        }
+
+        Write-Host "Found $($messages.Count) WebSocket messages"
+
+        # Parse frames
+        $frames = @()
+        foreach ($msg in $messages) {
+            if ($msg.type -eq "receive" -and $msg.data) {
+                try {
+                    $frameData = $msg.data | ConvertFrom-Json
+                    if ($frameData.line -and $null -ne $frameData.t -and $null -ne $frameData.v) {
+                        $frames += [PSCustomObject]@{
+                            line   = $frameData.line
+                            t      = [double]$frameData.t
+                            v      = [int]$frameData.v
+                            marker = $frameData.marker
+                        }
+                    }
+                } catch { }
+            }
+        }
+
+        Write-Host "Extracted $($frames.Count) signal frames"
+
+        # Separate SDA and SCL frames
+        $sclFrames = $frames | Where-Object { $_.line -match '^(scl|SCL)$' }
+        $sdaFrames = $frames | Where-Object { $_.line -match '^(sda|SDA)$' }
+
+        # Collect unique markers
+        $sclMarkers = $sclFrames | Where-Object { $_.marker } | Select-Object -ExpandProperty marker -Unique
+        $sdaMarkers = $sdaFrames | Where-Object { $_.marker } | Select-Object -ExpandProperty marker -Unique
+
+        Write-Host "`n=== UNIQUE MARKERS ==="
+        Write-Host "SCL markers: $($sclMarkers -join ', ')"
+        Write-Host "SDA markers: $($sdaMarkers -join ', ')"
+
+    } catch {
+        Write-Error "Error: $($_.Exception.Message)"
+        Write-Error $_.ScriptStackTrace
+        throw
+    }
+}
+
+# Run the marker extractor
+$filename = if ($args.Count -gt 0) { $args[0] } else { "yourpathhere\i2cdatav2.json" }
+Get-UniqueI2CMarkers -Filename $filename
