@@ -27,7 +27,7 @@ import websocket
 import csv
 
 # Open CSV file once at the start
-f = open("ws_data.csv", "w", newline="", encoding="utf-8")
+f = open("onthewire_1wire_data.csv", "w", newline="", encoding="utf-8")
 writer = csv.writer(f)
 
 def on_message(ws, message):
@@ -45,7 +45,6 @@ def on_close(ws, close_status_code, close_msg):
 def on_open(ws):
     print("Connection opened")
 
-# Replace with your actual WebSocket URL
 url = "wss://signals.holidayhackchallenge.com/wire/dq"
 ws = websocket.WebSocketApp(url,
                             on_open=on_open,
@@ -56,7 +55,73 @@ ws = websocket.WebSocketApp(url,
 ws.run_forever()
 ```
 
-The data file collected: [1-wire data](HHC_2025_Template/resources/OntheWire_1wire.csv
+The data file collected: [1-wire data](HHC_2025_Template/resources/OntheWire_1wire_data.csv
+
+The data contains the following markers:
+
+- "reset" at t=1 (reset pulse)
+ 
+- "presence" at t=551 (presence pulse response)
+
+ - "idle" at t=0 (bus idle high)
+   
+1-Wire Decoding
+
+In 1-Wire, data is encoded using pulse width modulation:
+
+- Write/Read 0: Long low pulse (~60µs)
+- 
+- Write/Read 1: Short low pulse (~6µs)
+- 
+Decode the signal after the presence pulse by measuring the low-pulse widths:
+
+Time slot analysis (from t=701 onwards):
+
+701→941: 240µs LOW → 0
+
+1001→1011: 10µs LOW → 1
+
+1071→1081: 10µs LOW → 1
+
+1087→1151: 64µs LOW → 0
+
+1157→1221: 64µs LOW → 0
+
+1281→1291: 10µs LOW → 1
+
+1351→1361: 10µs LOW → 1
+
+1367→1431: 64µs LOW → 0
+
+Continuing this analysis through the entire sequence and assembling bits LSB-first (1-Wire standard):
+
+Decoded bits (grouped by byte, LSB first):
+
+1. 01100011 → 0x63 → 'c'
+
+2. 01101000 → 0x68 → 'h'
+   
+3. 01110010 → 0x72 → 'r'
+   
+4. 01101001 → 0x69 → 'i
+   
+5. .01110011 → 0x73 → 's'
+   
+6. 01110100 → 0x74 → 't'
+    
+7.	01101101 → 0x6D → 'm'
+
+8.01100001 → 0x61 → 'a'
+
+9.01110011 → 0x73 → 's'
+
+Decoded Message
+
+XOR key: christmas
+
+The data is not encoded with the key Christmas, the bites translate to the following message:
+
+**read and decrypt the SPI bus data using the XOR key: icy**
 
 
 Step by step solution complete with any code used
