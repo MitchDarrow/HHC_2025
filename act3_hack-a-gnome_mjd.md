@@ -207,7 +207,7 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-| fluffme | Gave me clues about using server side java for prototype pollution |
+| fluffme | Gave me clues about using server side java for prototype pollution. Suggested using Webhook and Linode for testing connections and then establishing them. This allowed me to solve the challenge without changing my machine's security posture. |
 
 
 |[Previous Objective](HHC_2025_Template/act3_gnome_tea_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_snowcat_mjd.html)
