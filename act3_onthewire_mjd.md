@@ -243,7 +243,7 @@ XOR key “banaz”
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
 | claude.ai | 4.5 | 
-| Edge Developer Tools |  | 
+| Edge Developer Tools | Version 142.0.3595.94 | 
 | Firefox Developer Tools |  | 
 | Powershell | 5.1.26100.6899 | 
 | Python |  | 
