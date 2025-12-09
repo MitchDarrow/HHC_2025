@@ -24,7 +24,7 @@ Members of BerryDunn's IT Security Consulting team have participated in this eve
 
 The following are the BerryDunn IT Security team's official solutions to this year's HHC objectives: 
 
-| Act 1 Objective Solutions | Act 2 Objective Solutions | Act 3 Objective Solutions |
+| Act 1 Official Solutions | Act 2 Official Solutions | Act 3 Official Solutions |
 | :----------------------- | :-------------------------- | :-------------------------- |
 |    |     | [Gnome Tea](/act3_gnome_tea_mjd.md) |
 |    |     | [Hack-a-Gnome](/act3_hack-a-gnomesnowcat_mjd.md) |
