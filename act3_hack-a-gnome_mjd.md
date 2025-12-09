@@ -174,7 +174,7 @@ Trial and error reveals the codes:
 
 With control of the robot, boxes need to be moved so the power switch can be reached. The robot can only move a single box, so that limits the path.
 
-![Hack-a-Gnome Solution](/images/hack-a-gnome_Solution.jpg) 
+![Hack-a-Gnome Solution](/images/hack-a-gnome_solution.jpg) 
 
 **Answer: Reach the power switch and shut down the factory**
 
