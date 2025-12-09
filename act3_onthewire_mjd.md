@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+Using Browser developer tools, the data for each signal is captured. The data is analyzed using powershell and python scripts and decoded, leveraging the signal descriptions contained in the hints.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
@@ -228,7 +228,7 @@ Separate READ vs WRITE
 
 - Prints totals, raw hex, and XOR decrypted values using the provided key.
 
-XOR key “banaz”
+The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 characters “banaz”
 
 ![I2C Device 0x3C](/images/onthewire_i2cdecoded.jpg) 
 
