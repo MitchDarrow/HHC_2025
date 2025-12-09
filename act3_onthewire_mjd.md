@@ -230,6 +230,7 @@ Separate READ vs WRITE
 
 XOR key “banaz”
 
+![I2C Device 0x3C](/images/onthewire_i2cdecoded.jpg) 
 
 33 32 2E 38 34 converts to ASCII 32.84
 
