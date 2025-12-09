@@ -116,7 +116,7 @@ Trial and error testing revealed the following filters and the obfuscations need
 ```
 A script was used to enumerate the indexes and evaluate if RCE is possible. The initial command used was a simple 'whoami".
 
-The enumeration script source code is located here: [Jinja2 SSTI Enumeration Script](/resources/snowblind_enumeration2.py)
+The enumeration script source code is located here: [Jinja2 SSTI Enumeration Script](/resources/snowblind_enumeration2.py.txt)
 
 ![SSTI Enumeration](/images/snowblind_enumeration1.jpg) 
 
@@ -152,7 +152,7 @@ The script does the following:
 
 ![URL Regex](/images/snowblind_regex.jpg) 
 
-A copy of the backup script is located here: [Backup Script](/resources/snowblind_backup.py)
+A copy of the backup script is located here: [Backup Script](/resources/snowblind_backup.py.txt)
 
 An HTTP server was started on an external facing linux server on port 8000 to receive the data being exfitrated.
 
@@ -168,7 +168,7 @@ The exfiltrated data file is located here: [Exfiltrated File](/resources/shadow_
 
 Since we have the backup script, we know the encryption mechanism. We also know what the first block of data encrypted is "root:$". With this information, we can decode the file.
 
-Using this script to decode: [PNG Decoder Script](/resources/snowblind_decodepng3.py)
+Using this script to decode: [PNG Decoder Script](/resources/snowblind_decodepng3.py.txt)
 
 The file was damaged or incomplete, so the script suppresses errors and forces the data to be extracted. The backup script indicates that the data is exfiltrated is stored in the Blue channel of the file. The other channels can be ignored. Running the script reveals the exfiltrated data stored in the file.
 
