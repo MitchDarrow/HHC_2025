@@ -18,7 +18,7 @@ High level executive summary of how the objective was solved. Details belong in 
 <details>
 <summary>Click to expand</summary>
 
-# Part One: 1-Wire
+### Part One: 1-Wire
 
 The following python script connects to the web socket and collects the data into a csv file:
 
@@ -123,6 +123,49 @@ The data is not encoded with the key Christmas, the bites translate to the follo
 
 **read and decrypt the SPI bus data using the XOR key: icy**
 
+### Part 2: Get the SPI bus data stream and decode.
+
+SPI has the following characteristics:
+
+- Multiple wires: sck (clock), mosi (data), sometimes miso 
+
+- Clock-driven: You sample the data line when the clock transitions 
+
+- Data is valid on clock edges (rising or falling)
+
+Using Firefox developer tools, the SPI data signal is captrued and exported to the following json file: [SPI ata](HHC_2025_Template/resources/onthewire_spidata.json")
+
+The following decoder was written in Powershell decoder: [SPI Decoder](HHC_2025_Template/resources/onthewire_spidecoder.txt")
+
+Running the decoder:
+~~~powershell
+$filename = if ($args.Count -gt 0) { $args[0] } else { "C:\Users\1792\OneDrive - BerryDunn\Desktop\My Projects\HHC\spidata.xml" }
+
+Invoke-DecodeSPIData -Filename $filename
+
+Write-Host "`nDecoding complete!"
+
+Reading file: C:\Users\1792\OneDrive - BerryDunn\Desktop\My Projects\HHC\spidata.xml
+
+Found 14019 WebSocket messages
+
+Extracted 14016 signal frames
+
+Clock frames: 7110, Data frames: 3234
+
+Decoded 800 bits
+
+Assembled 100 bytes
+
+Raw bytes (hex): 1b 06 18 0d 43 18 07 07 59 0d 06 1a 1b 1a 09 1d 43 0d 01 06 59 20 51 3a 49 01 0c 1a 43 1d 08 17 18 49 16 0a 00 0d 1e 49 17 11 0c 43 21 26 31 59 02 06 00 53 43 1b 08 0d 18 07 19 18 47 43 0d 01 06 59 1d 06 14 19 06 0b 08 17 0c 1b 06 59 1a 06 17 1a 0c 0b 49 02 1d 0d 11 1c 1a 10 59 00 10 59 59 1b 4a 2a
+
+=== DECRYPTED DATA ===
+
+read and decrypt the I2C bus data using the XOR key: bananza. the temperature sensor address is 0x3C
+
+~~~
+
+**read and decrypt the I2C bus data using the XOR key: bananza. the temperature sensor address is 0x3C**
 
 Step by step solution complete with any code used
   
