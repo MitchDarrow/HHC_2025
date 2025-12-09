@@ -20,7 +20,7 @@
 |  Dosis Network Down  | [Act2 Dosis Network Down](/act2_idorable_bistro_mjd.md) |    |   |    | 
 |  Rogue Gnome Identity Provider  | [Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md) |    |   |    | 
 |  Quantgnome Leap  | [Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md) |    |   |    | 
-|  Going in Reverse  | [Act2 Going in Reverse](/act2_going_IN_REVERSE_mjd.md) |    |   |    | 
+|  Going in Reverse  | [Act2 Going in Reverse](/act2_going_in_reverse_mjd.md) |    |   |    | 
 |  Gnome Tea  |  [Act3 Gnome Tea](/act3_gnome_tea_mjd.md)  |    |   |    | 
 |  Hack-a-Gnome  |  [Act3 Hack-a-Gnome](/act3_hack-a-gnome_mjd.md) |    |   |    | 
 |  Snowcat RCE and Privilege Escalation  | [Act3 Snowcat RCE and Privilege Escalation](/act3_snowcat_mjd.md)   |    |   |    | 
