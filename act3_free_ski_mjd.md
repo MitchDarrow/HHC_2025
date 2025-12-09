@@ -1,4 +1,4 @@
-|[Previous Objective: Act3 On The Wire](HHC_2025_Template/act3_onthewire_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 SnowBlind Ambush](HHC_2025_Template/act3_snow_blind_mjd.html)
+|[Previous Objective: Act3 On The Wire](/act3_onthewire_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 SnowBlind Ambush](/act3_snow_blind_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Free Ski    | Difficulty Level: 4 |
@@ -111,6 +111,6 @@ Script: [Solve Free Ski](act3_solvefreeski.py)
 
 
 
-|[Previous Objective: Act3 On The Wire](HHC_2025_Template/act3_onthewire_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective: Act3 SnowBlind Ambush](HHC_2025_Template/act3_snow_blind_mjd.html)
+|[Previous Objective: Act3 On The Wire](/act3_onthewire_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 SnowBlind Ambush](/act3_snow_blind_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
