@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-The code on the outside of the building is binary and decodes to "imanok" which is konami spelled backwards. Konami code is a classic cheat sequence (↑ ↑ ↓ ↓ ← → ← → B A) often repurposed in games and puzzles.  Because the word is inverted, the code sequence is likely inverted as well (Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑).  The konami code gives the choice for working doorways in each room.  All doors work in the first room, and is designated the start. 
+The code on the outside of the building is binary and decodes to "imanok" which is konami spelled backwards. Konami code is a classic cheat sequence (↑ ↑ ↓ ↓ ← → ← → B A) often repurposed in games and puzzles.  Because the word is inverted, the code sequence is likely inverted as well (Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑). Each door is marked with one of three symbols A, ↑, B.  The konami code gives the choice for working doorways in each room, with the code arrows being interpreted as compass directions.  All doors work in the first room, and is designated the start of the code. Following the code leads to the destination and the flag.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
