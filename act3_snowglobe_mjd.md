@@ -1,13 +1,13 @@
-|[Previous Objective](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
+|[Previous Objective](HHC_2025_Template/act3_shrodingersscope_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_onthewire_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
-| Objective: Find and Shutdown Frosty's Snowglobe Machine  | Difficulty Level: 4 |
+| Objective: Find and Shutdown Frosty's Snowglobe Machine  | Difficulty Level: 3 |
 | :-----------------------: | :--------------------------: |
 | You've heard murmurings around the city about a wise, elderly gnome having a change of heart. He must have information about where Frosty's Snowglobe Machine is. You should find and talk to the gnome so you can get some help with how to make your way through the Data Center's labrynthian halls. Once you find the Snowglobe Machine, figure out how to shut it down and melt Frosty's cold, nefarious plans. | Location: Old Data Center |
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+The code on the outside of the building is binary and decodes to "imanok" which is konami spellled backwards. The konami code gives the door choice for each room after the first room.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
@@ -66,7 +66,7 @@ Trail and error reveals that all doors in room one work. Room 2 testing shows th
 | 10 | North: 1, 2, 3 | **↑** Up | North wall |
 | 11 | North: 1, 2, 3 | **↑** Up | North wall |
 
-**Answer: Flag or Answer**
+**Answer: Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑**
 
 </details>
 
@@ -89,5 +89,5 @@ Trail and error reveals that all doors in room one work. Room 2 testing shows th
 | None | None |
 
 
-|[Previous Objective](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
+|[Previous Objective](HHC_2025_Template/act3_shrodingersscope_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_onthewire_mjd.html)
 | :----------------------- | :--------------------------------: | --------------------------------: |
