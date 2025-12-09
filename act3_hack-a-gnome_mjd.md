@@ -207,7 +207,7 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-| fluffme | Gave me clues about where to find prototype pollutions and what to look for |
+| fluffme | Gave me clues about using server side java for prototype pollution |
 
 
 |[Previous Objective](HHC_2025_Template/act3_gnome_tea_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_snowcat_mjd.html)
