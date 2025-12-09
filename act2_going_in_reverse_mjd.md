@@ -35,7 +35,7 @@ The basic program consists of the following code:
 100 END
 ```
 
-The program has the encoded flag and the decoder. Lets rewrite this in PS to decode. Note that the ‘ denotes a comment in basic.
+The program has the encoded flag and the decoder. This PowerShell script will decode the string. Note that the ‘ denotes a comment in basic.
 
 ```powershell
 # PowerShell script to decode the ENC_FLAG$ string using XOR 
