@@ -76,9 +76,7 @@ Trail and error reveals that all doors in room one work. Room 2 testing shows th
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-|  |  | 
-|  |  |
-|  |  | 
+| None | None | 
 
 ## Hints Reference
 | Provided By         | Hint |
@@ -91,8 +89,7 @@ Trail and error reveals that all doors in room one work. Room 2 testing shows th
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
+| None | None |
 
 
 |[Previous Objective](HHC_2025_Template/act3_hackagnome_mjd.html)  |   [Table of Contents](HHC_2025_Template/index.html) | [Next Objective](HHC_2025_Template/act3_frosty_snowglobe_machine_mjd.html)
