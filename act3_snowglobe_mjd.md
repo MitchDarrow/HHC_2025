@@ -20,9 +20,9 @@ High level executive summary of how the objective was solved. Details belong in 
 <details>
 <summary>Click to expand</summary>
 
-Step by step solution complete with any code used
+Viewing the exterior wall of the datacenter, there is a pattern in the bricks that looks binary, six bytes of data:
   
-![Sample image alt text](/images/objectivename_purpose.jpg) 
+![snowglobe code](/images/snowglobe_code.jpg) 
 
 
 01101001 = 105 = 'i'
