@@ -1,4 +1,4 @@
-|[Previous Objective: Act3 Free Ski](/act3_free-ski_mjd.md)  |   [Table of Contents](/index.md) | [About BerryDunn](/hhc_2025_berrydunn.md)
+|[Previous Objective: Act3 Free Ski](/act3_free_ski_mjd.md)  |   [Table of Contents](/index.md) | [About BerryDunn](/hhc_2025_berrydunn.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Snowblind Ambush    | Difficulty Level: 5 |
