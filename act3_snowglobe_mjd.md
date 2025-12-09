@@ -9,8 +9,8 @@
 
 High level executive summary of how the objective was solved. Details belong in the detail section.
 
-| Methods Used             | MITRE ATT&CK Framework Methods |
-| :-----------------------: | :--------------------------------: |
+| Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
+| :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
 | Decode hidden payload | Defense Evasion | T1140 | Deobfuscate/Decode Files or Information |
 
 
