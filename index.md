@@ -1,5 +1,8 @@
 # BerryDunn Holiday Hack Challenge Solution Report
 
+| ![Holiday Hack Challenge Logo](/images/HHC.webp) | ![BerryDunn Logo](/images/bdlogo.svg) |
+| :---------------------------------------------------------: | : ---------------------------------------------------------: |
+
 ## SANS Holiday Hack Challenge 2025: Revenge of the Gnome(s) 
 
 ### About the Holiday Hack Challenge (NNC)
