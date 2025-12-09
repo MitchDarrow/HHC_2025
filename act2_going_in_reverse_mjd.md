@@ -62,7 +62,7 @@ Write-Output $decoded
  CTF{frost-plan:compressors,coolant,oil}
 ```
 
-**Answer: CTF{frost-plan:compressors,coolant,oil} **
+**Answer: CTF{frost-plan:compressors,coolant,oil}**
 
 </details>
 
