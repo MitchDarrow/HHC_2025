@@ -2,6 +2,7 @@
 # BerryDunn Holiday Hack Challenge Solution Report
 
 | SANS Holiday Hack Challenge 2025: Revenge of the Gnome(s)  | ![Holiday Hack Challenge Logo](/images/HHC.webp) |
+
 | :---------------------------------------------------------: | : ---------------------------------------------------------: |
 
 
