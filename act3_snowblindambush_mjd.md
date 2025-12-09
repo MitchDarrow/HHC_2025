@@ -200,7 +200,7 @@ With root password, it is a simple matter to escalate privileges using the su co
 | John the Ripper | 1.9.0-jumbo-1+bleeding-aec1328d6c | 
 | Linux Linode | System	Ubuntu 24.04 LTS |
 | netcat	| v1.10-50 |
-| Edge Developer Tools |   |
+| Edge Developer Tools | Version 142.0.3595.94 |
 | BurpeSuite |   | 
 
 ## Hints Reference
