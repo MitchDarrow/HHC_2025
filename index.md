@@ -14,11 +14,11 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 
 | Act 1 Objective Solutions | Act 2 Objective Solutions | Act 3 Objective Solutions |
 | :----------------------- | :-------------------------- | :-------------------------- |
-|    |     | [Gnome Tea](/HHC_2025_Template/act3_gnometea_mjd.md) |
-|    |     | [Hack-a-Gnome](/HHC_2025_Template/act3_hack-a-gnomesnowcat_mjd.md) |
-|    |     | [Snowcat RCE and Command Injection](/HHC_2025_Template/act3_snowcat_mjd.md) |
-|    |     | [Schrodinger's Scope](/HHC_2025_Template/act3_schrodingersscope_mjd.md) |
-|    |     | [Find and Shutdown Frosty's Snow Globe](/HHC_2025_Template/act3_snowglobe_mjd.md) |
-|    |     | [On The Wire](/HHC_2025_Template/act3_onthewire_mjd.md) |
-|    |     | [Free Ski](/HHC_2025_Template/act3_free_ski_mjd.md) |
-|    |     | [SnowBlind Ambush](/HHC_2025_Template/act3_snowblindambush_mjd.md) |
+|    |     | [Gnome Tea](/act3_gnometea_mjd.md) |
+|    |     | [Hack-a-Gnome](/act3_hack-a-gnomesnowcat_mjd.md) |
+|    |     | [Snowcat RCE and Command Injection](/act3_snowcat_mjd.md) |
+|    |     | [Schrodinger's Scope](/act3_schrodingersscope_mjd.md) |
+|    |     | [Find and Shutdown Frosty's Snow Globe](/act3_snowglobe_mjd.md) |
+|    |     | [On The Wire](/act3_onthewire_mjd.md) |
+|    |     | [Free Ski](/act3_free_ski_mjd.md) |
+|    |     | [SnowBlind Ambush](/act3_snowblindambush_mjd.md) |
