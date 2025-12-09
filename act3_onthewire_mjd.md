@@ -244,9 +244,9 @@ XOR key “banaz”
 | :-----------------------: | :--------------------------------: |
 | claude.ai | 4.5 | 
 | Edge Developer Tools | Version 142.0.3595.94 | 
-| Firefox Developer Tools |  | 
+| Firefox Developer Tools | Version 145.0.2 | 
 | Powershell | 5.1.26100.6899 | 
-| Python |  | 
+| Python | 3.12.8 | 
 
 ## Hints Reference
 | Provided By         | Hint |
