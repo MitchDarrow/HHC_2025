@@ -3,7 +3,7 @@
 ![Image of Mitch Darrow](images/mitch_darrow.png) 
 ## Mitch Darrow
 
-**Manager, Government Assurance Practice Group**
+**Manager, Government Assurance Practice Group, IT Security Consulting Team**
 
 **Office:** Portland, ME
 
