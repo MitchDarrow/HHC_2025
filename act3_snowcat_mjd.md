@@ -122,7 +122,7 @@ The first key listed is the one used with the temperature binary. The second key
 | ysoserial.jar | Version: v0.0.6 Release Date: June 28, 2022 | 
 | Linux Linode System | Ubuntu 24.04 LTS |
 | netcat | v1.10-50 | 
-| curl |  | 
+| curl | 8.11.0  | 
 
 ## Hints Reference
 | Provided By         | Hint |
@@ -135,8 +135,7 @@ The first key listed is the one used with the temperature binary. The second key
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
+| none | none |
 
 |[Previous Objective: Act3 Hack-a-Gnome ](/act3_hack-a-gnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Schrodinger's Scope](/act3_schrodingersscope_mjd.md)|
 | :----------------------- | :--------------------------------: | --------------------------------: |
