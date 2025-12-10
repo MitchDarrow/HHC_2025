@@ -109,9 +109,7 @@ Lets look at the contents of the jwks.json file:
 }
 ```
 
-We don’t have a users name, but looking around paulweb, I am able to access /etc/passwd
-get username santa from the /etc/passwd file on paulweb
-cat /etc/passwd
+The /etc/passwd file is accessible. The username "santa" looks like a good one to use in the attack.
 
 ![Contents of the Password file](/images/roguegnomeidp_passwdfile.jpg) 
  
