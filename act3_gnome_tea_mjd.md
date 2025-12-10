@@ -113,7 +113,7 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| BurpSuite | 2024.11.2 |
+| Burp Suite Community Edition | 2024.11.2 |
 | exiftool | N/A | 
 | Google Earth | N/A |
 | Edge Developer Tools | Version 142.0.3595.94 | 
