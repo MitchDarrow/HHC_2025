@@ -40,5 +40,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 
 
 For more information about BerryDunn [URL Here]
+
 For more information about the IT Security Team [URL Here]
+
 Bios of the team members who participated in this years challenge [URL Here]
