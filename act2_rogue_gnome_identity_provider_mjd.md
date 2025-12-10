@@ -1,4 +1,4 @@
-|[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)
+|[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Rogue Gnome Identity Provider | Difficulty Level: 2 |
@@ -232,5 +232,5 @@ Unordered list:
 | eucrates |  |
 
 
-|[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)
+|[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
