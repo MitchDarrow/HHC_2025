@@ -12,13 +12,13 @@ Some participation statistics from the 2024 HHC:
 
 Total Players Starting the Prologue: 19,036
 
-Total Players Starting Act 1: 5937
+Total participants starting Act 1: 5937
 
-Total Players Starting Act 2: 2659
+Total participants starting Act 2: 2659
 
-Total Players Starting Act3: 814
+Total participants starting Act3: 814
 
-Total players completing HHC: 191
+Total participants completing the HHC: 191
 
 Members of BerryDunn's IT Security Consulting team have participated in this event the last several years. The team uses the HHC for honing and developing staff member's skills . Each participant works independently. The team gathers once a week for a social hour where we are able to discuss objectives, tools, and techniques. The list below is a curated list that the team has determined to be the best of class solution for each objective. A matrix of solution write-ups for each objective may be found here: [All Solutions](/allwriteups.md)
 
