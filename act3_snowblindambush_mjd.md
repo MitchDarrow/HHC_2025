@@ -201,7 +201,7 @@ With root password, it is a simple matter to escalate privileges using the su co
 | Linux Linode | System	Ubuntu 24.04 LTS |
 | netcat	| v1.10-50 |
 | Edge Developer Tools | Version 142.0.3595.94 |
-| Burpsuite Community Edition	 | v2024.11.2 | 
+| Burp Suite Community Edition	 | v2024.11.2 | 
 
 ## Hints Reference
 | Provided By         | Hint |
