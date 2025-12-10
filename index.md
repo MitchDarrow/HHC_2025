@@ -34,6 +34,8 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 |    |  [Quantgnome Leap](/act2_quantgnome_leap_mjd.md)   | [On The Wire](/act3_onthewire_mjd.md) |
 |    |  [Going in Reverse](/act2_going_in_reverse_mjd.md)   | [Free Ski](/act3_free_ski_mjd.md) |
 |    |     | [SnowBlind Ambush](/act3_snowblindambush_mjd.md) |
+|    |     |  |
+|    |     |  |
 
 For more information about BerryDunn [URL Here]
 For more information about the IT Security Team [URL Here]
