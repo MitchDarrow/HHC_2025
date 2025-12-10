@@ -12,17 +12,10 @@ This objective is the exploitation of an Insecure Direct Object Reference (IDOR)
 
 | Activity | Primary Tactic | MITRE ATT&CK Technique ID | MITRE ATT&CK Technique Name |
 |----------|----------------|---------------------------|----------------------------|
-| Scan QR code on restaurant receipt to identify web application | Reconnaissance | T1593.002 | Search Open Websites/Domains: Search Engines |
-| Inspect HTML source code to find hidden comments and URLs | Discovery | T1213.002 | Data from Information Repositories: Sharepoint |
 | Access hidden receipt URL endpoint with sample identifier | Initial Access | T1190 | Exploit Public-Facing Application |
-| Use Burp Suite to intercept and analyze HTTP requests | Collection | T1557.001 | Adversary-in-the-Middle: LLMNR/NBT-NS Poisoning and SMB Relay |
 | Identify exposed ID parameter in subsequent requests | Discovery | T1046 | Network Service Discovery |
-| Configure Burp Intruder to enumerate receipt IDs from 100-200 | Discovery | T1083 | File and Directory Discovery |
 | Send automated requests to enumerate valid receipt identifiers | Collection | T1530 | Data from Cloud Storage |
-| Identify valid ID range (100-152) based on HTTP response codes | Discovery | T1595.002 | Active Scanning: Vulnerability Scanning |
 | Review enumerated responses to locate gnomish customer name | Collection | T1005 | Data from Local System |
-| Extract target name "Bartholomew Quibblefrost" from receipt ID 139 | Credential Access | T1552.001 | Unsecured Credentials: Credentials In Files |
-
 
 ## Detailed Solution
 <details>
