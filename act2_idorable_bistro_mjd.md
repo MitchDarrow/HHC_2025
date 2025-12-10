@@ -25,20 +25,20 @@ The following video is helpful for understanding Insecure Direct Object Referenc
 
 The receipt outside the restaurant has a QR code that points to this URL: https://its-idorable.hhc25-ops.com/
 
-![Initial website landing page](media/image1.png)
+![Initial website landing page](images/idorablebistro_rvs.jpg)
 
 Inspecting the page source code reveals a comment:
 
-![HTML source code showing hidden comment](media/image2.png)
+![HTML source code showing hidden comment](images/idorablebistro_comment.jpg)
 
 
 Trying the URL from the comment: https://its-idorable.hhc25-ops.com/receipt/a1b2c3d4
 
-![Sample receipt page accessed via hidden URL](media/image3.png)
+![Sample receipt page accessed via hidden URL](images/idorablebistro_burp.jpg)
 
 Using Burp Suite to view the requests. The first request uses a token, but a subsequent request exposes the ID parameter.
 
-![Burp Suite showing requests with exposed ID parameter](media/image4.png)
+![Burp Suite showing requests with exposed ID parameter](images/idorablebistro_intruder.jpg)
 
 Using Burp's Intruder, send requests with values for ID from 100 to 200:
 
