@@ -48,7 +48,7 @@ This search returns a match.
 
 Scrolling down the body is:
 
-![Email body content revealing JavaScript variable with URL](images/maildetective_answer.jpg.png)
+![Email body content revealing JavaScript variable with URL](images/maildetective_answer.jpg)
 
 ```javascript
 var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
