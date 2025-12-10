@@ -1,4 +1,4 @@
-[Back to Home](/index.md)
+[Back to Home Page](/index.md)
 
 ![Image of Mitch Darrow](images/mitch_darrow.png) 
 ## Mitch Darrow
