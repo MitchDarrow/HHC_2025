@@ -188,7 +188,7 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
 | crackstation.net | N/A  | 
-| Burpsuite Community Edition | v2024.11.2  |
+| Burp Suite Community Edition | v2024.11.2  |
 | Claude.ai | 4.5 | 
 | Linux Linode  | System Ubuntu 24.04 LTS |
 | Webhook.net | N/A  |
