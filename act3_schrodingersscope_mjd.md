@@ -227,7 +227,7 @@ Hijacking this session token, the document in wip is accessed.
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
 | Edge Developer Tools | Version 142.0.3595.53 | 
-| Burpsuite Community Edition | v2024.11.2 |
+| Burp Suite Community Edition | v2024.11.2 |
 
 
 ## Hints Reference
