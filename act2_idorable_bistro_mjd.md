@@ -56,7 +56,7 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| Burp Suite Community Edition |  | 
+| Burp Suite Community Edition | v2024.11.2 | 
 
 
 ## Hints Reference
