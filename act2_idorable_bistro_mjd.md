@@ -1,4 +1,4 @@
-|[Previous Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)
+|[Previous Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: IDORable Bistro    | Difficulty Level: 2 |
@@ -74,5 +74,5 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 | none | none |
 
 
-|[Previous Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)
+|[Previous Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
