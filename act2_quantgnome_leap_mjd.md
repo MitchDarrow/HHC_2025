@@ -1,4 +1,4 @@
-|[Previous Objective: Act2 Rogue Gnome Identity Provider](/act3_rogue_gnome_identity_provider_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 2 Going in Reverse](/act2_going_in_reverse_mjd.md)
+|[Previous Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 2 Going in Reverse](/act2_going_in_reverse_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Quantgnome Leap    | Difficulty Level: 2 |
