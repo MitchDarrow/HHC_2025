@@ -3,7 +3,7 @@
 
 | Objective: Dosis Network Down    | Difficulty Level: 2 |
 | :-----------------------: | :--------------------------: |
-| Drop by JJ's 24-7 for a network rescue and help restore the holiday cheer. What is the WiFi password found in the router's config? | Location: JJ's 24-7  |
+| Drop by JJ's 24-7 for a network rescue and help restore the holiday cheer.<br> What is the WiFi password found in the router's config? | Location: JJ's 24-7  |
 
 ## Solution Overview
 
