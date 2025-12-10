@@ -204,7 +204,7 @@ curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA2
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| curl |  | 
+| curl | 8.11.0  | 
 | [JSON Web Token (JWT) Debugger](https://JWT.IO) | N/A |
 | [JWK to PEM Converter](https://8gwifi.org/jwkconvertfunctions.jsp) | N/A  | 
 | [JSON Web Key generator](https://mkjwk.org/) | N/A  |
