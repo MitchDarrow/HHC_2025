@@ -20,7 +20,7 @@ Total participants starting Act3: 814
 
 Total participants completing the HHC: 191
 
-Members of BerryDunn's IT Security Consulting team have participated in this event the last several years. The team uses the HHC for honing and developing staff member's skills. Each participant works independently. The team gathers once a week for a social hour where we are able to discuss objectives, tools, and techniques. The list below is a curated list that the team has determined to be the best of class solution for each objective. A matrix of solution write-ups for each objective may be found here: [All Solutions](/allwriteups.md)
+Members of BerryDunn's IT Security Consulting team have participated in this event the last several years. The team uses the HHC for honing and developing staff member's skills. Each participant works independently. The team gathers once a week for a social hour where we are able to discuss objectives, tools, and techniques. The list below is a curated list of the best of class solution for each objective, as determined by a team review. A matrix of solution write-ups for each objective may be found here: [All Solutions](/allwriteups.md)
 
 The following are the BerryDunn IT Security team's official solutions to this year's HHC objectives: 
 
