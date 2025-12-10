@@ -1,9 +1,9 @@
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+|[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
-| Objective: Objective name    | Difficulty Level: # |
+| Objective: Rogue Gnome Identity Provider | Difficulty Level: 2 |
 | :-----------------------: | :--------------------------: |
-| Official Description | Location:   |
+| Hike over to Paul in the park for a gnomey authentication puzzle adventure. What malicious firmware image are the gnomes downloading? | Location: Dosis Neighborhood Park  |
 
 ## Solution Overview
 
@@ -68,5 +68,5 @@ Unordered list:
 |  |  |
 
 
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+|[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
