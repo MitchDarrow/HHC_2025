@@ -10,13 +10,13 @@ The SANS Holiday Hack Challenge is a free, annual cybersecurity competition desi
 
 Some participation statistics from the 2024 HHC:
 
-Total Players Starting HHC Prologue: 19,036
+Total Players Starting the Prologue: 19,036
 
-Total Players Starting HHC Act 1: 5937
+Total Players Starting Act 1: 5937
 
-Total Players Starting HHC Act 2: 2659
+Total Players Starting Act 2: 2659
 
-Total Players Starting HHC Act3: 814
+Total Players Starting Act3: 814
 
 Total players completing HHC: 191
 
