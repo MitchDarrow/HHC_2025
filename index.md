@@ -8,7 +8,7 @@
 ### About the Holiday Hack Challenge (HHC)
 The SANS Holiday Hack Challenge is a free, annual cybersecurity competition designed to help participants strengthen their technical skills through practical, hands-on challenges. At its core, the event is a large-scale capture-the-flag (CTF) exercise where players engage in penetration testing, reverse engineering, cryptography, network analysis, and other security disciplines. Each challenge is crafted to simulate real-world scenarios, giving participants the opportunity to practice problem-solving and apply security concepts in a safe environment. Since its early beginnings in the 2000s, the challenge has steadily evolved, incorporating increasingly sophisticated puzzles and interactive environments that encourage both individual learning and team collaboration. Its primary purpose is to make skill development accessible to all levels of expertise, from students just starting out to seasoned professionals looking to refine their techniques. By offering a structured yet engaging platform, the Holiday Hack Challenge has become a respected training ground in the cybersecurity community, fostering growth, knowledge sharing, and the advancement of practical defensive and offensive security skills.
 
-Some statistics from last year's challenge:
+Some participation statistics from the 2024 HHC:
 
 Total Players Starting HHC Prologue: 19,036
 
