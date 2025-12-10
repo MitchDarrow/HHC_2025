@@ -1,5 +1,5 @@
  ![BerryDunn Logo](/images/bdlogo.svg)
-# BerryDunn Holiday Hack Challenge All Team Solutions
+# BerryDunn Holiday Hack Challenge All Solutions
 
 | Objective | Mitch Darrow | Spencer Treece | Kodi Berube | Louis Krupp |
 | :------ | :------ | :------ | :------ | :------ |
