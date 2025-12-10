@@ -71,7 +71,7 @@ var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| curl |  | 
+| curl | 8.11.0 | 
 
 ## Hints Reference
 | Provided By         | Hint |
