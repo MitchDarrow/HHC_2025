@@ -138,7 +138,7 @@ $(cat%20/etc/config/wireless)
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| Burpesuite Community Edition | v2024.11.2 | 
+| Burp Suite Community Edition | v2024.11.2 | 
 | Exploit-db | N/A |
 
 
