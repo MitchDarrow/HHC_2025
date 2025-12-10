@@ -45,5 +45,5 @@ For more information about the BerryDunn's IT Security Team and the services off
 
 Bios of the team members who participated in this years challenge:
 
-| [Mitch Darrow](/bio_mjd.md) | [Spencer Treece](/bio_srt.md) | [Kodi Berube](/bio_kgb.md) |
-| :-----------------------: | :--------------------------: | :--------------------------: |
+| [Mitch Darrow](/bio_mjd.md) | [Spencer Treece](/bio_srt.md) | [Kodi Berube](/bio_kgb.md) | [Louis Krupp](/bio_lk.md) |
+| :-----------------------: | :--------------------------: | :--------------------------: | :--------------------------: |
