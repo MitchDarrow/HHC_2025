@@ -25,39 +25,30 @@ This objective investigates suspicious emails using IMAP (Internet Message Acces
 
 This is a helpful resource for reading messages using curl: https://everything.curl.dev/usingcurl/reademail.html
 
-![IMAP server connection interface](images/image1.png)
+![Objective Instructions](images/maildetective_instructions.jpg)
 
 Connect to the server using curl:
 
 ```bash
 telnet://localhost:143
 ```
-
-![Terminal showing IMAP connection command](images/image2.png)
-
-Login to the server:
+The following commands were used:
 
 ```
 a001 login dosismail holidaymagic
-```
-
-![IMAP login response showing successful authentication](images/image3.png)
-
-
-```
-A002 select Spam
-A003 search text "http:"
-A004 search text "HTTP"
-A005 fetch 2 body[]
+a002 select Spam
+a003 search text "http:"
+a004 search text "HTTP"
+a005 fetch 2 body[]
 ```
 
 This search returns a match.
 
-![IMAP fetch command showing email message body](images/image4.png)
+![IMAP fetch command showing email message body](images/maildetective_commands.jpg)
 
 Scrolling down the body is:
 
-![Email body content revealing JavaScript variable with URL](images/image5.png)
+![Email body content revealing JavaScript variable with URL](images/maildetective_answer.jpg.png)
 
 ```javascript
 var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
