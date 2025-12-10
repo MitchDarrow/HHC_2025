@@ -31,4 +31,4 @@
 |  Find and Shutdown Frosty's Snowglobe Machine  | [Act3 Find and Shutdown Frosty's snowglobe Machine](/act3_snowglobe_mjd.md)  |    |   |    | 
 |  On The Wire  | [Act3 On the Wire](/act3_onthewire_mjd.md)  |    |   |    | 
 |  Free Ski  | [Act3 Free Ski](/act3_free_ski_mjd.md)   |    |   |    | 
-|  Snowblind Ambush  | [Act3 Snowbllind Ambush](/act3_snowblindambush_mjd.md)  |    |   |    | 
+|  Snowblind Ambush  | [Act3 Snowblind Ambush](/act3_snowblindambush_mjd.md)  |    |   |    | 
