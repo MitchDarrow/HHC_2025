@@ -11,7 +11,7 @@ Reconnaissance located ssh keys that belonged to another user. These keys were u
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-| Locating poorly secured SSH keys | Credential Access | T1552.004 | Unsecured Credentials: Private Keys |
+| Locating inadequately secured SSH keys | Credential Access | T1552.004 | Unsecured Credentials: Private Keys |
 | Using keys to gain unauthorized access | Persistence / Lateral Movement | T1078.004 | Valid Accounts: SSH |
 
 ## Detailed Solution
