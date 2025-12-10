@@ -49,7 +49,7 @@ CVE-2023-1389 -- Command Injection / Remote Code Execution
 
 Exploit Code Analysis
 
-![Exploit-db entry for CVE-2023-1389](images/dosisnetwork_exploitdb)
+![Exploit-db entry for CVE-2023-1389](images/dosisnetwork_exploitdb.jpg)
 
 From exploit-db, the exploit code provides insight into the request structure needed:
 
@@ -128,7 +128,7 @@ The simplest payload is to print the file:
 $(cat%20/etc/config/wireless)
 ```
 
-![Payload execution showing wireless configuration file contents](images/dosisnetwork_solution)
+![Payload execution showing wireless configuration file contents](images/dosisnetwork_solution.jpg)
 
 **Answer: SprinklesAndPackets2025!**
 
