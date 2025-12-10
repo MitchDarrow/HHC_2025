@@ -36,7 +36,7 @@ Decoding the patterns gives:
 
 01001011 = 75 = 'k'
 
-Converting letters to their integer position in the alphabet makes no sense in the context. Neither does trying to convert them to compass directions. So it must be something simpler. This looks like konami spelled in reverse. A quick google explains:
+Converting letters to their integer position in the alphabet makes no sense in the context. Neither does trying to convert them to compass directions. So it must be something simpler. This looks like konami spelled in reverse ("Backwards you should look" seems to apply here). A quick google search explains:
 
 
 Konami code is a classic cheat sequence (↑ ↑ ↓ ↓ ← → ← → B A) often repurposed in games and puzzles.  Because the word is inverted, the code sequence is likely inverted as well.
