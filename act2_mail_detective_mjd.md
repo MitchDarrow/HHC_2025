@@ -3,7 +3,7 @@
 
 | Objective: Mail Detective    | Difficulty Level: 2 |
 | :-----------------------: | :--------------------------: |
-| Official Description | Location:   |
+| Help Mo in City Hall solve a curly email caper and crack the IMAP case. What is the URL of the pastebin service the gnomes are using? | Location: City Hall |
 
 ## Solution Overview
 
@@ -72,16 +72,13 @@ var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
 | curl |  | 
-|  |  |
-|  |  | 
 
 ## Hints Reference
 | Provided By         | Hint |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Santa | If I heard this correctly...our sneaky security gurus found a way to interact with the IMAP server using Curl! Yes...the CLI HTTP tool! Here are some helpful docs I found https://everything.curl.dev/usingcurl/reademail.html |
+| Mo | So here's our situation: those gnomes have been sending JavaScript-enabled emails to everyone in the neighborhood, and it's causing chaos. We had to shut down all the email clients because they weren't blocking the malicious scripts - kind of like how we'd ground aircraft until we clear a security threat. The only safe way to access the email server now is through curl - yes, the HTTP tool! Think you can help me use curl to connect to the IMAP server and hunt down one of these gnome emails? |
+
 
 ## Acknowledgements
 | Provided By         | Notes |
