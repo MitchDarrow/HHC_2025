@@ -7,14 +7,18 @@
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+The adversary begins by using exposed gnome credentials (gnome:SittingOnAShelf) to authenticate against the Identity Provider (IDP). This login returns a JSON Web Token (JWT), which is then analyzed. By exploiting weaknesses in JWT validation, the attacker modifies critical claims: changing the subject (sub) from gnome to santa, flipping the admin flag from false to true, and redirecting the jku field to a malicious JWKS file hosted on their own server.
 
-| Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
-| :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+To support this, the attacker generates a fraudulent RSA key pair and publishes the public key in their rogue JWKS file, while signing the tampered token with the private key. The manipulated token is then passed to the target service, which incorrectly validates it against the attacker-controlled JWKS endpoint. This grants unauthorized access and a valid session cookie. Finally, the attacker uses the session to connect to the diagnostic interface, retrieving sensitive data — in this case, the file refrigeration-botnet.bin.
 
+| Activity                                      | Primary Tactic        | MITRE ATT&CK Technique ID | MITRE ATT&CK Technique Name                  |
+|-----------------------------------------------|-----------------------|---------------------------|----------------------------------------------|
+| Collecting exposed gnome credentials          | Credential Access     | T1552.001                 | Unsecured Credentials: Passwords             |
+| Authenticating to IDP and analyzing JWT       | Defense Evasion       | T1140                     | Deobfuscate/Decode Files or Information      |
+| Modifying JWT claims (`sub`, `admin`, `jku`)  | Defense Evasion       | T1600                     | Modify Authentication Process                |
+| Introducing fraudulent JWKS/public key        | Defense Evasion       | T1550.003                 | Use Alternate Authentication Material        |
+| Passing tampered token for access             | Persistence/Lateral Movement | T1078.004          | Valid Accounts: SSH/Other                    |
+| Using session cookie to access diagnostics    | Impact                | T1499                     | Endpoint Denial/Manipulation                 |
 
 ## Detailed Solution
 <details>
