@@ -205,9 +205,9 @@ curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA2
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
 | curl |  | 
-| (JSON Web Token (JWT) Debugger)[https://JWT.IO] | N/A |
-| (JWK to PEM Converter)[https://8gwifi.org/jwkconvertfunctions.jsp] | N/A  | 
-| (SON Web Key generator)[https://mkjwk.org/] | N/A  |
+| [JSON Web Token (JWT) Debugger](https://JWT.IO) | N/A |
+| [JWK to PEM Converter](https://8gwifi.org/jwkconvertfunctions.jsp) | N/A  | 
+| [SON Web Key generator](https://mkjwk.org/) | N/A  |
 
 ## Hints Reference
 | Provided By         | Hint |
