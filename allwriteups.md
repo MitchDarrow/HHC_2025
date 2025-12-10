@@ -1,4 +1,7 @@
  ![BerryDunn Logo](/images/bdlogo.svg)
+
+ [Back to Home Page](/index.md)
+ 
 # BerryDunn Holiday Hack Challenge All Solutions
 
 | Objective | Mitch Darrow | Spencer Treece | Kodi Berube | Louis Krupp |
@@ -29,5 +32,3 @@
 |  On The Wire  | [Act3 On the Wire](/act3_onthewire_mjd.md)  |    |   |    | 
 |  Free Ski  | [Act3 Free Ski](/act3_free_ski_mjd.md)   |    |   |    | 
 |  Snowblind Ambush  | [Act3 Snowbllind Ambush](/act3_snowblindambush_mjd.md)  |    |   |    | 
-
-[Back to Home](/index.md)
