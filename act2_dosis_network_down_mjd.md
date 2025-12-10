@@ -18,8 +18,6 @@ The objective is to gain access to the router configuration and the password it 
 | Execute injected commands with root privileges via `popen()` function | Privilege Escalation | T1068 | Exploitation for Privilege Escalation |
 | Read `/etc/config/wireless` configuration file containing network credentials | Credential Access | T1552.001 | Unsecured Credentials: Credentials In Files |
 | Extract WiFi password (SprinklesAndPackets2025!) from wireless configuration | Collection | T1005 | Data from Local System |
-| Potential deployment of Mirai malware on compromised device | Impact | T1486 | Data Encrypted for Impact |
-
 
 
 ## Detailed Solution
