@@ -178,7 +178,7 @@ Using JWT.io change the minimal number of items. The hint says gnome has insuffi
 
 - jku changes from "http://idp.atnascorp/.well-known/jwks.json" to "http:/paulweb.neighborhood/jwks.json"
 
-The token is signed using the Private key generated. The public key and the fraudulent JSON file is placed in the www directory of paulweb.neighborhood.
+The token is signed using the Private key generated. The public key and the fraudulent JWKS file is placed in the www directory of paulweb.neighborhood.
 
 ![Creating a Tampered Token](/images/roguegnomeidp_tamperedjwt.jpg)  
 
