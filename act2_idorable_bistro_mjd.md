@@ -34,11 +34,11 @@ Inspecting the page source code reveals a comment:
 
 Trying the URL from the comment: https://its-idorable.hhc25-ops.com/receipt/a1b2c3d4
 
-![Sample receipt page accessed via hidden URL](images/idorablebistro_burp.jpg)
+![Sample receipt page accessed via hidden URL](images/idorablebistro_receipt.jpg)
 
 Using Burp Suite to view the requests. The first request uses a token, but a subsequent request exposes the ID parameter.
 
-![Burp Suite showing requests with exposed ID parameter](images/idorablebistro_intruder.jpg)
+![Burp Suite showing requests with exposed ID parameter](images/idorablebistro_burp.jpg)
 
 Using Burp's Intruder, send requests with values for ID from 100 to 200:
 
@@ -46,7 +46,7 @@ At ID=153, 404 responses begin, so valid receipts are from 100 to 152.
 
 Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 
-![Receipt showing Bartholomew Quibblefrost name at ID=139](media/image5.png)
+![Receipt showing Bartholomew Quibblefrost name at ID=139](images/idorablebistro_intruder.jpg)
 
 **Answer: Bartholomew Quibblefrost**
 
