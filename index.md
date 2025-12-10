@@ -29,7 +29,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 | Holiday Hack Orientation		 |  [Retro Recovery](/act2_retro_recovery_mjd.md)   | [Gnome Tea](/act3_gnome_tea_mjd.md) |
 | Into to NMAP |  [Mail Detective](/act2_mail_detective_mjd.md) | [Hack-a-Gnome](/act3_hack-a-gnomesnowcat_mjd.md) |
 | Neighborhood Watch Bypass	 |  [IDORable Bistro ](/act2_idorable_bistro_mjd.md)  | [Snowcat RCE and Command Injection](/act3_snowcat_mjd.md) |
-| Its All About Defang	 |  [Dosis Network Down](/act2_idorable_bistro_mjd.md)  | [Schrodinger's Scope](/act3_schrodingersscope_mjd.md) |
+| Its All About Defang	 |  [Dosis Network Down](/act2_dosis_network_down_mjd.md)  | [Schrodinger's Scope](/act3_schrodingersscope_mjd.md) |
 | Santa’s Gift-Tracking Service Port Mystery	 |  [Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md) | [Find and Shutdown Frosty's Snow Globe](/act3_snowglobe_mjd.md) |
 | Visual Networking Thinger		|  [Quantgnome Leap](/act2_quantgnome_leap_mjd.md)   | [On The Wire](/act3_onthewire_mjd.md) |
 | Blob Storage Challenge in the Neighborhood	 |  [Going in Reverse](/act2_going_in_reverse_mjd.md)   | [Free Ski](/act3_free_ski_mjd.md) |
