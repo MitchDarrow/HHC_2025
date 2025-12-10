@@ -56,7 +56,7 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| Edge Developer Tools |  |
+| Edge Developer Tools | Version 142.0.3595.94 |
 | Burp Suite Community Edition | v2024.11.2 | 
 
 
