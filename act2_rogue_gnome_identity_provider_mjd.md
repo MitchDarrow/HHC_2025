@@ -58,7 +58,7 @@ curl -H 'Cookie: session=<insert-session>' http://gnome-48371.atnascorp/diagnost
 jwt_tool.py <insert-JWT>
 ``` 
 
-Using the authenticate curl command from the notes combined with the credentils to login:
+Using the authenticate curl command from the notes combined with the credentials to login:
 
 ```
 paul@paulweb:~$ curl -X POST --data-binary $'username=gnome&password=SittingOnAShelf&return_uri=http%3A%2F%2Fgnome-48371.atnascorp%2Fauth' http://idp.atnascorp/loginp/login
