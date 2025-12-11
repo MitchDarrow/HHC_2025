@@ -20,7 +20,7 @@ Total participants starting Act3: 814
 
 Total participants completing the HHC: 191
 
-This year's HHC is structured in 3 Acts. Act 1 is intended to practice and polish skills. Some of these tools are old friends, and some of these tools may be new. Act 2 increases the difficulty, in some cases chaining attacks to achieve the objective. Act 3 increases the complexity and difficulty for most of the objectives.  Objectives are rated on a 1-5 scale, with 1 being less difficult, and 5 being the most difficult 
+This year's HHC is structured in 3 Acts. Act 1 is intended to practice and polish skills. Some of these tools are old friends, and some of these tools may be new. Act 2 increases the difficulty, in some cases chaining attacks to achieve the objective. Act 3 increases the complexity and difficulty for most of the objectives.  The difficulty of an objective is rated on a 1-5 scale, with 1 being less difficult, and 5 being the most difficult 
 
 Members of BerryDunn's IT Security Consulting team have participated in this event the last several years. The team uses the HHC for honing and developing staff member's skills. Each participant works independently. The team gathers once a week for a social hour where we are able to discuss objectives, tools, and techniques.
 
