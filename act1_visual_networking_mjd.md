@@ -7,14 +7,11 @@
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+This objective is designed to test knowledge of networking communications. This knowledge is useful when analyzing network traffic.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-
+| Monitor network traffic flows and protocols | Discovery | T1049 | System Network Connections Discovery |
 
 ## Detailed Solution
 <details>
