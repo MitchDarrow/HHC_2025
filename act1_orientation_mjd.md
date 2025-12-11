@@ -1,47 +1,26 @@
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+|  |   [Table of Contents](/index.md) | [Next Objective: Act1 intro to NMAP](/act1_introp_to_nmap_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
-| Objective: Objective name    | Difficulty Level: # |
+| Objective: Holiday Hack Orientation  | Difficulty Level: 1 |
 | :-----------------------: | :--------------------------: |
-| Official Description | Location:   |
+| Meet Lynn Schifano on the train for a warm welcome and get ready for your journey around the Dosis Neighborhood. | Location: Train   |
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+Orientation information about this year's challenge.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| none | none | none | none |
 
 
 ## Detailed Solution
 <details>
 <summary>Click to expand</summary>
 
-Step by step solution complete with any code used
-  
-![Sample image alt text](/images/objectivename_purpose.jpg) 
+Type the word "answer" in hte terminal
 
-
-```sh
-bash script code block
-```
-
-Ordered list:
-1. Item 1
-2. Item 2
-3. Item 3
-
-Unordered list:
-
-- Item
-- Item
-- Item
-/usr/local/weather/temperature
-
-**Answer: Flag or Answer**
+**Answer: answer**
 
 </details>
 
@@ -49,24 +28,20 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-|  |  | 
-|  |  |
-|  |  | 
+| none | none | 
+
 
 ## Hints Reference
 | Provided By         | Hint |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| none | none |
 
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
+| none | none |
 
 
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+
+|  |   [Table of Contents](/index.md) | [Next Objective: Act1 intro to NMAP](/act1_introp_to_nmap_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
