@@ -49,8 +49,8 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| losetup |  | 
-| testdisk |  |
+| losetup | 2.40.4 | 
+| testdisk | 7.2 |
 
 ## Hints Reference
 | Provided By         | Hint |
