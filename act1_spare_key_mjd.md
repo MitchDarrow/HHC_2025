@@ -1,9 +1,9 @@
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+|[Previous Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.m)  |   [Table of Contents](/index.md) | [Next Objective: Act1 The Open Door](/act1_the_open_door_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
-| Objective: Objective name    | Difficulty Level: # |
+| Objective: Spare Key   | Difficulty Level: 1 |
 | :-----------------------: | :--------------------------: |
-| Official Description | Location:   |
+| Help Goose Barry near the pond identify which identity has been granted excessive Owner permissions at the subscription level, violating the principle of least privilege. | Location: The Pond |
 
 ## Solution Overview
 
@@ -49,24 +49,18 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-|  |  | 
-|  |  |
-|  |  | 
+| Azure CLI | N/A | 
 
 ## Hints Reference
 | Provided By         | Hint |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Santa | This terminal has built-in hints! |
 
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
+| none | none |
 
 
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+|[Previous Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.m)  |   [Table of Contents](/index.md) | [Next Objective: Act1 The Open Door](/act1_the_open_door_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
