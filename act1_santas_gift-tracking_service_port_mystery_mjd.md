@@ -1,9 +1,9 @@
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+| [Previous Objective: Act 1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md) |   [Table of Contents](/index.md) | [Previous Objective: Act 1 Visual Networking](/act1_visual_networking_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
-| Objective: Objective name    | Difficulty Level: # |
+| Objective: Santa's Gift-Tracking Service Port   | Difficulty Level: 1 |
 | :-----------------------: | :--------------------------: |
-| Official Description | Location:   |
+| Chat with Yori near the apartment building about Santa's mysterious gift tracker and unravel the holiday mystery.| Location: Apratment Building |
 
 ## Solution Overview
 
@@ -20,26 +20,30 @@ High level executive summary of how the objective was solved. Details belong in 
 <details>
 <summary>Click to expand</summary>
 
-Step by step solution complete with any code used
+The objective is to:
+
+1. Identify the port that the santa_tracker process is running on
+
+2. Connecct to the port and verify the servide is running
+
+![Objective Instructions](/images/santatracker_instructions.jpg) 
+
+Use the SS tool to discover the port using the command:
+```sh
+ss -tlnp
+```
+
+There is a service running on port 12321
+ 
+Use curl to connect:
   
-![Sample image alt text](/images/objectivename_purpose.jpg) 
+![Sample image alt text](/images/santatracker_connect.jpg) 
 
 
 ```sh
-bash script code block
+curl -I http://0.0.0.0:12321
 ```
-
-Ordered list:
-1. Item 1
-2. Item 2
-3. Item 3
-
-Unordered list:
-
-- Item
-- Item
-- Item
-/usr/local/weather/temperature
+The service responds with a 200 OK and Content-Type of application/json
 
 **Answer: Flag or Answer**
 
@@ -49,24 +53,22 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-|  |  | 
-|  |  |
-|  |  | 
+| ss | iproute2-6.13.0| 
+| curl | 8.11.0 |
+
 
 ## Hints Reference
 | Provided By         | Hint |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Santa | Since we don't have a web browser to connect to this HTTP service...There is another common tool that you can use from the cli. |
+| Yuri | Think you can check out this terminal for me? I need to use cURL to access the gift tracker system, but it has me stumped. |
+
 
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
+| none | none |
 
 
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+| [Previous Objective: Act 1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md) |   [Table of Contents](/index.md) | [Previous Objective: Act 1 Visual Networking](/act1_visual_networking_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
