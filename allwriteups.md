@@ -4,7 +4,7 @@
  
 # BerryDunn Holiday Hack Challenge All Solutions
 
-| Objective | Mitch Darrow | Spencer Treece | Kodi Berube | Louis Krupp |
+| Mitch Darrow | Spencer Treece | Kodi Berube | Louis Krupp |
 | :------ | :------ | :------ | :------ | :------ |
 | [Act1 Holiday Hack Orientation ](/act1_orientation_mjd.md) |    |   |    | 
 | [Act1 Into to NMAP](/act1_intor_to_nmap_mjd.md) |    |   |    | 
