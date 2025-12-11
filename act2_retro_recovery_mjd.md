@@ -38,7 +38,7 @@ sudo testdisk /dev/loop0
 
 3. Select "undelete" as the action
 
-![TestDisk interface showing file listing on floppy disk image](images/retrorecover_explorefiles.jpg)
+![TestDisk interface showing file listing on floppy disk image](/images/retrorecovery_explorefiles.jpg)
 
 There is an interesting file: `all_i-want_for_christmas.bas`
 
@@ -48,7 +48,7 @@ Successfully recovered the deleted file `all_i-want_for_christmas.bas` to the cu
 
 Open in mousepad and explore:
 
-![BASIC source code file contents showing encoded string](images/retrorecovery_sourcecode.jpg)
+![BASIC source code file contents showing encoded string](/images/retrorecovery_sourcecode.jpg)
 
 There is a base64 encoded string:
 
