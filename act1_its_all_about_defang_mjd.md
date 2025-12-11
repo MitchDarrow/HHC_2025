@@ -7,14 +7,12 @@
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+Defanging Indicators of Compromise (IoC)
+Defanging is a cybersecurity practice of deliberately modifying malicious indicators such as URLs, IP addresses, email addresses, and domain names to render them non-functional while preserving their investigative value. This technique prevents accidental clicks, automated processing, or unintended execution when sharing threat intelligence in reports, emails, or public forums. Common defanging methods include replacing dots with "[.]" in domains (example[.]com), adding brackets to protocols (hxxp:// or hxxps://), replacing "@" symbols with "[at]" in email addresses, and modifying IP addresses (192[.]168[.]1[.]1). The practice is essential for security analysts, incident responders, and threat intelligence teams who need to document and communicate about malicious infrastructure without risking accidental exposure or triggering security controls. Defanging allows organizations to safely share IoCs across teams, with partners, or in public threat reports while maintaining the ability to quickly "refang" or restore the indicators to their original functional form when needed for analysis or blocking.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-
+| Identify malicious URLs, domains, and IP addresses from security incidents | Discovery | T1590 | Gather Victim Network Information |
 
 ## Detailed Solution
 <details>
@@ -46,7 +44,7 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| sed | N/A | 
+| sed | 4.9 | 
 
 ## Hints Reference
 | Provided By         | Hint |
