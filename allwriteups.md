@@ -10,7 +10,7 @@
 | [Act1 Its All About Defang](/act1_its_all_about_defang_mjd.md) |    |   |    | 
 | [Act1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md) |    |   |    | 
 | [Act1 Santa’s Gift-Tracking Service Port Mystery](/act1_santas_gift-tracking_service_port_mystery_mjd.md) |    |   |    | 
-| [Act1 Visual Networking Thinger](/act1_visual_networking_mjd.md) |    |   |    | 
+| [Act1 Visual Networking](/act1_visual_networking_mjd.md) |    |   |    | 
 | [Act1 Visual Firewall](/act1_visual_firewall_mjd.md) |    |   |    | 
 | [Act1 Blob Storage Challenge in the Neighborhood ](/act1_blob_storage_mjd.md)  |    |   |    | 
 | [Act1 Into to NMAP](/act1_intor_to_nmap_mjd.md) |    |   |    | 
