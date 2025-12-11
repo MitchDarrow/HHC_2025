@@ -19,13 +19,18 @@ The objective is to correctly configure firewall rules to best security practice
 <summary>Click to expand</summary>
 
 Rule: Internet to DMZ: Allow only HTTP and HTTPS traffic
+
 Rule: DMZ to Internal: Allow HTTP, HTTPS and SSH traffic
+
 Rule: Internal to DMZ: Allow HTTP, HTTPS and SSH traffic
+
 Rule: Internal to Cloud: Allow HTTP, HTTPS, SSH and SMTP traffic
+
 Rule: Internal to Workstations: Allow all traffic types
+
 Rule: Internet to Internal: Block RDP access
 
-**Answer: Flag or Answer**
+**Answer: Configure rules to Security Best Practice**
 
 </details>
 
