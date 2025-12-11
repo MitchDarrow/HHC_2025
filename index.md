@@ -10,15 +10,11 @@ The SANS Holiday Hack Challenge is a free, annual cybersecurity competition desi
 
 Some participation statistics from the 2024 HHC:
 
-Total Players Starting the Prologue: 19,036
-
-Total participants starting Act 1: 5937
-
-Total participants starting Act 2: 2659
-
-Total participants starting Act3: 814
-
-Total participants completing the HHC: 191
+- Total Players Starting the Prologue: 19,036
+- Total participants starting Act 1: 5937
+- Total participants starting Act 2: 2659
+- Total participants starting Act3: 814
+- Total participants completing the HHC: 191
 
 This year's HHC is structured in 3 Acts. Act 1 is intended to practice and polish skills. Some of these tools are old friends, and some of these tools may be new. Act 2 increases the difficulty, in some cases chaining attacks to achieve the objective. Act 3 increases the complexity and difficulty for most of the objectives.  The difficulty of an objective is rated on a 1-5 scale, with 1 being less difficult, and 5 being the most difficult 
 
