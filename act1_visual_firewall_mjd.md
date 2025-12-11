@@ -28,7 +28,7 @@ Rule: Internal to Cloud: Allow HTTP, HTTPS, SSH and SMTP traffic
 
 Rule: Internal to Workstations: Allow all traffic types
 
-Rule: Internet to Internal: Block RDP access
+Rule: Internet to Internal: Block direct Internet to Internal access
 
 **Answer: Configure rules to Security Best Practice**
 
