@@ -1,45 +1,29 @@
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+|[Previous Objective: Act1 Visual Networking](/act1_visual_networking_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Intro to NMAP](/act1_intro_to_nmap_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
-| Objective: Objective name    | Difficulty Level: # |
+| Objective: Visual Firewall    | Difficulty Level: 1 |
 | :-----------------------: | :--------------------------: |
-| Official Description | Location:   |
+| Find Elgee in the big hotel for a firewall frolic and some techy fun. | Location: Grand Hotel  |
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+The objective is to correctly configure firewall rules to best security practices. Without proper firewall configuration, security analysts lose a crucial control point for preventing, detecting, and responding to threats. 
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| Review existing firewall rules and policies | Discovery | T1082 | System Information Discovery |
 
 
 ## Detailed Solution
 <details>
 <summary>Click to expand</summary>
 
-Step by step solution complete with any code used
-  
-![Sample image alt text](/images/objectivename_purpose.jpg) 
-
-
-```sh
-bash script code block
-```
-
-Ordered list:
-1. Item 1
-2. Item 2
-3. Item 3
-
-Unordered list:
-
-- Item
-- Item
-- Item
-/usr/local/weather/temperature
+Rule: Internet to DMZ: Allow only HTTP and HTTPS traffic
+Rule: DMZ to Internal: Allow HTTP, HTTPS and SSH traffic
+Rule: Internal to DMZ: Allow HTTP, HTTPS and SSH traffic
+Rule: Internal to Cloud: Allow HTTP, HTTPS, SSH and SMTP traffic
+Rule: Internal to Workstations: Allow all traffic types
+Rule: Internet to Internal: Block RDP access
 
 **Answer: Flag or Answer**
 
@@ -49,24 +33,18 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-|  |  | 
-|  |  |
-|  |  | 
+| none | none | 
 
 ## Hints Reference
 | Provided By         | Hint |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Santa | This terminal has built-in hints. |
+| Elgee | Welcome to my little corner of network security! finger guns I've whipped up something sweeter than my favorite whoopie pie - an interactive firewall simulator that'll teach you more in ten minutes than most textbooks do in ten chapters. Don't worry about breaking anything; that's half the fun of learning! Ready to dig in? |
 
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
+| none | none |
 
-
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+|[Previous Objective: Act1 Visual Networking](/act1_visual_networking_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Intro to NMAP](/act1_intro_to_nmap_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
