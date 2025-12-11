@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-This objective is designed to test fundamental knowledge needed for using NMAP. Nmap is an essential tool in the penetration testers toolkit, used to discover open ports and services.
+This objective is designed to test fundamental knowledge of the Nmap tool. Nmap is an essential tool in the penetration testers toolkit, used to discover open ports and services.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
