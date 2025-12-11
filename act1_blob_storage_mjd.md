@@ -7,14 +7,14 @@
 
 ## Solution Overview
 
-The objective of this challenge is to connect using Azure CLI to the "neighborhood" tenant. Investigate and find where a security vulnerabliity exists. The neighborhood2 storage account was misconfigured to allow public blob access. The security vulnerability was a file named admin_credentials.txt that contained users and unencrypted passwords.
+The objective of this challenge is to connect using Azure CLI to the "neighborhood" tenant. Investigate and find where a security vulnerability exists. The neighborhood2 storage account was misconfigured to allow public blob access. The security vulnerability was a file named admin_credentials.txt that contained users and unencrypted passwords.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-
+| Enumerate Azure storage accounts in tenant | Discovery | T1580 | Cloud Infrastructure Discovery |
+| List containers in storage account | Discovery | T1619 | Cloud Storage Object Discovery |
+| Identify misconfigured public blob access on storage account | Discovery | T1613 |  Container and Resource Discovery |
+| Discover admin_credentials.txt file containing sensitive data | Discovery | T1619 | Cloud Storage Object Discovery |
 
 ## Detailed Solution
 <details>
