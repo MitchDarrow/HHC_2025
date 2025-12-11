@@ -26,7 +26,7 @@ The objective is to:
 
 2. Connecct to the port and verify the servide is running
 
-![Objective Instructions](/images/santatracker_instructions.jpg) 
+![Objective Instructions](/images/santatracking_instructions.jpg) 
 
 Use the SS tool to discover the port using the command:
 ```sh
