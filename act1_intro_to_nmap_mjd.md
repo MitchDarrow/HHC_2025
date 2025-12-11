@@ -1,4 +1,4 @@
-|[Previous Objective: Act1 Visual Firewall](/act1_visual_firewall_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Blob Storage Challenge](/act1_blob_storage_machine_mjd.md) |
+|[Previous Objective: Act1 Visual Firewall](/act1_visual_firewall_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Intro to NMAP    | Difficulty Level: 1 |
@@ -140,5 +140,5 @@ Terminated
 | :-----------------------: | :--------------------------------: |
 | none | none |
 
-|[Previous Objective: Act1 Visual Firewall](/act1_visual_firewall_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Blob Storage Challenge](/act1_blob_storage_machine_mjd.md) |
+|[Previous Objective: Act1 Visual Firewall](/act1_visual_firewall_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
