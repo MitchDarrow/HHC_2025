@@ -45,7 +45,7 @@ curl -I http://0.0.0.0:12321
 ```
 The service responds with a 200 OK and Content-Type of application/json
 
-**Answer: Flag or Answer**
+**Answer: The service is running**
 
 </details>
 
