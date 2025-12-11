@@ -1,9 +1,9 @@
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+|[Previous Objective: Act1 Santa’s Gift-Tracking Service Port Mystery](/act1+santas_gift-tracking_service_port_mystery_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Visual Firewall](/act1visual_firewall_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
-| Objective: Objective name    | Difficulty Level: # |
+| Objective: Visual Neworking    | Difficulty Level: 1 |
 | :-----------------------: | :--------------------------: |
-| Official Description | Location:   |
+| Skate over to Jared at the frozen pond for some network magic and learn the ropes by the hockey rink | Location: The Pond|
 
 ## Solution Overview
 
@@ -20,28 +20,51 @@ High level executive summary of how the objective was solved. Details belong in 
 <details>
 <summary>Click to expand</summary>
 
-Step by step solution complete with any code used
-  
-![Sample image alt text](/images/objectivename_purpose.jpg) 
+1. Build an IPv4 DNS Request:
+Port: 53
 
+Domain: visual-networking.holidayhackchallenge.com
 
-```sh
-bash script code block
-```
+Request Type: A
 
-Ordered list:
-1. Item 1
-2. Item 2
-3. Item 3
+2. Build a 3-Way Handshake:
 
-Unordered list:
+Client sends a packet with the TCP SYN flag set to the server.
 
-- Item
-- Item
-- Item
-/usr/local/weather/temperature
+The Server response with a packet with the TCP ACK and SYN flags set to the client.
 
-**Answer: Flag or Answer**
+The client responds with a packed with the TCP ACK flag to the server, completing the handshake.
+
+3. Build an HTTP GET request:
+
+HTTP verb: GET
+
+HTTP Version: HTTP/1.1
+
+Host: visual-networking.holidayhackchallenge.com
+
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0
+
+4. Build a TLS Handshake:
+
+Client Hello >>
+<< Server Hello
+<< Server Certificate
+Client Key Exchange >>
+<< Server Change Cipher Spec
+<< Fnished
+
+5. Build an HTTPS GET request:
+
+HTTP verb: GET
+
+HTTP Version: HTTP/1.1
+
+Host: visual-networking.holidayhackchallenge.com
+
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0
+
+**Answer: Complete all 5 Challenges**
 
 </details>
 
@@ -49,24 +72,18 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-|  |  | 
-|  |  |
-|  |  | 
+| none | none | 
+
 
 ## Hints Reference
 | Provided By         | Hint |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Santa | Thisterminal has built-in hints! |
 
 ## Acknowledgements
 | Provided By         | Notes |
 | :-----------------------: | :--------------------------------: |
-|  |  |
-|  |  |
+| none | none |
 
-
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)
+|[Previous Objective: Act1 Santa’s Gift-Tracking Service Port Mystery](/act1+santas_gift-tracking_service_port_mystery_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Visual Firewall](/act1visual_firewall_mjd.md)|
 | :----------------------- | :--------------------------------: | --------------------------------: |
