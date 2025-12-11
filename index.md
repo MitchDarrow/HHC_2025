@@ -29,7 +29,8 @@ The list below is a curated list of the best of class solution for each objectiv
 - An expandable section with the detailed solution, including screenshots and code snippets
 - A summary of tools used
 - A summary of hints for the objective
-- A summary of any 
+- An acknoledgements summary, thanking other participants for any guidance in solving the objective
+
 A matrix of solution write-ups for each objective that team members completed may be found here: [All Solutions](/allwriteups.md)
 
 The following are the BerryDunn IT Security team's official solutions to this year's HHC objectives: 
