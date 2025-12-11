@@ -48,7 +48,7 @@ az storage blob download \
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| Azure Cli |  | 
+| Azure Cli | N/A | 
 
 
 ## Hints Reference
