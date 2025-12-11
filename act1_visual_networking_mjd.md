@@ -84,7 +84,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 ## Hints Reference
 | Provided By         | Hint |
 | :-----------------------: | :--------------------------------: |
-| Santa | Thisterminal has built-in hints! |
+| Santa | This terminal has built-in hints! |
 
 ## Acknowledgements
 | Provided By         | Notes |
