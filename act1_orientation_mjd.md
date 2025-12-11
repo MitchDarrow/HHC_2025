@@ -18,7 +18,8 @@ Orientation information about this year's challenge.
 <details>
 <summary>Click to expand</summary>
 
-Type the word "answer" in hte terminal
+
+Type the word "answer" in the terminal
 
 **Answer: answer**
 
