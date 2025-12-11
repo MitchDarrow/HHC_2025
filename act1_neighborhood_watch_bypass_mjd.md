@@ -62,7 +62,7 @@ echo -e '#!/bin/bash\n/bin/bash' > ~/bin/ps
 chmod +x ~/bin/ps
 ```
 
-If the path hijack attack works, it will run the malicious version of the `ps` command and create a new shell with root privileges.
+The path hijack attack works and the malicious version of the `ps` command runs, creating a new shell with root privileges.
 
 ![Successful privilege escalation showing root shell access](images/neighborhoodwatchbypass_answer.jpg)
 
@@ -76,9 +76,8 @@ Successfully obtained a new shell with root privileges and can run the `runtoans
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-|  |  | 
-|  |  |
-|  |  | 
+| bash | 5.2.37(1)-release | 
+
 
 ## Hints Reference
 | Provided By         | Hint |
