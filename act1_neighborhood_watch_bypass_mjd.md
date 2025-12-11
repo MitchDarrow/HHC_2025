@@ -1,4 +1,4 @@
-|[Previous Objective: Act1 Its All About Defang](/act1_its_all_about-defang_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 1 Santa's Gift-Tracking Service Port](/actact1_santas_gift-tracking_service_port_mystery_mjd.md)
+|[Previous Objective: Act1 Its All About Defang](/act1_its_all_about-defang_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 1 Santa's Gift-Tracking Service Port](/act1_santas_gift-tracking_service_port_mystery_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Neighborhood Watch Bypass  | Difficulty Level: 1 |
@@ -92,5 +92,5 @@ Successfully obtained a new shell with root privileges and can run the `runtoans
 | none | none |
 
 
-|[Previous Objective: Act1 Its All About Defang](/act1_its_all_about-defang_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 1 Santa's Gift-Tracking Service Port](/actact1_santas_gift-tracking_service_port_mystery_mjd.md)
+|[Previous Objective: Act1 Its All About Defang](/act1_its_all_about-defang_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 1 Santa's Gift-Tracking Service Port](/act1_santas_gift-tracking_service_port_mystery_mjd.md)
 | :----------------------- | :--------------------------------: | --------------------------------: |
