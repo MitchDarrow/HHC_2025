@@ -7,39 +7,65 @@
 
 ## Solution Overview
 
-High level executive summary of how the objective was solved. Details belong in the detail section.
+This objective is a digital forensics investigation involving a floppy disk image file that required data recovery. The investigator used the Linux `losetup` command to mount the floppy disk image as a loop device, treating the image file as a physical block device. TestDisk was then executed against the loop device `/dev/loop0` to search for deleted files. After selecting the appropriate disk and partition type settings, the "undelete" function was used to browse recoverable files. Among the deleted files, a BASIC source code file named `all_i-want_for_christmas.bas` was identified as interesting. Upon opening the recovered BASIC file in a text editor (mousepad), the investigator discovered an embedded base64-encoded string within the source code. The base64 string `bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=` was decoded to reveal the hidden message: "merry christmas to all and to all a good night". This investigation demonstrates common digital forensics techniques including disk imaging, file carving, and data decoding.
 
-| Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
-| :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| Activity | Primary Tactic | MITRE ATT&CK Technique ID | MITRE ATT&CK Technique Name |
+|----------|----------------|---------------------------|----------------------------|
+| Execute TestDisk against loop device /dev/loop0 | Discovery | T1083 |  File and Directory Discovery |
+| Recover deleted file "all_i-want_for_christmas.bas" | Collection | T1074.001 | Data Staged: Local Data Staging |
+| Decode base64 string to reveal hidden message | Deobfuscate/Decode Files or Information | T1140 | Deobfuscate/Decode Files or Information |
 
 
 ## Detailed Solution
 <details>
 <summary>Click to expand</summary>
 
-Step by step solution complete with any code used
-  
-![Sample image alt text](/images/objectivename_purpose.jpg) 
+[Floppy Disk Image File](/resources/act2_retrorecovery_floppy.img)
 
+`losetup` is a Linux command used to set up and manage loop devices, which let you treat a regular file as if it were a block device (like a disk).
 
-```sh
-bash script code block
+Setup the disk image as a block device using the command:
+
+```bash
+sudo losetup -fP floppy.img
+
+sudo testdisk /dev/loop0
 ```
 
-Ordered list:
-1. Item 1
-2. Item 2
-3. Item 3
+1. Select the disk0 as the media and click proceed
 
-Unordered list:
+2. Accept the default "none" as the partition type
 
-- Item
-- Item
-- Item
-/usr/local/weather/temperature
+3. Select "undelete" as the action
+
+![TestDisk interface showing file listing on floppy disk image](images/retrorecover_explorefiles.jpg)
+
+There is an interesting file: `all_i-want_for_christmas.bas`
+
+Highlight the file and select "C" to copy the selected file.
+
+Successfully recovered the deleted file `all_i-want_for_christmas.bas` to the current directory.
+
+Open in mousepad and explore:
+
+![BASIC source code file contents showing encoded string](images/retrorecovery_sourcecode.jpg)
+
+There is a base64 encoded string:
+
+```
+bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=
+```
+
+Which decodes to:
+
+```
+merry christmas to all and to all a good night
+```
+
+**Answer: merry christmas to all and to all a good night**
+
+---
+
 
 **Answer: Flag or Answer**
 
