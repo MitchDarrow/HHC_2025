@@ -21,6 +21,7 @@ High level executive summary of how the objective was solved. Details belong in 
 <summary>Click to expand</summary>
 
 1. Build an IPv4 DNS Request:
+
 Port: 53
 
 Domain: visual-networking.holidayhackchallenge.com
@@ -49,9 +50,13 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 Client Hello >>
 << Server Hello
+
 << Server Certificate
+   
 Client Key Exchange >>
+
 << Server Change Cipher Spec
+
 << Fnished
 
 5. Build an HTTPS GET request:
