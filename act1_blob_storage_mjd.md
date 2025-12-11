@@ -38,7 +38,7 @@ az storage blob download \
   --file admin_passwords.txt
 ```
 
-![Misconfigured Storage Account allows Public Access](/images/blobstorage_passwordfile.jpg) 
+![Misconfigured Storage Account allows Public Access](/images/blobstorage_passwords.jpg) 
 
 **Answer: allowBlobPublicAccesss: True**
 
