@@ -1,28 +1,19 @@
 ﻿---
 nav: |
   <table>
-  <thead><tr><th><a href="/act3_schrodingersscope_mjd.html">Previous Objective: Act3 Schrodingers Scope</a></th> <th><a href="/index.html">Table of Contents</a></th> <th><a href="/act3_onthewire_mjd.html">Next Objective: Act3 On the Wire3</a></th></table>
-  
+  <thead><tr><th><a href="/HHC_2025/act3_schrodingersscope_mjd.html">Previous Objective: Act3 Schrodingers Scope</a></th> <th><a href="/HHC_2025/index.html">Table of Contents</a></th> <th><a href="/HHC_2025/act3_onthewire_mjd.html">Next Objective: Act3 On the Wire3</a></th></table>
 ---
-
 <table>
 <thead><tr><th>Objective: Find and Shutdown Frosty's Snowglobe Machine</th> <th>Difficulty Level: 3</th><tr><td>You've heard murmurings around the city about a wise, elderly gnome having a change of heart. He must have information about where Frosty's Snowglobe Machine is. You should find and talk to the gnome so you can get some help with how to make your way through the Data Center's labrynthian halls. Once you find the Snowglobe Machine, figure out how to shut it down and melt Frosty's cold, nefarious plans.</td> <td>Location: Old Data Center</td></table>
-
-
-## Solution Overview
-
+<h2>Solution Overview</h2>
 The code on the outside of the building is binary and decodes to "imanok" which is konami spelled backwards. Konami code is a classic cheat sequence (â†‘ â†‘ â†“ â†“ â† â†’ â† â†’ B A) often repurposed in games and puzzles.  Because the word is inverted, the code sequence is also inverted (Reversed Konami Code: A B â†’â†  â†’â† â†“ â†“ â†‘ â†‘). Each door is marked with one of three symbols A, â†‘, B.  The konami code gives the choice for working doorways in each room, with the code arrows being interpreted as compass directions.  All doors work in the first room, and is designated the start of the code. Following the code leads to the destination and the flag.
-
 <table>
 <thead><tr><th>Activity</th> <th>Primary Tactic</th> <th>MITRE ATT&CK Technique ID</th> <th>MITRE ATT&CK Technique Name</th><tr><td>Decode hidden payload</td> <td>Defense Evasion</td> <td>T1140</td> <td>Deobfuscate/Decode Files or Information</td></table>
-
-
-
-## Detailed Solution
+<h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
 <p>Viewing the exterior wall of the datacenter, there is a pattern in the bricks that looks binary, six bytes of data:</p>
-<p>!<a href="/images/snowglobe_code.jpg">snowglobe code</a> </p>
+<p>!<a href="/HHC_2025/images/snowglobe_code.jpg">snowglobe code</a> </p>
 <p>Decoding the patterns gives:</p>
 <p>01101001 = 105 = 'i'</p>
 <p>01101101 = 109 = 'm' </p>
@@ -41,30 +32,14 @@ The code on the outside of the building is binary and decodes to "imanok" which 
 <tr><td>Room</td> <td>Valid Exits</td> <td>Konami Position</td> <td>Pattern</td><tr><th></th> <th></th> <th></th> <th></th><tr><td>1</td> <td>All 12 doors</td> <td>Start</td> <td>All doors</td><tr><td>2</td> <td>A doors: 3, 6, 7, 10</td> <td><strong>A</strong></td> <td>All A-type</td><tr><td>3</td> <td>B doors: 1, 4, 9, 12</td> <td><strong>B</strong></td> <td>All B-type</td><tr><td>4</td> <td>East: 4, 5, 6</td> <td><strong>â†’</strong> Right</td> <td>East wall</td><tr><td>5</td> <td>West: 10, 11, 12</td> <td><strong>â†</strong> Left</td> <td>West wall</td><tr><td>6</td> <td>East: 4, 5, 6</td> <td><strong>â†’</strong> Right</td> <td>East wall</td><tr><td>7</td> <td>West: 10, 11, 12</td> <td><strong>â†</strong> Left</td> <td>West wall</td><tr><td>8</td> <td>South: 7, 8, 9</td> <td><strong>â†“</strong> Down</td> <td>South wall</td><tr><td>9</td> <td>South: 7, 8, 9</td> <td><strong>â†“</strong> Down</td> <td>South wall</td><tr><td>10</td> <td>North: 1, 2, 3</td> <td><strong>â†‘</strong> Up</td> <td>North wall</td><tr><td>11</td> <td>North: 1, 2, 3</td> <td><strong>â†‘</strong> Up</td> <td>North wall</td></table>
 <p><strong>Answer: Reversed Konami Code: A B â†’â†  â†’â† â†“ â†“ â†‘ â†‘</strong></p>
 </details>
-
-## Tools Reference
-
+<h2>Tools Reference</h2>
 <table>
 <thead><tr><th>Tools Used</th> <th>Tool Version</th><tr><td>None</td> <td>None</td> <td></td></table>
-
-
-## Hints Reference
+<h2>Hints Reference</h2>
 <table>
 <thead><tr><th>Provided By</th> <th>Hint</th><tr><td>Elder Gnome</td> <td>The Elder Gnome said the route to the old secret lab inside the Data Center starts on the far East wing inside the building, and that the hallways leading to it are probably pitch dark. He also said the employees that used to work there left some kind of code outside the building as a reminder of the route. Perhaps you can search in the vicinity of the Data Center for this code.</td><tr><td>Elder Gnome</td> <td>Backwards you should look: The Elder also recalled a story of another "computer person" like yourself who managed to find an intern that got lost inside the Data Center about 10 years ago. But that was before the reconstruction, so the current route likely isn't exactly the same. Maybe you can search for the Data Center's past in the historical archives that is the Internet for more information that may be helpful.</td></table>
-
-
-
-## Acknowledgements
+<h2>Acknowledgements</h2>
 <table>
 <thead><tr><th>Provided By</th> <th>Notes</th><tr><td>None</td> <td>None</td></table>
-
-
-
 <table>
-<thead><tr><th><a href="/act3_schrodingersscope_mjd.html">Previous Objective: Act3 Schrodingers Scope</a></th> <th><a href="/index.html">Table of Contents</a></th> <th><a href="/act3_onthewire_mjd.html">Next Objective: Act3 On the Wire3</a></th></table>
-
-
-
-
-
-
+<thead><tr><th><a href="/HHC_2025/act3_schrodingersscope_mjd.html">Previous Objective: Act3 Schrodingers Scope</a></th> <th><a href="/HHC_2025/index.html">Table of Contents</a></th> <th><a href="/HHC_2025/act3_onthewire_mjd.html">Next Objective: Act3 On the Wire3</a></th></table>

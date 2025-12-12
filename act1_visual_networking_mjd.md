@@ -1,23 +1,15 @@
 ﻿---
 nav: |
   <table>
-  <thead><tr><th><a href="/act1+santas_gift-tracking_service_port_mystery_mjd.html">Previous Objective: Act1 Santaâ€™s Gift-Tracking Service Port Mystery</a></th> <th><a href="/index.html">Table of Contents</a></th> <th><a href="/act1_visual_firewall_mjd.html">Next Objective: Act1 Visual Firewall</a></th></table>
-  
+  <thead><tr><th><a href="/HHC_2025/act1+santas_gift-tracking_service_port_mystery_mjd.html">Previous Objective: Act1 Santaâ€™s Gift-Tracking Service Port Mystery</a></th> <th><a href="/HHC_2025/index.html">Table of Contents</a></th> <th><a href="/HHC_2025/act1_visual_firewall_mjd.html">Next Objective: Act1 Visual Firewall</a></th></table>
 ---
-
 <table>
 <thead><tr><th>Objective: Visual Neworking</th> <th>Difficulty Level: 1</th><tr><td>Skate over to Jared at the frozen pond for some network magic and learn the ropes by the hockey rink</td> <td>Location: The Pond</td></table>
-
-
-## Solution Overview
-
+<h2>Solution Overview</h2>
 This objective is designed to test knowledge of networking communications. This knowledge is useful when analyzing network traffic.
-
 <table>
 <thead><tr><th>Activity</th> <th>Primary Tactic</th> <th>MITRE ATT&CK Technique ID</th> <th>MITRE ATT&CK Technique Name</th><tr><td>Monitor network traffic flows and protocols</td> <td>Discovery</td> <td>T1049</td> <td>System Network Connections Discovery</td></table>
-
-
-## Detailed Solution
+<h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
 <p>1. Build an IPv4 DNS Request:</p>
@@ -47,30 +39,14 @@ This objective is designed to test knowledge of networking communications. This 
 <p>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0</p>
 <p><strong>Answer: Complete all 5 Challenges</strong></p>
 </details>
-
-## Tools Reference
-
+<h2>Tools Reference</h2>
 <table>
 <thead><tr><th>Tools Used</th> <th>Tool Version</th><tr><td>none</td> <td>none</td> <td></td></table>
-
-
-
-## Hints Reference
+<h2>Hints Reference</h2>
 <table>
 <thead><tr><th>Provided By</th> <th>Hint</th><tr><td>Santa</td> <td>This terminal has built-in hints!</td></table>
-
-
-## Acknowledgements
+<h2>Acknowledgements</h2>
 <table>
 <thead><tr><th>Provided By</th> <th>Notes</th><tr><td>none</td> <td>none</td></table>
-
-
 <table>
-<thead><tr><th><a href="/act1+santas_gift-tracking_service_port_mystery_mjd.html">Previous Objective: Act1 Santaâ€™s Gift-Tracking Service Port Mystery</a></th> <th><a href="/index.html">Table of Contents</a></th> <th><a href="/act1_visual_firewall_mjd.html">Next Objective: Act1 Visual Firewall</a></th></table>
-
-
-
-
-
-
-
+<thead><tr><th><a href="/HHC_2025/act1+santas_gift-tracking_service_port_mystery_mjd.html">Previous Objective: Act1 Santaâ€™s Gift-Tracking Service Port Mystery</a></th> <th><a href="/HHC_2025/index.html">Table of Contents</a></th> <th><a href="/HHC_2025/act1_visual_firewall_mjd.html">Next Objective: Act1 Visual Firewall</a></th></table>
