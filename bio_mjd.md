@@ -2,7 +2,6 @@
 layout: default
 title: ""
 github.is_project_page: false
-<img src="/images/bdlogo.svg" alt="BerryDunn Logo">
 ---
 [Back to Home Page](/index.md)
 
