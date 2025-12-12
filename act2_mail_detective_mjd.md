@@ -1,4 +1,4 @@
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act 2 IDORable Bistro](/act2_idorable_bistro_mjd.md)
+|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act 2 IDORable Bistro](/act2_idorable_bistro_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Mail Detective    | Difficulty Level: 2 |
@@ -77,5 +77,5 @@ var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
 | none | none |
 
 
-|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act 2 IDORable Bistro](/act2_idorable_bistro_mjd.md)
+|[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act 2 IDORable Bistro](/act2_idorable_bistro_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
