@@ -1,4 +1,4 @@
-|[Previous Objective: Act3 Snowcat RCE abd Privilege Escalation](/act3_snowcat_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md)
+|[Previous Objective: Act3 Snowcat RCE abd Privilege Escalation](/act3_snowcat_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Schrödinger's Scope   | Difficulty Level: 3 |
@@ -246,5 +246,5 @@ Hijacking this session token, the document in wip is accessed.
 | khesperus | Provided a sanity check by confirming that I had all the elements to solve the objective |
 | eucrates | Provided feedback on scope and avoiding rabbit holes |
 
-|[Previous Objective: Act3 Snowcat RCE abd Privilege Escalation](/act3_snowcat_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md)
+|[Previous Objective: Act3 Snowcat RCE abd Privilege Escalation](/act3_snowcat_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
