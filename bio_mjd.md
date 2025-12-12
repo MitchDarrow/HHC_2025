@@ -1,6 +1,7 @@
 ---
 layout: default
 title: ""
+github.is_project_page = false
 ---
 [Back to Home Page](/index.md)
 
