@@ -1,9 +1,11 @@
 ﻿ !<a href="/HHC_2025/images/bdlogo.svg">BerryDunn Logo</a>
-<h1>BerryDunn Holiday Hack Challenge Solution Report</h1>
+<h1>BerryDunn Holiday Hack Challenge Solution Report
+</h1>
 <table>
-<thead><tr><th>SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</th> <th>!<a href="/HHC_2025/images/HHC.webp">Holiday Hack Challenge Logo</a></th> </tr></thead>
+<thead><tr><th>SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</th> <th><a href="/HHC_2025/images/HHC.webp">Holiday Hack Challenge Logo</a></th> </tr></thead>
 </table>
-<h3>About the Holiday Hack Challenge (HHC)</h3>
+<h3>About the Holiday Hack Challenge (HHC)
+</h3>
 The SANS Holiday Hack Challenge is a free, annual cybersecurity competition designed to help participants strengthen their technical skills through practical, hands-on challenges. At its core, the event is a large-scale capture-the-flag (CTF) exercise where players engage in penetration testing, reverse engineering, cryptography, network analysis, and other security disciplines. Each challenge is crafted to simulate real-world scenarios, giving participants the opportunity to practice problem-solving and apply security concepts in a safe environment. Since its early beginnings in the 2000s, the challenge has steadily evolved, incorporating increasingly sophisticated puzzles and interactive environments that encourage both individual learning and team collaboration. Its primary purpose is to make skill development accessible to all levels of expertise, from students just starting out to seasoned professionals looking to refine their techniques. By offering a structured yet engaging platform, the Holiday Hack Challenge has become a respected training ground in the cybersecurity community, fostering growth, knowledge sharing, and the advancement of practical defensive and offensive security skills.
 Some participation statistics from the 2024 HHC:
 - Total Players Starting the Prologue: 19,036
