@@ -1,34 +1,43 @@
- ![BerryDunn Logo](/images/bdlogo.svg)
+﻿ !<a href="/images/bdlogo.svg">BerryDunn Logo</a>
 
- [Back to Home Page](/index.md)
+ <a href="/index.html">Back to Home Page</a>
  
 # BerryDunn Holiday Hack Challenge All Solutions
 
-| Mitch Darrow | Spencer Treece | Kodi Berube | Louis Krupp |
-| :------ | :------ | :------ | :------ |
-| [Act1 Holiday Hack Orientation ](/act1_orientation_mjd.md) |    |   |    | 
-| [Act1 Its All About Defang](/act1_its_all_about_defang_mjd.md) |    |   |    | 
-| [Act1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md) |    |   |    | 
-| [Act1 Santa’s Gift-Tracking Service Port Mystery](/act1_santas_gift-tracking_service_port_mystery_mjd.md) |    |   |    | 
-| [Act1 Visual Networking](/act1_visual_networking_mjd.md) |    |   |    | 
-| [Act1 Visual Firewall](/act1_visual_firewall_mjd.md) |    |   |    | 
-| [Act1 Blob Storage Challenge in the Neighborhood ](/act1_blob_storage_mjd.md)  |    |   |    | 
-| [Act1 Into to NMAP](/act1_intro_to_nmap_mjd.md) |    |   |    | 
-| [Act1 Spare Key ](/act1_spare_key_mjd.md)  |    |   |    | 
-| [Act1 The Open Door ](/act1_the_open_door_mjd.md) |    |   |    | 
-| [Act1 Owner](/act1_owner_mjd.md) |    |   |    | 
-| [Act2 Retro Recovery](/act2_retro_recovery_mjd.md) |    |   |    | 
-| [Act2 Mail Detective](/act2_mail_detective_mjd.md) |    |   |    | 
-| [Act2 IDORable Bistro ](/act2_idorable_bistro_mjd.md) |    |   |    | 
-| [Act2 Dosis Network Down](/act2_idorable_bistro_mjd.md) |    |   |    | 
-| [Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md) |    |   |    | 
-| [Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md) |    |   |    | 
-| [Act2 Going in Reverse](/act2_going_in_reverse_mjd.md) |    |   |    | 
-|  [Act3 Gnome Tea](/act3_gnome_tea_mjd.md)  |    |   |    | 
-|  [Act3 Hack-a-Gnome](/act3_hack-a-gnome_mjd.md) |    |   |    | 
-| [Act3 Snowcat RCE and Privilege Escalation](/act3_snowcat_mjd.md)   |    |   |    | 
-|  [Act3 Schrödinger's Scope](/act3_schrodingersscope_mjd.md)  |    |   |    | 
-| [Act3 Find and Shutdown Frosty's snowglobe Machine](/act3_snowglobe_mjd.md)  |    |   |    | 
-| [Act3 On the Wire](/act3_onthewire_mjd.md)  |    |   |    | 
-| [Act3 Free Ski](/act3_free_ski_mjd.md)   |    |   |    | 
-| [Act3 Snowblind Ambush](/act3_snowblindambush_mjd.md)  |    |   |    | 
+<table>
+<thead><tr><th>Mitch Darrow</th> <th>Spencer Treece</th> <th>Kodi Berube</th> <th>Louis Krupp</th> </tr></thead>
+<tbody>
+<tr><td><a href="/act1_orientation_mjd.html">Act1 Holiday Hack Orientation </a></td> </tr>
+<tr><td><a href="/act1_its_all_about_defang_mjd.html">Act1 Its All About Defang</a></td> </tr>
+<tr><td><a href="/act1_neighborhood_watch_bypass_mjd.html">Act1 Neighborhood Watch Bypass</a></td> </tr>
+<tr><td><a href="/act1_santas_gift-tracking_service_port_mystery_mjd.html">Act1 Santaâ€™s Gift-Tracking Service Port Mystery</a></td> </tr>
+<tr><td><a href="/act1_visual_networking_mjd.html">Act1 Visual Networking</a></td> </tr>
+<tr><td><a href="/act1_visual_firewall_mjd.html">Act1 Visual Firewall</a></td> </tr>
+<tr><td><a href="/act1_blob_storage_mjd.html">Act1 Blob Storage Challenge in the Neighborhood </a></td> </tr>
+<tr><td><a href="/act1_intro_to_nmap_mjd.html">Act1 Into to NMAP</a></td> </tr>
+<tr><td><a href="/act1_spare_key_mjd.html">Act1 Spare Key </a></td> </tr>
+<tr><td><a href="/act1_the_open_door_mjd.html">Act1 The Open Door </a></td> </tr>
+<tr><td><a href="/act1_owner_mjd.html">Act1 Owner</a></td> </tr>
+<tr><td><a href="/act2_retro_recovery_mjd.html">Act2 Retro Recovery</a></td> </tr>
+<tr><td><a href="/act2_mail_detective_mjd.html">Act2 Mail Detective</a></td> </tr>
+<tr><td><a href="/act2_idorable_bistro_mjd.html">Act2 IDORable Bistro </a></td> </tr>
+<tr><td><a href="/act2_idorable_bistro_mjd.html">Act2 Dosis Network Down</a></td> </tr>
+<tr><td><a href="/act2_rogue_gnome_identity_provider_mjd.html">Act2 Rogue Gnome Identity Provider</a></td> </tr>
+<tr><td><a href="/act2_quantgnome_leap_mjd.html">Act2 Quantgnome Leap</a></td> </tr>
+<tr><td><a href="/act2_going_in_reverse_mjd.html">Act2 Going in Reverse</a></td> </tr>
+<tr><td><a href="/act3_gnome_tea_mjd.html">Act3 Gnome Tea</a></td> </tr>
+<tr><td><a href="/act3_hack-a-gnome_mjd.html">Act3 Hack-a-Gnome</a></td> </tr>
+<tr><td><a href="/act3_snowcat_mjd.html">Act3 Snowcat RCE and Privilege Escalation</a></td> </tr>
+<tr><td><a href="/act3_schrodingersscope_mjd.html">Act3 SchrÃ¶dinger's Scope</a></td> </tr>
+<tr><td><a href="/act3_snowglobe_mjd.html">Act3 Find and Shutdown Frosty's snowglobe Machine</a></td> </tr>
+<tr><td><a href="/act3_onthewire_mjd.html">Act3 On the Wire</a></td> </tr>
+<tr><td><a href="/act3_free_ski_mjd.html">Act3 Free Ski</a></td> </tr>
+<tr><td><a href="/act3_snowblindambush_mjd.html">Act3 Snowblind Ambush</a></td> </tr>
+</tbody>
+</table>
+
+
+
+
+
+

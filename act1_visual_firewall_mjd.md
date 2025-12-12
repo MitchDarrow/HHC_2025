@@ -1,55 +1,57 @@
-|[Previous Objective: Act1 Visual Networking](/act1_visual_networking_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Intro to NMAP](/act1_intro_to_nmap_mjd.md) |
-| :----------------------- | :--------------------------------: | --------------------------------: |
+﻿---
+nav: |
+  <table>
+  <thead><tr><th><a href="/act1_visual_networking_mjd.html">Previous Objective: Act1 Visual Networking</a></th> <th><a href="/index.html">Table of Contents</a></th> <th><a href="/act1_intro_to_nmap_mjd.html">Next Objective: Act1 Intro to NMAP</a></th></table>
+  
+---
 
-| Objective: Visual Firewall    | Difficulty Level: 1 |
-| :-----------------------: | :--------------------------: |
-| Find Elgee in the big hotel for a firewall frolic and some techy fun. | Location: Grand Hotel  |
+<table>
+<thead><tr><th>Objective: Visual Firewall</th> <th>Difficulty Level: 1</th><tr><td>Find Elgee in the big hotel for a firewall frolic and some techy fun.</td> <td>Location: Grand Hotel</td></table>
+
 
 ## Solution Overview
 
 The objective is to correctly configure firewall rules to best security practices. Without proper firewall configuration, security analysts lose a crucial control point for preventing, detecting, and responding to threats. 
 
-| Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
-| :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
-| Review existing firewall rules and policies | Discovery | T1082 | System Information Discovery |
+<table>
+<thead><tr><th>Activity</th> <th>Primary Tactic</th> <th>MITRE ATT&CK Technique ID</th> <th>MITRE ATT&CK Technique Name</th><tr><td>Review existing firewall rules and policies</td> <td>Discovery</td> <td>T1082</td> <td>System Information Discovery</td></table>
+
 
 
 ## Detailed Solution
 <details>
 <summary>Click to expand</summary>
-
-Rule: Internet to DMZ: Allow only HTTP and HTTPS traffic
-
-Rule: DMZ to Internal: Allow HTTP, HTTPS and SSH traffic
-
-Rule: Internal to DMZ: Allow HTTP, HTTPS and SSH traffic
-
-Rule: Internal to Cloud: Allow HTTP, HTTPS, SSH and SMTP traffic
-
-Rule: Internal to Workstations: Allow all traffic types
-
-Rule: Internet to Internal: Block direct Internet to Internal access
-
-**Answer: Configure rules to Security Best Practice**
-
+<p>Rule: Internet to DMZ: Allow only HTTP and HTTPS traffic</p>
+<p>Rule: DMZ to Internal: Allow HTTP, HTTPS and SSH traffic</p>
+<p>Rule: Internal to DMZ: Allow HTTP, HTTPS and SSH traffic</p>
+<p>Rule: Internal to Cloud: Allow HTTP, HTTPS, SSH and SMTP traffic</p>
+<p>Rule: Internal to Workstations: Allow all traffic types</p>
+<p>Rule: Internet to Internal: Block direct Internet to Internal access</p>
+<p><strong>Answer: Configure rules to Security Best Practice</strong></p>
 </details>
 
 ## Tools Reference
 
-| Tools Used           | Tool Version |
-| :-----------------------: | :--------------------------------: |
-| none | none | 
+<table>
+<thead><tr><th>Tools Used</th> <th>Tool Version</th><tr><td>none</td> <td>none</td> <td></td></table>
+
 
 ## Hints Reference
-| Provided By         | Hint |
-| :-----------------------: | :--------------------------------: |
-| Santa | This terminal has built-in hints. |
-| Elgee | Welcome to my little corner of network security! finger guns I've whipped up something sweeter than my favorite whoopie pie - an interactive firewall simulator that'll teach you more in ten minutes than most textbooks do in ten chapters. Don't worry about breaking anything; that's half the fun of learning! Ready to dig in? |
+<table>
+<thead><tr><th>Provided By</th> <th>Hint</th><tr><td>Santa</td> <td>This terminal has built-in hints.</td><tr><td>Elgee</td> <td>Welcome to my little corner of network security! finger guns I've whipped up something sweeter than my favorite whoopie pie - an interactive firewall simulator that'll teach you more in ten minutes than most textbooks do in ten chapters. Don't worry about breaking anything; that's half the fun of learning! Ready to dig in?</td></table>
+
 
 ## Acknowledgements
-| Provided By         | Notes |
-| :-----------------------: | :--------------------------------: |
-| none | none |
+<table>
+<thead><tr><th>Provided By</th> <th>Notes</th><tr><td>none</td> <td>none</td></table>
 
-|[Previous Objective: Act1 Visual Networking](/act1_visual_networking_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Intro to NMAP](/act1_intro_to_nmap_mjd.md) |
-| :----------------------- | :--------------------------------: | --------------------------------: |
+
+<table>
+<thead><tr><th><a href="/act1_visual_networking_mjd.html">Previous Objective: Act1 Visual Networking</a></th> <th><a href="/index.html">Table of Contents</a></th> <th><a href="/act1_intro_to_nmap_mjd.html">Next Objective: Act1 Intro to NMAP</a></th></table>
+
+
+
+
+
+
+

@@ -1,7 +1,13 @@
- ![BerryDunn Logo](/images/bdlogo.svg)
+﻿ !<a href="/images/bdlogo.svg">BerryDunn Logo</a>
 
- [Back to Home Page](/index.md)
+ <a href="/index.html">Back to Home Page</a>
 
 # About BerryDunn's Cybersecurity Team
 
-BerryDunn’s cybersecurity team brings deep industry expertise and recognized certifications to every engagement. We work closely with clients to bridge the gap between technical teams and leadership—delivering clear insights, tailored solutions, and lasting security improvements through transparent collaboration.
+BerryDunnâ€™s cybersecurity team brings deep industry expertise and recognized certifications to every engagement. We work closely with clients to bridge the gap between technical teams and leadershipâ€”delivering clear insights, tailored solutions, and lasting security improvements through transparent collaboration.
+
+
+
+
+
+

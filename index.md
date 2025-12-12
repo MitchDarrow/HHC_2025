@@ -1,8 +1,10 @@
- ![BerryDunn Logo](/images/bdlogo.svg)
+﻿ !<a href="/images/bdlogo.svg">BerryDunn Logo</a>
 # BerryDunn Holiday Hack Challenge Solution Report
 
-| SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s) | ![Holiday Hack Challenge Logo](/images/HHC.webp) |
-| :----------------------- | --------------------------------: |
+<table>
+<thead><tr><th>SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</th> <th>!<a href="/images/HHC.webp">Holiday Hack Challenge Logo</a></th> </tr></thead>
+</table>
+
 
 
 ### About the Holiday Hack Challenge (HHC)
@@ -27,23 +29,27 @@ The list below is a curated list of the best of class solution for each objectiv
 - A summary of hints for the objective
 - An acknoledgements summary, thanking other participants for any guidance in solving the objective
 
-A matrix of solution write-ups for each objective that team members completed may be found here: [All Solutions](/allwriteups.md)
+A matrix of solution write-ups for each objective that team members completed may be found here: <a href="/allwriteups.html">All Solutions</a>
 
 The following are the BerryDunn IT Security team's official solutions to this year's HHC objectives: 
 
-| Act 1 Official Solutions | Act 2 Official Solutions | Act 3 Official Solutions |
-| :----------------------- | :-------------------------- | :-------------------------- |
-| Holiday Hack Orientation		 |  [Retro Recovery](/act2_retro_recovery_mjd.md)   | [Gnome Tea](/act3_gnome_tea_mjd.md) |
-| Its All About Defang |  [Mail Detective](/act2_mail_detective_mjd.md) | [Hack-a-Gnome](/act3_hack-a-gnomesnowcat_mjd.md) |
-| Neighborhood Watch Bypass	 |  [IDORable Bistro ](/act2_idorable_bistro_mjd.md)  | [Snowcat RCE and Command Injection](/act3_snowcat_mjd.md) |
-|	Santa’s Gift-Tracking Service Port Mystery |  [Dosis Network Down](/act2_dosis_network_down_mjd.md)  | [Schrodinger's Scope](/act3_schrodingersscope_mjd.md) |
-| Visual Networking |  [Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md) | [Find and Shutdown Frosty's Snow Globe](/act3_snowglobe_mjd.md) |
-| Visual Firewall	|  [Quantgnome Leap](/act2_quantgnome_leap_mjd.md)   | [On The Wire](/act3_onthewire_mjd.md) |
-| Into to NMAP |  [Going in Reverse](/act2_going_in_reverse_mjd.md)   | [Free Ski](/act3_free_ski_mjd.md) |
-| Blob Storage Challenge in the Neighborhood |     | [SnowBlind Ambush](/act3_snowblindambush_mjd.md) |
-| Spare Key |     |  |
-| The Open Door |     |  |
-| Owner |     |  |
+<table>
+<thead><tr><th>Act 1 Official Solutions</th> <th>Act 2 Official Solutions</th> <th>Act 3 Official Solutions</th> </tr></thead>
+<tbody>
+<tr><td>Holiday Hack Orientation</td> <td><a href="/act2_retro_recovery_mjd.html">Retro Recovery</a></td> <td><a href="/act3_gnome_tea_mjd.html">Gnome Tea</a></td> </tr>
+<tr><td>Its All About Defang</td> <td><a href="/act2_mail_detective_mjd.html">Mail Detective</a></td> <td><a href="/act3_hack-a-gnomesnowcat_mjd.html">Hack-a-Gnome</a></td> </tr>
+<tr><td>Neighborhood Watch Bypass</td> <td><a href="/act2_idorable_bistro_mjd.html">IDORable Bistro </a></td> <td><a href="/act3_snowcat_mjd.html">Snowcat RCE and Command Injection</a></td> </tr>
+<tr><td>Santaâ€™s Gift-Tracking Service Port Mystery</td> <td><a href="/act2_dosis_network_down_mjd.html">Dosis Network Down</a></td> <td><a href="/act3_schrodingersscope_mjd.html">Schrodinger's Scope</a></td> </tr>
+<tr><td>Visual Networking</td> <td><a href="/act2_rogue_gnome_identity_provider_mjd.html">Rogue Gnome Identity Provider</a></td> <td><a href="/act3_snowglobe_mjd.html">Find and Shutdown Frosty's Snow Globe</a></td> </tr>
+<tr><td>Visual Firewall</td> <td><a href="/act2_quantgnome_leap_mjd.html">Quantgnome Leap</a></td> <td><a href="/act3_onthewire_mjd.html">On The Wire</a></td> </tr>
+<tr><td>Into to NMAP</td> <td><a href="/act2_going_in_reverse_mjd.html">Going in Reverse</a></td> <td><a href="/act3_free_ski_mjd.html">Free Ski</a></td> </tr>
+<tr><td>Blob Storage Challenge in the Neighborhood</td> <td><a href="/act3_snowblindambush_mjd.html">SnowBlind Ambush</a></td> </tr>
+<tr><td>Spare Key</td> </tr>
+<tr><td>The Open Door</td> </tr>
+<tr><td>Owner</td> </tr>
+</tbody>
+</table>
+
 
 
 For more information about BerryDunn [URL Here]
@@ -52,5 +58,12 @@ For more information about the BerryDunn's IT Security Team and the services off
 
 Bios of the team members who participated in this years challenge:
 
-| [Mitch Darrow](/bio_mjd.md) | [Spencer Treece](/bio_srt.md) | [Kodi Berube](/bio_kgb.md) | [Louis Krupp](/bio_lk.md) |
-| :-----------------------: | :--------------------------: | :--------------------------: | :--------------------------: |
+<table>
+<thead><tr><th><a href="/bio_mjd.html">Mitch Darrow</a></th> <th><a href="/bio_srt.html">Spencer Treece</a></th> <th><a href="/bio_kgb.html">Kodi Berube</a></th> <th><a href="/bio_lk.html">Louis Krupp</a></th> </tr></thead>
+</table>
+
+
+
+
+
+
