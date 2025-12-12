@@ -1,8 +1,8 @@
-﻿ !<a href="/HHC_2025/images/bdlogo.svg">BerryDunn Logo</a>
+
 <h1>BerryDunn Holiday Hack Challenge Solution Report
 </h1>
 <table>
-<thead><tr><th>SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</th> <th><a href="/HHC_2025/images/HHC.webp">Holiday Hack Challenge Logo</a></th> </tr></thead>
+<thead><tr><th>SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</th> <th><img src="/HHC_2025/images/HHC.webp" alt=Holiday Hack Challenge Logo></th> </tr></thead>
 </table>
 <h3>About the Holiday Hack Challenge (HHC)
 </h3>
