@@ -1,4 +1,4 @@
-|[Previous Objective: Act2 IDORable Bistro](/act3_idorable_bistro_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md)
+|[Previous Objective: Act2 IDORable Bistro](/act3_idorable_bistro_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Dosis Network Down    | Difficulty Level: 2 |
@@ -156,5 +156,5 @@ $(cat%20/etc/config/wireless)
 | raffi | directed me to look at the exploit-db poc code carefully |
 
 
-|[Previous Objective: Act2 IDORable Bistro](/act3_idorable_bistro_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md)
+|[Previous Objective: Act2 IDORable Bistro](/act3_idorable_bistro_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
