@@ -59,5 +59,5 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 | none | none |
 
 
-|[Previous Objective: Act1 Holiday Hack Orientation](/act1_orientation_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md)
+|[Previous Objective: Act1 Holiday Hack Orientation](/act1_orientation_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
