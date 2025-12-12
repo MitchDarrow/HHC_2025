@@ -1,6 +1,6 @@
 ---
 layout: default
-title: index
+title: SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)
 ---
  ![BerryDunn Logo](/images/bdlogo.svg)
 # BerryDunn Holiday Hack Challenge Solution Report
