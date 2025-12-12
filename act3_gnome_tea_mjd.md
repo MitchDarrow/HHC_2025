@@ -1,3 +1,7 @@
+---
+layout: default
+title: act3_gnome_tea_mjd
+---
 |[Previous Objective: Act2 Going in Reverse](/act2_going_in_reverse_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Hack-a-Gnome](/act3_hack-a-gnome_mjd.md) |
 | :-----------------------: | :--------------------------------: |  :--------------------------------: |
 

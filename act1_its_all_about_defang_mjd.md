@@ -1,3 +1,7 @@
+---
+layout: default
+title: act1_its_all_about_defang_mjd
+---
 |[Previous Objective: Act1 Holiday Hack Orientation](/act1_orientation_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

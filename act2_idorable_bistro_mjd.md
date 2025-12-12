@@ -1,3 +1,7 @@
+---
+layout: default
+title: act2_idorable_bistro_mjd
+---
 |[Previous Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

@@ -1,3 +1,7 @@
+---
+layout: default
+title: act3_onthewire_mjd
+---
 |[Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Free Ski](/act3_free_ski_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

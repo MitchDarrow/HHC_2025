@@ -1,3 +1,7 @@
+---
+layout: default
+title: about_berrydunn
+---
  ![BerryDunn Logo](/images/bdlogo.svg)
 
  [Back to Home Page](/index.md)

@@ -1,3 +1,7 @@
+---
+layout: default
+title: act1_intro_to_nmap_mjd
+---
 |[Previous Objective: Act1 Visual Firewall](/act1_visual_firewall_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

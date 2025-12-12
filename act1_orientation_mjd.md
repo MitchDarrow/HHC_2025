@@ -1,3 +1,7 @@
+---
+layout: default
+title: act1_orientation_mjd
+---
 |                                                      |   [Table of Contents](/index.md) | [Next Objective: Act1 intro to NMAP](/act1_introp_to_nmap_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

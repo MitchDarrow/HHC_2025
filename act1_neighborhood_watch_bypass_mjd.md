@@ -1,3 +1,7 @@
+---
+layout: default
+title: act1_neighborhood_watch_bypass_mjd
+---
 |[Previous Objective: Act1 Its All About Defang](/act1_its_all_about-defang_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 1 Santa's Gift-Tracking Service Port](/act1_santas_gift-tracking_service_port_mystery_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

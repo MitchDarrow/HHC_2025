@@ -1,3 +1,7 @@
+---
+layout: default
+title: act2_mail_detective_mjd
+---
 |[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act 2 IDORable Bistro](/act2_idorable_bistro_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

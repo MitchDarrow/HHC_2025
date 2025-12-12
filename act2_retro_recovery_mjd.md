@@ -1,3 +1,7 @@
+---
+layout: default
+title: act2_retro_recovery_mjd
+---
 |[Previous Objective: Act1 Owner](/act1_owner_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

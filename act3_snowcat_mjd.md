@@ -1,3 +1,7 @@
+---
+layout: default
+title: act3_snowcat_mjd
+---
 |[Previous Objective: Act3 Hack-a-Gnome ](/act3_hack-a-gnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Schrodinger's Scope](/act3_schrodingersscope_mjd.md)|
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

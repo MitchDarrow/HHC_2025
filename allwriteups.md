@@ -1,3 +1,7 @@
+---
+layout: default
+title: allwriteups
+---
  ![BerryDunn Logo](/images/bdlogo.svg)
 
  [Back to Home Page](/index.md)

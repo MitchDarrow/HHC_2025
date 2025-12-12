@@ -1,3 +1,7 @@
+---
+layout: default
+title: act1_blob_storage_mjd
+---
 |[Previous Objective: Act1 Intro to Nmap](/act1_intro_to_nmap_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Spare Key](/act1_spare_key_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

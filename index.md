@@ -1,3 +1,7 @@
+---
+layout: default
+title: index
+---
  ![BerryDunn Logo](/images/bdlogo.svg)
 # BerryDunn Holiday Hack Challenge Solution Report
 

@@ -1,3 +1,7 @@
+---
+layout: default
+title: act3_free_ski_mjd
+---
 |[Previous Objective: Act3 On The Wire](/act3_onthewire_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 SnowBlind Ambush](/act3_snowblindambush_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

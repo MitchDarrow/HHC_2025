@@ -1,3 +1,7 @@
+---
+layout: default
+title: act1_visual_firewall_mjd
+---
 |[Previous Objective: Act1 Visual Networking](/act1_visual_networking_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Intro to NMAP](/act1_intro_to_nmap_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

@@ -1,3 +1,7 @@
+---
+layout: default
+title: act1_owner_mjd
+---
 |[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

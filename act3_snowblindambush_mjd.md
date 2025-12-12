@@ -1,3 +1,7 @@
+---
+layout: default
+title: act3_snowblindambush_mjd
+---
 |[Previous Objective: Act3 Free Ski](/act3_free_ski_mjd.md)  |   [Table of Contents](/index.md) | [About BerryDunn](/hhc_2025_berrydunn.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
@@ -23,7 +27,7 @@ Starting with only public access to the web application, reconnaisance was condu
 <details>
 <summary>Click to expand</summary>
 
-  ## Step One: Gain Access to web application by abusing Chatbot
+## Step One: Gain Access to web application by abusing Chatbot
   
 Initial discovery activities of the website uncovered the following:
    

@@ -1,3 +1,7 @@
+---
+layout: default
+title: act2_going_in_reverse_mjd
+---
 |[Previous Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 3 Gnome Tea](/act3_gnome_tea_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
@@ -48,11 +52,11 @@ $decoded = ""
 
 # Loop through each character
 for ($i = 0; $i -lt $encFlag.Length; $i++) {
-    # Get ASCII code of character
+# Get ASCII code of character
     $ascii = [int][char]$encFlag[$i]
-    # XOR with 7
+# XOR with 7
     $decodedChar = [char]($ascii -bxor 7)
-    # Append to result
+# Append to result
     $decoded += $decodedChar
 }
 

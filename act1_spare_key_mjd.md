@@ -1,3 +1,7 @@
+---
+layout: default
+title: act1_spare_key_mjd
+---
 |[Previous Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.m)  |   [Table of Contents](/index.md) | [Next Objective: Act1 The Open Door](/act1_the_open_door_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

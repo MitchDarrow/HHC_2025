@@ -1,3 +1,7 @@
+---
+layout: default
+title: act1_visual_networking_mjd
+---
 |[Previous Objective: Act1 Santa’s Gift-Tracking Service Port Mystery](/act1+santas_gift-tracking_service_port_mystery_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Visual Firewall](/act1_visual_firewall_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

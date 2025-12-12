@@ -1,3 +1,7 @@
+---
+layout: default
+title: act3_hack-a-gnome_mjd
+---
 |[Previous Objective: Act3 Gnome Tea](/act3_gnome_tea_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Snowcat RCE and Privilege Escalation](/act3_snowcat_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

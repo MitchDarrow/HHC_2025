@@ -1,3 +1,7 @@
+---
+layout: default
+title: act3_snowglobe_mjd
+---
 |[Previous Objective: Act3 Schrodingers Scope](/act3_schrodingersscope_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 On the Wire3](/act3_onthewire_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

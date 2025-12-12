@@ -1,3 +1,7 @@
+---
+layout: default
+title: act3_schrodingersscope_mjd
+---
 |[Previous Objective: Act3 Snowcat RCE abd Privilege Escalation](/act3_snowcat_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
@@ -179,7 +183,7 @@ id="48dd96c0-0794-41cf-96c1-bf3ddc555a30"
 for i in {0..255}; do
   hex=$(printf '%02x' $i)
   
-  # Login and access page in one flow
+# Login and access page in one flow
   response=$(curl -s -L \
     -H "X-Forwarded-For: 127.0.0.1" \
     -H "Cookie: Schrodinger=$schrod; registration=${prefix}${hex}" \

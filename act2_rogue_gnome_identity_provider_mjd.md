@@ -1,3 +1,7 @@
+---
+layout: default
+title: act2_rogue_gnome_identity_provider_mjd
+---
 |[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 

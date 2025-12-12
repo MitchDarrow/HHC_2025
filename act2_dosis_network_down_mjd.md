@@ -1,3 +1,7 @@
+---
+layout: default
+title: act2_dosis_network_down_mjd
+---
 |[Previous Objective: Act2 IDORable Bistro](/act3_idorable_bistro_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
