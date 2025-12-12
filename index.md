@@ -5,6 +5,7 @@ title: BerryDunn Holiday Hack Challenge Solution Report
  ![BerryDunn Logo](/images/bdlogo.svg)
 # BerryDunn Holiday Hack Challenge Solution Report
 |SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)|![Holiday Hack Challenge Logo](/images/HHC.webp)|
+
 |:-----------------------|--------------------------------:|
 
 
