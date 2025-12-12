@@ -1,4 +1,4 @@
-|                                                      |   [Table of Contents](/index.md) | [Next Objective: Act1 intro to NMAP](/act1_introp_to_nmap_mjd.md)
+|                                                      |   [Table of Contents](/index.md) | [Next Objective: Act1 intro to NMAP](/act1_introp_to_nmap_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Holiday Hack Orientation  | Difficulty Level: 1 |
@@ -44,5 +44,5 @@ Type the word "answer" in the terminal
 
 
 
-|  |   [Table of Contents](/index.md) | [Next Objective: Act1 intro to NMAP](/act1_introp_to_nmap_mjd.md)
+|  |   [Table of Contents](/index.md) | [Next Objective: Act1 intro to NMAP](/act1_introp_to_nmap_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
