@@ -4,7 +4,6 @@ title: BerryDunn Holiday Hack Challenge Solution Report
 ---
  ![BerryDunn Logo](/images/bdlogo.svg)
 # BerryDunn Holiday Hack Challenge Solution Report
-
 |SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)|![Holiday Hack Challenge Logo](/images/HHC.webp)|
 |:-----------------------|--------------------------------:|
 
@@ -55,6 +54,5 @@ For more information about BerryDunn [URL Here]
 For more information about the BerryDunn's IT Security Team and the services offered [URL Here]
 
 Bios of the team members who participated in this years challenge:
-
 |[Mitch Darrow](/bio_mjd.md) | [Spencer Treece](/bio_srt.md) | [Kodi Berube](/bio_kgb.md) | [Louis Krupp](/bio_lk.md) |
 |:-----------------------: | :--------------------------: | :--------------------------: | :--------------------------: |
