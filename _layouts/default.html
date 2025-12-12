@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      
+      {% if page.nav %}
+      <div class="page-navigation">
+        {{ page.nav }}
+      </div>
+      {% else %}
+<div class="page-navigation">
+  <img src="/images/bdlogo.svg" alt="BerryDunn Logo">
+</div>
+      {% endif %}
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+      <div class="page-navigation">
+        {{ page.nav }}
+      </div>
+      </footer>
+    </main>
+  </body>
+</html>
