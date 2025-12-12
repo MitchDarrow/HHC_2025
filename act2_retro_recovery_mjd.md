@@ -1,4 +1,4 @@
-|[Previous Objective: Act1 Owner](/act1_owner_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md)
+|[Previous Objective: Act1 Owner](/act1_owner_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Retro Recovery   | Difficulty Level: 2 |
@@ -92,5 +92,5 @@ merry christmas to all and to all a good night
 | none | none |
 
 
-|[Previous Objective: Act1 Owner](/act1_owner_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md)
+|[Previous Objective: Act1 Owner](/act1_owner_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
