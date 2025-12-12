@@ -41,10 +41,10 @@ The basic program consists of the following code:
 The program has the encoded flag and the decoder. This PowerShell script will decode the string. Note that the ‘ denotes a comment in basic.
 
 ```powershell
-# PowerShell script to decode the ENC_FLAG$ string using XOR 
+# PowerShell script to decode the ENC_FLAG$ string using XOR
 # Encoded string
-$encFlag = "DSA|auhts*wkfi=dhjwubtthut+dhhkfis+hnkz" 
- 
+$encFlag = "DSA|auhts*wkfi=dhjwubtthut+dhhkfis+hnkz"
+
 #"old DSA|qnisf`bX_huXariz"
 
 # Initialize decoded string
@@ -73,7 +73,7 @@ Write-Output $decoded
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| PowerShell | 5.1.26100.6899 | 
+| PowerShell | 5.1.26100.6899 |
 
 
 ## Hints Reference

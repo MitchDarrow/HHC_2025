@@ -25,25 +25,25 @@ Reverse engineer an executable to reveal hidden information.
 
 Git clone both repositories to my kali machine.
 git clone https://github.com/extremecoders-re/pyinstxtractor.git
-git clone https://github.com/zrax/pycdc.git     
+git clone https://github.com/zrax/pycdc.git
 
 Run PyInstaller Extractor to create the pyc file:
-python ./pyinstxtractor.py FreeSki.exe     
-![Results of Pyextractor](/images/freeskipyextractor.jpg) 
+python ./pyinstxtractor.py FreeSki.exe
+![Results of Pyextractor](/images/freeskipyextractor.jpg)
 
-Install cmake: 
+Install cmake:
 ```sh
-sudo apt install cmake    
+sudo apt install cmake
 cmake .
 make
 ```
 Copy the extracted folder into the /pycdc folder
 
-![pydcdc folder](/images/freeski_pycdcfolder.png) 
+![pydcdc folder](/images/freeski_pycdcfolder.png)
 
 Extract the code: ./pycdas ~/pycdc/FreeSki.exe_extracted/FreeSki.pyc
 
-[Free Ski Source Code](/images/FreeSkiCode.txt) 
+[Free Ski Source Code](/images/FreeSkiCode.txt)
 
 Flag Decoding Process (in SetFlag function):
 1.	Product Calculation: Takes the 5 collected treasure values and combines them:
@@ -60,12 +60,12 @@ python
        r = random.randint(0, 255)
        decoded.append(chr(mountain.encoded_flag[i] ^ r))
 
-![Flag decoding](/images/free_ski_flagdecoding.jpg) 
+![Flag decoding](/images/free_ski_flagdecoding.jpg)
 
 There are **7 mountains** with encoded flags:
 - Mount Snow, Aspen, Whistler, Mount Baker, Mount Norquay, Mount Erciyes, Dragonmount
 
-![The Mountains](/images/free_ski_themountains.jpg) 
+![The Mountains](/images/free_ski_themountains.jpg)
 
 1. **Find treasure locations** - They're deterministically generated using `random.seed(binascii.crc32(mountain_name))` in `GetTreasureLocations()`
 2. **Calculate treasure values** - Each treasure's value is `(elevation * mountain_width) + horizontal_offset`
@@ -85,9 +85,9 @@ The script solvefreeski.py does the following:
 3.	Computes the decryption key - XORs all 5 treasure values together with bit shifts to create a product
 4.	Decodes the flag - Seeds Python's random number generator with that product, then XORs each byte of the encoded flag with the generated random values
 
-Script: [Solve Free Ski](act3_solvefreeski.py)   
+Script: [Solve Free Ski](act3_solvefreeski.py)
 
-![Free Ski Solution](/images/Free_ski_solution.jpg) 
+![Free Ski Solution](/images/Free_ski_solution.jpg)
 
 **Answer: frosty_yet_predictably_random**
 
@@ -97,9 +97,9 @@ Script: [Solve Free Ski](act3_solvefreeski.py)
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| claude.ai | v4.5 | 
+| claude.ai | v4.5 |
 | PyInstaller Extractor | ? |
-| pycdas | ? | 
+| pycdas | ? |
 
 ## Hints Reference
 | Provided By         | Hint |

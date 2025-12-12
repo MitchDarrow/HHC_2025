@@ -11,8 +11,8 @@ title: act1_neighborhood_watch_bypass_mjd
 
 ## Solution Overview
 
-This objective identifies a path hijacking privilege escalation attack against a Linux system where the user "chiuser" had limited sudo privileges. Initial reconnaissance revealed a bash script called `system_status` that executed the `ps` command to display process information. Investigation of the user's sudo privileges using `sudo -l` revealed critical security misconfigurations in the sudoers file. The secure_path configuration included the user's home directory bin folder (`/home/chiuser/bin`) in the PATH, and crucially, the PATH environment variable was preserved when executing commands with sudo. This configuration created a path hijacking vulnerability where a malicious binary could be placed in `~/bin` to intercept legitimate command calls. The attacker created a fake `ps` binary in the `~/bin` directory containing a simple bash script that spawned an interactive shell. When the `system_status` script was executed with sudo privileges, it called the `ps` command without using an absolute path, causing the system to execute the malicious version from `~/bin` first. Because the script ran with root privileges, the spawned bash shell inherited those elevated permissions, granting the attacker full root access to the system. 
- 
+This objective identifies a path hijacking privilege escalation attack against a Linux system where the user "chiuser" had limited sudo privileges. Initial reconnaissance revealed a bash script called `system_status` that executed the `ps` command to display process information. Investigation of the user's sudo privileges using `sudo -l` revealed critical security misconfigurations in the sudoers file. The secure_path configuration included the user's home directory bin folder (`/home/chiuser/bin`) in the PATH, and crucially, the PATH environment variable was preserved when executing commands with sudo. This configuration created a path hijacking vulnerability where a malicious binary could be placed in `~/bin` to intercept legitimate command calls. The attacker created a fake `ps` binary in the `~/bin` directory containing a simple bash script that spawned an interactive shell. When the `system_status` script was executed with sudo privileges, it called the `ps` command without using an absolute path, causing the system to execute the malicious version from `~/bin` first. Because the script ran with root privileges, the spawned bash shell inherited those elevated permissions, granting the attacker full root access to the system.
+
 
 | Activity | Primary Tactic | MITRE ATT&CK Technique ID | MITRE ATT&CK Technique Name |
 |----------|----------------|---------------------------|----------------------------|
@@ -55,7 +55,7 @@ Matching Defaults entries for chiuser on 633a785ffc6c:
 - The `~/bin` directory is **included** in the secure path
 - The PATH is **preserved** when using sudo
 
-This means if you create a **fake version of a command** (like `ps`, `head`, `grep`, etc.) in `~/bin`, and `system_status.sh` calls that command **without an absolute path**, it might run **the malicious version** instead — **as root**.
+This means if you create a **fake version of a command** (like `ps`, `head`, `grep`, etc.) in `~/bin`, and `system_status.sh` calls that command **without an absolute path**, it might run **the malicious version** instead - **as root**.
 
 Executing the Path Hijacking Attack
 
@@ -80,7 +80,7 @@ Successfully obtained a new shell with root privileges and can run the `runtoans
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| bash | 5.2.37(1)-release | 
+| bash | 5.2.37(1)-release |
 
 
 ## Hints Reference

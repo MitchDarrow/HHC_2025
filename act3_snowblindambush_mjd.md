@@ -28,53 +28,53 @@ Starting with only public access to the web application, reconnaisance was condu
 <summary>Click to expand</summary>
 
 ## Step One: Gain Access to web application by abusing Chatbot
-  
+
 Initial discovery activities of the website uncovered the following:
-   
+
   - The landing page code included a javascript file that was not actually loaded, egg.js
-    
+
     ![Landing Page Code](/images/snowblind_egg.js.jpg)
-     
+
   - Reviewing the code gives a hint: "AI Gnomes do not know the difference between left and right"
-    
+
     ![Chatbot Script Hint](/images/snowblind_egghint.jpg)
-    
+
    - AI chatbot gives redacted and conflicting hints about the password for the application login
-   
+
    Conversations with the chatbot revealed that it had information about the application admin account in the form of hints. Some of the hints are conflicting, making them unreliable. The chatbot redacts phrases, so it knows the password. The chatbot reveals the information when prompted to spell the password one character per line, defeating the redaction mechanisms. The password works for login, and additional functionality is available to explore. The left and right hint works as well. The chatbot will spell the password in reverse order without redactions.
-  
+
    **admin password: an_elf_and_password_on_a_bird**
-   
+
 ![Admin Password](/images/snowblind_adminpassword.jpg)
 
- 
+
   - File upload mechanism
     The profile page contains a file upload mechanism. While the page indicates only allowed filetypes, it is possible to upload a file that contains script code. Upon upload, the file is renamed to admin_XXXXXXXXXXXXXXXX.png, with the placeholder changing with every upload. This is a way to get a payload into the application, but not a way to trigger it.
 
     ![File Upload](/images/snowblind_fileupload.jpg)
-    
+
   - Parameter used after file upload
   After upload the page redirects and uses a parameter username.
 
       ![Redirect Parameter](/images/snowblind_parameter.jpg)
-    
+
 ## Step Two: Explore SSTI and achieve RCE : Insecure Software
 The hint indicates that the application is using Flask. There are two helpful resources for understanding SSTI:
 
 [Server Side Template Injections with Jinja2](https://onsecurity.io/article/server-side-template-injection-with-jinja2/)
 
-[Server Side Template Injection - Python - Payloads All The Things](https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/Python/#summary) 
+[Server Side Template Injection - Python - Payloads All The Things](https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/Python/#summary)
 
 A basic test to see if SSTI is possible is {{7*7}}. Because the application evaluates the expression and displays the results on the page, the application is likely vulnerable.
 
-![SSTI Test](/images/snowblind_sstitest.jpg) 
+![SSTI Test](/images/snowblind_sstitest.jpg)
 
 Trial and error testing revealed the following filters and the obfuscations needed to bypass.
 ```
 ┌───────────────────────────────┐
 │ 1. Payload Construction        │
 │   - Bracket access             │
-│   - Escaped underscores (\u005f, \137) 
+│   - Escaped underscores (\u005f, \137)
 │   - Reversed strings ('ssalc'|reverse) │
 └───────────────┬───────────────┘
                 │
@@ -122,11 +122,11 @@ A script was used to enumerate the indexes and evaluate if RCE is possible. The 
 
 The enumeration script source code is located here: [Jinja2 SSTI Enumeration Script](/resources/snowblind_enumeration2.py.txt)
 
-![SSTI Enumeration](/images/snowblind_enumeration1.jpg) 
+![SSTI Enumeration](/images/snowblind_enumeration1.jpg)
 
 The following indexes where discovered that would allow RCE:
 
-![SSTI Enumeration](/images/snowblind_enumeration2.jpg) 
+![SSTI Enumeration](/images/snowblind_enumeration2.jpg)
 
 ## Step Three: Achieve Shell Access Utilizing Insecure File Upload
 
@@ -145,16 +145,16 @@ sh /app/static/images/admin\\u005ff1f9cc53781abb79\\u002epng
 
 ## Step Four: Exfilitrate Data leveraging an Insecure processes / Data Leakage
 
-With initial access established, time for more recon. An interesting cron job was located in /etc/cron/cron.d/mycron. It runs a backup script every minute as root. 
+With initial access established, time for more recon. An interesting cron job was located in /etc/cron/cron.d/mycron. It runs a backup script every minute as root.
 
-![Cron Job](/images/snowblind_cronjob.jpg) 
+![Cron Job](/images/snowblind_cronjob.jpg)
 
 The script does the following:
 - it looks for a file in /dev/shm with a name formatted according to this pattern: '\\.frosty[0-9]+$'
 - it reads the file and applies a regular expression that requires at least the final two characters of the url to be letters and not numbers
 - if the regular experssion is true, it encrypts a copy of /etc/shadow and posts it to the url
 
-![URL Regex](/images/snowblind_regex.jpg) 
+![URL Regex](/images/snowblind_regex.jpg)
 
 A copy of the backup script is located here: [Backup Script](/resources/snowblind_backup.py.txt)
 
@@ -176,21 +176,21 @@ Using this script to decode: [PNG Decoder Script](/resources/snowblind_decodepng
 
 The file was damaged or incomplete, so the script suppresses errors and forces the data to be extracted. The backup script indicates that the data is exfiltrated is stored in the Blue channel of the file. The other channels can be ignored. Running the script reveals the exfiltrated data stored in the file.
 
-![Decoded PNG File](/images/snowblind_decodedpng.jpg) 
+![Decoded PNG File](/images/snowblind_decodedpng.jpg)
 
 ## Step Six: Crack Hash for Root
 
 With the password hash, salt, and the algorithm used, we can attempt to crack the hash using John the Ripper and the rockyou word list.
 
-![John the Ripper](/images/snowblind_johntheripper.jpg) 
+![John the Ripper](/images/snowblind_johntheripper.jpg)
 
 **root password: jollyboy**
 
-## Step Seven: Escalate privileges 
+## Step Seven: Escalate privileges
 
 With root password, it is a simple matter to escalate privileges using the su command. Once root, there is a bash script in the /root directory. Executing the script reveals the flag.
-  
-![Privilege Escalation](/images/snowblind_privilegeescalation.jpg) 
+
+![Privilege Escalation](/images/snowblind_privilegeescalation.jpg)
 
 
 **Answer: hhc25{Frostify_The_World_c05730b46d0f30c9d068343e9d036f80}**
@@ -201,11 +201,11 @@ With root password, it is a simple matter to escalate privileges using the su co
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| John the Ripper | 1.9.0-jumbo-1+bleeding-aec1328d6c | 
+| John the Ripper | 1.9.0-jumbo-1+bleeding-aec1328d6c |
 | Linux Linode | System	Ubuntu 24.04 LTS |
 | netcat	| v1.10-50 |
 | Edge Developer Tools | Version 142.0.3595.94 |
-| Burp Suite Community Edition	 | v2024.11.2 | 
+| Burp Suite Community Edition	 | v2024.11.2 |
 
 ## Hints Reference
 | Provided By         | Hint |

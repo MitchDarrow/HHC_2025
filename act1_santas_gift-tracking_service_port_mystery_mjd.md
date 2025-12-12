@@ -11,7 +11,7 @@ title: act1_santas_gift-tracking_service_port_mystery_mjd
 
 ## Solution Overview
 
-This objective is a network service discovery and verification task focused on identifying and confirming the operational status of a process. The investigator used the ss (socket statistics) command-line utility, which is part of the iproute2 package, to enumerate active network connections and listening ports on the local system. The specific command ss -tlnp was executed with flags to show TCP connections (-t), listening sockets (-l), numeric addresses without DNS resolution (-n), and associated process information (-p). The output revealed a service actively listening on port 12321, which was identified as the Santa Tracker process. To verify the service was functioning properly, the investigator used curl with the -I flag to send an HTTP HEAD request to the local address at http://0.0.0.0:12321. The service responded successfully with an HTTP 200 OK status code and indicated a Content-Type header of application/json, confirming the service was running and responding to requests. 
+This objective is a network service discovery and verification task focused on identifying and confirming the operational status of a process. The investigator used the ss (socket statistics) command-line utility, which is part of the iproute2 package, to enumerate active network connections and listening ports on the local system. The specific command ss -tlnp was executed with flags to show TCP connections (-t), listening sockets (-l), numeric addresses without DNS resolution (-n), and associated process information (-p). The output revealed a service actively listening on port 12321, which was identified as the Santa Tracker process. To verify the service was functioning properly, the investigator used curl with the -I flag to send an HTTP HEAD request to the local address at http://0.0.0.0:12321. The service responded successfully with an HTTP 200 OK status code and indicated a Content-Type header of application/json, confirming the service was running and responding to requests.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
@@ -28,7 +28,7 @@ The objective is to:
 
 2. Connecct to the port and verify the servide is running
 
-![Objective Instructions](/images/santatracking_instructions.jpg) 
+![Objective Instructions](/images/santatracking_instructions.jpg)
 
 Use the SS tool to discover the port using the command:
 ```sh
@@ -36,10 +36,10 @@ ss -tlnp
 ```
 
 There is a service running on port 12321
- 
+
 Use curl to connect:
-  
-![Sample image alt text](/images/santatracker_connect.jpg) 
+
+![Sample image alt text](/images/santatracker_connect.jpg)
 
 
 ```sh
@@ -55,7 +55,7 @@ The service responds with a 200 OK and Content-Type of application/json
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| ss | iproute2-6.13.0| 
+| ss | iproute2-6.13.0|
 | curl | 8.11.0 |
 
 

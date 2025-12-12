@@ -25,8 +25,8 @@ High level executive summary of how the objective was solved. Details belong in 
 <summary>Click to expand</summary>
 
 Step by step solution complete with any code used
-  
-![Sample image alt text](/images/objectivename_purpose.jpg) 
+
+![Sample image alt text](/images/objectivename_purpose.jpg)
 
 
 ```sh
@@ -53,7 +53,7 @@ Unordered list:
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| Azure CLI | N/A | 
+| Azure CLI | N/A |
 
 ## Hints Reference
 | Provided By         | Hint |

@@ -26,8 +26,8 @@ Starting with an account with minimal access to the system, the website was foun
 <summary>Click to expand</summary>
 
 Using a nonexistent URL (http://localhost/nonexistant), an error message was triggered revealing that the system is running a potentially vulnerable version of Tomcat.
-  
-![Tomcat Version Evidence](/images/snowcat_version.jpg) 
+
+![Tomcat Version Evidence](/images/snowcat_version.jpg)
 
 Testing identified the CommonsCollections6 gadget could effectively deliver a payload. The initial approach was to touch a file in the /tmp directory to confirm a successful attack.
 Payload details:
@@ -40,7 +40,7 @@ ls -la /tmp/pwned 2>/dev/null && echo "SUCCESS with touch!" || echo "Failed"
 ```
 The initial payload was delivered and successful:
 
-![Tomcat Initial Payload Evidence](/images/snowcat_initialpayload.jpg) 
+![Tomcat Initial Payload Evidence](/images/snowcat_initialpayload.jpg)
 
 To achieve a remote shell, the following approach was used:
 1. Setup a linux machine in linode, and start a netcat listener on port 4444
@@ -79,7 +79,7 @@ curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 
 This resulted in access as the identity running the web service:
 
-![Snowcat Service Account User](/images/snowcat_serviceaccount.jpg) 
+![Snowcat Service Account User](/images/snowcat_serviceaccount.jpg)
 
 Three binaries were discovered that the service account has access to with the SUID set:
 These binaries have SUID set:
@@ -100,7 +100,7 @@ The commands are run with a valid key:
 
 The weather user has access to the /usr/local/weather/keys directory. This was our target:
 
-![Keys Directory](/images/snowcat_keys.jpg)  
+![Keys Directory](/images/snowcat_keys.jpg)
 
 The following command was injected into the binary command line to create a file containing the contents of the keys folder and change the file permissions:
 ```
@@ -123,10 +123,10 @@ The first key listed is the one used with the temperature binary. The second key
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| ysoserial.jar | Version: v0.0.6 Release Date: June 28, 2022 | 
+| ysoserial.jar | Version: v0.0.6 Release Date: June 28, 2022 |
 | Linux Linode System | Ubuntu 24.04 LTS |
-| netcat | v1.10-50 | 
-| curl | 8.11.0  | 
+| netcat | v1.10-50 |
+| curl | 8.11.0  |
 
 ## Hints Reference
 | Provided By         | Hint |
@@ -134,7 +134,7 @@ The first key listed is the one used with the temperature binary. The second key
 | Santa | Snowcat is closely related to Tomcat. Maybe the recent Tomcat Remote Code Execution vulnerability (CVE-2025-24813) will work here. |
 | Santa | Maybe we can inject commands into the calls to the temperature, humidity, and pressure monitoring services. |
 | Santa | If you're feeling adventurous, maybe you can become root to figure out more about the attacker's plans. |
-| Thomas Hessman | We've lost access to the neighborhood weather monitoring station. There are a couple of vulnerabilities in the snowcat and weather monitoring services that we haven't gotten around to fixing. Can you help me exploit the vulnerabilities and retrieve the other application's authorization key? Enter the other application's authorization key into the badge. If Frosty's plan works and everything freezes over, our customers won't be having the best possible experience—they'll be having the coldest possible experience! We need to stop this before the whole neighborhood becomes one giant freezer.|
+| Thomas Hessman | We've lost access to the neighborhood weather monitoring station. There are a couple of vulnerabilities in the snowcat and weather monitoring services that we haven't gotten around to fixing. Can you help me exploit the vulnerabilities and retrieve the other application's authorization key? Enter the other application's authorization key into the badge. If Frosty's plan works and everything freezes over, our customers won't be having the best possible experience-they'll be having the coldest possible experience! We need to stop this before the whole neighborhood becomes one giant freezer.|
 
 ## Acknowledgements
 | Provided By         | Notes |

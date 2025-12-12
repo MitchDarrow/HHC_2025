@@ -33,7 +33,7 @@ Type the word "answer" in the terminal
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| none | none | 
+| none | none |
 
 
 ## Hints Reference

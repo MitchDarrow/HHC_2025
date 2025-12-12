@@ -23,14 +23,14 @@ The code on the outside of the building is binary and decodes to "imanok" which 
 <summary>Click to expand</summary>
 
 Viewing the exterior wall of the datacenter, there is a pattern in the bricks that looks binary, six bytes of data:
-  
-![snowglobe code](/images/snowglobe_code.jpg) 
+
+![snowglobe code](/images/snowglobe_code.jpg)
 
 Decoding the patterns gives:
 
 01101001 = 105 = 'i'
 
-01101101 = 109 = 'm' 
+01101101 = 109 = 'm'
 
 01100001 = 97 = 'a'
 
@@ -49,7 +49,7 @@ Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑
 
 -	Door Labels clockwise from NE corner: 1 B, 2 Up, 3 A, 4 B, 5 Up, 6 A, 7 A, 8 Up, 9 B, 10 A, 11 Up, 12 B
 
--	Door Numbers per Walls: North 1–3, East 4–6, South 7–9, West 10–12
+-	Door Numbers per Walls: North 1-3, East 4-6, South 7-9, West 10-12
 
 -	Orientation: Keep North up
 
@@ -78,7 +78,7 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| None | None | 
+| None | None |
 
 ## Hints Reference
 | Provided By         | Hint |

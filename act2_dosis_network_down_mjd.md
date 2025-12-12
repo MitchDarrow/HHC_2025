@@ -124,7 +124,7 @@ Work with the structure of the GET request until you get a **200 OK** response, 
 
 Once the structure is verified, insert a payload.
 
-On the TP-Link Archer AX21, the file `/etc/config/wireless` is part of the **OpenWrt-style configuration system** used in TP-Link firmware. It stores the **wireless interface definitions** — things like SSIDs, encryption settings, channels, and radio parameters. However, in the stock TP-Link firmware, this file is not normally user-accessible; it's managed internally by the router's web interface and app. If you flash the router with **OpenWrt**, then `/etc/config/wireless` becomes editable and contains the full wireless configuration in a structured text format.
+On the TP-Link Archer AX21, the file `/etc/config/wireless` is part of the **OpenWrt-style configuration system** used in TP-Link firmware. It stores the **wireless interface definitions** - things like SSIDs, encryption settings, channels, and radio parameters. However, in the stock TP-Link firmware, this file is not normally user-accessible; it's managed internally by the router's web interface and app. If you flash the router with **OpenWrt**, then `/etc/config/wireless` becomes editable and contains the full wireless configuration in a structured text format.
 
 The simplest payload is to print the file:
 
@@ -142,7 +142,7 @@ $(cat%20/etc/config/wireless)
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| Burp Suite Community Edition | v2024.11.2 | 
+| Burp Suite Community Edition | v2024.11.2 |
 | Exploit-db | N/A |
 
 

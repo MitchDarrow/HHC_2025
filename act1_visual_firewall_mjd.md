@@ -11,7 +11,7 @@ title: act1_visual_firewall_mjd
 
 ## Solution Overview
 
-The objective is to correctly configure firewall rules to best security practices. Without proper firewall configuration, security analysts lose a crucial control point for preventing, detecting, and responding to threats. 
+The objective is to correctly configure firewall rules to best security practices. Without proper firewall configuration, security analysts lose a crucial control point for preventing, detecting, and responding to threats.
 
 | Activity           | Primary Tactic | MITRE ATT&CK Technique ID             | MITRE ATT&CK Technique Name |
 | :-----------------------: | :--------------------------------: | :-----------------------: | :--------------------------------: |
@@ -42,7 +42,7 @@ Rule: Internet to Internal: Block direct Internet to Internal access
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| none | none | 
+| none | none |
 
 ## Hints Reference
 | Provided By         | Hint |

@@ -27,18 +27,18 @@ Using the Extract IOCs tab:
 Set the domain regex to: \b(?:[a-zA-Z0-9-]+\.)*icicleinnovations\.([a-zA-Z]{2,})\b
 
 Set the IP Address Regex to: (?<=\b(?:mail|core)?\.?icicleinnovations\.mail\s*\()\d{1,3}(?:\.\d{1,3}){3}(?=\))
- 
+
 Set the URL regex to: https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+(:[0-9]+)?(/[^\s]*\.exe)\b
- 
+
 Set the Email address regex to: \b[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+\.)*icicleinnovations\.[a-zA-Z]{2,}\b
- 
+
 To Defang the IOCs:
 
 Use this combined Sed command: s/http/hxxp/g; s/@/[@]/g; s#://#[://]#g; s/\./[.]/g
 
 ![Applying the combined Regex to Defang the IOCs](/images/itsallaboutdefang_solution.jpg)
 
-The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email addresses 
+The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email addresses
 
 **Answer: Defanged: 3 domains, 2 addresses, 2 URLs, and 2 email addressesr**
 
@@ -48,7 +48,7 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| sed | 4.9 | 
+| sed | 4.9 |
 
 ## Hints Reference
 | Provided By         | Hint |

@@ -3,10 +3,10 @@ layout: default
 title: act2_retro_recovery_mjd
 ---
 |[Previous Objective: Act1 Owner](/act1_owner_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md) |
-| :------------- | :-------------: | -------------: |
+| :----------------------- | :--------------------------------: | --------------------------------: |
 
-|Objective: Retro Recovery|Difficulty Level: 2|
-|:-----------------------:|:--------------------------:|
+| Objective: Retro Recovery   | Difficulty Level: 2 |
+| :-----------------------: | :--------------------------: |
 | Join Mark in the retro shop. Analyze his disk image for a blast from the retro past and recover some classic treasures. | Location: Retro Shop  |
 
 ## Solution Overview
@@ -79,7 +79,7 @@ merry christmas to all and to all a good night
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| losetup | 2.40.4 | 
+| losetup | 2.40.4 |
 | testdisk | 7.2 |
 
 ## Hints Reference
@@ -97,4 +97,4 @@ merry christmas to all and to all a good night
 
 
 |[Previous Objective: Act1 Owner](/act1_owner_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md) |
-| :------------- | :-------------: |-------------: |
+| :----------------------- | :--------------------------------: | --------------------------------: |

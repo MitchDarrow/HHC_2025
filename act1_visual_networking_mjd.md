@@ -54,7 +54,7 @@ Client Hello >>
 << Server Hello
 
 << Server Certificate
-   
+
 Client Key Exchange >>
 
 << Server Change Cipher Spec
@@ -79,7 +79,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| none | none | 
+| none | none |
 
 
 ## Hints Reference

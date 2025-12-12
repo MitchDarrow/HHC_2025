@@ -23,13 +23,13 @@ The objective of this challenge is to connect using Azure CLI to the "neighborho
 ## Detailed Solution
 <details>
 <summary>Click to expand</summary>
-  
+
 Step 1: Review the storage accounts
 
 ```sh
 az storage account list | less
 ```
-![Misconfigured Storage Account allows Public Access](/images/blobstorage_misconfig.jpg) 
+![Misconfigured Storage Account allows Public Access](/images/blobstorage_misconfig.jpg)
 
 The following commands were used to dive deeper:
 ```sh
@@ -42,7 +42,7 @@ az storage blob download \
   --file admin_passwords.txt
 ```
 
-![Misconfigured Storage Account allows Public Access](/images/blobstorage_passwords.jpg) 
+![Misconfigured Storage Account allows Public Access](/images/blobstorage_passwords.jpg)
 
 **Answer: allowBlobPublicAccesss: True**
 
@@ -52,7 +52,7 @@ az storage blob download \
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| Azure Cli | N/A | 
+| Azure Cli | N/A |
 
 
 ## Hints Reference

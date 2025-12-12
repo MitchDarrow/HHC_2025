@@ -7,7 +7,7 @@ title: act2_idorable_bistro_mjd
 
 | Objective: IDORable Bistro    | Difficulty Level: 2 |
 | :-----------------------: | :--------------------------: |
-| Josh has a tasty IDOR treat for you—stop by Sasabune for a bite of vulnerability. What is the name of the gnome? | Location: Sasabune  |
+| Josh has a tasty IDOR treat for you-stop by Sasabune for a bite of vulnerability. What is the name of the gnome? | Location: Sasabune  |
 
 ## Solution Overview
 
@@ -61,7 +61,7 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
 | Edge Developer Tools | Version 142.0.3595.94 |
-| Burp Suite Community Edition | v2024.11.2 | 
+| Burp Suite Community Edition | v2024.11.2 |
 
 
 ## Hints Reference

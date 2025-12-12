@@ -130,8 +130,8 @@ Terminated
 
 | Tools Used           | Tool Version |
 | :-----------------------: | :--------------------------------: |
-| nmap | 7.80 | 
-| ncat | 7.80 | 
+| nmap | 7.80 |
+| ncat | 7.80 |
 
 ## Hints Reference
 | Provided By         | Hint |
