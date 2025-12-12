@@ -1,4 +1,4 @@
-|[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)
+|[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
 
 | Objective: Rogue Gnome Identity Provider | Difficulty Level: 2 |
@@ -227,5 +227,5 @@ curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA2
 | eucrates | suggested using the jwk to pem convertor website (https://8gwifi.org/jwkconvertfunctions.jsp) |
 
 
-|[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)
+|[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md) |
 | :----------------------- | :--------------------------------: | --------------------------------: |
