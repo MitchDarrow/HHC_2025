@@ -1,28 +1,131 @@
 ﻿---
-nav: |
-  <table>
-  <thead><tr><th></th> <th><a href="/HHC_2025/index.html">Table of Contents</a></th> <th><a href="/HHC_2025/act1_introp_to_nmap_mjd.html">Next Objective: Act1 intro to NMAP</a></th></table>
+layout: default
+title: act1_orientation_mjd
 ---
 <table>
-<thead><tr><th>Objective: Holiday Hack Orientation</th> <th>Difficulty Level: 1</th><tr><td>Meet Lynn Schifano on the train for a warm welcome and get ready for your journey around the Dosis Neighborhood.</td> <td>Location: Train</td></table>
-<h2>Solution Overview</h2>
-Orientation information about this year's challenge.
+</thead>
+<tbody>
+</tbody>
+</table>
+
 <table>
-<thead><tr><th>Activity</th> <th>Primary Tactic</th> <th>MITRE ATT&CK Technique ID</th> <th>MITRE ATT&CK Technique Name</th><tr><td>none</td> <td>none</td> <td>none</td> <td>none</td></table>
-<h2>Detailed Solution</h2>
+<thead>
+<tr>
+<th>Objective: Holiday Hack Orientation</th>
+<br>
+<th>Difficulty Level: 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meet Lynn Schifano on the train for a warm welcome and get ready for your journey around the Dosis Neighborhood.</td>
+<br>
+<td>Location: Train</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Solution Overview</h2>
+
+Orientation information about this year's challenge.
+
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<br>
+<th>Primary Tactic</th>
+<br>
+<th>MITRE ATT&CK Technique ID</th>
+<br>
+<th>MITRE ATT&CK Technique Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<br>
+<td>none</td>
+<br>
+<td>none</td>
+<br>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
-<p>Type the word "answer" in the terminal</p>
-<p><strong>Answer: answer</strong></p>
+
+
+Type the word "answer" in the terminal
+
+<strong>Answer: answer</strong>
+
 </details>
-<h2>Tools Reference</h2>
+
+<h2>Tools Reference</h2>
+
 <table>
-<thead><tr><th>Tools Used</th> <th>Tool Version</th><tr><td>none</td> <td>none</td> <td></td></table>
-<h2>Hints Reference</h2>
+<thead>
+<tr>
+<th>Tools Used</th>
+<br>
+<th>Tool Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<br>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>Hints Reference</h2>
 <table>
-<thead><tr><th>Provided By</th> <th>Hint</th><tr><td>none</td> <td>none</td></table>
-<h2>Acknowledgements</h2>
+<thead>
+<tr>
+<th>Provided By</th>
+<br>
+<th>Hint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<br>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Acknowledgements</h2>
 <table>
-<thead><tr><th>Provided By</th> <th>Notes</th><tr><td>none</td> <td>none</td></table>
+<thead>
+<tr>
+<th>Provided By</th>
+<br>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<br>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+
+
+
 <table>
-<thead><tr><th></th> <th><a href="/HHC_2025/index.html">Table of Contents</a></th> <th><a href="/HHC_2025/act1_introp_to_nmap_mjd.html">Next Objective: Act1 intro to NMAP</a></th></table>
+</thead>
+<tbody>
+</tbody>
+</table>

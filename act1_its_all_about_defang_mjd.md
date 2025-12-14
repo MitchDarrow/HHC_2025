@@ -1,37 +1,171 @@
 ﻿---
-nav: |
-  <table>
-  <thead><tr><th><a href="/HHC_2025/act1_orientation_mjd.html">Previous Objective: Act1 Holiday Hack Orientation</a></th> <th><a href="/HHC_2025/index.html">Table of Contents</a></th> <th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Next Objective: Act1 Neighborhood Watch Bypass</a></th></table>
+layout: default
+title: act1_its_all_about_defang_mjd
 ---
 <table>
-<thead><tr><th>Objective: Its All About Defang</th> <th>Difficulty Level: 1</th><tr><td>Find Ed Skoudis upstairs in City Hall and help him troubleshoot a clever phishing tool in his cozy office.</td> <td>Location: City Hall</td></table>
-<h2>Solution Overview</h2>
-Defanging Indicators of Compromise (IoC)
-Defanging is a cybersecurity practice of deliberately modifying malicious indicators such as URLs, IP addresses, email addresses, and domain names to render them non-functional while preserving their investigative value. This technique prevents accidental clicks, automated processing, or unintended execution when sharing threat intelligence in reports, emails, or public forums. Common defanging methods include replacing dots with "[.]" in domains (example[.]com), adding brackets to protocols (hxxp:// or hxxps://), replacing "@" symbols with "[at]" in email addresses, and modifying IP addresses (192[.]168[.]1[.]1). The practice is essential for security analysts, incident responders, and threat intelligence teams who need to document and communicate about malicious infrastructure without risking accidental exposure or triggering security controls. Defanging allows organizations to safely share IoCs across teams, with partners, or in public threat reports while maintaining the ability to quickly "refang" or restore the indicators to their original functional form when needed for analysis or blocking.
+<thead>
+<tr>
+<th><a href="/HHC_2025/act1_orientation_mjd.html">Previous Objective: Act1 Holiday Hack Orientation</a></th>
+<br>
+<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+<br>
+<th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Next Objective: Act1 Neighborhood Watch Bypass</a></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
 <table>
-<thead><tr><th>Activity</th> <th>Primary Tactic</th> <th>MITRE ATT&CK Technique ID</th> <th>MITRE ATT&CK Technique Name</th><tr><td>Identify malicious URLs, domains, and IP addresses from security incidents</td> <td>Discovery</td> <td>T1590</td> <td>Gather Victim Network Information</td></table>
-<h2>Detailed Solution</h2>
+<thead>
+<tr>
+<th>Objective: Its All About Defang</th>
+<br>
+<th>Difficulty Level: 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Find Ed Skoudis upstairs in City Hall and help him troubleshoot a clever phishing tool in his cozy office.</td>
+<br>
+<td>Location: City Hall</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Solution Overview</h2>
+
+Defanging Indicators of Compromise (IoC)
+<br>
+Defanging is a cybersecurity practice of deliberately modifying malicious indicators such as URLs, IP addresses, email addresses, and domain names to render them non-functional while preserving their investigative value. This technique prevents accidental clicks, automated processing, or unintended execution when sharing threat intelligence in reports, emails, or public forums. Common defanging methods include replacing dots with "[.]" in domains (example[.]com), adding brackets to protocols (hxxp:// or hxxps://), replacing "@" symbols with "[at]" in email addresses, and modifying IP addresses (192[.]168[.]1[.]1). The practice is essential for security analysts, incident responders, and threat intelligence teams who need to document and communicate about malicious infrastructure without risking accidental exposure or triggering security controls. Defanging allows organizations to safely share IoCs across teams, with partners, or in public threat reports while maintaining the ability to quickly "refang" or restore the indicators to their original functional form when needed for analysis or blocking.
+
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<br>
+<th>Primary Tactic</th>
+<br>
+<th>MITRE ATT&CK Technique ID</th>
+<br>
+<th>MITRE ATT&CK Technique Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identify malicious URLs, domains, and IP addresses from security incidents</td>
+<br>
+<td>Discovery</td>
+<br>
+<td>T1590</td>
+<br>
+<td>Gather Victim Network Information</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
-<p>Using the Extract IOCs tab:</p>
-<p>Set the domain regex to: \b(?:[a-zA-Z0-9-]+\.)<em>icicleinnovations\.([a-zA-Z]{2,})\b</p>
-<p>Set the IP Address Regex to: (?<=\b(?:mail|core)?\.?icicleinnovations\.mail\s</em>\()\d{1,3}(?:\.\d{1,3}){3}(?=\))</p>
-<p>Set the URL regex to: https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+(:[0-9]+)?(/[^\s]<em>\.exe)\b</p>
-<p>Set the Email address regex to: \b[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+\.)</em>icicleinnovations\.[a-zA-Z]{2,}\b</p>
-<p>To Defang the IOCs:</p>
-<p>Use this combined Sed command: s/http/hxxp/g; s/@/[@]/g; s#://#[://]#g; s/\./[.]/g</p>
-<p>!<a href="/HHC_2025/images/itsallaboutdefang_solution.jpg">Applying the combined Regex to Defang the IOCs</a></p>
-<p>The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email addresses </p>
-<p><strong>Answer: Defanged: 3 domains, 2 addresses, 2 URLs, and 2 email addressesr</strong></p>
+
+Using the Extract IOCs tab:
+
+Set the domain regex to: \b(?:[a-zA-Z0-9-]+\.)<em>icicleinnovations\.([a-zA-Z]{2,})\b
+
+Set the IP Address Regex to: (?<=\b(?:mail|core)?\.?icicleinnovations\.mail\s</em>\()\d{1,3}(?:\.\d{1,3}){3}(?=\))
+
+Set the URL regex to: https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+(:[0-9]+)?(/[^\s]<em>\.exe)\b
+
+Set the Email address regex to: \b[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+\.)</em>icicleinnovations\.[a-zA-Z]{2,}\b
+
+To Defang the IOCs:
+
+Use this combined Sed command: s/http/hxxp/g; s/@/[@]/g; s#://#[://]#g; s/\./[.]/g
+
+<img src="/images/itsallaboutdefang_solution.jpg" alt="Applying the combined Regex to Defang the IOCs">
+
+The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email addresses
+
+<strong>Answer: Defanged: 3 domains, 2 addresses, 2 URLs, and 2 email addressesr</strong>
+
 </details>
-<h2>Tools Reference</h2>
+
+<h2>Tools Reference</h2>
+
 <table>
-<thead><tr><th>Tools Used</th> <th>Tool Version</th><tr><td>sed</td> <td>4.9</td> <td></td></table>
-<h2>Hints Reference</h2>
+<thead>
+<tr>
+<th>Tools Used</th>
+<br>
+<th>Tool Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sed</td>
+<br>
+<td>4.9</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Hints Reference</h2>
 <table>
-<thead><tr><th>Provided By</th> <th>Hint</th><tr><td>Santa</td> <td>The PTAS does a pretty good job at defanging, however, the feature we are still working on is one that defangs ALL scenarios. For now, you will need to write a custom sed command combining all defang options.</td><tr><td>Santa</td> <td>Remember, the new Phishing Threat Analysis Station (PTAS) is still under construction. Even though the regex patterns are provided, they haven't been fine tuned. Some of the matches may need to be manually removed.</td><tr><td>Ed</td> <td>Oh gosh, I could talk for hours about this stuff but I really need your help! The team has been working on this new SOC tool that helps triage phishing emails...and there are some...issues. We have had some pretty sketchy emails coming through and we need to make sure we block ALL of the indicators of compromise. Can you help me? No pressure...</td></table>
-<h2>Acknowledgements</h2>
+<thead>
+<tr>
+<th>Provided By</th>
+<br>
+<th>Hint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Santa</td>
+<br>
+<td>The PTAS does a pretty good job at defanging, however, the feature we are still working on is one that defangs ALL scenarios. For now, you will need to write a custom sed command combining all defang options.</td>
+</tr>
+<tr>
+<td>Santa</td>
+<br>
+<td>Remember, the new Phishing Threat Analysis Station (PTAS) is still under construction. Even though the regex patterns are provided, they haven't been fine tuned. Some of the matches may need to be manually removed.</td>
+</tr>
+<tr>
+<td>Ed</td>
+<br>
+<td>Oh gosh, I could talk for hours about this stuff but I really need your help! The team has been working on this new SOC tool that helps triage phishing emails...and there are some...issues. We have had some pretty sketchy emails coming through and we need to make sure we block ALL of the indicators of compromise. Can you help me? No pressure...</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Acknowledgements</h2>
 <table>
-<thead><tr><th>Provided By</th> <th>Notes</th><tr><td>none</td> <td>none</td></table>
+<thead>
+<tr>
+<th>Provided By</th>
+<br>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<br>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+
+
 <table>
-<thead><tr><th><a href="/HHC_2025/act1_orientation_mjd.html">Previous Objective: Act1 Holiday Hack Orientation</a></th> <th><a href="/HHC_2025/index.html">Table of Contents</a></th> <th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Next Objective: Act1 Neighborhood Watch Bypass</a></th></table>
+<thead>
+<tr>
+<th><a href="/HHC_2025/act1_orientation_mjd.html">Previous Objective: Act1 Holiday Hack Orientation</a></th>
+<br>
+<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+<br>
+<th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Next Objective: Act1 Neighborhood Watch Bypass</a></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
