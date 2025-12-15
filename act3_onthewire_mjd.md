@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md)</th>
-  <th>[Table of Contents](/index.md)</th>
-  <th>[Next Objective: Act3 Free Ski](/act3_free_ski_mjd.md)</th>
+  <th><a href="/HHC_2025/act3_snowglobe_mjd.html">Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine</a></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th><a href="/HHC_2025/act3_free_ski_mjd.html">Next Objective: Act3 Free Ski</a></th>
   </tr>
   </thead>
   <tbody>
@@ -205,9 +205,9 @@ SPI has the following characteristics:
 <li>Data is valid on clock edges (rising or falling)</li>
 </ul>
 
-Using Firefox developer tools, the SPI data signal is captrued and exported to the following json file: <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_spidata.xml"">SPI Data</a>
+Using Firefox developer tools, the SPI data signal is captrued and exported to the following json file: <img src="/HHC_2025/HHC_2025_Template/resources/onthewire_spidata.xml"" alt="SPI Data">
 
-The following decoder was written in Powershell: <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_spidecoder.ps1.txt"">SPI Decoder</a>
+The following decoder was written in Powershell: <img src="/HHC_2025/HHC_2025_Template/resources/onthewire_spidecoder.ps1.txt"" alt="SPI Decoder">
 
 Running the decoder:
 <br>
@@ -235,11 +235,11 @@ read and decrypt the I2C bus data using the XOR key: bananza. the temperature se
 
 <h3>Part 3: I2C Decoding</h3>
 
-The following data file was collected using Edge's Developer Tools:  <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdataV2.json"">I2C Data</a>
+The following data file was collected using Edge's Developer Tools:  <img src="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdataV2.json"" alt="I2C Data">
 
 The data file contains markers, but due to the volume of data, a script was used to identify the unique markers in the data structure.
 
-<a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cuniquemarkers.ps1.txt"">I2C Unique Markers</a>
+<img src="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cuniquemarkers.ps1.txt"" alt="I2C Unique Markers">
 
 These are the unigue markers:
 
@@ -252,7 +252,7 @@ SDA markers: bus-idle, start, address-bit, ack-bit, ack-release, data-bit, stop,
 
 </code></pre>
 
-The following decoder was written in Powershell: <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt"">I2C Decoder</a>
+The following decoder was written in Powershell: <img src="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt"" alt="I2C Decoder">
 
 Script Workflow
 
@@ -348,7 +348,7 @@ Separate READ vs WRITE
 
 The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 characters “banaz”
 
-<img src="/HHC_2025/images/onthewire_i2cdecoded.jpg" alt="I2C Device 0x3C">
+!<img src="/HHC_2025/images/onthewire_i2cdecoded.jpg" alt="I2C Device 0x3C">
 
 33 32 2E 38 34 converts to ASCII 32.84
 
@@ -437,3 +437,4 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 </tr>
 </tbody>
 </table>
+

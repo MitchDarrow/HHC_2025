@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act 1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md)</th>
-  <th>[Table of Contents](/index.md)</th>
-  <th>[Previous Objective: Act 1 Visual Networking](/act1_visual_networking_mjd.md)</th>
+  <th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Previous Objective: Act 1 Neighborhood Watch Bypass</a></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th><a href="/HHC_2025/act1_visual_networking_mjd.html">Previous Objective: Act 1 Visual Networking</a></th>
   </tr>
   </thead>
   <tbody>
@@ -72,7 +72,7 @@ The objective is to:
 <li>Connecct to the port and verify the servide is running</li>
 </ol>
 
-<img src="/HHC_2025/images/santatracking_instructions.jpg" alt="Objective Instructions">
+!<img src="/HHC_2025/images/santatracking_instructions.jpg" alt="Objective Instructions">
 
 Use the SS tool to discover the port using the command:
 <br>
@@ -84,7 +84,7 @@ There is a service running on port 12321
 
 Use curl to connect:
 
-<img src="/HHC_2025/images/santatracker_connect.jpg" alt="Sample image alt text">
+!<img src="/HHC_2025/images/santatracker_connect.jpg" alt="Sample image alt text">
 
 <pre><code class="language-sh">
 curl -I http://0.0.0.0:12321
@@ -152,3 +152,4 @@ The service responds with a 200 OK and Content-Type of application/json
 </tr>
 </tbody>
 </table>
+

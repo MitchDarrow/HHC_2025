@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md)</th>
-  <th>[Home Page](/index.md)</th>
-  <th>[Next Objective: Act 2 Going in Reverse](/act2_going_in_reverse_mjd.md)</th>
+  <th><a href="/HHC_2025/act2_rogue_gnome_identity_provider_mjd.html">Previous Objective: Act2 Rogue Gnome Identity Provider</a></th>
+  <th><a href="/HHC_2025/index.html">Home Page</a></th>
+  <th><a href="/HHC_2025/act2_going_in_reverse_mjd.html">Next Objective: Act 2 Going in Reverse</a></th>
   </tr>
   </thead>
   <tbody>
@@ -64,7 +64,7 @@ Reconnaissance located ssh keys that belonged to another user. These keys were u
 
 RSA keys were found in the Qgnome directory during recon
 
-<img src="/HHC_2025/images/quantgnome_rsakeys.jpg" alt="RSA Keys">
+!<img src="/HHC_2025/images/quantgnome_rsakeys.jpg" alt="RSA Keys">
 
 Inspecting the knownhosts file, there is a key referenced at /opt/oqs-key/ssh_host_ecdsa_nistp521_mldsa-87_key. This directory is accessible.
 
@@ -74,7 +74,7 @@ Using this key:
 ssh -p 2222 -i /opt/oqs-key/ssh_host_ecdsa_nistp521_mldsa-87_key gnome1@localhost
 </code></pre>
 
-<img src="/HHC_2025/images/quantgnome_gnome1.jpg" alt="SSH as Gnome1">
+!<img src="/HHC_2025/images/quantgnome_gnome1.jpg" alt="SSH as Gnome1">
 
 The Gnome1 user has access to a new key:
 
@@ -82,7 +82,7 @@ The Gnome1 user has access to a new key:
 ssh -p 2222 -i /opt/oqs-key/id_ed25519 gnome2@localhost
 </code></pre>
 
-<img src="/HHC_2025/images/quantgnome_gnome2.jpg" alt="SSH as Gnome2">
+!<img src="/HHC_2025/images/quantgnome_gnome2.jpg" alt="SSH as Gnome2">
 
 The Gnome2 user has access to a new key:
 
@@ -90,14 +90,15 @@ The Gnome2 user has access to a new key:
 ssh -p 2222 -i /opt/oqs-key/id_mayo2 gnome3@localhost
 </code></pre>
 
-<img src="/HHC_2025/images/quantgnome_gnome3.jpg" alt="SSH as Gnome3">
+!<img src="/HHC_2025/images/quantgnome_gnome3.jpg" alt="SSH as Gnome3">
 
 The Gnome3 user has access to a new key:
 
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/id_ecdsa_nistp256_sphincssha2128fsimple gnome4@localhost
 </code></pre>
-<img src="/HHC_2025/images/quantgnome_gnome4.jpg" alt="SSH as Gnome4">
+<br>
+!<img src="/HHC_2025/images/quantgnome_gnome4.jpg" alt="SSH as Gnome4">
 
 The Gnome4 user has access to a new key:
 
@@ -107,7 +108,7 @@ ssh -p 2222 -i /opt/oqs-key/id_ecdsa_nistp521_mldsa87 admin@localhost
 
 The instructions direct towards the directory where the SSH daemon is running (/opt/oqs-ssh), and The flag is in the directory /opt/oqs-ssh/flag
 
-<img src="/HHC_2025/images/quantgnome_flagdir.jpg" alt="Flag Directory">
+!<img src="/HHC_2025/images/quantgnome_flagdir.jpg" alt="Flag Directory">
 
 <strong>Answer: HHC{L3aping_0v3r_Quantum_Crypt0}</strong>
 
@@ -177,3 +178,4 @@ The instructions direct towards the directory where the SSH daemon is running (/
 </tr>
 </tbody>
 </table>
+

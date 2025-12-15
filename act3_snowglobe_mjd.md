@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act3 Schrodingers Scope](/act3_schrodingersscope_mjd.md)</th>
-  <th>[Table of Contents](/index.md)</th>
-  <th>[Next Objective: Act3 On the Wire3](/act3_onthewire_mjd.md)</th>
+  <th><a href="/HHC_2025/act3_schrodingersscope_mjd.html">Previous Objective: Act3 Schrodingers Scope</a></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th><a href="/HHC_2025/act3_onthewire_mjd.html">Next Objective: Act3 On the Wire3</a></th>
   </tr>
   </thead>
   <tbody>
@@ -58,7 +58,7 @@ The code on the outside of the building is binary and decodes to "imanok" which 
 
 Viewing the exterior wall of the datacenter, there is a pattern in the bricks that looks binary, six bytes of data:
 
-<img src="/HHC_2025/images/snowglobe_code.jpg" alt="snowglobe code">
+!<img src="/HHC_2025/images/snowglobe_code.jpg" alt="snowglobe code">
 
 Decoding the patterns gives:
 
@@ -229,3 +229,4 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 </tr>
 </tbody>
 </table>
+

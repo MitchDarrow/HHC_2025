@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act2 IDORable Bistro](/act3_idorable_bistro_mjd.md)</th>
-  <th>[Home Page](/index.md)</th>
-  <th>[Next Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md)</th>
+  <th><a href="/HHC_2025/act3_idorable_bistro_mjd.html">Previous Objective: Act2 IDORable Bistro</a></th>
+  <th><a href="/HHC_2025/index.html">Home Page</a></th>
+  <th><a href="/HHC_2025/act2_rogue_gnome_identity_provider_mjd.html">Next Objective: Act2 Rogue Gnome Identity Provider</a></th>
   </tr>
   </thead>
   <tbody>
@@ -94,7 +94,7 @@ The objective is to gain access to the router configuration and the password it 
 
 Device Information
 
-<img src="/HHC_2025/images/dosisnetwork_versioninfo.jpg" alt="Router logon screen showing Archer AX21 device information">
+!<img src="/HHC_2025/images/dosisnetwork_versioninfo.jpg" alt="Router logon screen showing Archer AX21 device information">
 
 The logon screen indicates that this is an <strong>Archer AX21 v2.0</strong> running firmware version <strong>1.1.4 Build 20230219</strong>.
 
@@ -126,7 +126,7 @@ CVE-2023-1389 -- Command Injection / Remote Code Execution
 
 Exploit Code Analysis
 
-<img src="/HHC_2025/images/dosisnetwork_exploitdb.jpg" alt="Exploit-db entry for CVE-2023-1389">
+!<img src="/HHC_2025/images/dosisnetwork_exploitdb.jpg" alt="Exploit-db entry for CVE-2023-1389">
 
 From exploit-db, the exploit code provides insight into the request structure needed:
 
@@ -191,7 +191,7 @@ url_command = "https://" + args.router + "/cgi-bin/luci/;stok=/locale?form=count
 <h1>Send the URL twice to run the command. Sending twice is necessary for the attack</h1>
 </code></pre>
 
-<img src="/HHC_2025/images/dosisnetwork_200.jpg" alt="Testing GET request structure showing 200 OK response">
+!<img src="/HHC_2025/images/dosisnetwork_200.jpg" alt="Testing GET request structure showing 200 OK response">
 
 Work with the structure of the GET request until you get a <strong>200 OK</strong> response, indicating that the structure is valid.
 
@@ -205,7 +205,7 @@ The simplest payload is to print the file:
 $(cat%20/etc/config/wireless)
 </code></pre>
 
-<img src="/HHC_2025/images/dosisnetwork_solution.jpg" alt="Payload execution showing wireless configuration file contents">
+!<img src="/HHC_2025/images/dosisnetwork_solution.jpg" alt="Payload execution showing wireless configuration file contents">
 
 <strong>Answer: SprinklesAndPackets2025!</strong>
 
@@ -271,3 +271,4 @@ $(cat%20/etc/config/wireless)
 </tr>
 </tbody>
 </table>
+

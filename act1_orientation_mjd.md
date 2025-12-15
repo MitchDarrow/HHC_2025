@@ -104,3 +104,9 @@ Type the word "answer" in the terminal
 </tr>
 </tbody>
 </table>
+
+<table>
+</thead>
+<tbody>
+</tbody>
+</table>

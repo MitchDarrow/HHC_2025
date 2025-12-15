@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.m)</th>
-  <th>[Table of Contents](/index.md)</th>
-  <th>[Next Objective: Act1 The Open Door](/act1_the_open_door_mjd.md)</th>
+  <th><a href="/act1_blob_storage_mjd.m">Previous Objective: Act1 Blob Storage Challenge</a></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th><a href="/HHC_2025/act1_the_open_door_mjd.html">Next Objective: Act1 The Open Door</a></th>
   </tr>
   </thead>
   <tbody>
@@ -52,7 +52,7 @@ High level executive summary of how the objective was solved. Details belong in 
 
 Step by step solution complete with any code used
 
-<img src="/HHC_2025/images/objectivename_purpose.jpg" alt="Sample image alt text">
+!<img src="/HHC_2025/images/objectivename_purpose.jpg" alt="Sample image alt text">
 
 <pre><code class="language-sh">
 bash script code block
@@ -126,3 +126,4 @@ Unordered list:
 </tr>
 </tbody>
 </table>
+

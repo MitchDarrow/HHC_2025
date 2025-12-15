@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act3 Snowcat RCE abd Privilege Escalation](/act3_snowcat_mjd.md)</th>
-  <th>[Table of Contents](/index.md)</th>
-  <th>[Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md)</th>
+  <th><a href="/HHC_2025/act3_snowcat_mjd.html">Previous Objective: Act3 Snowcat RCE abd Privilege Escalation</a></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th><a href="/HHC_2025/act3_snowglobe_mjd.html">Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine</a></th>
   </tr>
   </thead>
   <tbody>
@@ -88,13 +88,13 @@ The objective is to conduct a penetration test of a Neighborhood College Registr
 
 The initial step was to identify the bot responsible for the additional scope violations
 
-<img src="/HHC_2025/images/shroedingers_webbot.jpg" alt="Identification of WebBot">
+!<img src="/HHC_2025/images/shroedingers_webbot.jpg" alt="Identification of WebBot">
 
 With the object pattern identified, it is possible to use browser Developer Tools to block the request.
 <br>
 Selecting "Network Request Blocking" from the More Tools menu. The pattern to block is "<em>gnomeU</em>"
 
-<img src="/HHC_2025/images/shroedingers_webbotblock.jpg" alt="Blocking of WebBot">
+!<img src="/HHC_2025/images/shroedingers_webbotblock.jpg" alt="Blocking of WebBot">
 
 Reconnaisance began with examining the contents of the sitemap for the application.
 <br>
@@ -143,11 +143,11 @@ Exploring the endpoints revealed several pages of notes, two that were within th
 <br>
 The first enpoint found: /register/dev/dev_todos
 
-<img src="/HHC_2025/images/shroedingers_devtodos.jpg" alt="Developer Information To Do List">
+!<img src="/HHC_2025/images/shroedingers_devtodos.jpg" alt="Developer Information To Do List">
 
 The second endpoint found: /register/dev/dev_notes
 
-<img src="/HHC_2025/images/shroedingers_devnotes.jpg" alt="Developer Information Notes">
+!<img src="/HHC_2025/images/shroedingers_devnotes.jpg" alt="Developer Information Notes">
 
 Locating both of these files construct the Developer information disclosure vulnerability discovered.
 
@@ -155,7 +155,7 @@ Locating both of these files construct the Developer information disclosure vuln
 
 With the information the developer left behind, it is possible to attack the login page. Providing the credentials from the note results in an Invalid Forwarding IP error. The X-Forwarded-For header is meant to preserve the true client IP across proxies. But because it can be manually set by clients, it’s vulnerable to spoofing. To bypass this error, we will set the header to 127.0.0.1 in an attempt to trick the web server into believing the request originated from itself.
 
-<img src="/HHC_2025/images/shroedingers_xforwarder.jpg" alt="Spoofing the X-Forwarder Header">
+!<img src="/HHC_2025/images/shroedingers_xforwarder.jpg" alt="Spoofing the X-Forwarder Header">
 
 The login "testuser" with the password "2025h0L1d4y5" succeeds, and the /register/courses node is now accessible.
 
@@ -165,7 +165,7 @@ Spoofing the X-Forwarded-For header and authenticating as testuser achieves the 
 
 Examining the source code for the courses page, a commented secion of code is discovered.
 
-<img src="/HHC_2025/images/shroedingers_commentedsearch.jpg" alt="Commented Search Feature">
+!<img src="/HHC_2025/images/shroedingers_commentedsearch.jpg" alt="Commented Search Feature">
 
 Using a snippet of code from the register/js/registerCourses.js in the developer console this feature can be enabled:
 
@@ -193,27 +193,29 @@ fetch('/register/courseSearchUnlocked', { method: 'POST', headers: { 'Content-Ty
 
 This activates the search feature in the application:
 
-<img src="/HHC_2025/images/shroedingers_activatedsearch.jpg" alt="Activated Search Feature">
+!<img src="/HHC_2025/images/shroedingers_activatedsearch.jpg" alt="Activated Search Feature">
 
 <strong>Answer: Found commented code</strong>
 
 Testing the search interface for SQL Injection (SQLi), the application was found to be vulnerable.  An OR injection (' OR '1'='1) was utilized to list all course entries in the database.
 
-<img src="/HHC_2025/images/shroedingers_searchsqli.jpg" alt="Search SQL Injection">
+!<img src="/HHC_2025/images/shroedingers_searchsqli.jpg" alt="Search SQL Injection">
 
 <strong>Answer: SQL Injection</strong>
 
 This reveals the unauthorized course and allows me to report it:
-<img src="/HHC_2025/images/shroedingers_mischief.jpg" alt="Unauthorized Course">
+<br>
+!<img src="/HHC_2025/images/shroedingers_mischief.jpg" alt="Unauthorized Course">
 
 Opening the course details prompts for reporting:
-<img src="/HHC_2025/images/shroedingers_gnomecourse.jpg" alt="Unauthorized Course Details">
+<br>
+!<img src="/HHC_2025/images/shroedingers_gnomecourse.jpg" alt="Unauthorized Course Details">
 
 <strong>Answer: Unauthorized content</strong>
 
 The final hint suggests that a token or cookie may be weak. The error message when attempting to access the wip/holiday_behavior endpoint confirms this idea.
 
-<img src="/HHC_2025/images/shroedingers_wipermissions.jpg" alt="Registration Value">
+!<img src="/HHC_2025/images/shroedingers_wipermissions.jpg" alt="Registration Value">
 
 Looking at the registration values generated:
 
@@ -290,7 +292,7 @@ Hijacking this session token, the document in wip is accessed.
 
 <strong>Answer: Cookie prediction</strong>
 
-<img src="/HHC_2025/images/shroedingers_final.jpg" alt="Final Assessment Results">
+!<img src="/HHC_2025/images/shroedingers_final.jpg" alt="Final Assessment Results">
 
 </details>
 
@@ -370,3 +372,4 @@ Hijacking this session token, the document in wip is accessed.
 </tr>
 </tbody>
 </table>
+

@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)</th>
-  <th>[Home Page](/index.md)</th>
-  <th>[Next Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)</th>
+  <th><a href="/HHC_2025/act2_dosis_network_down_mjd.html">Previous Objective: Act2 Dosis Network Down</a></th>
+  <th><a href="/HHC_2025/index.html">Home Page</a></th>
+  <th><a href="/HHC_2025/act2_quantgnome_leap_mjd.html">Next Objective: Act2 Quantgnome Leap</a></th>
   </tr>
   </thead>
   <tbody>
@@ -146,7 +146,7 @@ eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9pZHAuYXRuYXNjb3JwLy53ZWxsLWtub3duL2p3a3Mu
 
 Using JWT.IO to decode the token:
 
-<img src="/HHC_2025/images/roguegnomeidp_jwt.jpg" alt="Decoding the token">
+!<img src="/HHC_2025/images/roguegnomeidp_jwt.jpg" alt="Decoding the token">
 
 Lets look at the contents of the jwks.json file:
 <br>
@@ -185,11 +185,11 @@ Lets look at the contents of the jwks.json file:
 
 The /etc/passwd file is accessible. The username "santa" looks like a good one to use in the attack.
 
-<img src="/HHC_2025/images/roguegnomeidp_passwdfile.jpg" alt="Contents of the Password file">
+!<img src="/HHC_2025/images/roguegnomeidp_passwdfile.jpg" alt="Contents of the Password file">
 
 Using mkjwk - JSON Web Key Generator, generate the json web key:
 
-<img src="/HHC_2025/images/roguegnomeidp_keys.jpg" alt="Generating JSON Web Key">
+!<img src="/HHC_2025/images/roguegnomeidp_keys.jpg" alt="Generating JSON Web Key">
 
 <pre><code class="language-">
 e: AQAB
@@ -262,7 +262,7 @@ Using JWT.io change the minimal number of items. The hint says gnome has insuffi
 
 The token is signed using the Private key generated. The public key and the fraudulent JWKS file is placed in the www directory of paulweb.neighborhood.
 
-<img src="/HHC_2025/images/roguegnomeidp_tamperedjwt.jpg" alt="Creating a Tampered Token">
+!<img src="/HHC_2025/images/roguegnomeidp_tamperedjwt.jpg" alt="Creating a Tampered Token">
 
 Tampered token:
 <br>
@@ -281,7 +281,8 @@ The session key is used to connect to the diagntic interface:
 <pre><code class="language-">
 curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA20V3TpQ5ST2sky_K3XDsllPSs; ' http://gnome-48371.atnascorp/diagnostic-interface
 </code></pre>
-<img src="/HHC_2025/images/roguegnomeidp_diagnostic.jpg" alt="Getting the Diagnostic Interface">
+<br>
+!<img src="/HHC_2025/images/roguegnomeidp_diagnostic.jpg" alt="Getting the Diagnostic Interface">
 
 <strong>Answer:refrigeration-botnet.bin</strong>
 
@@ -302,15 +303,15 @@ curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA2
 <td>8.11.0</td>
 </tr>
 <tr>
-<td><a href="https://JWT.IO">JSON Web Token (JWT) Debugger</a></td>
+<td><img src="https://JWT.IO" alt="JSON Web Token (JWT) Debugger"></td>
 <td>N/A</td>
 </tr>
 <tr>
-<td><a href="https://8gwifi.org/jwkconvertfunctions.jsp">JWK to PEM Converter</a></td>
+<td><img src="https://8gwifi.org/jwkconvertfunctions.jsp" alt="JWK to PEM Converter"></td>
 <td>N/A</td>
 </tr>
 <tr>
-<td><a href="https://mkjwk.org/">JSON Web Key generator</a></td>
+<td><img src="https://mkjwk.org/" alt="JSON Web Key generator"></td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -359,3 +360,4 @@ curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA2
 </tr>
 </tbody>
 </table>
+

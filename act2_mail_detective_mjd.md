@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)</th>
-  <th>[Home Page](/index.md)</th>
-  <th>[Next Objective: Act 2 IDORable Bistro](/act2_idorable_bistro_mjd.md)</th>
+  <th><a href="/HHC_2025/act3_hackagnome_mjd.html">Previous Objective: Act2 Name</a></th>
+  <th><a href="/HHC_2025/index.html">Home Page</a></th>
+  <th><a href="/HHC_2025/act2_idorable_bistro_mjd.html">Next Objective: Act 2 IDORable Bistro</a></th>
   </tr>
   </thead>
   <tbody>
@@ -82,7 +82,7 @@ This objective investigates suspicious emails using IMAP (Internet Message Acces
 
 This is a helpful resource for reading messages using curl: https://everything.curl.dev/usingcurl/reademail.html
 
-<img src="/HHC_2025/images/maildetective_instructions.jpg" alt="Objective Instructions">
+!<img src="/HHC_2025/images/maildetective_instructions.jpg" alt="Objective Instructions">
 
 Connect to the server using curl:
 
@@ -102,11 +102,11 @@ a005 fetch 2 body[]
 
 This search returns a match.
 
-<img src="/HHC_2025/images/maildetective_commands.jpg" alt="IMAP fetch command showing email message body">
+!<img src="/HHC_2025/images/maildetective_commands.jpg" alt="IMAP fetch command showing email message body">
 
 Scrolling down the body is:
 
-<img src="/HHC_2025/images/maildetective_answer.jpg" alt="Email body content revealing JavaScript variable with URL">
+!<img src="/HHC_2025/images/maildetective_answer.jpg" alt="Email body content revealing JavaScript variable with URL">
 
 <pre><code class="language-javascript">
 var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
@@ -168,3 +168,4 @@ var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
 </tr>
 </tbody>
 </table>
+

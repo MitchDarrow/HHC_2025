@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act1 Holiday Hack Orientation](/act1_orientation_mjd.md)</th>
-  <th>[Table of Contents](/index.md)</th>
-  <th>[Next Objective: Act1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md)</th>
+  <th><a href="/HHC_2025/act1_orientation_mjd.html">Previous Objective: Act1 Holiday Hack Orientation</a></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Next Objective: Act1 Neighborhood Watch Bypass</a></th>
   </tr>
   </thead>
   <tbody>
@@ -72,7 +72,7 @@ To Defang the IOCs:
 
 Use this combined Sed command: s/http/hxxp/g; s/@/[@]/g; s#://#[://]#g; s/\./[.]/g
 
-<img src="/HHC_2025/images/itsallaboutdefang_solution.jpg" alt="Applying the combined Regex to Defang the IOCs">
+!<img src="/HHC_2025/images/itsallaboutdefang_solution.jpg" alt="Applying the combined Regex to Defang the IOCs">
 
 The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email addresses
 
@@ -136,3 +136,4 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 </tr>
 </tbody>
 </table>
+

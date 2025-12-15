@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act3 On The Wire](/act3_onthewire_mjd.md)</th>
-  <th>[Table of Contents](/index.md)</th>
-  <th>[Next Objective: Act3 SnowBlind Ambush](/act3_snowblindambush_mjd.md)</th>
+  <th><a href="/HHC_2025/act3_onthewire_mjd.html">Previous Objective: Act3 On The Wire</a></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th><a href="/HHC_2025/act3_snowblindambush_mjd.html">Next Objective: Act3 SnowBlind Ambush</a></th>
   </tr>
   </thead>
   <tbody>
@@ -71,7 +71,8 @@ git clone https://github.com/zrax/pycdc.git
 Run PyInstaller Extractor to create the pyc file:
 <br>
 python ./pyinstxtractor.py FreeSki.exe
-<img src="/HHC_2025/images/freeskipyextractor.jpg" alt="Results of Pyextractor">
+<br>
+!<img src="/HHC_2025/images/freeskipyextractor.jpg" alt="Results of Pyextractor">
 
 Install cmake:
 <br>
@@ -83,11 +84,11 @@ make
 <br>
 Copy the extracted folder into the /pycdc folder
 
-<img src="/HHC_2025/images/freeski_pycdcfolder.png" alt="pydcdc folder">
+!<img src="/HHC_2025/images/freeski_pycdcfolder.png" alt="pydcdc folder">
 
 Extract the code: ./pycdas ~/pycdc/FreeSki.exe_extracted/FreeSki.pyc
 
-<a href="/HHC_2025/images/FreeSkiCode.txt">Free Ski Source Code</a>
+<img src="/HHC_2025/images/FreeSkiCode.txt" alt="Free Ski Source Code">
 
 Flag Decoding Process (in SetFlag function):
 <ol>
@@ -117,14 +118,14 @@ python
 <br>
        decoded.append(chr(mountain.encoded_flag[i] ^ r))
 
-<img src="/HHC_2025/images/free_ski_flagdecoding.jpg" alt="Flag decoding">
+!<img src="/HHC_2025/images/free_ski_flagdecoding.jpg" alt="Flag decoding">
 
 There are <strong>7 mountains</strong> with encoded flags:
 <ul>
 <li>Mount Snow, Aspen, Whistler, Mount Baker, Mount Norquay, Mount Erciyes, Dragonmount</li>
 </ul>
 
-<img src="/HHC_2025/images/free_ski_themountains.jpg" alt="The Mountains">
+!<img src="/HHC_2025/images/free_ski_themountains.jpg" alt="The Mountains">
 
 <ol>
 <li><strong>Find treasure locations</strong> - They're deterministically generated using <code>random.seed(binascii.crc32(mountain_name))</code> in <code>GetTreasureLocations()</code></li>
@@ -151,9 +152,9 @@ The script solvefreeski.py does the following:
 <li>Decodes the flag - Seeds Python's random number generator with that product, then XORs each byte of the encoded flag with the generated random values</li>
 </ol>
 
-Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
+Script: <img src="/HHC_2025/act3_solvefreeski.py" alt="Solve Free Ski">
 
-<img src="/HHC_2025/images/Free_ski_solution.jpg" alt="Free Ski Solution">
+!<img src="/HHC_2025/images/Free_ski_solution.jpg" alt="Free Ski Solution">
 
 <strong>Answer: frosty_yet_predictably_random</strong>
 
@@ -223,3 +224,4 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
 </tr>
 </tbody>
 </table>
+

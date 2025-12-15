@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act2 Going in Reverse](/act2_going_in_reverse_mjd.md)</th>
-  <th>[Table of Contents](/index.md)</th>
-  <th>[Next Objective: Act3 Hack-a-Gnome](/act3_hack-a-gnome_mjd.md)</th>
+  <th><a href="/HHC_2025/act2_going_in_reverse_mjd.html">Previous Objective: Act2 Going in Reverse</a></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th><a href="/HHC_2025/act3_hack-a-gnome_mjd.html">Next Objective: Act3 Hack-a-Gnome</a></th>
   </tr>
   </thead>
   <tbody>
@@ -76,7 +76,7 @@ Starting with only public access to the web application, reconnaisance was condu
 
 Using Edge's developer tools, the application code is reviewed. An interesting comment is found on the page:
 
-<img src="/HHC_2025/images/gnometea_interestingcomment.jpg" alt="Interesting Comment">
+!<img src="/HHC_2025/images/gnometea_interestingcomment.jpg" alt="Interesting Comment">
 
 The API key is part of the URL:
 
@@ -114,11 +114,11 @@ curl -X GET \
 <br>
   https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk | grep "password"
 
-<img src="/HHC_2025/images/gnometea_passwordhint.jpg" alt="Password Hint">
+!<img src="/HHC_2025/images/gnometea_passwordhint.jpg" alt="Password Hint">
 
 Searching the gnomes collection reveals Barnabies email address. This is needed for login.
 
-<img src="/HHC_2025/images/gnometea_username.jpg" alt="Barnaby's Username">
+!<img src="/HHC_2025/images/gnometea_username.jpg" alt="Barnaby's Username">
 
 <strong>Username: barnabybriefcase@gnomemail.dosis</strong>
 
@@ -126,7 +126,7 @@ The correct URL to obtain Barnaby's image is: https://firebasestorage.googleapis
 
 curl "https://firebasestorage.googleapis.com/v0/b/holidayhack2025.firebasestorage.app/o/gnome-documents%2Fl7VS01K9GKV5ir5S8suDcwOFEpp2_drivers_license.jpeg?alt=media" -o drivers_license.jpeg
 
-<img src="/HHC_2025/images/gnometea_exifdata.jpg" alt="Image Exifdata">
+!<img src="/HHC_2025/images/gnometea_exifdata.jpg" alt="Image Exifdata">
 
 The image was taken at: 33 deg 27' 53.85" S, 115 deg 54' 37.62" E
 
@@ -134,11 +134,11 @@ Converting the Latitude and Longitude into a format for Google Maps:
 
 https://www.google.com/maps?q=-33.464958,115.910450
 
-<img src="/HHC_2025/images/gnometea_password.jpg" alt="Barnaby's Password">
+!<img src="/HHC_2025/images/gnometea_password.jpg" alt="Barnaby's Password">
 
 With valid credentials, login is achieved as Barnaby.
 
-<img src="/HHC_2025/images/gnometea_login.jpg" alt="Gnome Tea Login">
+!<img src="/HHC_2025/images/gnometea_login.jpg" alt="Gnome Tea Login">
 
 Following the hint about client side controls, the source code now available is reviewed, and admin access is hard coded into the source.
 
@@ -160,7 +160,7 @@ Following the hint about client side controls, the source code now available is 
 
 Using the console in Edge's developer tools, admin access is achieved by setting T to 3loaihgxP0VwCTKmkHHFLe6FZ4m2
 
-<img src="/HHC_2025/images/gnometea_solution.jpg" alt="Gnome Tea Solution">
+!<img src="/HHC_2025/images/gnometea_solution.jpg" alt="Gnome Tea Solution">
 
 <strong>Answer: GigGigglesGiggler</strong>
 
@@ -242,3 +242,4 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 </tr>
 </tbody>
 </table>
+

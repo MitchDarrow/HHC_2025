@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act1 Owner](/act1_owner_mjd.md)</th>
-  <th>[Home Page](/index.md)</th>
-  <th>[Next Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md)</th>
+  <th><a href="/HHC_2025/act1_owner_mjd.html">Previous Objective: Act1 Owner</a></th>
+  <th><a href="/HHC_2025/index.html">Home Page</a></th>
+  <th><a href="/HHC_2025/act2_mail_detective_mjd.html">Next Objective: Act2 Mail Detective</a></th>
   </tr>
   </thead>
   <tbody>
@@ -68,7 +68,7 @@ This objective is a digital forensics investigation involving a floppy disk imag
 <details>
 <summary>Click to expand</summary>
 
-<a href="/HHC_2025/resources/retrorecovery_floppy.img">Floppy Disk Image File</a>
+<img src="/HHC_2025/resources/retrorecovery_floppy.img" alt="Floppy Disk Image File">
 
 <code>losetup</code> is a Linux command used to set up and manage loop devices, which let you treat a regular file as if it were a block device (like a disk).
 
@@ -92,7 +92,7 @@ sudo testdisk /dev/loop0
 <li>Select "undelete" as the action</li>
 </ol>
 
-<img src="/HHC_2025/images/retrorecovery_explorefiles.jpg" alt="TestDisk interface showing file listing on floppy disk image">
+!<img src="/HHC_2025/images/retrorecovery_explorefiles.jpg" alt="TestDisk interface showing file listing on floppy disk image">
 
 There is an interesting file: <code>all_i-want_for_christmas.bas</code>
 
@@ -102,7 +102,7 @@ Successfully recovered the deleted file <code>all_i-want_for_christmas.bas</code
 
 Open in mousepad and explore:
 
-<img src="/HHC_2025/images/retrorecovery_sourcecode.jpg" alt="BASIC source code file contents showing encoded string">
+!<img src="/HHC_2025/images/retrorecovery_sourcecode.jpg" alt="BASIC source code file contents showing encoded string">
 
 There is a base64 encoded string:
 
@@ -188,3 +188,4 @@ merry christmas to all and to all a good night
 </tr>
 </tbody>
 </table>
+

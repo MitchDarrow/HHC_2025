@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act1 Its All About Defang](/act1_its_all_about-defang_mjd.md)</th>
-  <th>[Table of Contents](/index.md)</th>
-  <th>[Next Objective: Act 1 Santa's Gift-Tracking Service Port](/act1_santas_gift-tracking_service_port_mystery_mjd.md)</th>
+  <th><a href="/HHC_2025/act1_its_all_about-defang_mjd.html">Previous Objective: Act1 Its All About Defang</a></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th><a href="/HHC_2025/act1_santas_gift-tracking_service_port_mystery_mjd.html">Next Objective: Act 1 Santa's Gift-Tracking Service Port</a></th>
   </tr>
   </thead>
   <tbody>
@@ -82,11 +82,11 @@ This objective identifies a path hijacking privilege escalation attack against a
 
 Access the terminal provided:
 
-<img src="/HHC_2025/images/neighborhoodwatchbypass_instructions.jpg" alt="Terminal access showing initial shell prompt">
+!<img src="/HHC_2025/images/neighborhoodwatchbypass_instructions.jpg" alt="Terminal access showing initial shell prompt">
 
 During reconnaissance, the bash script <code>system_status</code> is discovered. The script is running a <code>ps</code> command.
 
-<img src="/HHC_2025/images/neighborhoodwatchbypass_script.jpg" alt="System status script showing ps command execution">
+!<img src="/HHC_2025/images/neighborhoodwatchbypass_script.jpg" alt="System status script showing ps command execution">
 
 Let's see what chiuser can do:
 
@@ -124,7 +124,7 @@ chmod +x ~/bin/ps
 
 The path hijack attack works and the malicious version of the <code>ps</code> command runs, creating a new shell with root privileges.
 
-<img src="/HHC_2025/images/neighborhoodwatchbypass_answer.jpg" alt="Successful privilege escalation showing root shell access">
+!<img src="/HHC_2025/images/neighborhoodwatchbypass_answer.jpg" alt="Successful privilege escalation showing root shell access">
 
 Successfully obtained a new shell with root privileges and can run the <code>runtoanswer</code> link, which runs the restore_fire_alarm.
 
@@ -188,3 +188,4 @@ Successfully obtained a new shell with root privileges and can run the <code>run
 </tr>
 </tbody>
 </table>
+

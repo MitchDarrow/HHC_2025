@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act1 Intro to Nmap](/act1_intro_to_nmap_mjd.md)</th>
-  <th>[Table of Contents](/index.md)</th>
-  <th>[Next Objective: Act1 Spare Key](/act1_spare_key_mjd.md)</th>
+  <th><a href="/HHC_2025/act1_intro_to_nmap_mjd.html">Previous Objective: Act1 Intro to Nmap</a></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th><a href="/HHC_2025/act1_spare_key_mjd.html">Next Objective: Act1 Spare Key</a></th>
   </tr>
   </thead>
   <tbody>
@@ -79,7 +79,8 @@ Step 1: Review the storage accounts
 <pre><code class="language-sh">
 az storage account list | less
 </code></pre>
-<img src="/HHC_2025/images/blobstorage_misconfig.jpg" alt="Misconfigured Storage Account allows Public Access">
+<br>
+!<img src="/HHC_2025/images/blobstorage_misconfig.jpg" alt="Misconfigured Storage Account allows Public Access">
 
 The following commands were used to dive deeper:
 <br>
@@ -93,7 +94,7 @@ az storage blob download \
   --file admin_passwords.txt
 </code></pre>
 
-<img src="/HHC_2025/images/blobstorage_passwords.jpg" alt="Misconfigured Storage Account allows Public Access">
+!<img src="/HHC_2025/images/blobstorage_passwords.jpg" alt="Misconfigured Storage Account allows Public Access">
 
 <strong>Answer: allowBlobPublicAccesss: True</strong>
 
@@ -147,3 +148,4 @@ az storage blob download \
 </tr>
 </tbody>
 </table>
+

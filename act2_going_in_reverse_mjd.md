@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th>[Previous Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)</th>
-  <th>[Table of Contents](/index.md)</th>
-  <th>[Next Objective: Act 3 Gnome Tea](/act3_gnome_tea_mjd.md)</th>
+  <th><a href="/HHC_2025/act2_quantgnome_leap_mjd.html">Previous Objective: Act2 Quantgnome Leap</a></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th><a href="/HHC_2025/act3_gnome_tea_mjd.html">Next Objective: Act 3 Gnome Tea</a></th>
   </tr>
   </thead>
   <tbody>
@@ -89,7 +89,7 @@ for ($i = 0; $i -lt $encFlag.Length; $i++) {
 <h1>Get ASCII code of character</h1>
     $ascii = [int][char]$encFlag[$i]
 <h1>XOR with 7</h1>
-    $decodedChar = <a href="/HHC_2025/$ascii -bxor 7">char</a>
+    $decodedChar = <img src="/HHC_2025/$ascii -bxor 7" alt="char">
 <h1>Append to result</h1>
     $decoded += $decodedChar
 }
@@ -163,3 +163,4 @@ Write-Output $decoded
 </tr>
 </tbody>
 </table>
+
