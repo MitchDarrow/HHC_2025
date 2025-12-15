@@ -8,7 +8,7 @@ title: index
 <table>
 <thead>
 <tr>
-<th><h3>SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</h3></th>
+<th>SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</th>
 <th><img src="/HHC_2025/images/HHC.webp" alt="Holiday Hack Challenge Logo"></th>
 </tr>
 </thead>
