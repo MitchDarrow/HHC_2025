@@ -2,9 +2,9 @@
 layout: default
 title: bio_mjd
 ---
-<img src="/index.md" alt="Back to Home Page">
+<a href="/HHC_2025/index.html">Back to Home Page</a>
 
-<img src="/HHC_2025/images/mitch_darrow.png" alt="Image of Mitch Darrow">
+<img src="images/mitch_darrow.png" alt="Image of Mitch Darrow" />
 <h2>Mitch Darrow</h2>
 
 <strong>Manager, Government Assurance Practice Group, IT Security Consulting Team</strong>

@@ -93,12 +93,12 @@ ws = websocket.WebSocketApp(url,
 ws.run_forever()
 </code></pre>
 
-The data file collected: [1-wire data](HHC_2025_Template/resources/OntheWire_1wire_data.csv
+The data file collected: <a href="HHC_2025_Template/resources/OntheWire_1wire_data.csv
 
 The data contains the following markers:
 
 <ul>
-<li>"reset" at t=1 (reset pulse)</li>
+<li>"reset" at t=1 (reset pulse">1-wire data</a></li>
 </ul>
 
 <ul>
