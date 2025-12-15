@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act1_santas_gift-tracking_service_port_mystery_mjd
+nav: |
+  | [Previous Objective: Act 1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md) |   [Table of Contents](/index.md) | [Previous Objective: Act 1 Visual Networking](/act1_visual_networking_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Previous Objective: Act 1 Neighborhood Watch Bypass</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_visual_networking_mjd.html">Previous Objective: Act 1 Visual Networking</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -178,20 +167,5 @@ The service responds with a 200 OK and Content-Type of application/json
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Previous Objective: Act 1 Neighborhood Watch Bypass</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_visual_networking_mjd.html">Previous Objective: Act 1 Visual Networking</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

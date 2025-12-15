@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act3_snowcat_mjd
+nav: |
+  |[Previous Objective: Act3 Hack-a-Gnome ](/act3_hack-a-gnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Schrodinger's Scope](/act3_schrodingersscope_mjd.md)|
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_hack-a-gnome_mjd.html">Previous Objective: Act3 Hack-a-Gnome </a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_schrodingersscope_mjd.html">Next Objective: Act3 Schrodinger's Scope</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -317,19 +306,5 @@ The first key listed is the one used with the temperature binary. The second key
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_hack-a-gnome_mjd.html">Previous Objective: Act3 Hack-a-Gnome </a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_schrodingersscope_mjd.html">Next Objective: Act3 Schrodinger's Scope</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

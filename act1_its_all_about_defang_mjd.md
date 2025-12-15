@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act1_its_all_about_defang_mjd
+nav: |
+  |[Previous Objective: Act1 Holiday Hack Orientation](/act1_orientation_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act1_orientation_mjd.html">Previous Objective: Act1 Holiday Hack Orientation</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Next Objective: Act1 Neighborhood Watch Bypass</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -152,20 +141,5 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act1_orientation_mjd.html">Previous Objective: Act1 Holiday Hack Orientation</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Next Objective: Act1 Neighborhood Watch Bypass</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

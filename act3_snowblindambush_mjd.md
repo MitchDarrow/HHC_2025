@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act3_snowblindambush_mjd
+nav: |
+  |[Previous Objective: Act3 Free Ski](/act3_free_ski_mjd.md)  |   [Table of Contents](/index.md) | [About BerryDunn](/hhc_2025_berrydunn.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_free_ski_mjd.html">Previous Objective: Act3 Free Ski</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/hhc_2025_berrydunn.html">About BerryDunn</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -447,20 +436,5 @@ With root password, it is a simple matter to escalate privileges using the su co
 <br>
 <td>Sanity checks on achieving shell and on decrypting the png file.</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_free_ski_mjd.html">Previous Objective: Act3 Free Ski</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/hhc_2025_berrydunn.html">About BerryDunn</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act1_blob_storage_mjd
+nav: |
+  |[Previous Objective: Act1 Intro to Nmap](/act1_intro_to_nmap_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Spare Key](/act1_spare_key_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act1_intro_to_nmap_mjd.html">Previous Objective: Act1 Intro to Nmap</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_spare_key_mjd.html">Next Objective: Act1 Spare Key</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -181,20 +170,5 @@ az storage blob download \
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act1_intro_to_nmap_mjd.html">Previous Objective: Act1 Intro to Nmap</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_spare_key_mjd.html">Next Objective: Act1 Spare Key</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

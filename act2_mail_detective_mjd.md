@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act2_mail_detective_mjd
+nav: |
+  |[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act 2 IDORable Bistro](/act2_idorable_bistro_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_hackagnome_mjd.html">Previous Objective: Act2 Name</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Home Page</a></th>
-<br>
-<th><a href="/HHC_2025/act2_idorable_bistro_mjd.html">Next Objective: Act 2 IDORable Bistro</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -208,20 +197,5 @@ var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_hackagnome_mjd.html">Previous Objective: Act2 Name</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Home Page</a></th>
-<br>
-<th><a href="/HHC_2025/act2_idorable_bistro_mjd.html">Next Objective: Act 2 IDORable Bistro</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

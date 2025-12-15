@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act2_dosis_network_down_mjd
+nav: |
+  |[Previous Objective: Act2 IDORable Bistro](/act3_idorable_bistro_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_idorable_bistro_mjd.html">Previous Objective: Act2 IDORable Bistro</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Home Page</a></th>
-<br>
-<th><a href="/HHC_2025/act2_rogue_gnome_identity_provider_mjd.html">Next Objective: Act2 Rogue Gnome Identity Provider</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -353,20 +342,5 @@ $(cat%20/etc/config/wireless)
 <br>
 <td>directed me to look at the exploit-db poc code carefully</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_idorable_bistro_mjd.html">Previous Objective: Act2 IDORable Bistro</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Home Page</a></th>
-<br>
-<th><a href="/HHC_2025/act2_rogue_gnome_identity_provider_mjd.html">Next Objective: Act2 Rogue Gnome Identity Provider</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

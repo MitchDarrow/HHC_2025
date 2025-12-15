@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act3_schrodingersscope_mjd
+nav: |
+  |[Previous Objective: Act3 Snowcat RCE abd Privilege Escalation](/act3_snowcat_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_snowcat_mjd.html">Previous Objective: Act3 Snowcat RCE abd Privilege Escalation</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_snowglobe_mjd.html">Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -507,19 +496,5 @@ Hijacking this session token, the document in wip is accessed.
 <br>
 <td>Provided feedback on scope and avoiding rabbit holes</td>
 </tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_snowcat_mjd.html">Previous Objective: Act3 Snowcat RCE abd Privilege Escalation</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_snowglobe_mjd.html">Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

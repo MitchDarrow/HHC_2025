@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act3_hack-a-gnome_mjd
+nav: |
+  |[Previous Objective: Act3 Gnome Tea](/act3_gnome_tea_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Snowcat RCE and Privilege Escalation](/act3_snowcat_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_gnome_tea_mjd.html">Previous Objective: Act3 Gnome Tea</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_snowcat_mjd.html">Next Objective: Act3 Snowcat RCE and Privilege Escalation</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -431,19 +420,5 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 <br>
 <td>Gave me clues about using server side java for prototype pollution. Suggested using Webhook and Linode for testing connections and then establishing them. This allowed me to solve the challenge without changing my machine's security posture.</td>
 </tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_gnome_tea_mjd.html">Previous Objective: Act3 Gnome Tea</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_snowcat_mjd.html">Next Objective: Act3 Snowcat RCE and Privilege Escalation</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

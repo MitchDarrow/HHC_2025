@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act1_intro_to_nmap_mjd
+nav: |
+  |[Previous Objective: Act1 Visual Firewall](/act1_visual_firewall_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act1_visual_firewall_mjd.html">Previous Objective: Act1 Visual Firewall</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_blob_storage_mjd.html">Next Objective: Act1 Blob Storage Challenge</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>

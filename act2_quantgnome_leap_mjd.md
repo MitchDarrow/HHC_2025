@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act2_quantgnome_leap_mjd
+nav: |
+  |[Previous Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act 2 Going in Reverse](/act2_going_in_reverse_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act2_rogue_gnome_identity_provider_mjd.html">Previous Objective: Act2 Rogue Gnome Identity Provider</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Home Page</a></th>
-<br>
-<th><a href="/HHC_2025/act2_going_in_reverse_mjd.html">Next Objective: Act 2 Going in Reverse</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -209,20 +198,5 @@ The instructions direct towards the directory where the SSH daemon is running (/
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_rogue_gnome_identity_provider_mjd.html">Previous Objective: Act2 Rogue Gnome Identity Provider</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Home page</a></th>
-<br>
-<th><a href="/HHC_2025/act2_going_in_reverse_mjd.html">Next Objective: Act 2 Going in Reverse</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

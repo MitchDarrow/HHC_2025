@@ -1,6 +1,10 @@
 ﻿---
 layout: default
 title: act_objective_initials_template
+nav: |
+  | Objective: Objective name    | Difficulty Level: # |
+  | :-----------------------: | :--------------------------: |
+  | Official Description | Location:   |
 ---
 <table>
 <thead>
@@ -16,22 +20,7 @@ title: act_objective_initials_template
 </tbody>
 </table>
 
-<table>
-<thead>
-<tr>
-<th>Objective: Objective name</th>
-<br>
-<th>Difficulty Level: #</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Official Description</td>
-<br>
-<td>Location:</td>
-</tr>
-</tbody>
-</table>
+
 
 <h2>Solution Overview</h2>
 

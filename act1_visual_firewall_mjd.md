@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act1_visual_firewall_mjd
+nav: |
+  |[Previous Objective: Act1 Visual Networking](/act1_visual_networking_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Intro to NMAP](/act1_intro_to_nmap_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act1_visual_networking_mjd.html">Previous Objective: Act1 Visual Networking</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_intro_to_nmap_mjd.html">Next Objective: Act1 Intro to NMAP</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -140,19 +129,5 @@ Rule: Internet to Internal: Block direct Internet to Internal access
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act1_visual_networking_mjd.html">Previous Objective: Act1 Visual Networking</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_intro_to_nmap_mjd.html">Next Objective: Act1 Intro to NMAP</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

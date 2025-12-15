@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act3_free_ski_mjd
+nav: |
+  |[Previous Objective: Act3 On The Wire](/act3_onthewire_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 SnowBlind Ambush](/act3_snowblindambush_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_onthewire_mjd.html">Previous Objective: Act3 On The Wire</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_snowblindambush_mjd.html">Next Objective: Act3 SnowBlind Ambush</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -255,20 +244,5 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_onthewire_mjd.html">Previous Objective: Act3 On The Wire</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_snowblindambush_mjd.html">Next Objective: Act3 SnowBlind Ambush</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

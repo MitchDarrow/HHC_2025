@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act1_spare_key_mjd
+nav: |
+  |[Previous Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.m)  |   [Table of Contents](/index.md) | [Next Objective: Act1 The Open Door](/act1_the_open_door_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/act1_blob_storage_mjd.m">Previous Objective: Act1 Blob Storage Challenge</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_the_open_door_mjd.html">Next Objective: Act1 The Open Door</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -145,20 +134,5 @@ Unordered list:
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/act1_blob_storage_mjd.m">Previous Objective: Act1 Blob Storage Challenge</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_the_open_door_mjd.html">Next Objective: Act1 The Open Door</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

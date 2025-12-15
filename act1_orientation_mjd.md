@@ -1,13 +1,10 @@
 ﻿---
 layout: default
 title: act1_orientation_mjd
+nav: |
+  |                                                      |   [Table of Contents](/index.md) | [Next Objective: Act1 intro to NMAP](/act1_introp_to_nmap_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -119,13 +116,5 @@ Type the word "answer" in the terminal
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-
-
-<table>
-</thead>
-<tbody>
 </tbody>
 </table>

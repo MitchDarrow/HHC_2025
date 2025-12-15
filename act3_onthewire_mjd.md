@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act3_onthewire_mjd
+nav: |
+  |[Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Free Ski](/act3_free_ski_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_snowglobe_mjd.html">Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_free_ski_mjd.html">Next Objective: Act3 Free Ski</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -480,20 +469,5 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_snowglobe_mjd.html">Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_free_ski_mjd.html">Next Objective: Act3 Free Ski</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

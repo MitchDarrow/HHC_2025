@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act3_snowglobe_mjd
+nav: |
+  |[Previous Objective: Act3 Schrodingers Scope](/act3_schrodingersscope_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 On the Wire3](/act3_onthewire_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_schrodingersscope_mjd.html">Previous Objective: Act3 Schrodingers Scope</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_onthewire_mjd.html">Next Objective: Act3 On the Wire3</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -284,20 +273,5 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 <br>
 <td>None</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_schrodingersscope_mjd.html">Previous Objective: Act3 Schrodingers Scope</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_onthewire_mjd.html">Next Objective: Act3 On the Wire3</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

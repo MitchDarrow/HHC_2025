@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act2_going_in_reverse_mjd
+nav: |
+  |[Previous Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 3 Gnome Tea](/act3_gnome_tea_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act2_quantgnome_leap_mjd.html">Previous Objective: Act2 Quantgnome Leap</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_gnome_tea_mjd.html">Next Objective: Act 3 Gnome Tea</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -209,20 +198,5 @@ Write-Output $decoded
 <br>
 <td>None</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act2_quantgnome_leap_mjd.html">Previous Objective: Act2 Quantgnome Leap</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_gnome_tea_mjd.html">Next Objective: Act 3 Gnome Tea</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act2_idorable_bistro_mjd
+nav: |
+  |[Previous Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act2_mail_detective_mjd.html">Previous Objective: Act2 Mail Detective</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Home Page</a></th>
-<br>
-<th><a href="/HHC_2025/act2_dosis_network_down_mjd.html">Next Objective: Act2 Dosis Network Down</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -198,20 +187,5 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act2_mail_detective_mjd.html">Previous Objective: Act2 Mail Detective</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Home Page</a></th>
-<br>
-<th><a href="/HHC_2025/act2_dosis_network_down_mjd.html">Next Objective: Act2 Dosis Network Down</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

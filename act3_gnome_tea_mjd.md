@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act3_gnome_tea_mjd
+nav: |
+  |[Previous Objective: Act2 Going in Reverse](/act2_going_in_reverse_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Hack-a-Gnome](/act3_hack-a-gnome_mjd.md) |
+  | :-----------------------: | :--------------------------------: |  :--------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act2_going_in_reverse_mjd.html">Previous Objective: Act2 Going in Reverse</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_hack-a-gnome_mjd.html">Next Objective: Act3 Hack-a-Gnome</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -285,20 +274,5 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 <br>
 <td>Introduced me to Claude.ai</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act2_going_in_reverse_mjd.html">Previous Objective: Act2 Going in Reverse</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_hack-a-gnome_mjd.html">Next Objective: Act3 Hack-a-Gnome</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>

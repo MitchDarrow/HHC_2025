@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act1_the_open_door_mjd
+nav: |
+  |[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_hackagnome_mjd.html">Previous Objective: Act2 Name</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_frosty_snowglobe_machine_mjd.html">Next Objective: Act # Name</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -127,21 +116,6 @@ Unordered list:
 <th>Provided By</th>
 <br>
 <th>Notes</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act3_hackagnome_mjd.html">Previous Objective: Act2 Name</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act3_frosty_snowglobe_machine_mjd.html">Next Objective: Act # Name</a></th>
 </tr>
 </thead>
 <tbody>

@@ -1,21 +1,10 @@
 ﻿---
 layout: default
 title: act1_neighborhood_watch_bypass_mjd
+nav: |
+  |[Previous Objective: Act1 Its All About Defang](/act1_its_all_about-defang_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 1 Santa's Gift-Tracking Service Port](/act1_santas_gift-tracking_service_port_mystery_mjd.md) |
+  | :----------------------- | :--------------------------------: | --------------------------------: |
 ---
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act1_its_all_about-defang_mjd.html">Previous Objective: Act1 Its All About Defang</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_santas_gift-tracking_service_port_mystery_mjd.html">Next Objective: Act 1 Santa's Gift-Tracking Service Port</a></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 <table>
 <thead>
 <tr>
@@ -232,20 +221,5 @@ Successfully obtained a new shell with root privileges and can run the <code>run
 <br>
 <td>none</td>
 </tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th><a href="/HHC_2025/act1_its_all_about-defang_mjd.html">Previous Objective: Act1 Its All About Defang</a></th>
-<br>
-<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-<br>
-<th><a href="/HHC_2025/act1_santas_gift-tracking_service_port_mystery_mjd.html">Next Objective: Act 1 Santa's Gift-Tracking Service Port</a></th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>
