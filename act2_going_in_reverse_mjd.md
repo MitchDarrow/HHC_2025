@@ -75,26 +75,26 @@ The basic program consists of the following code:
 The program has the encoded flag and the decoder. This PowerShell script will decode the string. Note that the ‘ denotes a comment in basic.
 
 <pre><code class="language-powershell">
-<h1>PowerShell script to decode the ENC_FLAG$ string using XOR</h1>
-<h1>Encoded string</h1>
+# PowerShell script to decode the ENC_FLAG$ string using XOR
+# Encoded string
 $encFlag = "DSA|auhts</em>wkfi=dhjwubtthut+dhhkfis+hnkz"
 
 #"old DSA|qnisf`bX_huXariz"
 
-<h1>Initialize decoded string</h1>
+# Initialize decoded string
 $decoded = ""
 
-<h1>Loop through each character</h1>
+# Loop through each character
 for ($i = 0; $i -lt $encFlag.Length; $i++) {
-<h1>Get ASCII code of character</h1>
+# Get ASCII code of character
     $ascii = [int][char]$encFlag[$i]
-<h1>XOR with 7</h1>
+# XOR with 7
     $decodedChar = <a href="/HHC_2025/$ascii -bxor 7">char</a>
-<h1>Append to result</h1>
+# Append to result
     $decoded += $decodedChar
 }
 
-<h1>Print decoded string</h1>
+# Print decoded string
 Write-Output $decoded
  CTF{frost-plan:compressors,coolant,oil}
 </code></pre>

@@ -250,7 +250,7 @@ id="48dd96c0-0794-41cf-96c1-bf3ddc555a30"
 for i in {0..255}; do
   hex=$(printf '%02x' $i)
 
-<h1>Login and access page in one flow</h1>
+# Login and access page in one flow
   response=$(curl -s -L \
     -H "X-Forwarded-For: 127.0.0.1" \
     -H "Cookie: Schrodinger=$schrod; registration=${prefix}${hex}" \

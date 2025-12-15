@@ -101,29 +101,29 @@ https://portswigger.net/web-security/jwt
 The notes.txt file contains some useful commands and a set of credentials:
 <br>
 <pre><code class="language-">
-<h1>Credentials</h1>
+# Credentials
 
-<h2>Gnome credentials (found on a post-it):</h2>
+## Gnome credentials (found on a post-it):
 Gnome:SittingOnAShelf
 
-<h1>Curl Commands Used in Analysis of Gnome:</h1>
+# Curl Commands Used in Analysis of Gnome:
 
-<h2>Gnome Diagnostic Interface authentication required page:</h2>
+## Gnome Diagnostic Interface authentication required page:
 curl http://gnome-48371.atnascorp
 
-<h2>Request IDP Login Page</h2>
+## Request IDP Login Page
 curl http://idp.atnascorp/?return_uri=http%3A%2F%2Fgnome-48371.atnascorp%2Fauth
 
-<h2>Authenticate to IDP</h2>
+## Authenticate to IDP
 curl -X POST --data-binary $'username=gnome&password=SittingOnAShelf&return_uri=http%3A%2F%2Fgnome-48371.atnascorp%2Fauth' http://idp.atnascorp/login
 
-<h2>Pass Auth Token to Gnome</h2>
+## Pass Auth Token to Gnome
 curl -v http://gnome-48371.atnascorp/auth?token=<insert-JWT>
 
-<h2>Access Gnome Diagnostic Interface</h2>
+## Access Gnome Diagnostic Interface
 curl -H 'Cookie: session=<insert-session>' http://gnome-48371.atnascorp/diagnostic-interface
 
-<h2>Analyze the JWT</h2>
+## Analyze the JWT
 jwt_tool.py <insert-JWT>
 </code></pre>
 

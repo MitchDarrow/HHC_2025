@@ -64,7 +64,7 @@ The following python script connects to the web socket and collects the data int
 import websocket
 import csv
 
-<h1>Open CSV file once at the start</h1>
+# Open CSV file once at the start
 f = open("onthewire_1wire_data.csv", "w", newline="", encoding="utf-8")
 writer = csv.writer(f)
 
