@@ -97,7 +97,6 @@ The Gnome3 user has access to a new key:
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/id_ecdsa_nistp256_sphincssha2128fsimple gnome4@localhost
 </code></pre>
-<br>
 <img src="/HHC_2025/images/quantgnome_gnome4.jpg" alt="SSH as Gnome4">
 
 The Gnome4 user has access to a new key:

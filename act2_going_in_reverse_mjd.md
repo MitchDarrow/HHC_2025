@@ -89,7 +89,7 @@ for ($i = 0; $i -lt $encFlag.Length; $i++) {
 <h1>Get ASCII code of character</h1>
     $ascii = [int][char]$encFlag[$i]
 <h1>XOR with 7</h1>
-    $decodedChar = <img src="/HHC_2025/$ascii -bxor 7" alt="char">
+    $decodedChar = <a href="/HHC_2025/$ascii -bxor 7">char</a>
 <h1>Append to result</h1>
     $decoded += $decodedChar
 }

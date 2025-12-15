@@ -2,9 +2,9 @@
 layout: default
 title: about_its
 ---
- <img src="/images/bdlogo.svg" alt="BerryDunn Logo" />
+ <img src="/HHC_2025/<img src="/HHC_2025/images/bdlogo.svg" alt="BerryDunn Logo">/bdlogo.svg" alt="BerryDunn Logo">
 
- <a href="/HHC_2025/index.html">Back to Home Page</a>
+ <a href="/HHC_2025/<a href="/HHC_2025/index.html">Back to Home Page</a>index<a href="/HHC_2025/<a href="/HHC_2025/index.html">Back to Home Page</a>index.html">Back to Home Page</a>">Back to Home Page</a>
 
 <h1>About BerryDunn's Cybersecurity Team</h1>
 

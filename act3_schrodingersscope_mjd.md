@@ -204,11 +204,9 @@ Testing the search interface for SQL Injection (SQLi), the application was found
 <strong>Answer: SQL Injection</strong>
 
 This reveals the unauthorized course and allows me to report it:
-<br>
 <img src="/HHC_2025/images/shroedingers_mischief.jpg" alt="Unauthorized Course">
 
 Opening the course details prompts for reporting:
-<br>
 <img src="/HHC_2025/images/shroedingers_gnomecourse.jpg" alt="Unauthorized Course Details">
 
 <strong>Answer: Unauthorized content</strong>

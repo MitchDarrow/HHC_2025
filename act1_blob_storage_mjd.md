@@ -79,7 +79,6 @@ Step 1: Review the storage accounts
 <pre><code class="language-sh">
 az storage account list | less
 </code></pre>
-<br>
 <img src="/HHC_2025/images/blobstorage_misconfig.jpg" alt="Misconfigured Storage Account allows Public Access">
 
 The following commands were used to dive deeper:

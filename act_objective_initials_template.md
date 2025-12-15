@@ -20,9 +20,9 @@ nav: |
 <table>
 <thead>
 <tr>
-<th><img src="/act3_hackagnome_mjd.md" alt="Previous Objective: Act2 Name"></th>
-<th><img src="/act3_hackagnome_mjd.md" alt="Previous Objective: Act2 Name"></th>
-<th><img src="/act3_hackagnome_mjd.md" alt="Previous Objective: Act2 Name"></th>
+<th><a href="/HHC_2025/act3_hackagnome_mjd.html">Previous Objective: Act2 Name</a></th>
+<th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+<th><a href="/HHC_2025/act3_frosty_snowglobe_machine_mjd.html">Next Objective: Act # Name</a></th>
 </tr>
 </thead>
 <tbody>

@@ -68,7 +68,7 @@ This objective is a digital forensics investigation involving a floppy disk imag
 <details>
 <summary>Click to expand</summary>
 
-<img src="/HHC_2025/resources/retrorecovery_floppy.img" alt="Floppy Disk Image File">
+<a href="/HHC_2025/resources/retrorecovery_floppy.img">Floppy Disk Image File</a>
 
 <code>losetup</code> is a Linux command used to set up and manage loop devices, which let you treat a regular file as if it were a block device (like a disk).
 

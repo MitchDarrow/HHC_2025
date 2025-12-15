@@ -71,7 +71,6 @@ git clone https://github.com/zrax/pycdc.git
 Run PyInstaller Extractor to create the pyc file:
 <br>
 python ./pyinstxtractor.py FreeSki.exe
-<br>
 <img src="/HHC_2025/images/freeskipyextractor.jpg" alt="Results of Pyextractor">
 
 Install cmake:
@@ -88,7 +87,7 @@ Copy the extracted folder into the /pycdc folder
 
 Extract the code: ./pycdas ~/pycdc/FreeSki.exe_extracted/FreeSki.pyc
 
-<img src="/HHC_2025/images/FreeSkiCode.txt" alt="Free Ski Source Code">
+<a href="/HHC_2025/images/FreeSkiCode.txt">Free Ski Source Code</a>
 
 Flag Decoding Process (in SetFlag function):
 <ol>
@@ -152,7 +151,7 @@ The script solvefreeski.py does the following:
 <li>Decodes the flag - Seeds Python's random number generator with that product, then XORs each byte of the encoded flag with the generated random values</li>
 </ol>
 
-Script: <img src="/HHC_2025/act3_solvefreeski.py" alt="Solve Free Ski">
+Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
 
 <img src="/HHC_2025/images/Free_ski_solution.jpg" alt="Free Ski Solution">
 

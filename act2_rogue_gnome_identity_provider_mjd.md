@@ -281,7 +281,6 @@ The session key is used to connect to the diagntic interface:
 <pre><code class="language-">
 curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA20V3TpQ5ST2sky_K3XDsllPSs; ' http://gnome-48371.atnascorp/diagnostic-interface
 </code></pre>
-<br>
 <img src="/HHC_2025/images/roguegnomeidp_diagnostic.jpg" alt="Getting the Diagnostic Interface">
 
 <strong>Answer:refrigeration-botnet.bin</strong>
@@ -303,15 +302,15 @@ curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA2
 <td>8.11.0</td>
 </tr>
 <tr>
-<td><img src="https://JWT.IO" alt="JSON Web Token (JWT) Debugger"></td>
+<td><a href="https://JWT.IO">JSON Web Token (JWT) Debugger</a></td>
 <td>N/A</td>
 </tr>
 <tr>
-<td><img src="https://8gwifi.org/jwkconvertfunctions.jsp" alt="JWK to PEM Converter"></td>
+<td><a href="https://8gwifi.org/jwkconvertfunctions.jsp">JWK to PEM Converter</a></td>
 <td>N/A</td>
 </tr>
 <tr>
-<td><img src="https://mkjwk.org/" alt="JSON Web Key generator"></td>
+<td><a href="https://mkjwk.org/">JSON Web Key generator</a></td>
 <td>N/A</td>
 </tr>
 </tbody>
