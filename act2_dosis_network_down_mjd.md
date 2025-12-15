@@ -91,19 +91,19 @@ The objective is to gain access to the router configuration and the password it 
 <h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
-
+<br>
 Device Information
-
+<br>
 <img src="/HHC_2025/images/dosisnetwork_versioninfo.jpg" alt="Router logon screen showing Archer AX21 device information">
-
+<br>
 The logon screen indicates that this is an <strong>Archer AX21 v2.0</strong> running firmware version <strong>1.1.4 Build 20230219</strong>.
-
+<br>
 TP-Link Archer AX21 (AX1800) firmware versions before 1.1.4 Build 20230219 contained a command injection vulnerability in the country form of the <code>/cgi-bin/luci;stok=/locale</code> endpoint on the web management interface. Specifically, the country parameter of the write operation was not sanitized before being used in a call to <code>popen()</code>, allowing an unauthenticated attacker to inject commands, which would be run as root, with a simple POST request.
-
+<br>
 The following is a recent, known vulnerability. While the firmware version suggests it is patched, it needs to be tested.
-
+<br>
 CVE-2023-1389 -- Command Injection / Remote Code Execution
-
+<br>
 <ul>
 <li><strong>Description:</strong> A command injection vulnerability exists in the Archer AX21 firmware (before version 1.1.4 Build 20230219). Attackers can send crafted POST requests to the router's web management interface, specifically the <code>/cgi-bin/luci;stok=/locale</code> endpoint, to inject commands.</li>
 </ul>
@@ -125,11 +125,11 @@ CVE-2023-1389 -- Command Injection / Remote Code Execution
 </ul>
 
 Exploit Code Analysis
-
+<br>
 <img src="/HHC_2025/images/dosisnetwork_exploitdb.jpg" alt="Exploit-db entry for CVE-2023-1389">
-
+<br>
 From exploit-db, the exploit code provides insight into the request structure needed:
-
+<br>
 <pre><code class="language-python">
 #!/usr/bin/python3
 #
@@ -190,17 +190,17 @@ url_command = "https://" + args.router + "/cgi-bin/luci/;stok=/locale?form=count
 
 # Send the URL twice to run the command. Sending twice is necessary for the attack
 </code></pre>
-
+<br>
 <img src="/HHC_2025/images/dosisnetwork_200.jpg" alt="Testing GET request structure showing 200 OK response">
-
+<br>
 Work with the structure of the GET request until you get a <strong>200 OK</strong> response, indicating that the structure is valid.
-
+<br>
 Once the structure is verified, insert a payload.
-
+<br>
 On the TP-Link Archer AX21, the file <code>/etc/config/wireless</code> is part of the <strong>OpenWrt-style configuration system</strong> used in TP-Link firmware. It stores the <strong>wireless interface definitions</strong> - things like SSIDs, encryption settings, channels, and radio parameters. However, in the stock TP-Link firmware, this file is not normally user-accessible; it's managed internally by the router's web interface and app. If you flash the router with <strong>OpenWrt</strong>, then <code>/etc/config/wireless</code> becomes editable and contains the full wireless configuration in a structured text format.
-
+<br>
 The simplest payload is to print the file:
-
+<br>
 <pre><code class="language-">
 $(cat%20/etc/config/wireless)
 </code></pre>
