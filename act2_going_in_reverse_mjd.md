@@ -2,8 +2,17 @@
 layout: default
 title: act2_going_in_reverse_mjd
 nav: |
-  |[Previous Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act 3 Gnome Tea](/act3_gnome_tea_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act2 Quantgnome Leap](/act2_quantgnome_leap_mjd.md)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[Next Objective: Act 3 Gnome Tea](/act3_gnome_tea_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -50,7 +59,6 @@ Clicking on the BASIC program downloads it into the browser window. Reviewing th
 </tr>
 </tbody>
 </table>
-
 
 <h2>Detailed Solution</h2>
 <details>
@@ -148,7 +156,6 @@ Write-Output $decoded
 </tr>
 </tbody>
 </table>
-
 
 <h2>Hints Reference</h2>
 <table>

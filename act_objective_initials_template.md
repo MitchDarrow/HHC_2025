@@ -2,9 +2,20 @@
 layout: default
 title: act_objective_initials_template
 nav: |
-  | Objective: Objective name    | Difficulty Level: # |
-  | :-----------------------: | :--------------------------: |
-  | Official Description | Location:   |
+  <table>
+  <thead>
+  <tr>
+  <th>Objective: Objective name</th>
+  <th>Difficulty Level: #</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>Official Description</td>
+  <td>Location:</td>
+  </tr>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -19,8 +30,6 @@ nav: |
 <tbody>
 </tbody>
 </table>
-
-
 
 <h2>Solution Overview</h2>
 
@@ -42,15 +51,13 @@ High level executive summary of how the objective was solved. Details belong in 
 </tbody>
 </table>
 
-
 <h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
 
 Step by step solution complete with any code used
 
-<img src="/images/objectivename_purpose.jpg" alt="Sample image alt text">
-
+<img src="/HHC_2025/images/objectivename_purpose.jpg" alt="Sample image alt text">
 
 <pre><code class="language-sh">
 <br>
@@ -110,18 +117,6 @@ Unordered list:
 </table>
 
 <h2>Acknowledgements</h2>
-<table>
-<thead>
-<tr>
-<th>Provided By</th>
-<br>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 
 <table>
 <thead>

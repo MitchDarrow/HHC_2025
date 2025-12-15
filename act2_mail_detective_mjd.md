@@ -2,8 +2,17 @@
 layout: default
 title: act2_mail_detective_mjd
 nav: |
-  |[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act 2 IDORable Bistro](/act2_idorable_bistro_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)</th>
+  <th>[Home Page](/index.md)</th>
+  <th>[Next Objective: Act 2 IDORable Bistro](/act2_idorable_bistro_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -25,7 +34,6 @@ nav: |
 <h2>Solution Overview</h2>
 
 This objective investigates suspicious emails using IMAP (Internet Message Access Protocol) commands via curl. The investigator connected to an IMAP server running on localhost port 143 using telnet protocol. Authentication was performed using the credentials "dosismail" with password "holidaymagic". After successful login, the investigator selected the "Spam" mailbox to examine suspicious messages. Multiple search commands were executed to find emails containing HTTP URLs, with the search for "HTTP" (uppercase) returning positive results. The investigator used the IMAP FETCH command to retrieve the full body of message ID 2. Examination of the email body revealed embedded JavaScript code containing a suspicious variable assignment. The JavaScript code contained a URL pointing to "https://frostbin.atnas.mail/api/paste", which appears to be a pastebin-style service potentially used for command and control or data exfiltration. This investigation demonstrates how IMAP protocol commands can be used for email forensics and threat hunting.
-
 
 <table>
 <thead>
@@ -87,7 +95,6 @@ This objective investigates suspicious emails using IMAP (Internet Message Acces
 </tr>
 </tbody>
 </table>
-
 
 <h2>Detailed Solution</h2>
 <details>
@@ -180,7 +187,6 @@ var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
 </tr>
 </tbody>
 </table>
-
 
 <h2>Acknowledgements</h2>
 <table>

@@ -2,8 +2,17 @@
 layout: default
 title: act1_visual_networking_mjd
 nav: |
-  |[Previous Objective: Act1 Santa’s Gift-Tracking Service Port Mystery](/act1+santas_gift-tracking_service_port_mystery_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Visual Firewall](/act1_visual_firewall_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act1 Santa’s Gift-Tracking Service Port Mystery](/act1+santas_gift-tracking_service_port_mystery_mjd.md)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[Next Objective: Act1 Visual Firewall](/act1_visual_firewall_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -137,7 +146,6 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 </tr>
 </tbody>
 </table>
-
 
 <h2>Hints Reference</h2>
 <table>

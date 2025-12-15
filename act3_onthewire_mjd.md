@@ -2,8 +2,17 @@
 layout: default
 title: act3_onthewire_mjd
 nav: |
-  |[Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Free Ski](/act3_free_ski_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine](/act3_snowglobe_mjd.md)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[Next Objective: Act3 Free Ski](/act3_free_ski_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -50,7 +59,6 @@ Using browser developer tools, the data for each signal is captured. The data is
 </tr>
 </tbody>
 </table>
-
 
 <h2>Detailed Solution</h2>
 <details>
@@ -270,7 +278,6 @@ SDA markers: bus-idle, start, address-bit, ack-bit, ack-release, data-bit, stop,
 
 </code></pre>
 
-
 The following decoder was written in Powershell: <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt"">I2C Decoder</a>
 
 Script Workflow
@@ -367,7 +374,7 @@ Separate READ vs WRITE
 
 The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 characters “banaz”
 
-<img src="/images/onthewire_i2cdecoded.jpg" alt="I2C Device 0x3C">
+<img src="/HHC_2025/images/onthewire_i2cdecoded.jpg" alt="I2C Device 0x3C">
 
 33 32 2E 38 34 converts to ASCII 32.84
 

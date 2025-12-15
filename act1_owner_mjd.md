@@ -2,8 +2,17 @@
 layout: default
 title: act1_owner_mjd
 nav: |
-  |[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act2 Name](/act3_hackagnome_mjd.md)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[Next Objective: Act # Name](/act3_frosty_snowglobe_machine_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -42,15 +51,13 @@ High level executive summary of how the objective was solved. Details belong in 
 </tbody>
 </table>
 
-
 <h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
 
 Step by step solution complete with any code used
 
-<img src="/images/objectivename_purpose.jpg" alt="Sample image alt text">
-
+<img src="/HHC_2025/images/objectivename_purpose.jpg" alt="Sample image alt text">
 
 <pre><code class="language-sh">
 <br>

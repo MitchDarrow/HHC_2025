@@ -2,8 +2,17 @@
 layout: default
 title: act1_intro_to_nmap_mjd
 nav: |
-  |[Previous Objective: Act1 Visual Firewall](/act1_visual_firewall_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act1 Visual Firewall](/act1_visual_firewall_mjd.md)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[Next Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -50,7 +59,6 @@ This objective is designed to test fundamental knowledge of the Nmap tool. Nmap 
 </tr>
 </tbody>
 </table>
-
 
 <h2>Detailed Solution</h2>
 <details>

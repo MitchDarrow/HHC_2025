@@ -2,8 +2,17 @@
 layout: default
 title: act2_dosis_network_down_mjd
 nav: |
-  |[Previous Objective: Act2 IDORable Bistro](/act3_idorable_bistro_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act2 IDORable Bistro](/act3_idorable_bistro_mjd.md)</th>
+  <th>[Home Page](/index.md)</th>
+  <th>[Next Objective: Act2 Rogue Gnome Identity Provider](/act2_rogue_gnome_identity_provider_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -105,11 +114,9 @@ The objective is to gain access to the router configuration and the password it 
 </tbody>
 </table>
 
-
 <h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
-
 
 Device Information
 
@@ -297,7 +304,6 @@ $(cat%20/etc/config/wireless)
 </tbody>
 </table>
 
-
 <h2>Hints Reference</h2>
 <table>
 <thead>
@@ -325,7 +331,6 @@ $(cat%20/etc/config/wireless)
 </tr>
 </tbody>
 </table>
-
 
 <h2>Acknowledgements</h2>
 <table>

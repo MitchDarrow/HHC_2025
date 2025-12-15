@@ -2,8 +2,17 @@
 layout: default
 title: act1_spare_key_mjd
 nav: |
-  |[Previous Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.m)  |   [Table of Contents](/index.md) | [Next Objective: Act1 The Open Door](/act1_the_open_door_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act1 Blob Storage Challenge](/act1_blob_storage_mjd.m)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[Next Objective: Act1 The Open Door](/act1_the_open_door_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -42,15 +51,13 @@ High level executive summary of how the objective was solved. Details belong in 
 </tbody>
 </table>
 
-
 <h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
 
 Step by step solution complete with any code used
 
-<img src="/images/objectivename_purpose.jpg" alt="Sample image alt text">
-
+<img src="/HHC_2025/images/objectivename_purpose.jpg" alt="Sample image alt text">
 
 <pre><code class="language-sh">
 <br>

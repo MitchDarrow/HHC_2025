@@ -2,8 +2,17 @@
 layout: default
 title: act1_blob_storage_mjd
 nav: |
-  |[Previous Objective: Act1 Intro to Nmap](/act1_intro_to_nmap_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Spare Key](/act1_spare_key_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act1 Intro to Nmap](/act1_intro_to_nmap_mjd.md)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[Next Objective: Act1 Spare Key](/act1_spare_key_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -89,7 +98,7 @@ Step 1: Review the storage accounts
 az storage account list | less
 <br>
 </code></pre>
-<img src="/images/blobstorage_misconfig.jpg" alt="Misconfigured Storage Account allows Public Access">
+<img src="/HHC_2025/images/blobstorage_misconfig.jpg" alt="Misconfigured Storage Account allows Public Access">
 
 The following commands were used to dive deeper:
 <br>
@@ -111,7 +120,7 @@ az storage blob download \
 <br>
 </code></pre>
 
-<img src="/images/blobstorage_passwords.jpg" alt="Misconfigured Storage Account allows Public Access">
+<img src="/HHC_2025/images/blobstorage_passwords.jpg" alt="Misconfigured Storage Account allows Public Access">
 
 <strong>Answer: allowBlobPublicAccesss: True</strong>
 
@@ -135,7 +144,6 @@ az storage blob download \
 </tr>
 </tbody>
 </table>
-
 
 <h2>Hints Reference</h2>
 <table>

@@ -2,8 +2,17 @@
 layout: default
 title: act3_snowglobe_mjd
 nav: |
-  |[Previous Objective: Act3 Schrodingers Scope](/act3_schrodingersscope_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 On the Wire3](/act3_onthewire_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act3 Schrodingers Scope](/act3_schrodingersscope_mjd.md)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[Next Objective: Act3 On the Wire3](/act3_onthewire_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -51,14 +60,13 @@ The code on the outside of the building is binary and decodes to "imanok" which 
 </tbody>
 </table>
 
-
 <h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
 
 Viewing the exterior wall of the datacenter, there is a pattern in the bricks that looks binary, six bytes of data:
 
-<img src="/images/snowglobe_code.jpg" alt="snowglobe code">
+<img src="/HHC_2025/images/snowglobe_code.jpg" alt="snowglobe code">
 
 Decoding the patterns gives:
 
@@ -76,7 +84,6 @@ Decoding the patterns gives:
 
 Converting letters to their integer position in the alphabet makes no sense in the context of the rooms. Nor does trying to convert the numeric values into compass directions. It must be something simpler. This looks like konami spelled in reverse ("Backwards you should look" seems to apply here). A quick google search explains:
 
-
 Konami code is a classic cheat sequence (↑ ↑ ↓ ↓ ← → ← → B A) often repurposed in games and puzzles.  Because the word is inverted, the code sequence is likely inverted as well.
 
 Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑
@@ -92,7 +99,6 @@ Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑
 <ul>
 <li>Orientation: Keep North up</li>
 </ul>
-
 
 Trial and error reveals that all doors in room 1 work. Room 2 testing shows that all A labeled doors work. Room 3 testing indicates that all B labeled doors work.  This confirms that the pattern is a reversed konami code. Finishing the sequence:
 
@@ -256,7 +262,6 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 </tr>
 </tbody>
 </table>
-
 
 <h2>Acknowledgements</h2>
 <table>

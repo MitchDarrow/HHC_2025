@@ -2,8 +2,17 @@
 layout: default
 title: act3_snowcat_mjd
 nav: |
-  |[Previous Objective: Act3 Hack-a-Gnome ](/act3_hack-a-gnome_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act3 Schrodinger's Scope](/act3_schrodingersscope_mjd.md)|
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act3 Hack-a-Gnome ](/act3_hack-a-gnome_mjd.md)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[Next Objective: Act3 Schrodinger's Scope](/act3_schrodingersscope_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -78,14 +87,13 @@ Starting with an account with minimal access to the system, the website was foun
 </tbody>
 </table>
 
-
 <h2>Detailed Solution</h2>
 <details>
 <summary>Click to expand</summary>
 
 Using a nonexistent URL (http://localhost/nonexistant), an error message was triggered revealing that the system is running a potentially vulnerable version of Tomcat.
 
-<img src="/images/snowcat_version.jpg" alt="Tomcat Version Evidence">
+<img src="/HHC_2025/images/snowcat_version.jpg" alt="Tomcat Version Evidence">
 
 Testing identified the CommonsCollections6 gadget could effectively deliver a payload. The initial approach was to touch a file in the /tmp directory to confirm a successful attack.
 <br>
@@ -107,7 +115,7 @@ ls -la /tmp/pwned 2>/dev/null && echo "SUCCESS with touch!" || echo "Failed"
 <br>
 The initial payload was delivered and successful:
 
-<img src="/images/snowcat_initialpayload.jpg" alt="Tomcat Initial Payload Evidence">
+<img src="/HHC_2025/images/snowcat_initialpayload.jpg" alt="Tomcat Initial Payload Evidence">
 
 To achieve a remote shell, the following approach was used:
 <ol>
@@ -162,7 +170,7 @@ curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 
 This resulted in access as the identity running the web service:
 
-<img src="/images/snowcat_serviceaccount.jpg" alt="Snowcat Service Account User">
+<img src="/HHC_2025/images/snowcat_serviceaccount.jpg" alt="Snowcat Service Account User">
 
 Three binaries were discovered that the service account has access to with the SUID set:
 <br>
@@ -196,7 +204,7 @@ The commands are run with a valid key:
 
 The weather user has access to the /usr/local/weather/keys directory. This was our target:
 
-<img src="/images/snowcat_keys.jpg" alt="Keys Directory">
+<img src="/HHC_2025/images/snowcat_keys.jpg" alt="Keys Directory">
 
 The following command was injected into the binary command line to create a file containing the contents of the keys folder and change the file permissions:
 <br>

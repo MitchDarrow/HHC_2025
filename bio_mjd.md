@@ -15,7 +15,6 @@ title: bio_mjd
 
 <strong>Started with BerryDunn:</strong> 2014
 
-
 Mitch is a manager BerryDunn’s Government Assurance Practice Group and leads BerryDunn’s vulnerability scanning and penetration testing services. With 25 years of experience in business system analysis, database design, system architecture, network administration, incident response, and design engineering. He also provides leadership on security engagements to measure, analyze, and improve performance issues, training and development, project coordination, and strategy and planning.
 
 <strong>Certifications:</strong> GIAC Penetration Tester (GPEN)

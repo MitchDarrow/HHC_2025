@@ -2,8 +2,17 @@
 layout: default
 title: act1_visual_firewall_mjd
 nav: |
-  |[Previous Objective: Act1 Visual Networking](/act1_visual_networking_mjd.md)  |   [Table of Contents](/index.md) | [Next Objective: Act1 Intro to NMAP](/act1_intro_to_nmap_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act1 Visual Networking](/act1_visual_networking_mjd.md)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[Next Objective: Act1 Intro to NMAP](/act1_intro_to_nmap_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -50,7 +59,6 @@ The objective is to correctly configure firewall rules to best security practice
 </tr>
 </tbody>
 </table>
-
 
 <h2>Detailed Solution</h2>
 <details>

@@ -2,8 +2,17 @@
 layout: default
 title: act2_idorable_bistro_mjd
 nav: |
-  |[Previous Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md)  |   [Home Page](/index.md) | [Next Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act2 Mail Detective](/act2_mail_detective_mjd.md)</th>
+  <th>[Home Page](/index.md)</th>
+  <th>[Next Objective: Act2 Dosis Network Down](/act2_dosis_network_down_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -25,7 +34,6 @@ nav: |
 <h2>Solution Overview</h2>
 
 This objective is the exploitation of an Insecure Direct Object Reference (IDOR) vulnerability at the IDORable Bistro website. The initial reconnaissance involved scanning a QR code on a restaurant receipt that directed to https://its-idorable.hhc25-ops.com/. Inspection of the page source code revealed a hidden comment containing a sample receipt URL with a predictable identifier pattern. Using Burp Suite, the attacker intercepted HTTP requests and discovered that while initial requests used tokens, the initial request generated additional requests which exposed a numeric ID parameter. Using Burp Suite's Intruder feature to enumerate receipt IDs from 100 to 200, discovering that valid receipts existed from ID 100 to 152. Manual review of the enumerated responses revealed a receipt at ID 139 containing a gnomish customer name "Quibblefrost". The full name extracted from this receipt was "Bartholomew Quibblefrost". This vulnerability demonstrates a classic IDOR flaw where sequential numeric identifiers allow unauthorized access to other users' data without proper access controls. The attack required no authentication bypass and relied solely on predictable resource identifiers.
-
 
 <table>
 <thead>
@@ -93,7 +101,6 @@ Inspecting the page source code reveals a comment:
 
 <img src="/HHC_2025/images/idorablebistro_comment.jpg" alt="HTML source code showing hidden comment">
 
-
 Trying the URL from the comment: https://its-idorable.hhc25-ops.com/receipt/a1b2c3d4
 
 <img src="/HHC_2025/images/idorablebistro_receipt.jpg" alt="Sample receipt page accessed via hidden URL">
@@ -137,7 +144,6 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 </tr>
 </tbody>
 </table>
-
 
 <h2>Hints Reference</h2>
 <table>

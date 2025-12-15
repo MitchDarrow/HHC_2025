@@ -2,7 +2,7 @@
 layout: default
 title: index
 ---
- <img src="/images/bdlogo.svg" alt="BerryDunn Logo">
+ <img src="/HHC_2025/images/bdlogo.svg" alt="BerryDunn Logo">
 <h1>BerryDunn Holiday Hack Challenge Solution Report</h1>
 
 <table>
@@ -10,13 +10,12 @@ title: index
 <tr>
 <th>SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</th>
 <br>
-<th><img src="/images/HHC.webp" alt="Holiday Hack Challenge Logo"></th>
+<th><img src="/HHC_2025/images/HHC.webp" alt="Holiday Hack Challenge Logo"></th>
 </tr>
 </thead>
 <tbody>
 </tbody>
 </table>
-
 
 <h3>About the Holiday Hack Challenge (HHC)</h3>
 <br>
@@ -133,7 +132,6 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 </tr>
 </tbody>
 </table>
-
 
 For more information about BerryDunn [URL Here]
 

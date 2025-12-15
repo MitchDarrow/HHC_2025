@@ -2,8 +2,17 @@
 layout: default
 title: act1_santas_gift-tracking_service_port_mystery_mjd
 nav: |
-  | [Previous Objective: Act 1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md) |   [Table of Contents](/index.md) | [Previous Objective: Act 1 Visual Networking](/act1_visual_networking_mjd.md) |
-  | :----------------------- | :--------------------------------: | --------------------------------: |
+  <table>
+  <thead>
+  <tr>
+  <th>[Previous Objective: Act 1 Neighborhood Watch Bypass](/act1_neighborhood_watch_bypass_mjd.md)</th>
+  <th>[Table of Contents](/index.md)</th>
+  <th>[Previous Objective: Act 1 Visual Networking](/act1_visual_networking_mjd.md)</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <table>
 <thead>
@@ -74,7 +83,7 @@ The objective is to:
 <li>Connecct to the port and verify the servide is running</li>
 </ol>
 
-<img src="/images/santatracking_instructions.jpg" alt="Objective Instructions">
+<img src="/HHC_2025/images/santatracking_instructions.jpg" alt="Objective Instructions">
 
 Use the SS tool to discover the port using the command:
 <br>
@@ -88,8 +97,7 @@ There is a service running on port 12321
 
 Use curl to connect:
 
-<img src="/images/santatracker_connect.jpg" alt="Sample image alt text">
-
+<img src="/HHC_2025/images/santatracker_connect.jpg" alt="Sample image alt text">
 
 <pre><code class="language-sh">
 <br>
@@ -127,7 +135,6 @@ The service responds with a 200 OK and Content-Type of application/json
 </tbody>
 </table>
 
-
 <h2>Hints Reference</h2>
 <table>
 <thead>
@@ -150,7 +157,6 @@ The service responds with a 200 OK and Content-Type of application/json
 </tr>
 </tbody>
 </table>
-
 
 <h2>Acknowledgements</h2>
 <table>
