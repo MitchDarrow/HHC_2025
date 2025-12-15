@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Retro Recovery</th>
-<br>
 <th>Difficulty Level: 2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Join Mark in the retro shop. Analyze his disk image for a blast from the retro past and recover some classic treasures.</td>
-<br>
 <td>Location: Retro Shop</td>
 </tr>
 </tbody>
@@ -39,40 +37,28 @@ This objective is a digital forensics investigation involving a floppy disk imag
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Execute TestDisk against loop device /dev/loop0</td>
-<br>
 <td>Discovery</td>
-<br>
 <td>T1083</td>
-<br>
 <td>File and Directory Discovery</td>
 </tr>
 <tr>
 <td>Recover deleted file "all_i-want_for_christmas.bas"</td>
-<br>
 <td>Collection</td>
-<br>
 <td>T1074.001</td>
-<br>
 <td>Data Staged: Local Data Staging</td>
 </tr>
 <tr>
 <td>Decode base64 string to reveal hidden message</td>
-<br>
 <td>Deobfuscate/Decode Files or Information</td>
-<br>
 <td>T1140</td>
-<br>
 <td>Deobfuscate/Decode Files or Information</td>
 </tr>
 </tbody>
@@ -89,11 +75,9 @@ This objective is a digital forensics investigation involving a floppy disk imag
 Setup the disk image as a block device using the command:
 
 <pre><code class="language-bash">
-<br>
 sudo losetup -fP floppy.img
 
 sudo testdisk /dev/loop0
-<br>
 </code></pre>
 
 <ol>
@@ -123,17 +107,13 @@ Open in mousepad and explore:
 There is a base64 encoded string:
 
 <pre><code class="language-">
-<br>
 bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=
-<br>
 </code></pre>
 
 Which decodes to:
 
 <pre><code class="language-">
-<br>
 merry christmas to all and to all a good night
-<br>
 </code></pre>
 
 <strong>Answer: merry christmas to all and to all a good night</strong>
@@ -150,19 +130,16 @@ merry christmas to all and to all a good night
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>losetup</td>
-<br>
 <td>2.40.4</td>
 </tr>
 <tr>
 <td>testdisk</td>
-<br>
 <td>7.2</td>
 </tr>
 </tbody>
@@ -173,29 +150,24 @@ merry christmas to all and to all a good night
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>I miss old school games. I wonder if there is anything on this disk? I remember, when kids would accidentlly delete things.......... it wasn't to hard to recover files. I wonder if you can still mount these disks?</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Wow! A disk from the 1980s! I remember delivering those computer disks to the good boys and girls. Games were their favorite, but they weren't like they are now.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>I know there are still tools available that can help you find deleted files. Maybe that might help. Ya know, one of my favorite games was a Quick Basic game called Star Trek.</td>
 </tr>
 <tr>
 <td>Mark</td>
-<br>
 <td>This FAT12 floppy disk image must have been under an arcade machine here in the Retro Store. When I was a kid we shared warez by hiding things as deleted files. I remember writing programs in BASIC. So much fun! My favorite was Star Trek. The beauty of file systems is that 'deleted' doesn't always mean gone forever. Ready to dive into some digital archaeology and see what secrets this old disk is hiding? Download the floppy disk image, and see what you can find!</td>
 </tr>
 </tbody>
@@ -206,14 +178,12 @@ merry christmas to all and to all a good night
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>

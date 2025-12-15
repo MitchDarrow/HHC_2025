@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Spare Key</th>
-<br>
 <th>Difficulty Level: 1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Help Goose Barry near the pond identify which identity has been granted excessive Owner permissions at the subscription level, violating the principle of least privilege.</td>
-<br>
 <td>Location: The Pond</td>
 </tr>
 </tbody>
@@ -39,11 +37,8 @@ High level executive summary of how the objective was solved. Details belong in 
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
@@ -60,17 +55,13 @@ Step by step solution complete with any code used
 <img src="/HHC_2025/images/objectivename_purpose.jpg" alt="Sample image alt text">
 
 <pre><code class="language-sh">
-<br>
 bash script code block
-<br>
 </code></pre>
 
 Ordered list:
 <ol>
 <li>Item 1</li>
-<br>
 <li>Item 2</li>
-<br>
 <li>Item 3</li>
 </ol>
 
@@ -78,9 +69,7 @@ Unordered list:
 
 <ul>
 <li>Item</li>
-<br>
 <li>Item</li>
-<br>
 <li>Item</li>
 </ul>
 /usr/local/weather/temperature
@@ -95,14 +84,12 @@ Unordered list:
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Azure CLI</td>
-<br>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -113,14 +100,12 @@ Unordered list:
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>This terminal has built-in hints!</td>
 </tr>
 </tbody>
@@ -131,14 +116,12 @@ Unordered list:
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>

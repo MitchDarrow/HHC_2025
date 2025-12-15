@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Find and Shutdown Frosty's Snowglobe Machine</th>
-<br>
 <th>Difficulty Level: 3</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>You've heard murmurings around the city about a wise, elderly gnome having a change of heart. He must have information about where Frosty's Snowglobe Machine is. You should find and talk to the gnome so you can get some help with how to make your way through the Data Center's labrynthian halls. Once you find the Snowglobe Machine, figure out how to shut it down and melt Frosty's cold, nefarious plans.</td>
-<br>
 <td>Location: Old Data Center</td>
 </tr>
 </tbody>
@@ -39,22 +37,16 @@ The code on the outside of the building is binary and decodes to "imanok" which 
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Decode hidden payload</td>
-<br>
 <td>Defense Evasion</td>
-<br>
 <td>T1140</td>
-<br>
 <td>Deobfuscate/Decode Files or Information</td>
 </tr>
 </tbody>
@@ -106,112 +98,76 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 <thead>
 <tr>
 <th>Room</th>
-<br>
 <th>Valid Exits</th>
-<br>
 <th>Konami Position</th>
-<br>
 <th>Pattern</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<br>
 <td>All 12 doors</td>
-<br>
 <td>Start</td>
-<br>
 <td>All doors</td>
 </tr>
 <tr>
 <td>2</td>
-<br>
 <td>A doors: 3, 6, 7, 10</td>
-<br>
 <td><strong>A</strong></td>
-<br>
 <td>All A-type</td>
 </tr>
 <tr>
 <td>3</td>
-<br>
 <td>B doors: 1, 4, 9, 12</td>
-<br>
 <td><strong>B</strong></td>
-<br>
 <td>All B-type</td>
 </tr>
 <tr>
 <td>4</td>
-<br>
 <td>East: 4, 5, 6</td>
-<br>
 <td><strong>→</strong> Right</td>
-<br>
 <td>East wall</td>
 </tr>
 <tr>
 <td>5</td>
-<br>
 <td>West: 10, 11, 12</td>
-<br>
 <td><strong>←</strong> Left</td>
-<br>
 <td>West wall</td>
 </tr>
 <tr>
 <td>6</td>
-<br>
 <td>East: 4, 5, 6</td>
-<br>
 <td><strong>→</strong> Right</td>
-<br>
 <td>East wall</td>
 </tr>
 <tr>
 <td>7</td>
-<br>
 <td>West: 10, 11, 12</td>
-<br>
 <td><strong>←</strong> Left</td>
-<br>
 <td>West wall</td>
 </tr>
 <tr>
 <td>8</td>
-<br>
 <td>South: 7, 8, 9</td>
-<br>
 <td><strong>↓</strong> Down</td>
-<br>
 <td>South wall</td>
 </tr>
 <tr>
 <td>9</td>
-<br>
 <td>South: 7, 8, 9</td>
-<br>
 <td><strong>↓</strong> Down</td>
-<br>
 <td>South wall</td>
 </tr>
 <tr>
 <td>10</td>
-<br>
 <td>North: 1, 2, 3</td>
-<br>
 <td><strong>↑</strong> Up</td>
-<br>
 <td>North wall</td>
 </tr>
 <tr>
 <td>11</td>
-<br>
 <td>North: 1, 2, 3</td>
-<br>
 <td><strong>↑</strong> Up</td>
-<br>
 <td>North wall</td>
 </tr>
 </tbody>
@@ -227,14 +183,12 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>None</td>
-<br>
 <td>None</td>
 </tr>
 </tbody>
@@ -245,19 +199,16 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Elder Gnome</td>
-<br>
 <td>The Elder Gnome said the route to the old secret lab inside the Data Center starts on the far East wing inside the building, and that the hallways leading to it are probably pitch dark. He also said the employees that used to work there left some kind of code outside the building as a reminder of the route. Perhaps you can search in the vicinity of the Data Center for this code.</td>
 </tr>
 <tr>
 <td>Elder Gnome</td>
-<br>
 <td>Backwards you should look: The Elder also recalled a story of another "computer person" like yourself who managed to find an intern that got lost inside the Data Center about 10 years ago. But that was before the reconstruction, so the current route likely isn't exactly the same. Maybe you can search for the Data Center's past in the historical archives that is the Internet for more information that may be helpful.</td>
 </tr>
 </tbody>
@@ -268,14 +219,12 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>None</td>
-<br>
 <td>None</td>
 </tr>
 </tbody>

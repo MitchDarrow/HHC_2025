@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: IDORable Bistro</th>
-<br>
 <th>Difficulty Level: 2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Josh has a tasty IDOR treat for you-stop by Sasabune for a bite of vulnerability. What is the name of the gnome?</td>
-<br>
 <td>Location: Sasabune</td>
 </tr>
 </tbody>
@@ -39,49 +37,34 @@ This objective is the exploitation of an Insecure Direct Object Reference (IDOR)
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Access hidden receipt URL endpoint with sample identifier</td>
-<br>
 <td>Initial Access</td>
-<br>
 <td>T1190</td>
-<br>
 <td>Exploit Public-Facing Application</td>
 </tr>
 <tr>
 <td>Identify exposed ID parameter in subsequent requests</td>
-<br>
 <td>Discovery</td>
-<br>
 <td>T1046</td>
-<br>
 <td>Network Service Discovery</td>
 </tr>
 <tr>
 <td>Send automated requests to enumerate valid receipt identifiers</td>
-<br>
 <td>Collection</td>
-<br>
 <td>T1530</td>
-<br>
 <td>Data from Cloud Storage</td>
 </tr>
 <tr>
 <td>Review enumerated responses to locate gnomish customer name</td>
-<br>
 <td>Collection</td>
-<br>
 <td>T1005</td>
-<br>
 <td>Data from Local System</td>
 </tr>
 </tbody>
@@ -127,19 +110,16 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Edge Developer Tools</td>
-<br>
 <td>Version 142.0.3595.94</td>
 </tr>
 <tr>
 <td>Burp Suite Community Edition</td>
-<br>
 <td>v2024.11.2</td>
 </tr>
 </tbody>
@@ -150,29 +130,24 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>I have been seeing a lot of receipts lying around with some kind of QR code on them. I am pretty sure they are for Duke Dosis's Holiday Bistro. Interesting...see you if you can find one and see what they are all about...</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>I had tried to scan one of the QR codes and it took me to somebody's meal receipt! I am afraid somebody could look up anyone's meal if they have the correct ID...in the correct place.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Sometimes...developers put in a lot of effort to anonymyze information by using randomly generated identifiers...but...there are also times where the "real" ID is used in a separate Network request...</td>
 </tr>
 <tr>
 <td>Josh</td>
-<br>
 <td>I need your help with something urgent. A gnome came through Sasabune today, poorly disguising itself as human - apparently asking for frozen sushi, which is almost as terrible as that fusion disaster I had to endure that one time. Based on my previous work finding IDOR bugs in restaurant payment systems, I suspect we can exploit a similar vulnerability here. I was at a talk recently and learned some interesting things about some of these payment systems. Let's use that receipt to dig deeper and unmask this gnome's true identity.</td>
 </tr>
 </tbody>
@@ -183,14 +158,12 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>

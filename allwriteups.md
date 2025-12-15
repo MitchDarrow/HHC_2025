@@ -12,11 +12,8 @@ title: allwriteups
 <thead>
 <tr>
 <th>Mitch Darrow</th>
-<br>
 <th>Spencer Treece</th>
-<br>
 <th>Kodi Berube</th>
-<br>
 <th>Louis Krupp</th>
 </tr>
 </thead>

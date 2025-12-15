@@ -12,14 +12,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Holiday Hack Orientation</th>
-<br>
 <th>Difficulty Level: 1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Meet Lynn Schifano on the train for a warm welcome and get ready for your journey around the Dosis Neighborhood.</td>
-<br>
 <td>Location: Train</td>
 </tr>
 </tbody>
@@ -33,22 +31,16 @@ Orientation information about this year's challenge.
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
-<br>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>
@@ -70,14 +62,12 @@ Type the word "answer" in the terminal
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>
@@ -88,14 +78,12 @@ Type the word "answer" in the terminal
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>
@@ -106,14 +94,12 @@ Type the word "answer" in the terminal
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>

@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Its All About Defang</th>
-<br>
 <th>Difficulty Level: 1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Find Ed Skoudis upstairs in City Hall and help him troubleshoot a clever phishing tool in his cozy office.</td>
-<br>
 <td>Location: City Hall</td>
 </tr>
 </tbody>
@@ -41,22 +39,16 @@ Defanging is a cybersecurity practice of deliberately modifying malicious indica
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Identify malicious URLs, domains, and IP addresses from security incidents</td>
-<br>
 <td>Discovery</td>
-<br>
 <td>T1590</td>
-<br>
 <td>Gather Victim Network Information</td>
 </tr>
 </tbody>
@@ -94,14 +86,12 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>sed</td>
-<br>
 <td>4.9</td>
 </tr>
 </tbody>
@@ -112,24 +102,20 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>The PTAS does a pretty good job at defanging, however, the feature we are still working on is one that defangs ALL scenarios. For now, you will need to write a custom sed command combining all defang options.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Remember, the new Phishing Threat Analysis Station (PTAS) is still under construction. Even though the regex patterns are provided, they haven't been fine tuned. Some of the matches may need to be manually removed.</td>
 </tr>
 <tr>
 <td>Ed</td>
-<br>
 <td>Oh gosh, I could talk for hours about this stuff but I really need your help! The team has been working on this new SOC tool that helps triage phishing emails...and there are some...issues. We have had some pretty sketchy emails coming through and we need to make sure we block ALL of the indicators of compromise. Can you help me? No pressure...</td>
 </tr>
 </tbody>
@@ -140,14 +126,12 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>

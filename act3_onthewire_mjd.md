@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: On The Wire</th>
-<br>
 <th>Difficulty Level: 4</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Help Evan next to city hall hack this gnome and retrieve the temperature value reported by the I²C device at address 0x3C. The temperature data is XOR-encrypted, so you’ll need to work through each communication stage to uncover the necessary keys. Start with the unencrypted data being transmitted over the 1-wire protocol.</td>
-<br>
 <td>Location: City Hall</td>
 </tr>
 </tbody>
@@ -39,22 +37,16 @@ Using browser developer tools, the data for each signal is captured. The data is
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Decode hidden payload</td>
-<br>
 <td>Defense Evasion</td>
-<br>
 <td>T1140</td>
-<br>
 <td>Deobfuscate/Decode Files or Information</td>
 </tr>
 </tbody>
@@ -69,53 +61,36 @@ Using browser developer tools, the data for each signal is captured. The data is
 The following python script connects to the web socket and collects the data into a csv file:
 
 <pre><code class="language-python">
-<br>
 import websocket
-<br>
 import csv
 
 <h1>Open CSV file once at the start</h1>
-<br>
 f = open("onthewire_1wire_data.csv", "w", newline="", encoding="utf-8")
-<br>
 writer = csv.writer(f)
 
 def on_message(ws, message):
-<br>
     print("Received:", message)  # See messages in console
-<br>
     writer.writerow([message])
-<br>
     f.flush()  # Ensure data is written immediately
 
 def on_error(ws, error):
-<br>
     print("Error:", error)
 
 def on_close(ws, close_status_code, close_msg):
-<br>
     print("Connection closed")
-<br>
     f.close()
 
 def on_open(ws):
-<br>
     print("Connection opened")
 
 url = "wss://signals.holidayhackchallenge.com/wire/dq"
-<br>
 ws = websocket.WebSocketApp(url,
-<br>
                             on_open=on_open,
-<br>
                             on_message=on_message,
-<br>
                             on_error=on_error,
-<br>
                             on_close=on_close)
 
 ws.run_forever()
-<br>
 </code></pre>
 
 The data file collected: [1-wire data](HHC_2025_Template/resources/OntheWire_1wire_data.csv
@@ -269,7 +244,6 @@ The data file contains markers, but due to the volume of data, a script was used
 These are the unigue markers:
 
 <pre><code class="language-">
-<br>
 === UNIQUE MARKERS ===
 
 SCL markers: bus-idle, clock-low, address-sample, address-hold, ack-sample, ack-hold, data-sample, data-hold, stop-setup, gap-start
@@ -388,34 +362,28 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>claude.ai</td>
-<br>
 <td>4.5</td>
 </tr>
 <tr>
 <td>Edge Developer Tools</td>
-<br>
 <td>Version 142.0.3595.94</td>
 </tr>
 <tr>
 <td>Firefox Developer Tools</td>
-<br>
 <td>Version 145.0.2</td>
 </tr>
 <tr>
 <td>Powershell</td>
-<br>
 <td>5.1.26100.6899</td>
 </tr>
 <tr>
 <td>Python</td>
-<br>
 <td>3.12.8</td>
 </tr>
 </tbody>
@@ -426,36 +394,29 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>Protocols<br>Key concept - Clock vs. Data signals:<br>-Some protocols have separate clock and data lines (like SPI and I2C)<br>-For clocked protocols, you need to sample the data line at specific moments defined by the clock<br>-The clock signal tells you when to read the data signal<br>For 1-Wire (no separate clock):<br>-Information is encoded in pulse widths (how long the signal stays low or high)<br>-Different pulse widths represent different bit values<br>-Look for patterns in the timing between transitions<br>For SPI and I2C:<br>-Identify which line is the clock (SCL for I2C, SCK for SPI)<br>-Data is typically valid/stable when the clock is in a specific state (high or low)<br>-You need to detect clock edges (transitions) and sample data at those moments<br>Technical approach:<br>-Sort frames by timestamp<br>-Detect rising edges (0→1) and falling edges (1→0) on the clock line<br>-Sample the data line's value at each clock edge</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Structure<br>What you're dealing with:<br>-You have access to WebSocket endpoints that stream digital signal data<br>-Each endpoint represents a physical wire in a hardware communication system<br>-The data comes as JSON frames with three properties: line (wire name), t (timestamp), and v (value: 0 or 1)<br>-The server continuously broadcasts signal data in a loop - you can connect at any time<br>-This is a multi-stage challenge where solving one stage reveals information needed for the next<br>Where to start:<br>-Connect to a WebSocket endpoint and observe the data format<br>-The server automatically sends data every few seconds - just wait and collect<br>-Look for documentation on the protocol types mentioned (1-Wire, SPI, I2C)<br>-Consider that hardware protocols encode information in the timing and sequence of signal transitions, not just the values themselves<br>-Consider capturing the WebSocket frames to a file so you can work offlineclock edge</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>On Rails<br>Stage-by-stage approach<br>1. Connect to the captured wire files or endpoints for the relevant wires.<br>2. Collect all frames for the transmission (buffer until inactivity or loop boundary).<br>3. Identify protocol from wire names (e.g., dq → 1-Wire; mosi/sck → SPI; sda/scl → I²C).<br>4. Decode the raw signal:<br>- Pulse-width protocols: locate falling→rising transitions and measure low-pulse width.<br>- Clocked protocols: detect clock edges and sample the data line at the specified sampling phase.<br>5. Assemble bits into bytes taking the correct bit order (LSB vs MSB).<br>6. Convert bytes to text (printable ASCII or hex as appropriate).<br>7. Extract information from the decoded output - it contains the XOR key or other hints for the next stage.<br>1. Repeat Stage 1 decoding to recover raw bytes (they will appear random).<br>2. Apply XOR decryption using the key obtained from the previous stage.<br>3. Inspect decrypted output for next-stage keys or target device information.<br>- Multiple 7-bit device addresses share the same SDA/SCL lines.<br>- START condition: SDA falls while SCL is high. STOP: SDA rises while SCL is high.<br>- First byte of a transaction = (7-bit address << 1)</td>
-<br>
 <td>R/W. Extract address with address = first_byte >> 1.<br>- Identify and decode every device’s transactions; decrypt only the target device’s payload.<br>- Print bytes in hex and as ASCII (if printable) - hex patterns reveal structure.<br>- Check printable ASCII range (0x20-0x7E) to spot valid text.<br>- Verify endianness: swapping LSB/MSB will quickly break readable text.<br>- For XOR keys, test short candidate keys and look for common English words.<br>- If you connect mid-broadcast, wait for the next loop or detect a reset/loop marker before decoding.<br>- Buffering heuristic: treat the stream complete after a short inactivity window (e.g., 500 ms) or after a full broadcast loop.<br>- Sort frames by timestamp per wire and collapse consecutive identical levels before decoding to align with the physical waveform.<br></td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Garbage<br>If your decoded data looks like gibberish:<br>- The data may be encrypted with XOR cipher<br>- XOR is a simple encryption: encrypted_byte XOR key_byte = plaintext_byte<br>- The same operation both encrypts and decrypts: plaintext XOR key = encrypted, encrypted XOR key = plaintext<br>How XOR cipher works:<br>function xorDecrypt(encrypted, key) {<br>  let result = "";<br>  for (let i = 0; i < encrypted.length; i++) {<br>    const encryptedChar = encrypted.charCodeAt(i);<br>    const keyChar = key.charCodeAt(i % key.length);  // Key repeats<br>   result += String.fromCharCode(encryptedChar ^ keyChar);<br>  }<br>  return result;<br>}<br>Key characteristics:<br>- The key is typically short and repeats for the length of the message<br>- You need the correct key to decrypt (look for keys in previous stage messages)<br>- If you see readable words mixed with garbage, you might have the wrong key or bit order<br>Testing your decryption:<br>- Encrypted data will have random-looking byte values</td>
 </tr>
 <tr>
 <td>Evan</td>
-<br>
 <td>So here's the deal - there are some seriously bizarre signals floating around this area. Not your typical radio chatter or WiFi noise, but something... different. I've been trying to make sense of the patterns, but it's like trying to build a robot hand out of a coffee maker - you need the right approach. Think you can help me decode whatever weirdness is being transmitted out there?</td>
 </tr>
 </tbody>
@@ -466,14 +427,12 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>

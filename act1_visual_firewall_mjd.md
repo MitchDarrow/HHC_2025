@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Visual Firewall</th>
-<br>
 <th>Difficulty Level: 1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Find Elgee in the big hotel for a firewall frolic and some techy fun.</td>
-<br>
 <td>Location: Grand Hotel</td>
 </tr>
 </tbody>
@@ -39,22 +37,16 @@ The objective is to correctly configure firewall rules to best security practice
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Review existing firewall rules and policies</td>
-<br>
 <td>Discovery</td>
-<br>
 <td>T1082</td>
-<br>
 <td>System Information Discovery</td>
 </tr>
 </tbody>
@@ -86,14 +78,12 @@ Rule: Internet to Internal: Block direct Internet to Internal access
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>
@@ -104,19 +94,16 @@ Rule: Internet to Internal: Block direct Internet to Internal access
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>This terminal has built-in hints.</td>
 </tr>
 <tr>
 <td>Elgee</td>
-<br>
 <td>Welcome to my little corner of network security! finger guns I've whipped up something sweeter than my favorite whoopie pie - an interactive firewall simulator that'll teach you more in ten minutes than most textbooks do in ten chapters. Don't worry about breaking anything; that's half the fun of learning! Ready to dig in?</td>
 </tr>
 </tbody>
@@ -127,14 +114,12 @@ Rule: Internet to Internal: Block direct Internet to Internal access
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>

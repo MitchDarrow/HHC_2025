@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Visual Neworking</th>
-<br>
 <th>Difficulty Level: 1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Skate over to Jared at the frozen pond for some network magic and learn the ropes by the hockey rink</td>
-<br>
 <td>Location: The Pond</td>
 </tr>
 </tbody>
@@ -39,22 +37,16 @@ This objective is designed to test knowledge of networking communications. This 
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Monitor network traffic flows and protocols</td>
-<br>
 <td>Discovery</td>
-<br>
 <td>T1049</td>
-<br>
 <td>System Network Connections Discovery</td>
 </tr>
 </tbody>
@@ -134,14 +126,12 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>
@@ -152,14 +142,12 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>This terminal has built-in hints!</td>
 </tr>
 </tbody>
@@ -170,14 +158,12 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>

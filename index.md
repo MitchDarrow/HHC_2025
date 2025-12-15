@@ -9,7 +9,6 @@ title: index
 <thead>
 <tr>
 <th>SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</th>
-<br>
 <th><img src="/HHC_2025/images/HHC.webp" alt="Holiday Hack Challenge Logo"></th>
 </tr>
 </thead>
@@ -25,13 +24,9 @@ Some participation statistics from the 2024 HHC:
 
 <ul>
 <li>Total Players Starting the Prologue: 19,036</li>
-<br>
 <li>Total participants starting Act 1: 5937</li>
-<br>
 <li>Total participants starting Act 2: 2659</li>
-<br>
 <li>Total participants starting Act3: 814</li>
-<br>
 <li>Total participants completing the HHC: 191</li>
 </ul>
 
@@ -42,13 +37,9 @@ Members of BerryDunn's IT Security Consulting team have participated in this eve
 The list below is a curated list of the best of class solution for each objective, as determined by team consensus. Each write-up includes the following features:
 <ul>
 <li>An high level summary of the solution including a MITRE ATT&CK Mapping</li>
-<br>
 <li>An expandable section with the detailed solution, including screenshots and code snippets</li>
-<br>
 <li>A summary of tools used</li>
-<br>
 <li>A summary of hints for the objective</li>
-<br>
 <li>An acknoledgements summary, thanking other participants for any guidance in solving the objective</li>
 </ul>
 
@@ -60,65 +51,48 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 <thead>
 <tr>
 <th>Act 1 Official Solutions</th>
-<br>
 <th>Act 2 Official Solutions</th>
-<br>
 <th>Act 3 Official Solutions</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Holiday Hack Orientation</td>
-<br>
 <td><a href="/HHC_2025/act2_retro_recovery_mjd.html">Retro Recovery</a></td>
-<br>
 <td><a href="/HHC_2025/act3_gnome_tea_mjd.html">Gnome Tea</a></td>
 </tr>
 <tr>
 <td>Its All About Defang</td>
-<br>
 <td><a href="/HHC_2025/act2_mail_detective_mjd.html">Mail Detective</a></td>
-<br>
 <td><a href="/HHC_2025/act3_hack-a-gnomesnowcat_mjd.html">Hack-a-Gnome</a></td>
 </tr>
 <tr>
 <td>Neighborhood Watch Bypass</td>
-<br>
 <td><a href="/HHC_2025/act2_idorable_bistro_mjd.html">IDORable Bistro </a></td>
-<br>
 <td><a href="/HHC_2025/act3_snowcat_mjd.html">Snowcat RCE and Command Injection</a></td>
 </tr>
 <tr>
 <td>Santa’s Gift-Tracking Service Port Mystery</td>
-<br>
 <td><a href="/HHC_2025/act2_dosis_network_down_mjd.html">Dosis Network Down</a></td>
-<br>
 <td><a href="/HHC_2025/act3_schrodingersscope_mjd.html">Schrodinger's Scope</a></td>
 </tr>
 <tr>
 <td>Visual Networking</td>
-<br>
 <td><a href="/HHC_2025/act2_rogue_gnome_identity_provider_mjd.html">Rogue Gnome Identity Provider</a></td>
-<br>
 <td><a href="/HHC_2025/act3_snowglobe_mjd.html">Find and Shutdown Frosty's Snow Globe</a></td>
 </tr>
 <tr>
 <td>Visual Firewall</td>
-<br>
 <td><a href="/HHC_2025/act2_quantgnome_leap_mjd.html">Quantgnome Leap</a></td>
-<br>
 <td><a href="/HHC_2025/act3_onthewire_mjd.html">On The Wire</a></td>
 </tr>
 <tr>
 <td>Into to NMAP</td>
-<br>
 <td><a href="/HHC_2025/act2_going_in_reverse_mjd.html">Going in Reverse</a></td>
-<br>
 <td><a href="/HHC_2025/act3_free_ski_mjd.html">Free Ski</a></td>
 </tr>
 <tr>
 <td>Blob Storage Challenge in the Neighborhood</td>
-<br>
 <td><a href="/HHC_2025/act3_snowblindambush_mjd.html">SnowBlind Ambush</a></td>
 </tr>
 <tr>
@@ -143,11 +117,8 @@ Bios of the team members who participated in this years challenge:
 <thead>
 <tr>
 <th><a href="/HHC_2025/bio_mjd.html">Mitch Darrow</a></th>
-<br>
 <th><a href="/HHC_2025/bio_srt.html">Spencer Treece</a></th>
-<br>
 <th><a href="/HHC_2025/bio_kgb.html">Kodi Berube</a></th>
-<br>
 <th><a href="/HHC_2025/bio_lk.html">Louis Krupp</a></th>
 </tr>
 </thead>

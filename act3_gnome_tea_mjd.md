@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Gnome Tea</th>
-<br>
 <th>Difficulty Level: 3</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Enter the apartment building near 24-7 and help Thomas infiltrate the GnomeTea social network and discover the secret agent passphrase.</td>
-<br>
 <td>Location: Apartment Building</td>
 </tr>
 </tbody>
@@ -39,49 +37,34 @@ Starting with only public access to the web application, reconnaisance was condu
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Developer information disclosure</td>
-<br>
 <td>Reconnaissance</td>
-<br>
 <td>T1593</td>
-<br>
 <td>Search Open Websites</td>
 </tr>
 <tr>
 <td>Found commented code</td>
-<br>
 <td>Reconnaissance</td>
-<br>
 <td>T1595.002</td>
-<br>
 <td>Vulnerability Scanning</td>
 </tr>
 <tr>
 <td>Gain access to web application: Leak Sensitive Information</td>
-<br>
 <td>Reconnaissance</td>
-<br>
 <td>T1589</td>
-<br>
 <td>Gather Victim Identity Information</td>
 </tr>
 <tr>
 <td>Gain admin access to application</td>
-<br>
 <td>Privilege Escalation</td>
-<br>
 <td>T1548</td>
-<br>
 <td>Abuse elevation control mechanism</td>
 </tr>
 </tbody>
@@ -160,29 +143,17 @@ With valid credentials, login is achieved as Barnaby.
 Following the hint about client side controls, the source code now available is reviewed, and admin access is hard coded into the source.
 
 <pre><code class="language-javascript">
-<br>
     const [r,e] = K.useState({
-<br>
         totalGnomes: 0,
-<br>
         totalTea: 0,
-<br>
         totalDMs: 0
-<br>
     })
-<br>
       , [t,s] = K.useState(!0)
-<br>
       , [o,l] = K.useState(null)
-<br>
       , [h,f] = K.useState(!1)
-<br>
       , [m,v] = K.useState(!1)
-<br>
       , {user: _} = _l()
-<br>
       , T = "3loaihgxP0VwCTKmkHHFLe6FZ4m2";
-<br>
     typeof window < "u" && (window.EXPECTED_ADMIN_UID = T),
 
 </code></pre>
@@ -201,29 +172,24 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Burp Suite Community Edition</td>
-<br>
 <td>2024.11.2</td>
 </tr>
 <tr>
 <td>exiftool</td>
-<br>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Google Earth</td>
-<br>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Edge Developer Tools</td>
-<br>
 <td>Version 142.0.3595.94</td>
 </tr>
 </tbody>
@@ -234,34 +200,28 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>License: Exif jpeg image data can often contain data like the latitude and longitude of where the picture was taken.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>GnomeTea: I heard rumors that the new GnomeTea app is where all the Gnomes spill the tea on each other. It uses Firebase which means there is a client side config the app uses to connect to all the firebase services.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Statistically Coded: Hopefully they did not rely on hard-coded client-side controls to validate admin access once a user validly logs in. If so, it might be pretty easy to change some variable in the developer console to bypass these controls.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Rules: Hopefully they setup their firestore and bucket security rules properly to prevent anyone from reading them easily with curl. There might be sensitive details leaked in messages.</td>
 </tr>
 <tr>
 <td>CraHan</td>
-<br>
 <td>Say, you wouldn't happen to have time to help me out with something? The gnomes have been oddly suspicious and whispering to each other. In fact, I could've sworn I heard them use some sort of secret phrase. When I laughed right next to one, it said "passphrase denied". I asked what that was all about but it just giggled and ran away. I know they've been using GnomeTea to "spill the tea" on one another, but I can't sign up 'cause I'm obviously not a gnome. I could sure use your expertise to infiltrate this app and figure out what their secret passphrase is. I've tried a few things already, but as usual the whole... Uh, what's the word I'm looking for here? Oh right, "endeavor", ended up with the rest of my unfinished projects.</td>
 </tr>
 </tbody>
@@ -272,14 +232,12 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Eucrates</td>
-<br>
 <td>Introduced me to Claude.ai</td>
 </tr>
 </tbody>

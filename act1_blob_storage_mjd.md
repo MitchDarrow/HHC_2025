@@ -77,30 +77,20 @@ The objective of this challenge is to connect using Azure CLI to the "neighborho
 Step 1: Review the storage accounts
 
 <pre><code class="language-sh">
-<br>
 az storage account list | less
-<br>
 </code></pre>
 <img src="/HHC_2025/images/blobstorage_misconfig.jpg" alt="Misconfigured Storage Account allows Public Access">
 
 The following commands were used to dive deeper:
 <br>
 <pre><code class="language-sh">
-<br>
 az storage container list --account-name neighborhood2 --output table
-<br>
 az storage blob list --container-name public --account-name neighborhood2
-<br>
 az storage blob download \
-<br>
   --container-name public \
-<br>
   --account-name neighborhood2 \
-<br>
   --name admin_passwords.txt \
-<br>
   --file admin_passwords.txt
-<br>
 </code></pre>
 
 <img src="/HHC_2025/images/blobstorage_passwords.jpg" alt="Misconfigured Storage Account allows Public Access">

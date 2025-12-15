@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Free Ski</th>
-<br>
 <th>Difficulty Level: 4</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Go to the retro store and help Goose Olivia ski down the mountain and collect all five treasure chests to reveal the hidden flag in this classic SkiFree-inspired challenge.</td>
-<br>
 <td>Location: Retro Store</td>
 </tr>
 </tbody>
@@ -39,31 +37,22 @@ Reverse engineer an executable to reveal hidden information.
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Decompile executable file</td>
-<br>
 <td>Defense Evasion</td>
-<br>
 <td>T1027</td>
-<br>
 <td>Obfuscated Files or Information</td>
 </tr>
 <tr>
 <td>Decode hidden payload</td>
-<br>
 <td>Defense Evasion</td>
-<br>
 <td>T1140</td>
-<br>
 <td>Deobfuscate/Decode Files or Information</td>
 </tr>
 </tbody>
@@ -87,13 +76,9 @@ python ./pyinstxtractor.py FreeSki.exe
 Install cmake:
 <br>
 <pre><code class="language-sh">
-<br>
 sudo apt install cmake
-<br>
 cmake .
-<br>
 make
-<br>
 </code></pre>
 <br>
 Copy the extracted folder into the /pycdc folder
@@ -143,11 +128,8 @@ There are <strong>7 mountains</strong> with encoded flags:
 
 <ol>
 <li><strong>Find treasure locations</strong> - They're deterministically generated using <code>random.seed(binascii.crc32(mountain_name))</code> in <code>GetTreasureLocations()</code></li>
-<br>
 <li><strong>Calculate treasure values</strong> - Each treasure's value is <code>(elevation * mountain_width) + horizontal_offset</code></li>
-<br>
 <li><strong>Compute the product</strong> - XOR the 5 treasure values together with bit shifts</li>
-<br>
 <li><strong>Decrypt the flag</strong> - Use that product to seed random and XOR-decode the flag</li>
 </ol>
 
@@ -164,11 +146,8 @@ The key insight is that the game's "randomness" is actually deterministic - ever
 The script solvefreeski.py does the following:
 <ol>
 <li>Recreates the treasure generation algorithm - Uses the same seeding method (CRC32 of mountain name) to deterministically find where all 5 treasures are located on each mountain</li>
-<br>
 <li>Calculates treasure values - Each treasure's value is (elevation × 1000) + horizontal_offset</li>
-<br>
 <li>Computes the decryption key - XORs all 5 treasure values together with bit shifts to create a product</li>
-<br>
 <li>Decodes the flag - Seeds Python's random number generator with that product, then XORs each byte of the encoded flag with the generated random values</li>
 </ol>
 
@@ -186,24 +165,20 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>claude.ai</td>
-<br>
 <td>v4.5</td>
 </tr>
 <tr>
 <td>PyInstaller Extractor</td>
-<br>
 <td>?</td>
 </tr>
 <tr>
 <td>pycdas</td>
-<br>
 <td>?</td>
 </tr>
 </tbody>
@@ -214,24 +189,20 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>Many Python decompilers don't understand Python 3.13, but Decompyle++ does!</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Have you ever used PyInstaller Extractor?</td>
 </tr>
 <tr>
 <td>Olivia Goose</td>
-<br>
 <td>This game looks simple enough, doesn't it? Almost too simple. But between you and me... it seems nearly impossible to win fair and square. My advice? If you ain't cheatin', you ain't tryin'. wink Now get out there and show that mountain who's boss!</td>
 </tr>
 </tbody>
@@ -242,14 +213,12 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>

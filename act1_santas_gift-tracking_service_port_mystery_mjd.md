@@ -18,14 +18,12 @@ nav: |
 <thead>
 <tr>
 <th>Objective: Santa's Gift-Tracking Service Port</th>
-<br>
 <th>Difficulty Level: 1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Chat with Yori near the apartment building about Santa's mysterious gift tracker and unravel the holiday mystery.</td>
-<br>
 <td>Location: Apratment Building</td>
 </tr>
 </tbody>
@@ -39,31 +37,22 @@ This objective is a network service discovery and verification task focused on i
 <thead>
 <tr>
 <th>Activity</th>
-<br>
 <th>Primary Tactic</th>
-<br>
 <th>MITRE ATT&CK Technique ID</th>
-<br>
 <th>MITRE ATT&CK Technique Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Execute ss -tlnp command to enumerate network connections</td>
-<br>
 <td>Discovery</td>
-<br>
 <td>T1049</td>
-<br>
 <td>System Network Connections Discovery</td>
 </tr>
 <tr>
 <td>Use curl to send HTTP HEAD request to identified port</td>
-<br>
 <td>Discovery</td>
-<br>
 <td>T1046</td>
-<br>
 <td>Network Service Discovery</td>
 </tr>
 </tbody>
@@ -88,9 +77,7 @@ The objective is to:
 Use the SS tool to discover the port using the command:
 <br>
 <pre><code class="language-sh">
-<br>
 ss -tlnp
-<br>
 </code></pre>
 
 There is a service running on port 12321
@@ -100,9 +87,7 @@ Use curl to connect:
 <img src="/HHC_2025/images/santatracker_connect.jpg" alt="Sample image alt text">
 
 <pre><code class="language-sh">
-<br>
 curl -I http://0.0.0.0:12321
-<br>
 </code></pre>
 <br>
 The service responds with a 200 OK and Content-Type of application/json
@@ -117,19 +102,16 @@ The service responds with a 200 OK and Content-Type of application/json
 <thead>
 <tr>
 <th>Tools Used</th>
-<br>
 <th>Tool Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ss</td>
-<br>
 <td>iproute2-6.13.0</td>
 </tr>
 <tr>
 <td>curl</td>
-<br>
 <td>8.11.0</td>
 </tr>
 </tbody>
@@ -140,19 +122,16 @@ The service responds with a 200 OK and Content-Type of application/json
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Hint</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Santa</td>
-<br>
 <td>Since we don't have a web browser to connect to this HTTP service...There is another common tool that you can use from the cli.</td>
 </tr>
 <tr>
 <td>Yuri</td>
-<br>
 <td>Think you can check out this terminal for me? I need to use cURL to access the gift tracker system, but it has me stumped.</td>
 </tr>
 </tbody>
@@ -163,14 +142,12 @@ The service responds with a 200 OK and Content-Type of application/json
 <thead>
 <tr>
 <th>Provided By</th>
-<br>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>none</td>
-<br>
 <td>none</td>
 </tr>
 </tbody>
