@@ -4,8 +4,7 @@ title: bio_mjd
 ---
 <img src="/index.md" alt="Back to Home Page">
 
-!<img src="/HHC_2025/images/mitch_darrow.png" alt="Image of Mitch Darrow">
-<br>
+<img src="/HHC_2025/images/mitch_darrow.png" alt="Image of Mitch Darrow">
 <h2>Mitch Darrow</h2>
 
 <strong>Manager, Government Assurance Practice Group, IT Security Consulting Team</strong>

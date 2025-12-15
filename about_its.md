@@ -2,7 +2,7 @@
 layout: default
 title: about_its
 ---
- !<img src="/HHC_2025/images/bdlogo.svg" alt="BerryDunn Logo">
+ <img src="/HHC_2025/images/bdlogo.svg" alt="BerryDunn Logo">
 
  <img src="/index.md" alt="Back to Home Page">
 

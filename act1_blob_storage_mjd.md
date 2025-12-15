@@ -80,7 +80,7 @@ Step 1: Review the storage accounts
 az storage account list | less
 </code></pre>
 <br>
-!<img src="/HHC_2025/images/blobstorage_misconfig.jpg" alt="Misconfigured Storage Account allows Public Access">
+<img src="/HHC_2025/images/blobstorage_misconfig.jpg" alt="Misconfigured Storage Account allows Public Access">
 
 The following commands were used to dive deeper:
 <br>
@@ -94,7 +94,7 @@ az storage blob download \
   --file admin_passwords.txt
 </code></pre>
 
-!<img src="/HHC_2025/images/blobstorage_passwords.jpg" alt="Misconfigured Storage Account allows Public Access">
+<img src="/HHC_2025/images/blobstorage_passwords.jpg" alt="Misconfigured Storage Account allows Public Access">
 
 <strong>Answer: allowBlobPublicAccesss: True</strong>
 

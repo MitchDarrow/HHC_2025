@@ -348,7 +348,7 @@ Separate READ vs WRITE
 
 The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 characters “banaz”
 
-!<img src="/HHC_2025/images/onthewire_i2cdecoded.jpg" alt="I2C Device 0x3C">
+<img src="/HHC_2025/images/onthewire_i2cdecoded.jpg" alt="I2C Device 0x3C">
 
 33 32 2E 38 34 converts to ASCII 32.84
 

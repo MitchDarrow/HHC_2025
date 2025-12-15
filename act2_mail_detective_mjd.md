@@ -82,7 +82,7 @@ This objective investigates suspicious emails using IMAP (Internet Message Acces
 
 This is a helpful resource for reading messages using curl: https://everything.curl.dev/usingcurl/reademail.html
 
-!<img src="/HHC_2025/images/maildetective_instructions.jpg" alt="Objective Instructions">
+<img src="/HHC_2025/images/maildetective_instructions.jpg" alt="Objective Instructions">
 
 Connect to the server using curl:
 
@@ -102,11 +102,11 @@ a005 fetch 2 body[]
 
 This search returns a match.
 
-!<img src="/HHC_2025/images/maildetective_commands.jpg" alt="IMAP fetch command showing email message body">
+<img src="/HHC_2025/images/maildetective_commands.jpg" alt="IMAP fetch command showing email message body">
 
 Scrolling down the body is:
 
-!<img src="/HHC_2025/images/maildetective_answer.jpg" alt="Email body content revealing JavaScript variable with URL">
+<img src="/HHC_2025/images/maildetective_answer.jpg" alt="Email body content revealing JavaScript variable with URL">
 
 <pre><code class="language-javascript">
 var pastebinUrl = "https://frostbin.atnas.mail/api/paste";

@@ -72,7 +72,7 @@ To Defang the IOCs:
 
 Use this combined Sed command: s/http/hxxp/g; s/@/[@]/g; s#://#[://]#g; s/\./[.]/g
 
-!<img src="/HHC_2025/images/itsallaboutdefang_solution.jpg" alt="Applying the combined Regex to Defang the IOCs">
+<img src="/HHC_2025/images/itsallaboutdefang_solution.jpg" alt="Applying the combined Regex to Defang the IOCs">
 
 The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email addresses
 

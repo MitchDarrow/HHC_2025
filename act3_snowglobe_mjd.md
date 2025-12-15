@@ -58,7 +58,7 @@ The code on the outside of the building is binary and decodes to "imanok" which 
 
 Viewing the exterior wall of the datacenter, there is a pattern in the bricks that looks binary, six bytes of data:
 
-!<img src="/HHC_2025/images/snowglobe_code.jpg" alt="snowglobe code">
+<img src="/HHC_2025/images/snowglobe_code.jpg" alt="snowglobe code">
 
 Decoding the patterns gives:
 

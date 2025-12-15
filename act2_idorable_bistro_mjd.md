@@ -78,19 +78,19 @@ The following video is helpful for understanding Insecure Direct Object Referenc
 
 The receipt outside the restaurant has a QR code that points to this URL: https://its-idorable.hhc25-ops.com/
 
-!<img src="/HHC_2025/images/idorablebistro_rvs.jpg" alt="Initial website landing page">
+<img src="/HHC_2025/images/idorablebistro_rvs.jpg" alt="Initial website landing page">
 
 Inspecting the page source code reveals a comment:
 
-!<img src="/HHC_2025/images/idorablebistro_comment.jpg" alt="HTML source code showing hidden comment">
+<img src="/HHC_2025/images/idorablebistro_comment.jpg" alt="HTML source code showing hidden comment">
 
 Trying the URL from the comment: https://its-idorable.hhc25-ops.com/receipt/a1b2c3d4
 
-!<img src="/HHC_2025/images/idorablebistro_receipt.jpg" alt="Sample receipt page accessed via hidden URL">
+<img src="/HHC_2025/images/idorablebistro_receipt.jpg" alt="Sample receipt page accessed via hidden URL">
 
 Using Burp Suite to view the requests. The first request uses a token, but a subsequent request exposes the ID parameter.
 
-!<img src="/HHC_2025/images/idorablebistro_burp.jpg" alt="Burp Suite showing requests with exposed ID parameter">
+<img src="/HHC_2025/images/idorablebistro_burp.jpg" alt="Burp Suite showing requests with exposed ID parameter">
 
 Using Burp's Intruder, send requests with values for ID from 100 to 200:
 
@@ -98,7 +98,7 @@ At ID=153, 404 responses begin, so valid receipts are from 100 to 152.
 
 Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 
-!<img src="/HHC_2025/images/idorablebistro_intruder.jpg" alt="Receipt showing Bartholomew Quibblefrost name at ID=139">
+<img src="/HHC_2025/images/idorablebistro_intruder.jpg" alt="Receipt showing Bartholomew Quibblefrost name at ID=139">
 
 <strong>Answer: Bartholomew Quibblefrost</strong>
 

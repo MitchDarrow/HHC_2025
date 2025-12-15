@@ -72,7 +72,7 @@ The objective is to:
 <li>Connecct to the port and verify the servide is running</li>
 </ol>
 
-!<img src="/HHC_2025/images/santatracking_instructions.jpg" alt="Objective Instructions">
+<img src="/HHC_2025/images/santatracking_instructions.jpg" alt="Objective Instructions">
 
 Use the SS tool to discover the port using the command:
 <br>
@@ -84,7 +84,7 @@ There is a service running on port 12321
 
 Use curl to connect:
 
-!<img src="/HHC_2025/images/santatracker_connect.jpg" alt="Sample image alt text">
+<img src="/HHC_2025/images/santatracker_connect.jpg" alt="Sample image alt text">
 
 <pre><code class="language-sh">
 curl -I http://0.0.0.0:12321

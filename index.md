@@ -2,7 +2,7 @@
 layout: default
 title: index
 ---
- !<img src="/HHC_2025/images/bdlogo.svg" alt="BerryDunn Logo">
+ <img src="/HHC_2025/images/bdlogo.svg" alt="BerryDunn Logo">
 <br>
 <h1>BerryDunn Holiday Hack Challenge Solution Report</h1>
 
@@ -10,7 +10,7 @@ title: index
 <thead>
 <tr>
 <th>SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</th>
-<th>!<img src="/HHC_2025/images/HHC.webp" alt="Holiday Hack Challenge Logo"></th>
+<th><img src="/HHC_2025/images/HHC.webp" alt="Holiday Hack Challenge Logo"></th>
 </tr>
 </thead>
 <tbody>
@@ -114,3 +114,15 @@ For more information about the BerryDunn's IT Security Team and the services off
 
 Bios of the team members who participated in this years challenge:
 
+<table>
+<thead>
+<tr>
+<th><img src="/bio_mjd.md" alt="Mitch Darrow"></th>
+<th><img src="/bio_mjd.md" alt="Mitch Darrow"></th>
+<th><img src="/bio_mjd.md" alt="Mitch Darrow"></th>
+<th><img src="/bio_mjd.md" alt="Mitch Darrow"></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>

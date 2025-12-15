@@ -146,7 +146,7 @@ eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9pZHAuYXRuYXNjb3JwLy53ZWxsLWtub3duL2p3a3Mu
 
 Using JWT.IO to decode the token:
 
-!<img src="/HHC_2025/images/roguegnomeidp_jwt.jpg" alt="Decoding the token">
+<img src="/HHC_2025/images/roguegnomeidp_jwt.jpg" alt="Decoding the token">
 
 Lets look at the contents of the jwks.json file:
 <br>
@@ -185,11 +185,11 @@ Lets look at the contents of the jwks.json file:
 
 The /etc/passwd file is accessible. The username "santa" looks like a good one to use in the attack.
 
-!<img src="/HHC_2025/images/roguegnomeidp_passwdfile.jpg" alt="Contents of the Password file">
+<img src="/HHC_2025/images/roguegnomeidp_passwdfile.jpg" alt="Contents of the Password file">
 
 Using mkjwk - JSON Web Key Generator, generate the json web key:
 
-!<img src="/HHC_2025/images/roguegnomeidp_keys.jpg" alt="Generating JSON Web Key">
+<img src="/HHC_2025/images/roguegnomeidp_keys.jpg" alt="Generating JSON Web Key">
 
 <pre><code class="language-">
 e: AQAB
@@ -262,7 +262,7 @@ Using JWT.io change the minimal number of items. The hint says gnome has insuffi
 
 The token is signed using the Private key generated. The public key and the fraudulent JWKS file is placed in the www directory of paulweb.neighborhood.
 
-!<img src="/HHC_2025/images/roguegnomeidp_tamperedjwt.jpg" alt="Creating a Tampered Token">
+<img src="/HHC_2025/images/roguegnomeidp_tamperedjwt.jpg" alt="Creating a Tampered Token">
 
 Tampered token:
 <br>
@@ -282,7 +282,7 @@ The session key is used to connect to the diagntic interface:
 curl -H 'Cookie: session=eyJhZG1pbiI6dHJ1ZSwidXNlcm5hbWUiOiJzYW50YSJ9.aRJ4Fw.oA20V3TpQ5ST2sky_K3XDsllPSs; ' http://gnome-48371.atnascorp/diagnostic-interface
 </code></pre>
 <br>
-!<img src="/HHC_2025/images/roguegnomeidp_diagnostic.jpg" alt="Getting the Diagnostic Interface">
+<img src="/HHC_2025/images/roguegnomeidp_diagnostic.jpg" alt="Getting the Diagnostic Interface">
 
 <strong>Answer:refrigeration-botnet.bin</strong>
 

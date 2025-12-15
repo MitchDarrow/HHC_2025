@@ -92,7 +92,7 @@ sudo testdisk /dev/loop0
 <li>Select "undelete" as the action</li>
 </ol>
 
-!<img src="/HHC_2025/images/retrorecovery_explorefiles.jpg" alt="TestDisk interface showing file listing on floppy disk image">
+<img src="/HHC_2025/images/retrorecovery_explorefiles.jpg" alt="TestDisk interface showing file listing on floppy disk image">
 
 There is an interesting file: <code>all_i-want_for_christmas.bas</code>
 
@@ -102,7 +102,7 @@ Successfully recovered the deleted file <code>all_i-want_for_christmas.bas</code
 
 Open in mousepad and explore:
 
-!<img src="/HHC_2025/images/retrorecovery_sourcecode.jpg" alt="BASIC source code file contents showing encoded string">
+<img src="/HHC_2025/images/retrorecovery_sourcecode.jpg" alt="BASIC source code file contents showing encoded string">
 
 There is a base64 encoded string:
 
