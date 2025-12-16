@@ -90,10 +90,7 @@ Setup the disk image as a block device using the command:
 <pre><code class="language-bash">
 sudo losetup -fP floppy.img
 sudo testdisk /dev/loop0
-<p>
 </code></pre>
-<br>
-</p>
 <ol>
 <li>Select the disk0 as the media and click proceed</li>
 </ol>
