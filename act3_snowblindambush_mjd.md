@@ -7,7 +7,7 @@ nav: |
   <tr>
   <th><a href="/HHC_2025/act3_free_ski_mjd.html">Previous Objective: Act3 Free Ski</a></th>
   <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-  <th><a href="/HHC_2025/hhc_2025_berrydunn.html">About BerryDunn</a></th>
+  <th><a href="/HHC_2025/about_berrydunn.html">About BerryDunn</a></th>
   </tr>
   </thead>
   <tbody>
