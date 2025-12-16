@@ -131,7 +131,7 @@ For more information about BerryDunn <a href="/HHC_2025/about_berrydunn.html">Ab
 <br>
 </p>
 <p>
-For more information about the BerryDunn's IT Security Team and the services offered <a href="/HHC_2025/about_its.html">About </a>
+For more information about the BerryDunn's IT Security Team and the services offered <a href="/HHC_2025/about_its.html">About BerryDunn's Cybersecurity Team</a>
 <br>
 </p>
 <p>
