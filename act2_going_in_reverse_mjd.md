@@ -79,6 +79,7 @@ The basic program consists of the following code:
 85 FLAG$ = "" : FOR I = 1 TO LEN(ENC_FLAG$) : FLAG$ = FLAG$ + CHR$(ASC(MID$(ENC_FLAG$,I,1)) XOR 7) : NEXT I : PRINT FLAG$
 90 PRINT "ACCESS DENIED"
 100 END
+<br>
 </code></pre>
 <p>
 The program has the encoded flag and the decoder. This PowerShell script will decode the string. Note that the ‘ denotes a comment in basic.
