@@ -20,36 +20,69 @@ nav:
 <tbody>
 <tr>
 <td><a href="/HHC_2025/act1_orientation_mjd.html">Act1 Holiday Hack Orientation </a></td>
+<td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_its_all_about_defang_mjd.html">Act1 Its All About Defang</a></td>
+<td> </td>
+<td> </td>
+<td> </td> 
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Act1 Neighborhood Watch Bypass</a></td>
+ <td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_santas_gift-tracking_service_port_mystery_mjd.html">Act1 Santa’s Gift-Tracking Service Port Mystery</a></td>
+<td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_visual_networking_mjd.html">Act1 Visual Networking</a></td>
+<td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_visual_firewall_mjd.html">Act1 Visual Firewall</a></td>
+<td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_blob_storage_mjd.html">Act1 Blob Storage Challenge in the Neighborhood </a></td>
+ <td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_intro_to_nmap_mjd.html">Act1 Into to NMAP</a></td>
+ <td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_spare_key_mjd.html">Act1 Spare Key </a></td>
+ <td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_the_open_door_mjd.html">Act1 The Open Door </a></td>
+ <td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_owner_mjd.html">Act1 Owner</a></td>
+ <td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act2_retro_recovery_mjd.html">Act2 Retro Recovery</a></td>
