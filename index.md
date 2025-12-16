@@ -127,11 +127,11 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 </tbody>
 </table>
 <p>
-For more information about BerryDunn [URL Here]
+For more information about BerryDunn <a href="/HHC_2025/about_berrydunn.html">About BerryDunn</a>
 <br>
 </p>
 <p>
-For more information about the BerryDunn's IT Security Team and the services offered [URL Here]
+For more information about the BerryDunn's IT Security Team and the services offered <a href="/HHC_2025/about_its.html">About </a>
 <br>
 </p>
 <p>
