@@ -106,13 +106,18 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 </tr>
 <tr>
 <td>Blob Storage Challenge in the Neighborhood</td>
+<td> </td>
 <td><a href="/HHC_2025/act3_snowblindambush_mjd.html">SnowBlind Ambush</a></td>
 </tr>
 <tr>
 <td>Spare Key</td>
+<td> </td>
+<td> </td>  
 </tr>
 <tr>
 <td>The Open Door</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>Owner</td>
