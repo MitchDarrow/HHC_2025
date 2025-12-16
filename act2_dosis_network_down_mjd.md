@@ -5,7 +5,7 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th><a href="/HHC_2025/act3_idorable_bistro_mjd.html">Previous Objective: Act2 IDORable Bistro</a></th>
+  <th><a href="/HHC_2025/act2_idorable_bistro_mjd.html">Previous Objective: Act2 IDORable Bistro</a></th>
   <th><a href="/HHC_2025/index.html">Home Page</a></th>
   <th><a href="/HHC_2025/act2_rogue_gnome_identity_provider_mjd.html">Next Objective: Act2 Rogue Gnome Identity Provider</a></th>
   </tr>
