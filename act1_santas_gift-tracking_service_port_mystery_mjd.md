@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 This objective is a network service discovery and verification task focused on identifying and confirming the operational status of a process. The investigator used the ss (socket statistics) command-line utility, which is part of the iproute2 package, to enumerate active network connections and listening ports on the local system. The specific command ss -tlnp was executed with flags to show TCP connections (-t), listening sockets (-l), numeric addresses without DNS resolution (-n), and associated process information (-p). The output revealed a service actively listening on port 12321, which was identified as the Santa Tracker process. To verify the service was functioning properly, the investigator used curl with the -I flag to send an HTTP HEAD request to the local address at http://0.0.0.0:12321. The service responded successfully with an HTTP 200 OK status code and indicated a Content-Type header of application/json, confirming the service was running and responding to requests.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -57,47 +60,66 @@ This objective is a network service discovery and verification task focused on i
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 The objective is to:
-
+<br>
+</p>
 <ol>
 <li>Identify the port that the santa_tracker process is running on</li>
 </ol>
-
 <ol>
 <li>Connecct to the port and verify the servide is running</li>
 </ol>
-
+<p>
 <img src="/HHC_2025/images/santatracking_instructions.jpg" alt="Objective Instructions">
-
+<br>
+</p>
+<p>
 Use the SS tool to discover the port using the command:
 <br>
 <pre><code class="language-sh">
 ss -tlnp
 </code></pre>
-
+<br>
+</p>
+<p>
 There is a service running on port 12321
-
+<br>
+</p>
+<p>
 Use curl to connect:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/santatracker_connect.jpg" alt="Sample image alt text">
-
+<br>
+</p>
 <pre><code class="language-sh">
 curl -I http://0.0.0.0:12321
+<p>
 </code></pre>
 <br>
 The service responds with a 200 OK and Content-Type of application/json
-
+<br>
+</p>
+<p>
 <strong>Answer: The service is running</strong>
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -116,8 +138,10 @@ The service responds with a 200 OK and Content-Type of application/json
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -136,8 +160,10 @@ The service responds with a 200 OK and Content-Type of application/json
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -152,4 +178,3 @@ The service responds with a 200 OK and Content-Type of application/json
 </tr>
 </tbody>
 </table>
-

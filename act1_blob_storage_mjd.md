@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 The objective of this challenge is to connect using Azure CLI to the "neighborhood" tenant. Investigate and find where a security vulnerability exists. The neighborhood2 storage account was misconfigured to allow public blob access. The security vulnerability was a file named admin_credentials.txt that contained users and unencrypted passwords.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -69,18 +72,28 @@ The objective of this challenge is to connect using Azure CLI to the "neighborho
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 Step 1: Review the storage accounts
-
+<br>
+</p>
 <pre><code class="language-sh">
 az storage account list | less
+<p>
 </code></pre>
+<br>
 <img src="/HHC_2025/images/blobstorage_misconfig.jpg" alt="Misconfigured Storage Account allows Public Access">
-
+<br>
+</p>
+<p>
 The following commands were used to dive deeper:
 <br>
 <pre><code class="language-sh">
@@ -92,15 +105,21 @@ az storage blob download \
   --name admin_passwords.txt \
   --file admin_passwords.txt
 </code></pre>
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/blobstorage_passwords.jpg" alt="Misconfigured Storage Account allows Public Access">
-
+<br>
+</p>
+<p>
 <strong>Answer: allowBlobPublicAccesss: True</strong>
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -115,8 +134,10 @@ az storage blob download \
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -131,8 +152,10 @@ az storage blob download \
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -147,4 +170,3 @@ az storage blob download \
 </tr>
 </tbody>
 </table>
-

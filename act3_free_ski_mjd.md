@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 Reverse engineer an executable to reveal hidden information.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -57,22 +60,32 @@ Reverse engineer an executable to reveal hidden information.
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 Git clone both repositories to my kali machine.
 <br>
 git clone https://github.com/extremecoders-re/pyinstxtractor.git
 <br>
 git clone https://github.com/zrax/pycdc.git
-
+<br>
+</p>
+<p>
 Run PyInstaller Extractor to create the pyc file:
 <br>
 python ./pyinstxtractor.py FreeSki.exe
+<br>
 <img src="/HHC_2025/images/freeskipyextractor.jpg" alt="Results of Pyextractor">
-
+<br>
+</p>
+<p>
 Install cmake:
 <br>
 <pre><code class="language-sh">
@@ -82,17 +95,28 @@ make
 </code></pre>
 <br>
 Copy the extracted folder into the /pycdc folder
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/freeski_pycdcfolder.png" alt="pydcdc folder">
-
+<br>
+</p>
+<p>
 Extract the code: ./pycdas ~/pycdc/FreeSki.exe_extracted/FreeSki.pyc
-
+<br>
+</p>
+<p>
 <a href="/HHC_2025/images/FreeSkiCode.txt">Free Ski Source Code</a>
-
+<br>
+</p>
+<p>
 Flag Decoding Process (in SetFlag function):
+<br>
+</p>
 <ol>
 <li>Product Calculation: Takes the 5 collected treasure values and combines them:</li>
 </ol>
+<p>
 python
 <br>
    product = 0
@@ -100,15 +124,21 @@ python
    for treasure_val in treasure_list:
 <br>
        product = (product << 8) ^ treasure_val
+<br>
+</p>
 <ol>
 <li>Random Seeding: Uses this product as a seed:</li>
 </ol>
+<p>
 python
 <br>
    random.seed(product)
+<br>
+</p>
 <ol>
 <li>XOR Decryption: Each mountain has an encoded_flag (bytes). The flag is decoded by XORing each byte with random values generated from the seeded RNG:</li>
 </ol>
+<p>
 python
 <br>
    for i in range(len(mountain.encoded_flag)):
@@ -116,23 +146,30 @@ python
        r = random.randint(0, 255)
 <br>
        decoded.append(chr(mountain.encoded_flag[i] ^ r))
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/free_ski_flagdecoding.jpg" alt="Flag decoding">
-
+<br>
+</p>
+<p>
 There are <strong>7 mountains</strong> with encoded flags:
+<br>
+</p>
 <ul>
 <li>Mount Snow, Aspen, Whistler, Mount Baker, Mount Norquay, Mount Erciyes, Dragonmount</li>
 </ul>
-
+<p>
 <img src="/HHC_2025/images/free_ski_themountains.jpg" alt="The Mountains">
-
+<br>
+</p>
 <ol>
 <li><strong>Find treasure locations</strong> - They're deterministically generated using <code>random.seed(binascii.crc32(mountain_name))</code> in <code>GetTreasureLocations()</code></li>
 <li><strong>Calculate treasure values</strong> - Each treasure's value is <code>(elevation * mountain_width) + horizontal_offset</code></li>
 <li><strong>Compute the product</strong> - XOR the 5 treasure values together with bit shifts</li>
 <li><strong>Decrypt the flag</strong> - Use that product to seed random and XOR-decode the flag</li>
 </ol>
-
+<p>
 Interesting strings:
 <br>
 "find all the lost bears. don't drill into a rock. Win game."
@@ -140,27 +177,39 @@ Interesting strings:
 Combined with the victory message:
 <br>
 "You win! Drill Baby is reunited with all its bears."
-
+<br>
+</p>
+<p>
 The key insight is that the game's "randomness" is actually deterministic - everything is seeded based on the mountain name, so you can predict exactly where treasures will spawn without playing the game!
-
+<br>
+</p>
+<p>
 The script solvefreeski.py does the following:
+<br>
+</p>
 <ol>
 <li>Recreates the treasure generation algorithm - Uses the same seeding method (CRC32 of mountain name) to deterministically find where all 5 treasures are located on each mountain</li>
 <li>Calculates treasure values - Each treasure's value is (elevation × 1000) + horizontal_offset</li>
 <li>Computes the decryption key - XORs all 5 treasure values together with bit shifts to create a product</li>
 <li>Decodes the flag - Seeds Python's random number generator with that product, then XORs each byte of the encoded flag with the generated random values</li>
 </ol>
-
+<p>
 Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/Free_ski_solution.jpg" alt="Free Ski Solution">
-
+<br>
+</p>
+<p>
 <strong>Answer: frosty_yet_predictably_random</strong>
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -183,8 +232,10 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -207,8 +258,10 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -223,4 +276,3 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
 </tr>
 </tbody>
 </table>
-

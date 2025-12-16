@@ -2,12 +2,18 @@
 layout: default
 title: allwriteups
 ---
+<p>
  <img src="/HHC_2025/images/bdlogo.svg" alt="BerryDunn Logo">
-
+<br>
+</p>
+<p>
  <a href="/HHC_2025/index.html">Back to Home Page</a>
-
+<br>
+</p>
+<p>
 <h1>BerryDunn Holiday Hack Challenge All Solutions</h1>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>

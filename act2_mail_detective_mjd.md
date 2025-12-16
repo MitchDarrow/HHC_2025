@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 This objective investigates suspicious emails using IMAP (Internet Message Access Protocol) commands via curl. The investigator connected to an IMAP server running on localhost port 143 using telnet protocol. Authentication was performed using the credentials "dosismail" with password "holidaymagic". After successful login, the investigator selected the "Spam" mailbox to examine suspicious messages. Multiple search commands were executed to find emails containing HTTP URLs, with the search for "HTTP" (uppercase) returning positive results. The investigator used the IMAP FETCH command to retrieve the full body of message ID 2. Examination of the email body revealed embedded JavaScript code containing a suspicious variable assignment. The JavaScript code contained a URL pointing to "https://frostbin.atnas.mail/api/paste", which appears to be a pastebin-style service potentially used for command and control or data exfiltration. This investigation demonstrates how IMAP protocol commands can be used for email forensics and threat hunting.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -75,49 +78,76 @@ This objective investigates suspicious emails using IMAP (Internet Message Acces
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 This is a helpful resource for reading messages using curl: https://everything.curl.dev/usingcurl/reademail.html
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/maildetective_instructions.jpg" alt="Objective Instructions">
-
+<br>
+</p>
+<p>
 Connect to the server using curl:
-
+<br>
+</p>
 <pre><code class="language-bash">
 telnet://localhost:143
+<p>
 </code></pre>
 <br>
 The following commands were used:
-
+<br>
+</p>
 <pre><code class="language-">
 a001 login dosismail holidaymagic
 a002 select Spam
 a003 search text "http:"
 a004 search text "HTTP"
 a005 fetch 2 body[]
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 This search returns a match.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/maildetective_commands.jpg" alt="IMAP fetch command showing email message body">
-
+<br>
+</p>
+<p>
 Scrolling down the body is:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/maildetective_answer.jpg" alt="Email body content revealing JavaScript variable with URL">
-
+<br>
+</p>
 <pre><code class="language-javascript">
 var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 <strong>Answer: https://frostbin.atnas.mail/api/paste</strong>
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -132,8 +162,10 @@ var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -152,8 +184,10 @@ var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -168,4 +202,3 @@ var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
 </tr>
 </tbody>
 </table>
-

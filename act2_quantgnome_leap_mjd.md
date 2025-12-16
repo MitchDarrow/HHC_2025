@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 Reconnaissance located ssh keys that belonged to another user. These keys were used to move laterally in the system and gain access to another user. This was repeated until admin level access was achieved. The flag was located under the directory where the SSH daemon was running.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -57,64 +60,108 @@ Reconnaissance located ssh keys that belonged to another user. These keys were u
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 RSA keys were found in the Qgnome directory during recon
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/quantgnome_rsakeys.jpg" alt="RSA Keys">
-
+<br>
+</p>
+<p>
 Inspecting the knownhosts file, there is a key referenced at /opt/oqs-key/ssh_host_ecdsa_nistp521_mldsa-87_key. This directory is accessible.
-
+<br>
+</p>
+<p>
 Using this key:
-
+<br>
+</p>
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/ssh_host_ecdsa_nistp521_mldsa-87_key gnome1@localhost
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/quantgnome_gnome1.jpg" alt="SSH as Gnome1">
-
+<br>
+</p>
+<p>
 The Gnome1 user has access to a new key:
-
+<br>
+</p>
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/id_ed25519 gnome2@localhost
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/quantgnome_gnome2.jpg" alt="SSH as Gnome2">
-
+<br>
+</p>
+<p>
 The Gnome2 user has access to a new key:
-
+<br>
+</p>
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/id_mayo2 gnome3@localhost
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/quantgnome_gnome3.jpg" alt="SSH as Gnome3">
-
+<br>
+</p>
+<p>
 The Gnome3 user has access to a new key:
-
+<br>
+</p>
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/id_ecdsa_nistp256_sphincssha2128fsimple gnome4@localhost
+<p>
 </code></pre>
+<br>
 <img src="/HHC_2025/images/quantgnome_gnome4.jpg" alt="SSH as Gnome4">
-
+<br>
+</p>
+<p>
 The Gnome4 user has access to a new key:
-
+<br>
+</p>
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/id_ecdsa_nistp521_mldsa87 admin@localhost
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 The instructions direct towards the directory where the SSH daemon is running (/opt/oqs-ssh), and The flag is in the directory /opt/oqs-ssh/flag
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/quantgnome_flagdir.jpg" alt="Flag Directory">
-
+<br>
+</p>
+<p>
 <strong>Answer: HHC{L3aping_0v3r_Quantum_Crypt0}</strong>
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -129,8 +176,10 @@ The instructions direct towards the directory where the SSH daemon is running (/
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -161,8 +210,10 @@ The instructions direct towards the directory where the SSH daemon is running (/
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -177,4 +228,3 @@ The instructions direct towards the directory where the SSH daemon is running (/
 </tr>
 </tbody>
 </table>
-

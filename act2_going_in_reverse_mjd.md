@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 Clicking on the BASIC program downloads it into the browser window. Reviewing the source code contains an encoded flag (line 30) and that the code applies a bitwise XOR (-bxor) with the number 7. The PowerShell script applies this logic to decode the encoded text.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -51,13 +54,19 @@ Clicking on the BASIC program downloads it into the browser window. Reviewing th
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 The basic program consists of the following code:
-
+<br>
+</p>
 <pre><code class="language-basic">
 10 REM <em><strong> COMMODORE 64 SECURITY SYSTEM </strong></em>
 20 ENC_PASS$ = "D13URKBT"
@@ -70,20 +79,21 @@ The basic program consists of the following code:
 85 FLAG$ = "" : FOR I = 1 TO LEN(ENC_FLAG$) : FLAG$ = FLAG$ + CHR$(ASC(MID$(ENC_FLAG$,I,1)) XOR 7) : NEXT I : PRINT FLAG$
 90 PRINT "ACCESS DENIED"
 100 END
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 The program has the encoded flag and the decoder. This PowerShell script will decode the string. Note that the ‘ denotes a comment in basic.
-
+<br>
+</p>
 <pre><code class="language-powershell">
 # PowerShell script to decode the ENC_FLAG$ string using XOR
 # Encoded string
 $encFlag = "DSA|auhts</em>wkfi=dhjwubtthut+dhhkfis+hnkz"
-
 #"old DSA|qnisf`bX_huXariz"
-
 # Initialize decoded string
 $decoded = ""
-
 # Loop through each character
 for ($i = 0; $i -lt $encFlag.Length; $i++) {
 # Get ASCII code of character
@@ -93,18 +103,22 @@ for ($i = 0; $i -lt $encFlag.Length; $i++) {
 # Append to result
     $decoded += $decodedChar
 }
-
 # Print decoded string
 Write-Output $decoded
  CTF{frost-plan:compressors,coolant,oil}
+<p>
 </code></pre>
-
+<br>
+</p>
+<p>
 <strong>Answer: CTF{frost-plan:compressors,coolant,oil}</strong>
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -119,8 +133,10 @@ Write-Output $decoded
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -147,8 +163,10 @@ Write-Output $decoded
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -163,4 +181,3 @@ Write-Output $decoded
 </tr>
 </tbody>
 </table>
-

