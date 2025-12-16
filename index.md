@@ -121,6 +121,8 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 </tr>
 <tr>
 <td>Owner</td>
+<td> </td> 
+<td> </td>  
 </tr>
 </tbody>
 </table>
