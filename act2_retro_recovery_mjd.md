@@ -151,14 +151,6 @@ merry christmas to all and to all a good night
 <strong>Answer: merry christmas to all and to all a good night</strong>
 <br>
 </p>
-<p>
----
-<br>
-</p>
-<p>
-<strong>Answer: Flag or Answer</strong>
-<br>
-</p>
 </details>
 <p>
 <h2>Tools Reference</h2>
