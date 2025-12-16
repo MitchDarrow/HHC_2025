@@ -2,6 +2,7 @@
 layout: default
 title: index
 ---
+<p>
 <h1>BerryDunn Holiday Hack Challenge Solution Report</h1>
 <br>
 </p>
