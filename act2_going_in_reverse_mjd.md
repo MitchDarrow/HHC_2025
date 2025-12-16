@@ -68,7 +68,7 @@ The basic program consists of the following code:
 <br>
 </p>
 <pre><code class="language-basic">
-10 REM <em><strong> COMMODORE 64 SECURITY SYSTEM </strong></em>
+10 REM COMMODORE 64 SECURITY SYSTEM 
 20 ENC_PASS$ = "D13URKBT"
 30 ENC_FLAG$ = "DSA|auhts<em>wkfi=dhjwubtthut+dhhkfis+hnkz" ' old "DSA|qnisf`bX_huXariz"
 40 INPUT "ENTER PASSWORD: "; PASS$
@@ -79,7 +79,6 @@ The basic program consists of the following code:
 85 FLAG$ = "" : FOR I = 1 TO LEN(ENC_FLAG$) : FLAG$ = FLAG$ + CHR$(ASC(MID$(ENC_FLAG$,I,1)) XOR 7) : NEXT I : PRINT FLAG$
 90 PRINT "ACCESS DENIED"
 100 END
-<br>
 </code></pre>
 <p>
 The program has the encoded flag and the decoder. This PowerShell script will decode the string. Note that the ‘ denotes a comment in basic.
