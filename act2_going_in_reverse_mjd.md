@@ -70,7 +70,7 @@ The basic program consists of the following code:
 <pre><code class="language-basic">
 10 REM COMMODORE 64 SECURITY SYSTEM 
 20 ENC_PASS$ = "D13URKBT"
-30 ENC_FLAG$ = "DSA|auhts<em>wkfi=dhjwubtthut+dhhkfis+hnkz" ' old "DSA|qnisf`bX_huXariz"
+30 ENC_FLAG$ = "DSA|auhtswkfi=dhjwubtthut+dhhkfis+hnkz" ' old "DSA|qnisf`bX_huXariz"
 40 INPUT "ENTER PASSWORD: "; PASS$
 50 IF LEN(PASS$) <> LEN(ENC_PASS$) THEN GOTO 90
 60 FOR I = 1 TO LEN(PASS$)
