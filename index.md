@@ -2,9 +2,6 @@
 layout: default
 title: index
 ---
-<p>
- <img src="/HHC_2025/images/bdlogo.svg" alt="BerryDunn Logo">
-<br>
 <h1>BerryDunn Holiday Hack Challenge Solution Report</h1>
 <br>
 </p>
