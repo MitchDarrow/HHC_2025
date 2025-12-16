@@ -130,20 +130,16 @@ There is a base64 encoded string:
 </p>
 <pre><code class="language-">
 bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=
-<p>
 </code></pre>
 <br>
-</p>
 <p>
 Which decodes to:
 <br>
 </p>
 <pre><code class="language-">
 merry christmas to all and to all a good night
-<p>
 </code></pre>
 <br>
-</p>
 <p>
 <strong>Answer: merry christmas to all and to all a good night</strong>
 <br>
