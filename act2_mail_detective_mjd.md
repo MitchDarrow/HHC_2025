@@ -101,9 +101,8 @@ Connect to the server using curl:
 </p>
 <pre><code class="language-bash">
 telnet://localhost:143
-<p>
 </code></pre>
-<br>
+<p>
 The following commands were used:
 <br>
 </p>
@@ -113,10 +112,7 @@ a002 select Spam
 a003 search text "http:"
 a004 search text "HTTP"
 a005 fetch 2 body[]
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 This search returns a match.
 <br>
@@ -135,10 +131,7 @@ Scrolling down the body is:
 </p>
 <pre><code class="language-javascript">
 var pastebinUrl = "https://frostbin.atnas.mail/api/paste";
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 <strong>Answer: https://frostbin.atnas.mail/api/paste</strong>
 <br>

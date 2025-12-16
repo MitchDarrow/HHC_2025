@@ -79,10 +79,7 @@ The basic program consists of the following code:
 85 FLAG$ = "" : FOR I = 1 TO LEN(ENC_FLAG$) : FLAG$ = FLAG$ + CHR$(ASC(MID$(ENC_FLAG$,I,1)) XOR 7) : NEXT I : PRINT FLAG$
 90 PRINT "ACCESS DENIED"
 100 END
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 The program has the encoded flag and the decoder. This PowerShell script will decode the string. Note that the ‘ denotes a comment in basic.
 <br>
@@ -106,10 +103,7 @@ for ($i = 0; $i -lt $encFlag.Length; $i++) {
 # Print decoded string
 Write-Output $decoded
  CTF{frost-plan:compressors,coolant,oil}
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 <strong>Answer: CTF{frost-plan:compressors,coolant,oil}</strong>
 <br>

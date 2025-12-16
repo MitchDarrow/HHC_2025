@@ -32,10 +32,7 @@ nav: |
 <h2>Solution Overview</h2>
 <br>
 </p>
-<p>
 This objective identifies a path hijacking privilege escalation attack against a Linux system where the user "chiuser" had limited sudo privileges. Initial reconnaissance revealed a bash script called <code>system_status</code> that executed the <code>ps</code> command to display process information. Investigation of the user's sudo privileges using <code>sudo -l</code> revealed critical security misconfigurations in the sudoers file. The secure_path configuration included the user's home directory bin folder (<code>/home/chiuser/bin</code>) in the PATH, and crucially, the PATH environment variable was preserved when executing commands with sudo. This configuration created a path hijacking vulnerability where a malicious binary could be placed in <code>~/bin</code> to intercept legitimate command calls. The attacker created a fake <code>ps</code> binary in the <code>~/bin</code> directory containing a simple bash script that spawned an interactive shell. When the <code>system_status</code> script was executed with sudo privileges, it called the <code>ps</code> command without using an absolute path, causing the system to execute the malicious version from <code>~/bin</code> first. Because the script ran with root privileges, the spawned bash shell inherited those elevated permissions, granting the attacker full root access to the system.
-<br>
-</p>
 <table>
 <thead>
 <tr>
@@ -95,10 +92,7 @@ Access the terminal provided:
 <img src="/HHC_2025/images/neighborhoodwatchbypass_instructions.jpg" alt="Terminal access showing initial shell prompt">
 <br>
 </p>
-<p>
 During reconnaissance, the bash script <code>system_status</code> is discovered. The script is running a <code>ps</code> command.
-<br>
-</p>
 <p>
 <img src="/HHC_2025/images/neighborhoodwatchbypass_script.jpg" alt="System status script showing ps command execution">
 <br>
@@ -109,10 +103,7 @@ Let's see what chiuser can do:
 </p>
 <pre><code class="language-bash">
 sudo -l
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 This is useful:
 <br>
@@ -125,18 +116,12 @@ Matching Defaults entries for chiuser on 633a785ffc6c:
     secure_path=/home/chiuser/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin,
     env_keep+="API_ENDPOINT API_PORT RESOURCE_ID HHCUSERNAME",
     env_keep+=PATH
-<p>
 </code></pre>
-<br>
-</p>
 <ul>
 <li>The <code>~/bin</code> directory is <strong>included</strong> in the secure path</li>
 <li>The PATH is <strong>preserved</strong> when using sudo</li>
 </ul>
-<p>
 This means if you create a <strong>fake version of a command</strong> (like <code>ps</code>, <code>head</code>, <code>grep</code>, etc.) in <code>~/bin</code>, and <code>system_status.sh</code> calls that command <strong>without an absolute path</strong>, it might run <strong>the malicious version</strong> instead - <strong>as root</strong>.
-<br>
-</p>
 <p>
 Executing the Path Hijacking Attack
 <br>
@@ -148,26 +133,14 @@ Create a malicious script:
 <pre><code class="language-bash">
 echo -e '#!/bin/bash\n/bin/bash' > ~/bin/ps
 chmod +x ~/bin/ps
-<p>
 </code></pre>
-<br>
-</p>
-<p>
 The path hijack attack works and the malicious version of the <code>ps</code> command runs, creating a new shell with root privileges.
-<br>
-</p>
 <p>
 <img src="/HHC_2025/images/neighborhoodwatchbypass_answer.jpg" alt="Successful privilege escalation showing root shell access">
 <br>
 </p>
-<p>
 Successfully obtained a new shell with root privileges and can run the <code>runtoanswer</code> link, which runs the restore_fire_alarm.
-<br>
-</p>
-<p>
 <strong>Answer:Successfully obtained a new shell with root privileges and can run the <code>runtoanswer</code> link.</strong>
-<br>
-</p>
 </details>
 <p>
 <h2>Tools Reference</h2>

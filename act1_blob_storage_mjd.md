@@ -87,15 +87,15 @@ Step 1: Review the storage accounts
 </p>
 <pre><code class="language-sh">
 az storage account list | less
-<p>
 </code></pre>
-<br>
+<p>
 <img src="/HHC_2025/images/blobstorage_misconfig.jpg" alt="Misconfigured Storage Account allows Public Access">
 <br>
 </p>
 <p>
 The following commands were used to dive deeper:
 <br>
+</p>
 <pre><code class="language-sh">
 az storage container list --account-name neighborhood2 --output table
 az storage blob list --container-name public --account-name neighborhood2
@@ -105,8 +105,6 @@ az storage blob download \
   --name admin_passwords.txt \
   --file admin_passwords.txt
 </code></pre>
-<br>
-</p>
 <p>
 <img src="/HHC_2025/images/blobstorage_passwords.jpg" alt="Misconfigured Storage Account allows Public Access">
 <br>

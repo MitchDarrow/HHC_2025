@@ -95,10 +95,7 @@ ws = websocket.WebSocketApp(url,
                             on_error=on_error,
                             on_close=on_close)
 ws.run_forever()
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 The data file collected: <a href="/HHC_2025/HHC_2025_Template/resources/OntheWire_1wire_data.csv
 <br>
@@ -249,8 +246,8 @@ The following decoder was written in Powershell: <a href="/HHC_2025/HHC_2025_Tem
 <p>
 Running the decoder:
 <br>
-<pre><code class="language-powershell">
 </p>
+<pre><code class="language-powershell">
 Found 14019 WebSocket messages
 Extracted 14016 signal frames
 Clock frames: 7110, Data frames: 3234
@@ -259,10 +256,7 @@ Assembled 100 bytes
 Raw bytes (hex): 1b 06 18 0d 43 18 07 07 59 0d 06 1a 1b 1a 09 1d 43 0d 01 06 59 20 51 3a 49 01 0c 1a 43 1d 08 17 18 49 16 0a 00 0d 1e 49 17 11 0c 43 21 26 31 59 02 06 00 53 43 1b 08 0d 18 07 19 18 47 43 0d 01 06 59 1d 06 14 19 06 0b 08 17 0c 1b 06 59 1a 06 17 1a 0c 0b 49 02 1d 0d 11 1c 1a 10 59 00 10 59 59 1b 4a 2a
 === DECRYPTED DATA ===
 read and decrypt the I2C bus data using the XOR key: bananza. the temperature sensor address is 0x3C
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 <strong>read and decrypt the I2C bus data using the XOR key: bananza. the temperature sensor address is 0x3C</strong>
 <br>
@@ -291,10 +285,7 @@ These are the unigue markers:
 === UNIQUE MARKERS ===
 SCL markers: bus-idle, clock-low, address-sample, address-hold, ack-sample, ack-hold, data-sample, data-hold, stop-setup, gap-start
 SDA markers: bus-idle, start, address-bit, ack-bit, ack-release, data-bit, stop, gap-start
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 The following decoder was written in Powershell: <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt"">I2C Decoder</a>
 <br>

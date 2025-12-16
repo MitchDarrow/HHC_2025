@@ -75,9 +75,8 @@ Not shown: 999 closed ports
 PORT     STATE SERVICE
 8080/tcp open  http-proxy
 Nmap done: 1 IP address (1 host up) scanned in 0.20 seconds
-<p>
 </code></pre>
-<br>
+<p>
 Answer: Port 8080
 <br>
 </p>
@@ -93,10 +92,7 @@ Not shown: 65534 closed ports
 PORT      STATE SERVICE
 24601/tcp open  unknown
 Nmap done: 1 IP address (1 host up) scanned in 2.10 seconds
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 Answer: Port 24601
 <br>
@@ -141,9 +137,8 @@ Nmap done: 9 IP addresses (9 hosts up) scanned in 0.44 seconds
 <ol>
 <li>What is the service running on 127.0.12.25 TCP port 8080?  nmap -p 8080 127.0.12.25</li>
 </ol>
-<p>
 </code></pre>
-<br>
+<p>
 elf@bd65e17d2fa9:~$ nmap -sV -p 8080 127.0.12.25
 <br>
 Starting Nmap 7.80 ( https://nmap.org ) at 2025-12-11 21:39 UTC
@@ -164,15 +159,14 @@ Service detection performed. Please report any incorrect results at https://nmap
 <br>
 Nmap done: 1 IP address (1 host up) scanned in 6.82 seconds
 <br>
-<pre><code class="language-">
 </p>
+<pre><code class="language-">
 Answer: http
 <ol>
 <li>Use ncat to connect to TCP port 24601 on 127.0.12.25 and view the banner:  ncat 127.0.12.25 24601</li>
 </ol>
-<p>
 </code></pre>
-<br>
+<p>
 elf@bd65e17d2fa9:~$ ncat 127.0.12.25 24601
 <br>
 Welcome to the WarDriver 9000!

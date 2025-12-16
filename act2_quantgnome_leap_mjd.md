@@ -87,10 +87,7 @@ Using this key:
 </p>
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/ssh_host_ecdsa_nistp521_mldsa-87_key gnome1@localhost
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 <img src="/HHC_2025/images/quantgnome_gnome1.jpg" alt="SSH as Gnome1">
 <br>
@@ -101,10 +98,7 @@ The Gnome1 user has access to a new key:
 </p>
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/id_ed25519 gnome2@localhost
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 <img src="/HHC_2025/images/quantgnome_gnome2.jpg" alt="SSH as Gnome2">
 <br>
@@ -115,10 +109,7 @@ The Gnome2 user has access to a new key:
 </p>
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/id_mayo2 gnome3@localhost
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 <img src="/HHC_2025/images/quantgnome_gnome3.jpg" alt="SSH as Gnome3">
 <br>
@@ -129,9 +120,8 @@ The Gnome3 user has access to a new key:
 </p>
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/id_ecdsa_nistp256_sphincssha2128fsimple gnome4@localhost
-<p>
 </code></pre>
-<br>
+<p>
 <img src="/HHC_2025/images/quantgnome_gnome4.jpg" alt="SSH as Gnome4">
 <br>
 </p>
@@ -141,10 +131,7 @@ The Gnome4 user has access to a new key:
 </p>
 <pre><code class="language-sh">
 ssh -p 2222 -i /opt/oqs-key/id_ecdsa_nistp521_mldsa87 admin@localhost
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 The instructions direct towards the directory where the SSH daemon is running (/opt/oqs-ssh), and The flag is in the directory /opt/oqs-ssh/flag
 <br>

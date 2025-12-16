@@ -67,10 +67,7 @@ Step by step solution complete with any code used
 </p>
 <pre><code class="language-sh">
 bash script code block
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 Ordered list:
 <br>

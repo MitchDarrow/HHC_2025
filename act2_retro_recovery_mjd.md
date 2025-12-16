@@ -32,10 +32,7 @@ nav: |
 <h2>Solution Overview</h2>
 <br>
 </p>
-<p>
 This objective is a digital forensics investigation involving a floppy disk image file that required data recovery. The investigator used the Linux <code>losetup</code> command to mount the floppy disk image as a loop device, treating the image file as a physical block device. TestDisk was then executed against the loop device <code>/dev/loop0</code> to search for deleted files. After selecting the appropriate disk and partition type settings, the "undelete" function was used to browse recoverable files. Among the deleted files, a BASIC source code file named <code>all_i-want_for_christmas.bas</code> was identified as interesting. Upon opening the recovered BASIC file in a text editor (mousepad), the investigator discovered an embedded base64-encoded string within the source code. The base64 string <code>bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=</code> was decoded to reveal the hidden message: "merry christmas to all and to all a good night". This investigation demonstrates common digital forensics techniques including disk imaging, file carving, and data decoding.
-<br>
-</p>
 <table>
 <thead>
 <tr>
@@ -79,10 +76,7 @@ This objective is a digital forensics investigation involving a floppy disk imag
 <a href="/HHC_2025/resources/retrorecovery_floppy.img">Floppy Disk Image File</a>
 <br>
 </p>
-<p>
 <code>losetup</code> is a Linux command used to set up and manage loop devices, which let you treat a regular file as if it were a block device (like a disk).
-<br>
-</p>
 <p>
 Setup the disk image as a block device using the command:
 <br>
@@ -90,10 +84,7 @@ Setup the disk image as a block device using the command:
 <pre><code class="language-bash">
 sudo losetup -fP floppy.img
 sudo testdisk /dev/loop0
-<p>
 </code></pre>
-<br>
-</p>
 <ol>
 <li>Select the disk0 as the media and click proceed</li>
 </ol>
@@ -107,18 +98,12 @@ sudo testdisk /dev/loop0
 <img src="/HHC_2025/images/retrorecovery_explorefiles.jpg" alt="TestDisk interface showing file listing on floppy disk image">
 <br>
 </p>
-<p>
 There is an interesting file: <code>all_i-want_for_christmas.bas</code>
-<br>
-</p>
 <p>
 Highlight the file and select "C" to copy the selected file.
 <br>
 </p>
-<p>
 Successfully recovered the deleted file <code>all_i-want_for_christmas.bas</code> to the current directory.
-<br>
-</p>
 <p>
 Open in mousepad and explore:
 <br>
@@ -133,20 +118,14 @@ There is a base64 encoded string:
 </p>
 <pre><code class="language-">
 bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 Which decodes to:
 <br>
 </p>
 <pre><code class="language-">
 merry christmas to all and to all a good night
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 <strong>Answer: merry christmas to all and to all a good night</strong>
 <br>

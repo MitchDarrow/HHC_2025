@@ -222,10 +222,7 @@ Following the hint about client side controls, the source code now available is 
       , {user: _} = _l()
       , T = "3loaihgxP0VwCTKmkHHFLe6FZ4m2";
     typeof window < "u" && (window.EXPECTED_ADMIN_UID = T),
-<p>
 </code></pre>
-<br>
-</p>
 <p>
 Using the console in Edge's developer tools, admin access is achieved by setting T to 3loaihgxP0VwCTKmkHHFLe6FZ4m2
 <br>

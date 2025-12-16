@@ -86,11 +86,10 @@ The objective is to:
 <p>
 Use the SS tool to discover the port using the command:
 <br>
+</p>
 <pre><code class="language-sh">
 ss -tlnp
 </code></pre>
-<br>
-</p>
 <p>
 There is a service running on port 12321
 <br>
@@ -105,9 +104,8 @@ Use curl to connect:
 </p>
 <pre><code class="language-sh">
 curl -I http://0.0.0.0:12321
-<p>
 </code></pre>
-<br>
+<p>
 The service responds with a 200 OK and Content-Type of application/json
 <br>
 </p>

@@ -88,12 +88,13 @@ python ./pyinstxtractor.py FreeSki.exe
 <p>
 Install cmake:
 <br>
+</p>
 <pre><code class="language-sh">
 sudo apt install cmake
 cmake .
 make
 </code></pre>
-<br>
+<p>
 Copy the extracted folder into the /pycdc folder
 <br>
 </p>
