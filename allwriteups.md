@@ -1,13 +1,11 @@
 ﻿---
 layout: default
 title: allwriteups
+nav:
+ <a href="/HHC_2025/index.html">Back to Home Page</a>
 ---
 <p>
  <img src="/HHC_2025/images/bdlogo.svg" alt="BerryDunn Logo">
-<br>
-</p>
-<p>
- <a href="/HHC_2025/index.html">Back to Home Page</a>
 <br>
 </p>
 <p>
