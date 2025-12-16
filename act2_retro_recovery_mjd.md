@@ -90,7 +90,10 @@ Setup the disk image as a block device using the command:
 <pre><code class="language-bash">
 sudo losetup -fP floppy.img
 sudo testdisk /dev/loop0
+<p>
 </code></pre>
+<br>
+</p>
 <ol>
 <li>Select the disk0 as the media and click proceed</li>
 </ol>
@@ -130,18 +133,30 @@ There is a base64 encoded string:
 </p>
 <pre><code class="language-">
 bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=
+<p>
 </code></pre>
 <br>
+</p>
 <p>
 Which decodes to:
 <br>
 </p>
 <pre><code class="language-">
 merry christmas to all and to all a good night
+<p>
 </code></pre>
 <br>
+</p>
 <p>
 <strong>Answer: merry christmas to all and to all a good night</strong>
+<br>
+</p>
+<p>
+---
+<br>
+</p>
+<p>
+<strong>Answer: Flag or Answer</strong>
 <br>
 </p>
 </details>
