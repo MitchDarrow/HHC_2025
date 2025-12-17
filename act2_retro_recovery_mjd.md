@@ -68,10 +68,8 @@ This objective is a digital forensics investigation involving a floppy disk imag
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 <a href="/HHC_2025/resources/retrorecovery_floppy.img">Floppy Disk Image File</a>
 <br>
