@@ -46,7 +46,7 @@ Conduct reconnaisance of an Azure tenant looking for secrets.
 </tr>
 </thead>
 <tbody>
-  <tr><td>Discovering SAS key in Azure Storage</td>Reconnaissance<td>T1526</td><td>Cloud Service Discovery</td><td></td></tr>
+  <tr><td>Discovering SAS key in Azure Storage</td><td>Reconnaissance</td><td>T1526</td><td>Cloud Service Discovery</td></tr>
 </tbody>
 </table>
 <p>
