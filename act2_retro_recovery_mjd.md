@@ -87,11 +87,9 @@ sudo testdisk /dev/loop0
 </code></pre>
 <ol>
 <li>Select the disk0 as the media and click proceed</li>
-</ol>
-<ol>
+
 <li>Accept the default "none" as the partition type</li>
-</ol>
-<ol>
+
 <li>Select "undelete" as the action</li>
 </ol>
 <p>
