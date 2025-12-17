@@ -115,7 +115,6 @@ Flag Decoding Process (in SetFlag function):
 </p>
 <ol>
 <li>Product Calculation: Takes the 5 collected treasure values and combines them:</li>
-</ol>
 <p>
 python
 <br>
@@ -126,18 +125,14 @@ python
        product = (product << 8) ^ treasure_val
 <br>
 </p>
-<ol>
 <li>Random Seeding: Uses this product as a seed:</li>
-</ol>
 <p>
 python
 <br>
    random.seed(product)
 <br>
 </p>
-<ol>
 <li>XOR Decryption: Each mountain has an encoded_flag (bytes). The flag is decoded by XORing each byte with random values generated from the seeded RNG:</li>
-</ol>
 <p>
 python
 <br>
