@@ -133,6 +133,7 @@ python
 <br>
 </p>
 <li>XOR Decryption: Each mountain has an encoded_flag (bytes). The flag is decoded by XORing each byte with random values generated from the seeded RNG:</li>
+</ol>
 <p>
 python
 <br>
@@ -189,7 +190,7 @@ The script solvefreeski.py does the following:
 <li>Decodes the flag - Seeds Python's random number generator with that product, then XORs each byte of the encoded flag with the generated random values</li>
 </ol>
 <p>
-Script: <a href="/HHC_2025/act3_solvefreeski.py">Solve Free Ski</a>
+Script: <a href="/HHC_2025/act3_solvefreeski.py.txt">Solve Free Ski</a>
 <br>
 </p>
 <p>
