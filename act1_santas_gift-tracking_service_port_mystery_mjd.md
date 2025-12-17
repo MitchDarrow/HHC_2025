@@ -65,10 +65,8 @@ This objective is a network service discovery and verification task focused on i
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 The objective is to:
 <br>
