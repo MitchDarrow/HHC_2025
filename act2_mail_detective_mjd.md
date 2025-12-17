@@ -83,10 +83,8 @@ This objective investigates suspicious emails using IMAP (Internet Message Acces
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 This is a helpful resource for reading messages using curl: https://everything.curl.dev/usingcurl/reademail.html
 <br>
