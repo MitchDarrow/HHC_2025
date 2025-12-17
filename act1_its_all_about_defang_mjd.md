@@ -61,10 +61,8 @@ Defanging is a cybersecurity practice of deliberately modifying malicious indica
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 Using the Extract IOCs tab:
 <br>
