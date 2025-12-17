@@ -93,16 +93,10 @@ To support the attack, the attacker generates a fraudulent RSA key pair and publ
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-URL:
+URL: http://paulweb.neighborhood/
 <br>
-</p>
-<p>
-http://paulweb.neighborhood/
-<br>
-</p>
 <p>
 Useful resources for understading how JSON Web Tokens work:
 <br>
