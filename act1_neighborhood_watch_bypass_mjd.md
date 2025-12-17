@@ -138,6 +138,7 @@ The path hijack attack works and the malicious version of the <code>ps</code> co
 <br>
 </p>
 Successfully obtained a new shell with root privileges and can run the <code>runtoanswer</code> link, which runs the restore_fire_alarm.
+<br>
 <strong>Answer:Successfully obtained a new shell with root privileges and can run the <code>runtoanswer</code> link.</strong>
 </details>
 <p>
