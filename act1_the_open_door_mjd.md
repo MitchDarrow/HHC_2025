@@ -33,7 +33,7 @@ nav: |
 <br>
 </p>
 <p>
-High level executive summary of how the objective was solved. Details belong in the detail section.
+Conducted reconnaisance of an Azure tenant. Discovered a Network Sec=urity Group (NSG) misconfiguration allowing Remote Desktop Protocol (RDP) from the public internet. 
 <br>
 </p>
 <table>
