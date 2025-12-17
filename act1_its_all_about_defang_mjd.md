@@ -70,19 +70,19 @@ Using the Extract IOCs tab:
 <br>
 </p>
 <p>
-Set the domain regex to: \b(?:[a-zA-Z0-9-]+\.)<em>icicleinnovations\.([a-zA-Z]{2,})\b
+Set the domain regex to: \b(?:[a-zA-Z0-9-]+\.)*icicleinnovations\.([a-zA-Z]{2,})\b
 <br>
 </p>
 <p>
-Set the IP Address Regex to: (?<=\b(?:mail|core)?\.?icicleinnovations\.mail\s</em>\()\d{1,3}(?:\.\d{1,3}){3}(?=\))
+Set the IP Address Regex to: (?<=\b(?:mail|core)?\.?icicleinnovations\.mail\s*\()\d{1,3}(?:\.\d{1,3}){3}(?=\))
 <br>
 </p>
 <p>
-Set the URL regex to: https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+(:[0-9]+)?(/[^\s]<em>\.exe)\b
+Set the URL regex to: https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+(:[0-9]+)?(/[^\s]\.exe)\b
 <br>
 </p>
 <p>
-Set the Email address regex to: \b[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+\.)</em>icicleinnovations\.[a-zA-Z]{2,}\b
+Set the Email address regex to: \b[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+\.)icicleinnovations\.[a-zA-Z]{2,}\b
 <br>
 </p>
 <p>
