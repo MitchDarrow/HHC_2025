@@ -17,14 +17,14 @@ nav: |
 <table>
 <thead>
 <tr>
-<th>Objective: Objective name</th>
-<th>Difficulty Level: #</th>
+<th>Objective: The Open Door</th>
+<th>Difficulty Level: 1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Official Description</td>
-<td>Location:</td>
+<td>Help Goose Lucas in the hotel parking lot find the dangerously misconfigured Network Security Group rule that's allowing unrestricted internet access to sensitive ports like RDP or SSH.</td>
+<td>Location: Grand Hotel Parking Lot</td>
 </tr>
 </tbody>
 </table>
