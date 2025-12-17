@@ -89,10 +89,10 @@ The objective is to conduct a penetration test of a Neighborhood College Registr
 <br>
 </p>
 <details>
-<p>
+
 <summary>Click to expand</summary>
 <br>
-</p>
+
 <p>
 The initial step was to identify the bot responsible for the additional scope violations
 <br>
