@@ -165,21 +165,50 @@ Welcome to the WarDriver 9000!
 <strong>Answer: Welcome to the WarDriver 9000!</strong>
 
 </details>
-
-## Tools Reference
-
-| Tools Used           | Tool Version |
-| :-----------------------: | :--------------------------------: |
-| nmap | 7.80 |
-| ncat | 7.80 |
-
-## Hints Reference
-| Provided By         | Hint |
-| :-----------------------: | :--------------------------------: |
-| Santa | This terminal has built-in hints! |
-| Eric | Speaking of tools, let me introduce you to one of the most essential weapons in any pentester's arsenal: Nmap. It's like having X-ray vision for networks, and I've set up a perfect environment for you to learn the fundamentals. Help me find and connect to the wardriving rig's service on my motorcycle!
-
-## Acknowledgements
-| Provided By         | Notes |
-| :-----------------------: | :--------------------------------: |
-| none | none |
+<p>
+<h2>Tools Reference</h2>
+<br>
+</p>
+<table>
+<thead>
+<tr>
+<th>Tools Used</th>
+<th>Tool Version</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>ncat</td><td>7.8</td></tr>
+<tr><td>nmap</td><td>7.8</td></tr>
+</tbody>
+</table>
+<p>
+<h2>Hints Reference</h2>
+<br>
+</p>
+<table>
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Hint</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Santa</td><td>This terminal has built-in hints!</td></tr>
+<tr><td>Eric</td><td>Speaking of tools, let me introduce you to one of the most essential weapons in any pentester's arsenal: Nmap. It's like having X-ray vision for networks, and I've set up a perfect environment for you to learn the fundamentals. Help me find and connect to the wardriving rig's service on my motorcycle!</td></tr>  
+</tbody>
+</table>
+<p>
+<h2>Acknowledgements</h2>
+<br>
+</p>
+<table>
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>none</td><td>none</td></tr>
+</tbody>
+</table>
