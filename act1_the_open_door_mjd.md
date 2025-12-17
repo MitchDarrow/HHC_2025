@@ -105,6 +105,10 @@ Unordered list:
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Azure CLI</td>
+<td>N/A</td>
+</tr>
 </tbody>
 </table>
 <p>
@@ -119,6 +123,10 @@ Unordered list:
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Santa</td>
+<td>This terminal has built-in hints!</td>
+</tr>
 </tbody>
 </table>
 <p>
@@ -133,5 +141,9 @@ Unordered list:
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>none</td>
+<td>none</td>
+</tr>
 </tbody>
 </table>
