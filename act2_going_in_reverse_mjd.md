@@ -59,10 +59,8 @@ Clicking on the BASIC program downloads it into the browser window. Reviewing th
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 The basic program consists of the following code:
 <br>
