@@ -89,10 +89,8 @@ Structure Query Language (SQL) injection was used to identify the database type,
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 Starting with the login page, tested several injections attempting to identify the backend database. This nosql injection {“$ne”: null} creates an error:
 <br>
