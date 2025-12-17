@@ -80,10 +80,8 @@ This objective identifies a path hijacking privilege escalation attack against a
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 Access the terminal provided:
 <br>
