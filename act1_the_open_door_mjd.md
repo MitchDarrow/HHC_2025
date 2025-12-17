@@ -46,6 +46,7 @@ High level executive summary of how the objective was solved. Details belong in 
 </tr>
 </thead>
 <tbody>
+  <tr><td>Discovering that RDP is exposed to the internet</td><td>Reconnaisance</td><td>T1590.003</td><td>Gather Victim Network Information: Internet Exposed Services</td></tr>
 </tbody>
 </table>
 <p>
