@@ -106,11 +106,7 @@ The data contains the following markers:
 </p>
 <ul>
 <li>"reset" at t=1 (reset pulse">1-wire data</a></li>
-</ul>
-<ul>
 <li>"presence" at t=551 (presence pulse response)</li>
-</ul>
-<ul>
 <li>"idle" at t=0 (bus idle high)</li>
 </ul>
 <p>
@@ -123,8 +119,6 @@ In 1-Wire, data is encoded using pulse width modulation:
 </p>
 <ul>
 <li>Write/Read 0: Long low pulse (~60µs)</li>
-</ul>
-<ul>
 <li>Write/Read 1: Short low pulse (~6µs)</li>
 </ul>
 <p>
@@ -177,29 +171,13 @@ Decoded bits (grouped by byte, LSB first):
 </p>
 <ol>
 <li>01100011 → 0x63 → 'c'</li>
-</ol>
-<ol>
 <li>01101000 → 0x68 → 'h'</li>
-</ol>
-<ol>
 <li>01110010 → 0x72 → 'r'</li>
-</ol>
-<ol>
 <li>01101001 → 0x69 → 'i</li>
-</ol>
-<ol>
 <li>01110011 → 0x73 → 's'</li>
-</ol>
-<ol>
 <li>01110100 → 0x74 → 't'</li>
-</ol>
-<ol>
 <li>01101101 → 0x6D → 'm'</li>
-</ol>
-<ol>
 <li>01100001 → 0x61 → 'a'</li>
-</ol>
-<ol>
 <li>01110011 → 0x73 → 's'</li>
 </ol>
 <p>
@@ -228,11 +206,7 @@ SPI has the following characteristics:
 </p>
 <ul>
 <li>Multiple wires: sck (clock), mosi (data), sometimes miso</li>
-</ul>
-<ul>
 <li>Clock-driven: You sample the data line when the clock transitions</li>
-</ul>
-<ul>
 <li>Data is valid on clock edges (rising or falling)</li>
 </ul>
 <p>
@@ -310,8 +284,6 @@ Use markers instead of raw edge detection
 </p>
 <ul>
 <li>SDA frames are annotated with markers like start, stop, address-bit, data-bit, ack-bit.</li>
-</ul>
-<ul>
 <li>These markers tell us exactly what each bit represents, so we don’t need to reconstruct timing from SCL edges.</li>
 </ul>
 <p>
@@ -320,14 +292,8 @@ Group transactions
 </p>
 <ul>
 <li>A start marker begins a new transaction.</li>
-</ul>
-<ul>
 <li>A stop marker ends the transaction.</li>
-</ul>
-<ul>
 <li>Between start/stop, collect only address-bit and data-bit values.</li>
-</ul>
-<ul>
 <li>Ignore ack-bit and ack-release markers (ACKs are not part of data).</li>
 </ul>
 <p>
@@ -336,14 +302,8 @@ Decode transaction contents
 </p>
 <ul>
 <li>First 8 bits → device address (7 bits) + R/W bit.</li>
-</ul>
-<ul>
 <li>Address = upper 7 bits.</li>
-</ul>
-<ul>
 <li>R/W = lowest bit (0 = write, 1 = read).</li>
-</ul>
-<ul>
 <li>Remaining bits grouped into 8 bit chunks → data bytes (MSB first).</li>
 </ul>
 <p>
@@ -359,11 +319,7 @@ Iteration analysis
 </p>
 <ul>
 <li>Counts how many transactions involve the target address (default 0x3C).</li>
-</ul>
-<ul>
 <li>Uses the start timestamps to calculate intervals between successive transactions.</li>
-</ul>
-<ul>
 <li>Confirms whether the device is broadcasting on a ~2000 ms loop.</li>
 </ul>
 <p>
@@ -372,11 +328,7 @@ Separate READ vs WRITE
 </p>
 <ul>
 <li>Filters decoded transactions by R/W bit.</li>
-</ul>
-<ul>
 <li>Aggregates all READ data and all WRITE data separately.</li>
-</ul>
-<ul>
 <li>Prints totals, raw hex, and XOR decrypted values using the provided key.</li>
 </ul>
 <p>
