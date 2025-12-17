@@ -63,7 +63,6 @@ This objective is designed to test knowledge of networking communications. This 
 <br>
 <ol>
 <li>Build an IPv4 DNS Request:</li>
-</ol>
 <p>
 Port: 53
 <br>
@@ -76,9 +75,7 @@ Domain: visual-networking.holidayhackchallenge.com
 Request Type: A
 <br>
 </p>
-<ol>
 <li>Build a 3-Way Handshake:</li>
-</ol>
 <p>
 Client sends a packet with the TCP SYN flag set to the server.
 <br>
@@ -91,9 +88,7 @@ The Server response with a packet with the TCP ACK and SYN flags set to the clie
 The client responds with a packed with the TCP ACK flag to the server, completing the handshake.
 <br>
 </p>
-<ol>
 <li>Build an HTTP GET request:</li>
-</ol>
 <p>
 HTTP verb: GET
 <br>
@@ -110,9 +105,7 @@ Host: visual-networking.holidayhackchallenge.com
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0
 <br>
 </p>
-<ol>
 <li>Build a TLS Handshake:</li>
-</ol>
 <p>
 Client Hello >>
 <br>
@@ -137,9 +130,7 @@ Client Key Exchange >>
 << Fnished
 <br>
 </p>
-<ol>
 <li>Build an HTTPS GET request:</li>
-</ol>
 <p>
 HTTP verb: GET
 <br>
