@@ -59,10 +59,8 @@ The objective is to correctly configure firewall rules to best security practice
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 Rule: Internet to DMZ: Allow only HTTP and HTTPS traffic
 <br>
