@@ -320,14 +320,8 @@ Trial and error reveals the codes:
 </p>
 <ul>
 <li>0x201 = UP</li>
-</ul>
-<ul>
 <li>0x202 = DOWN</li>
-</ul>
-<ul>
 <li>0x204 = RIGHT</li>
-</ul>
-<ul>
 <li>0x203 = LEFT</li>
 </ul>
 <p>
