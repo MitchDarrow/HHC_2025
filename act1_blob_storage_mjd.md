@@ -77,10 +77,8 @@ The objective of this challenge is to connect using Azure CLI to the "neighborho
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 Step 1: Review the storage accounts
 <br>
