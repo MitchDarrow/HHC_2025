@@ -161,3 +161,25 @@ elf@bd65e17d2fa9:~$ ncat 127.0.12.25 24601
 Welcome to the WarDriver 9000!
 <br>
 </code></pre>
+
+**Answer: Welcome to the WarDriver 9000!**
+
+</details>
+
+## Tools Reference
+
+| Tools Used           | Tool Version |
+| :-----------------------: | :--------------------------------: |
+| nmap | 7.80 |
+| ncat | 7.80 |
+
+## Hints Reference
+| Provided By         | Hint |
+| :-----------------------: | :--------------------------------: |
+| Santa | This terminal has built-in hints! |
+| Eric | Speaking of tools, let me introduce you to one of the most essential weapons in any pentester's arsenal: Nmap. It's like having X-ray vision for networks, and I've set up a perfect environment for you to learn the fundamentals. Help me find and connect to the wardriving rig's service on my motorcycle!
+
+## Acknowledgements
+| Provided By         | Notes |
+| :-----------------------: | :--------------------------------: |
+| none | none |
