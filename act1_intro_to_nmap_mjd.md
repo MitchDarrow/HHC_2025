@@ -59,9 +59,9 @@ This objective is designed to test fundamental knowledge of the Nmap tool. Nmap 
 <br>
 </p>
 <details>
-<p>
+
 <summary>Click to expand</summary>
-<br>
+
 </p>
 <ol>
 <li>Run the following command to do a default scan of the top 1000 ports: nmap 127.0.12.25</li>
