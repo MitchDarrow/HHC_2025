@@ -77,10 +77,9 @@ Starting with only public access to the web application, reconnaisance was condu
 <br>
 </p>
 <details>
-<p>
+
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 Using Edge's developer tools, the application code is reviewed. An interesting comment is found on the page:
 <br>
