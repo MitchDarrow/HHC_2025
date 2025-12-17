@@ -113,11 +113,7 @@ Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑
 </p>
 <ul>
 <li>Door Labels clockwise from NE corner: 1 B, 2 Up, 3 A, 4 B, 5 Up, 6 A, 7 A, 8 Up, 9 B, 10 A, 11 Up, 12 B</li>
-</ul>
-<ul>
 <li>Door Numbers per Walls: North 1-3, East 4-6, South 7-9, West 10-12</li>
-</ul>
-<ul>
 <li>Orientation: Keep North up</li>
 </ul>
 <p>
