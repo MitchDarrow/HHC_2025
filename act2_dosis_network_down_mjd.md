@@ -92,10 +92,8 @@ The objective is to gain access to the router configuration and the password it 
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 Device Information
 <br>
