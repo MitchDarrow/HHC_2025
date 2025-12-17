@@ -56,40 +56,50 @@ High level executive summary of how the objective was solved. Details belong in 
 <summary>Click to expand</summary>
 <br>
 <p>
-Step by step solution complete with any code used
+Start by listing the groups with this command:
 <br>
 </p>
-<p>
-<img src="/HHC_2025/images/objectivename_purpose.jpg" alt="Sample image alt text">
-<br>
-</p>
-<pre><code class="language-sh">
-bash script code block
+<pre><code class="language-ps">
+az group list
 </code></pre>
 <p>
-Ordered list:
-<br>
-</p>
-<ol>
-<li>Item 1</li>
-<li>Item 2</li>
-<li>Item 3</li>
-</ol>
-<p>
-Unordered list:
-<br>
-</p>
-<ul>
-<li>Item</li>
-<li>Item</li>
-<li>Item</li>
-</ul>
-<p>
-/usr/local/weather/temperature
+<img src="/HHC_2025/images/opendoor_groups.jpg" alt="Azure tenant group list">
 <br>
 </p>
 <p>
-<strong>Answer: Flag or Answer</strong>
+Next display the Network Security Groups (NSGs) with this command: 
+<br>
+</p>
+<pre><code class="language-ps">
+az network nsg list -o table
+</code></pre>
+<p>
+<img src="/HHC_2025/images/opendoor_nsgs.jpg" alt="Azure Network Security Groups">
+<br>
+</p>
+Looking at the Production group NSG Rules:
+<br>
+</p>
+<pre><code class="language-ps">
+az network nsg rule list --nsg-name nsg-production-eastus --resource-group theneighborhood-rg1 --output table
+</code></pre>
+<p>
+<img src="/HHC_2025/images/opendoor_production.jpg" alt="Azure Production Group NSG Rules">
+<br>
+</p>
+<strong>There is a rule that allows RDP from anywhere on the internet.</strong>
+Show the rule to complete the objective with this command:
+<pre><code class="language-ps">
+  az network nsg rule show \
+  --nsg-name nsg-production-eastus \
+  --resource-group theneighborhood-rg1 \
+  --name Allow-RDP-From-Internet \
+  --output json
+</code></pre>
+
+
+<p>
+<strong>Answer: NSG misconfiguration allowing RDP (port 3389) from the public internet</strong>
 <br>
 </p>
 </details>
