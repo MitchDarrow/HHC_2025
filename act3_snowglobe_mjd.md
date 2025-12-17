@@ -59,10 +59,10 @@ The code on the outside of the building is binary and decodes to "imanok" which 
 <br>
 </p>
 <details>
-<p>
+
 <summary>Click to expand</summary>
 <br>
-</p>
+
 <p>
 Viewing the exterior wall of the datacenter, there is a pattern in the bricks that looks binary, six bytes of data:
 <br>
