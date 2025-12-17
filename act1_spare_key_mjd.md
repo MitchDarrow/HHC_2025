@@ -56,40 +56,55 @@ High level executive summary of how the objective was solved. Details belong in 
 <summary>Click to expand</summary>
 <br>
 <p>
-Step by step solution complete with any code used
+Start by listing all resource groups:
+<br>
+</p>
+<pre><code class="language-ps">
+az group list -o table
+</code></pre> 
+<p>
+<img src="/HHC_2025/images/sparekey_resourcegroups.jpg" alt="Azure Resource Group Listing">
 <br>
 </p>
 <p>
-<img src="/HHC_2025/images/objectivename_purpose.jpg" alt="Sample image alt text">
+Next get a listing of storage accounts:
 <br>
 </p>
-<pre><code class="language-sh">
-bash script code block
-</code></pre>
+<pre><code class="language-ps">
+az storage account list --resource-group rg-the-neighborhood -o table
+</code></pre>  
 <p>
-Ordered list:
-<br>
-</p>
-<ol>
-<li>Item 1</li>
-<li>Item 2</li>
-<li>Item 3</li>
-</ol>
-<p>
-Unordered list:
-<br>
-</p>
-<ul>
-<li>Item</li>
-<li>Item</li>
-<li>Item</li>
-</ul>
-<p>
-/usr/local/weather/temperature
+<img src="/HHC_2025/images/sparekey_accounts.jpg" alt="Azure Resource Group Accounts">
 <br>
 </p>
 <p>
-<strong>Answer: Flag or Answer</strong>
+Examining the files in the static website container:
+<br>
+</p>
+<pre><code class="language-ps">
+az storage blob list --container-name '$web' account-name neighborhoodhoa --auth-mode login
+</code></pre>  
+<p>
+<img src="/HHC_2025/images/sparekey_blobs.jpg" alt="Azure Resource Blob Listing">
+<br>
+</p>
+<p>
+The metadata WARNING: LEAKED_SECRETS looks promising. Download the file to review:
+</p>
+ <pre><code class="language-ps">
+az storage blob download \
+  --account-name neighborhoodhoa \
+  --container-name '$web' \
+  --name 'iac/terraform.tfvars' \
+  --file terraform.tfvars \
+  --auth-mode login
+</code></pre>  
+<p>
+<img src="/HHC_2025/images/sparekey_secret.jpg" alt="Long Lived SAS token found">
+<br>
+</p>
+
+<strong>Answer:A migration_sas token within hte /iac/terraform.tfvars file exposed a long-lived SAS token</strong>
 <br>
 </p>
 </details>
