@@ -59,10 +59,8 @@ This objective is designed to test knowledge of networking communications. This 
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <ol>
 <li>Build an IPv4 DNS Request:</li>
 </ol>
