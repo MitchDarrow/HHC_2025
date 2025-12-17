@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th><a href="/HHC_2025/act3_hackagnome_mjd.html">Previous Objective: Act2 Name</a></th>
+  <th><a href="/HHC_2025/act1_sparekey_mjd.html">Previous Objective: Act1 Spare Key</a></th>
   <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-  <th><a href="/HHC_2025/act3_frosty_snowglobe_machine_mjd.html">Next Objective: Act # Name</a></th>
+  <th><a href="/HHC_2025/act1_owner_mjd.html">Next Objective: Act1 Owner</a></th>
   </tr>
   </thead>
   <tbody>
