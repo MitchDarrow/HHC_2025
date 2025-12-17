@@ -53,10 +53,10 @@ High level executive summary of how the objective was solved. Details belong in 
 <br>
 </p>
 <details>
-<p>
+
 <summary>Click to expand</summary>
 <br>
-</p>
+
 <p>
 Step by step solution complete with any code used
 <br>
