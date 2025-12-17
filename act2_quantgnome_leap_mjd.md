@@ -65,10 +65,8 @@ Reconnaissance located ssh keys that belonged to another user. These keys were u
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 RSA keys were found in the Qgnome directory during recon
 <br>
