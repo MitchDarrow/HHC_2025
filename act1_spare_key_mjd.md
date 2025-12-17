@@ -33,7 +33,7 @@ nav: |
 <br>
 </p>
 <p>
-High level executive summary of how the objective was solved. Details belong in the detail section.
+Conduct reconnaisance of an Azure tenant looking for secrets.
 <br>
 </p>
 <table>
@@ -46,6 +46,7 @@ High level executive summary of how the objective was solved. Details belong in 
 </tr>
 </thead>
 <tbody>
+  <tr><td>Discovering SAS key in Azure Storage</td>Reconnaissance<td>T1526</td><td>Cloud Service Discovery</td><td></td></tr>
 </tbody>
 </table>
 <p>
@@ -104,7 +105,7 @@ az storage blob download \
 <br>
 </p>
 
-<strong>Answer:A migration_sas token within hte /iac/terraform.tfvars file exposed a long-lived SAS token</strong>
+<strong>Answer: A migration_sas token within hte /iac/terraform.tfvars file exposed a long-lived SAS token</strong>
 <br>
 </p>
 </details>
