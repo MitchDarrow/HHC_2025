@@ -174,11 +174,7 @@ These binaries have SUID set:
 </p>
 <ul>
 <li>/usr/local/weather/humidity</li>
-</ul>
-<ul>
 <li>/usr/local/weather/pressure</li>
-</ul>
-<ul>
 <li>/usr/local/weather/temperature</li>
 </ul>
 <p>
@@ -187,11 +183,7 @@ The commands are run with a valid key:
 </p>
 <ul>
 <li>/usr/local/weather/temperature 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6</li>
-</ul>
-<ul>
 <li>/usr/local/weather/humidity 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6</li>
-</ul>
-<ul>
 <li>/usr/local/weather/pressure 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6</li>
 </ul>
 <p>
