@@ -33,7 +33,7 @@ nav: |
 <br>
 </p>
 <p>
-Conduct reconnaisance of an Azure tenant looking for secrets.
+Conduct reconnaisance of an Azure tenant looking for for interesting files that might contain valuable information. The $web directory was explored for configuration files. A terraform file contained a long-lived SAS migration token.
 <br>
 </p>
 <table>
