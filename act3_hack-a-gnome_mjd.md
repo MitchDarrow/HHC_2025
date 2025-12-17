@@ -109,14 +109,8 @@ Key Indicators:
 </p>
 <ol>
 <li>Microsoft.Azure.Documents.Common/2.14.0 - This is the Azure Cosmos DB SDK</li>
-</ol>
-<ol>
 <li>ActivityId - Cosmos DB uses ActivityIds for tracking queries</li>
-</ol>
-<ol>
 <li>Error code SC1010 - Cosmos DB-specific error code</li>
-</ol>
-<ol>
 <li>"invalid token '$'" - You likely triggered a syntax error in Cosmos DB's SQL-like query language</li>
 </ol>
 <p>
@@ -125,14 +119,8 @@ About Cosmos DB:
 </p>
 <ul>
 <li>Microsoft's NoSQL database service</li>
-</ul>
-<ul>
 <li>Uses a SQL-like query language (not standard SQL)</li>
-</ul>
-<ul>
 <li>Supports multiple APIs (SQL API, MongoDB API, Cassandra, etc.)</li>
-</ul>
-<ul>
 <li>This appears to be using the SQL API based on the error</li>
 </ul>
 <p>
@@ -149,8 +137,6 @@ Using similar injection techniques, it is possible to map the database structure
 </p>
 <ul>
 <li>'harold" AND IS_DEFINED(c.id)--' is used to identify the field ID  (harold is ID=1, bruce is ID=2)</li>
-</ul>
-<ul>
 <li>'harold" AND IS_DEFINED(c.digest)--' is used to identify the field were the password digest is stored.</li>
 </ul>
 <p>
