@@ -95,10 +95,10 @@ Starting with only public access to the web application, reconnaisance was condu
 <br>
 </p>
 <details>
-<p>
+
 <summary>Click to expand</summary>
 <br>
-</p>
+
 <p>
 <h2>Step One: Gain Access to web application by abusing Chatbot</h2>
 <br>
