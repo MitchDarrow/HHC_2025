@@ -59,10 +59,10 @@ Using browser developer tools, the data for each signal is captured. The data is
 <br>
 </p>
 <details>
-<p>
+
 <summary>Click to expand</summary>
 <br>
-</p>
+
 <p>
 <h3>Part One: 1-Wire</h3>
 <br>
