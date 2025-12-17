@@ -77,10 +77,8 @@ This objective is the exploitation of an Insecure Direct Object Reference (IDOR)
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 The following video is helpful for understanding Insecure Direct Object References: https://www.youtube.com/watch?v=hzrhtHrhwno
 <br>
