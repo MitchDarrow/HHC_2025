@@ -162,7 +162,7 @@ Welcome to the WarDriver 9000!
 <br>
 </code></pre>
 
-**Answer: Welcome to the WarDriver 9000!**
+<strong>Answer: Welcome to the WarDriver 9000!</strong>
 
 </details>
 
