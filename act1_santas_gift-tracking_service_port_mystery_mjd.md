@@ -73,8 +73,6 @@ The objective is to:
 </p>
 <ol>
 <li>Identify the port that the santa_tracker process is running on</li>
-</ol>
-<ol>
 <li>Connecct to the port and verify the servide is running</li>
 </ol>
 <p>
