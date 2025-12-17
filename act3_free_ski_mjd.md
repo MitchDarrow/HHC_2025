@@ -65,10 +65,9 @@ Reverse engineer an executable to reveal hidden information.
 <br>
 </p>
 <details>
-<p>
+
 <summary>Click to expand</summary>
 <br>
-</p>
 <p>
 Git clone both repositories to my kali machine.
 <br>
