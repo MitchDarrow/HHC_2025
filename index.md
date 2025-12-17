@@ -139,14 +139,12 @@ Bios of the team members who participated in this years challenge:
 <br>
 </p>
 <table>
-<thead>
 <tr>
 <th><a href="/HHC_2025/bio_mjd.html">Mitch Darrow</a></th>
 <th><a href="/HHC_2025/bio_srt.html">Spencer Treece</a></th>
 <th><a href="/HHC_2025/bio_kgb.html">Kodi Berube</a></th>
 <th><a href="/HHC_2025/bio_lk.html">Louis Krupp</a></th>
 </tr>
-</thead>
 <tbody>
 </tbody>
 </table>
