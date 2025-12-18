@@ -95,7 +95,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 <td><a href="/HHC_2025/act3_snowglobe_mjd.html">Find and Shutdown Frosty's Snow Globe</a></td>
 </tr>
 <tr>
-<td><a href="/HHC_2025/act1_visual_firewall_mjd.html">AVisual Firewall</a></td>
+<td><a href="/HHC_2025/act1_visual_firewall_mjd.html">Visual Firewall</a></td>
 <td><a href="/HHC_2025/act2_quantgnome_leap_mjd.html">Quantgnome Leap</a></td>
 <td><a href="/HHC_2025/act3_onthewire_mjd.html">On The Wire</a></td>
 </tr>
