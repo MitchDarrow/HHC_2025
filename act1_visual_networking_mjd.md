@@ -150,8 +150,9 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 <p>
 <strong>Answer: Complete all 5 Challenges</strong>
 <br>
+</p>
 </details>
-
+<p>
 <h2>Tools Reference</h2>
 <br>
 </p>
