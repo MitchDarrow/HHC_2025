@@ -56,40 +56,73 @@ High level executive summary of how the objective was solved. Details belong in 
 <summary>Click to expand</summary>
 <br>
 <p>
-Step by step solution complete with any code used
+Start by listing the accounts with this command:
 <br>
 </p>
-<p>
-<img src="/HHC_2025/images/objectivename_purpose.jpg" alt="Sample image alt text">
-<br>
-</p>
-<pre><code class="language-sh">
-bash script code block
+<pre><code class="language-ps">
+az account list --query "[].name"
 </code></pre>
 <p>
-Ordered list:
-<br>
-</p>
-<ol>
-<li>Item 1</li>
-<li>Item 2</li>
-<li>Item 3</li>
-</ol>
-<p>
-Unordered list:
-<br>
-</p>
-<ul>
-<li>Item</li>
-<li>Item</li>
-<li>Item</li>
-</ul>
-<p>
-/usr/local/weather/temperature
+<img src="/HHC_2025/images/owner_accounts.jpg" alt="Azure tenant accounts list">
 <br>
 </p>
 <p>
-<strong>Answer: Flag or Answer</strong>
+Next lets find which accounts are enabled:
+<br>
+</p>
+<pre><code class="language-ps">
+az account list --query "[?state=='Enabled'].{Name:name, ID:id}"
+</code></pre>
+<p>
+<img src="/HHC_2025/images/owner_enabled.jpg" alt="Azure tenant enabled accounts">
+<br>
+</p>
+<p>
+Reviewing the Owner's of the each listed subscription: pass in each subscription id.
+<br>
+</p>
+<pre><code class="language-ps">
+az role assignment list --scope "/subscriptions/065cc24a-077e-40b9-b666-2f4dd9f3a617" --query [?roleDefinition=='Owner']
+</code></pre>
+<p>
+<img src="/HHC_2025/images/owner_owners.jpg" alt="Azure tenant Subscription iD ownwers">
+<br>
+</p>
+<p>
+In addition to the PIM group, there is a group called IT Admins. Let's figure out the membership of the IT Admins group.
+<br>
+</p>
+<pre><code class="language-ps">
+az ad group member list --group 6b982f2f-78a0-44a8-b915-79240b2b4796 | less
+</code></pre>
+<p>
+<img src="/HHC_2025/images/owner_itadminsGroup.jpg" alt="Azure tenant IT Admins Group properties">
+<br>
+</p>
+<p>
+IT Admins is a nested group. Let's figure out the membership of the Subscription Admins group.
+<br>
+</p>
+<pre><code class="language-ps">
+az ad group member list --group 631ebd3f-39f9-4492-a780-aef2aec8c94e | less
+</code></pre>
+<p>
+<img src="/HHC_2025/images/owner_subscriptionadminsGroup.jpg" alt="Azure tenant subscription Admins Group properties">
+<br>
+</p>
+<p>
+IT Admins is a nested group. Let's figure out the membership of the Subscription Admins group.
+<br>
+</p>
+<pre><code class="language-ps">
+az ad group member list --group 631ebd3f-39f9-4492-a780-aef2aec8c94e | less
+</code></pre>
+<p>
+<img src="/HHC_2025/images/owner_subscriptionadminsGroup.jpg" alt="Azure tenant subscription Admins Group properties">
+<br>
+</p>  
+<p>
+<strong>Answer: Use just-in-time elevated access instead of permanent assignments. Permanent Owner roles create persistente attack paths and violate least-privilege principles.  </strong>
 <br>
 </p>
 </details>
