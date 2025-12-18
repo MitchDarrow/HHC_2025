@@ -141,6 +141,7 @@ Nmap done: 1 IP address (1 host up) scanned in 6.82 seconds
 </code></pre>
 Answer: http
 <li>Use ncat to connect to TCP port 24601 on 127.0.12.25 and view the banner:  ncat 127.0.12.25 24601</li>
+</ol>
 <pre><code class="language-sh">
 elf@bd65e17d2fa9:~$ ncat 127.0.12.25 24601
 Welcome to the WarDriver 9000!
