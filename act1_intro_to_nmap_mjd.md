@@ -160,9 +160,7 @@ elf@bd65e17d2fa9:~$ ncat 127.0.12.25 24601
 Welcome to the WarDriver 9000!
 <br>
 </code></pre>
-
 <strong>Answer: Welcome to the WarDriver 9000!</strong>
-
 </details>
 <p>
 <h2>Tools Reference</h2>
