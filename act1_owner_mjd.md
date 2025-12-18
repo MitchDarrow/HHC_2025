@@ -33,7 +33,7 @@ nav: |
 <br>
 </p>
 <p>
-High level executive summary of how the objective was solved. Details belong in the detail section.
+Conduct reconnaisance of an Azure tenant looking for permission misconfigurations. The group IT Admins wass found on subscription the neighborhood-sub-3. Another group was nested inside IT Admins that contained a permanent permission assignment to a user. This violates the principle of least privilege and creates a permanent attack path.
 <br>
 </p>
 <table>
@@ -46,6 +46,7 @@ High level executive summary of how the objective was solved. Details belong in 
 </tr>
 </thead>
 <tbody>
+  <tr><td>Discovering a permanent owner assignment in Azure Storage</td><td>Reconnaissance</td><td>T1526</td><td>Cloud Service Discovery</td></tr>
 </tbody>
 </table>
 <p>
