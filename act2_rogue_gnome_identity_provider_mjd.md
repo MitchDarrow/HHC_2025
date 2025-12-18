@@ -125,11 +125,11 @@ curl http://idp.atnascorp/?return_uri=http%3A%2F%2Fgnome-48371.atnascorp%2Fauth
 ## Authenticate to IDP
 curl -X POST --data-binary $'username=gnome&password=SittingOnAShelf&return_uri=http%3A%2F%2Fgnome-48371.atnascorp%2Fauth' http://idp.atnascorp/login
 ## Pass Auth Token to Gnome
-curl -v http://gnome-48371.atnascorp/auth?token=<insert-JWT>
+curl -v http://gnome-48371.atnascorp/auth?token=[insert-JWT]
 ## Access Gnome Diagnostic Interface
-curl -H 'Cookie: session=<insert-session>' http://gnome-48371.atnascorp/diagnostic-interface
+curl -H 'Cookie: session=[insert-session]' http://gnome-48371.atnascorp/diagnostic-interface
 ## Analyze the JWT
-jwt_tool.py <insert-JWT>
+jwt_tool.py [insert-JWT]
 </code></pre>
 <p>
 Using the authenticate curl command from the notes combined with the credentials to login:
