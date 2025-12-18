@@ -131,6 +131,7 @@ Server responds Finished
 <br>
 </p>
 <li>Build an HTTPS GET request:</li>
+</ol>
 <p>
 HTTP verb: GET
 <br>
