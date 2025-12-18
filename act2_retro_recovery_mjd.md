@@ -126,7 +126,6 @@ merry christmas to all and to all a good night
 <strong>Answer: merry christmas to all and to all a good night</strong>
 <br>
 </p>
-<p>
 </details>
 <p>
 <h2>Tools Reference</h2>
