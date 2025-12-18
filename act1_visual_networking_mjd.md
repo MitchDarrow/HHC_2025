@@ -107,27 +107,27 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 </p>
 <li>Build a TLS Handshake:</li>
 <p>
-Client Hello >>
+#Client Hello >>
 <br>
 </p>
 <p>
-<< Server Hello
+#<< Server Hello
 <br>
 </p>
 <p>
-<< Server Certificate
+#<< Server Certificate
 <br>
 </p>
 <p>
-Client Key Exchange >>
+#Client Key Exchange >>
 <br>
 </p>
 <p>
-<< Server Change Cipher Spec
+#<< Server Change Cipher Spec
 <br>
 </p>
 <p>
-<< Fnished
+#<< Fnished
 <br>
 </p>
 <li>Build an HTTPS GET request:</li>
