@@ -17,14 +17,14 @@ nav: |
 <table>
 <thead>
 <tr>
-<th>Objective: Objective name</th>
-<th>Difficulty Level: #</th>
+<th>Objective: Owner</th>
+<th>Difficulty Level: 1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Official Description</td>
-<td>Location:</td>
+<td>Help Goose James near the park discover the accidentally leaked SAS token in a public JavaScript file and determine what Azure Storage resource it exposes and what permissions it grants.</td>
+<td>Location: The Park</td>
 </tr>
 </tbody>
 </table>
