@@ -5,7 +5,7 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th><a href="/HHC_2025/act3_snowcat_mjd.html">Previous Objective: Act3 Snowcat RCE abd Privilege Escalation</a></th>
+  <th><a href="/HHC_2025/act3_snowcat_mjd.html">Previous Objective: Act3 Snowcat RCE and Privilege Escalation</a></th>
   <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
   <th><a href="/HHC_2025/act3_snowglobe_mjd.html">Next Objective: Act3 Find and Shutdown Frosty's Snowglobe Machine</a></th>
   </tr>
