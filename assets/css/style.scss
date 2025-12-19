@@ -19,6 +19,12 @@ body {
   background-image: linear-gradient(126deg, rgba(0, 58, 93, 1) 57%, rgba(102, 165, 13, 0.68) 100%);
 }
 
+.page-header img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Override link colors */
 .main-content a {
   color: #33617d;
