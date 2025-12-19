@@ -5,6 +5,29 @@
 
 /* Override and add custom styles below this line */
 
+/* Override body font-family */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #424242;
+}
+
+/* Override page header gradient */
+.page-header {
+  color: #fff;
+  text-align: center;
+  background-color: #003a5d;
+  background-image: linear-gradient(126deg, rgba(0, 58, 93, 1) 57%, rgba(102, 165, 13, 0.68) 100%);
+}
+
+/* Override link colors */
+.main-content a {
+  color: #33617d;
+}
+
+.main-content a:hover {
+  text-decoration: underline;
+}
+
 /* Center and style the page navigation */
 .page-navigation {
   margin-top: 2rem;
@@ -57,11 +80,11 @@
 
 .main-content table th {
   font-weight: bold;
-  background-color: #159957;
+  background-color: #66A50D;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0;
   text-align: left;
-  border: 1px solid #159957;
+  border: 1px solid #66A50D;
 }
 
 .main-content table td {
@@ -93,33 +116,33 @@
   }
 }
 
-/* Style headers properly */
+/* Style headers properly with new colors */
 .main-content h1 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #159957;
+  color: #003a5d;
 }
 
 .main-content h2 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #159957;
+  color: #66A50D;
 }
 
 .main-content h3 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #159957;
+  color: #66A50D;
 }
 
 .main-content h4 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #606c71;
+  color: #424242;
 }
 
 /* Fix details/summary styling */
@@ -168,4 +191,20 @@
   white-space: pre;
   background: transparent;
   border: 0;
+}
+
+/* Button styling (for future use) */
+.btn {
+  background-color: #68A2B9;
+  border-color: #68A2B9;
+}
+
+.btn:hover {
+  background-color: #5891a7;
+  border-color: #5891a7;
+}
+
+/* Footer styling (for future use) */
+.site-footer {
+  background-color: #e4e4e4;
 }
