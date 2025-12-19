@@ -62,6 +62,15 @@ body {
   margin: 0;
 }
 
+/* Style the header table text like h1 */
+.main-content table:first-of-type td:first-child {
+  padding: 1rem 1.5rem;
+  width: 60%;
+  font-size: 2.25rem; /* Same as h1 */
+  font-weight: normal; /* Same as your h1 style */
+  color: #003a5d; /* Same as your h1 style */
+}
+
 /* Center and style the page navigation */
 .page-navigation {
   margin-top: 2rem;
