@@ -135,7 +135,7 @@ For more information about the BerryDunn's IT Security Team and the services off
 <br>
 </p>
 <p>
-Bios of the team members who participated in this years challenge:
+Meet the BerryDunn team members who participated in this year's challenge:
 <br>
 </p>
 <table width="100%;">
