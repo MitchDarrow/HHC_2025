@@ -28,6 +28,36 @@ body {
   text-decoration: underline;
 }
 
+
+/* Fix the header table with logo */
+.main-content table:first-of-type {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.main-content table:first-of-type td {
+  padding: 1rem 1.5rem; /* Add left/right padding to text cell */
+  vertical-align: middle;
+}
+
+.main-content table:first-of-type td:first-child {
+  /* Text cell - ensure padding */
+  padding: 1rem 1.5rem;
+}
+
+.main-content table:first-of-type td:last-child {
+  /* Image cell - remove padding and fix image */
+  padding: 0;
+  line-height: 0; /* Removes the space below inline images */
+}
+
+.main-content table:first-of-type img {
+  display: block; /* Removes the inline gap under the image */
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
 /* Center and style the page navigation */
 .page-navigation {
   margin-top: 2rem;
