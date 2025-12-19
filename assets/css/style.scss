@@ -29,30 +29,34 @@ body {
 }
 
 
-/* Fix the header table with logo */
+/* Make the header table full width */
 .main-content table:first-of-type {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  width: 100%;
+  display: table; /* Override the display: block from general table styles */
 }
 
 .main-content table:first-of-type td {
-  padding: 1rem 1.5rem; /* Add left/right padding to text cell */
+  padding: 1rem 1.5rem;
   vertical-align: middle;
 }
 
 .main-content table:first-of-type td:first-child {
   /* Text cell - ensure padding */
   padding: 1rem 1.5rem;
+  width: 60%; /* Optional: control the width ratio between columns */
 }
 
 .main-content table:first-of-type td:last-child {
   /* Image cell - remove padding and fix image */
   padding: 0;
-  line-height: 0; /* Removes the space below inline images */
+  line-height: 0;
+  width: 40%; /* Optional: control the width ratio between columns */
 }
 
 .main-content table:first-of-type img {
-  display: block; /* Removes the inline gap under the image */
+  display: block;
   width: 100%;
   height: auto;
   margin: 0;
