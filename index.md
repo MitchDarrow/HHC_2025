@@ -138,12 +138,12 @@ For more information about the BerryDunn's IT Security Team and the services off
 Bios of the team members who participated in this years challenge:
 <br>
 </p>
-<table>
+<table width=100%>
 <tr>
-<th><a href="/HHC_2025/bio_mjd.html">Mitch Darrow</a></th>
-<th><a href="/HHC_2025/bio_srt.html">Spencer Treece</a></th>
-<th><a href="/HHC_2025/bio_kgb.html">Kodi Berube</a></th>
-<th><a href="/HHC_2025/bio_lk.html">Louis Krupp</a></th>
+<td><a href="/HHC_2025/bio_mjd.html">Mitch Darrow</a></td>
+<td><a href="/HHC_2025/bio_srt.html">Spencer Treece</a></td>
+<td><a href="/HHC_2025/bio_kgb.html">Kodi Berube</a></td>
+<td><a href="/HHC_2025/bio_lk.html">Louis Krupp</a></td>
 </tr>
 <tbody>
 </tbody>
