@@ -3,16 +3,15 @@ layout: default
 title: index
 ---
 <style>
-  .hhc-title {
-    font-size: 2em;          /* matches H1 */
-    font-weight: normal;     /* Cayman H1 weight */
-    color: #159957;          /* Cayman H1 color */
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  /* Style ONLY this specific header cell */
+  th.hhc-title {
+    font-size: 2em !important;       /* match H1 */
+    font-weight: normal !important;  /* remove bold */
+    color: #003a5d !important;       /* your blue */
+    background: none !important;     /* remove Cayman green */
+    border: none !important;         /* remove table border */
+    padding: 0 !important;           /* remove table padding */
     text-align: left;
-    padding: 0;              /* remove table padding */
-    border: none;            /* remove table border */
-    background: none;        /* remove table header background */
   }
 </style>
 
