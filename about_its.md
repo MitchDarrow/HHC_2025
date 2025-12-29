@@ -3,33 +3,38 @@ layout: default
 title: about_its
 ---
 <style>
-  /* Override Cayman's forced 60% width */
-  .main-content table:first-of-type td:first-child {
-    width: auto !important;
-    white-space: nowrap;
-    vertical-align: top;
-  }
-
-  /* Scale the image */
-  .main-content table:first-of-type td:first-child img {
-    max-width: 150px;  /* or whatever size you want */
-    height: auto;
-    display: block;
-  }
-
-  /* Ensure the second cell wraps normally */
-  .main-content table:first-of-type td:nth-child(2) {
-    white-space: normal !important;
-    line-height: 1.4;
-    vertical-align: top;
-  }
-
-  /* Override Cayman's table layout */
-  .main-content table:first-of-type {
+  /* Make Cayman table behave like a real table */
+  .main-content table {
+    display: table !important;
     table-layout: auto !important;
     width: 100%;
   }
 </style>
+<style>
+  /* Stop Cayman from making images 100% width in the table */
+  .main-content table:first-of-type td:first-child img {
+    width: 150px !important;   /* pick the exact pixel width you want */
+    max-width: 150px !important;
+    height: auto !important;
+    display: block;
+  }
+
+  /* Make the first cell shrink to its content (the image) */
+  .main-content table:first-of-type td:first-child {
+    width: 1px !important;          /* shrink-to-fit hack */
+    white-space: nowrap !important;
+    vertical-align: top;
+  }
+
+  /* Let the second cell take the remaining space and wrap */
+  .main-content table:first-of-type td:nth-child(2) {
+    width: auto !important;
+    white-space: normal !important;
+    line-height: 1.4;
+    vertical-align: top;
+  }
+</style>
+
 <p>
 <a href="/HHC_2025/index.html">Back to Home Page</a>
 <br>
