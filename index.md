@@ -2,6 +2,20 @@
 layout: default
 title: index
 ---
+<style>
+  .hhc-title {
+    font-size: 2em;          /* matches H1 */
+    font-weight: normal;     /* Cayman H1 weight */
+    color: #159957;          /* Cayman H1 color */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding: 0;              /* remove table padding */
+    border: none;            /* remove table border */
+    background: none;        /* remove table header background */
+  }
+</style>
+
 <p>
 <h1>BerryDunn Holiday Hack Challenge Solution Report</h1>
 <br>
@@ -9,7 +23,7 @@ title: index
 <table>
 <thead>
 <tr>
-<th>SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</th>
+<th class="hhc-title">SANS Holiday Hack Challenge 2025:<br>Revenge of the Gnome(s)</th>
 <th><img src="/HHC_2025/images/HHC.webp" alt="Holiday Hack Challenge Logo"></th>
 </tr>
 </thead>
