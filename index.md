@@ -3,13 +3,15 @@ layout: default
 title: index
 ---
 <style>
-  /* Style ONLY this specific header cell */
   th.hhc-title {
-    font-size: 2em !important;       /* match H1 */
-    font-weight: normal !important;  /* remove bold */
-    color: #003a5d !important;       /* your blue */
-    border: none !important;         /* remove table border */
-    padding: 0 !important;           /* remove table padding */
+    font-size: 2em !important;        /* match H1 size */
+    font-weight: normal !important;   /* remove bold */
+    color: #003a5d !important;        /* your blue */
+    padding-left: 0.75rem !important; /* add left padding */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+    border: none !important;
     text-align: left;
   }
 </style>
