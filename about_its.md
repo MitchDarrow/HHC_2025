@@ -6,19 +6,18 @@ title: about_its
   /* Override Cayman's forced 60% width */
   .main-content table:first-of-type td:first-child {
     width: auto !important;
-    padding: 0.5rem 1rem; /* optional: match other td padding */
     white-space: nowrap;
     vertical-align: top;
   }
 
-  /* Scale the image safely */
+  /* Scale the image */
   .main-content table:first-of-type td:first-child img {
-    max-width: 150px;   /* or whatever size you want */
+    max-width: 150px;  /* or whatever size you want */
     height: auto;
     display: block;
   }
 
-  /* Ensure text wraps normally */
+  /* Ensure the second cell wraps normally */
   .main-content table:first-of-type td:nth-child(2) {
     white-space: normal !important;
     line-height: 1.4;
@@ -26,7 +25,7 @@ title: about_its
   }
 
   /* Override Cayman's table layout */
-  .main-content table {
+  .main-content table:first-of-type {
     table-layout: auto !important;
     width: 100%;
   }
