@@ -3,23 +3,29 @@ layout: default
 title: about_its
 ---
 <style>
-  table img {
-    max-width: 150px;   /* adjust as needed */
-    height: auto;
-    display: block;
-  }
-</style>
-<style>
-  table td:first-child {
-    width: auto;
-    vertical-align: top;
-    white-space: normal;
+  table {
+    display: table !important;
+    table-layout: auto !important;
+    width: 100% !important;
+    border-collapse: collapse;
   }
 
-  table td:nth-child(2) {
-    white-space: normal;
-    line-height: 1.4;
+  table tr {
+    display: table-row !important;
+  }
+
+  table td {
+    display: table-cell !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
     vertical-align: top;
+    line-height: 1.4;
+  }
+
+  table td:first-child img {
+    max-width: 150px;
+    height: auto;
+    display: block;
   }
 </style>
 
