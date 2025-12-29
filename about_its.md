@@ -2,6 +2,7 @@
 layout: default
 title: about_its
 ---
+<style> table td, table th { white-space: normal !important; word-wrap: break-word; line-height: 1.4; vertical-align: top; } </style>
 <p>
 <a href="/HHC_2025/index.html">Back to Home Page</a>
 <br>
