@@ -3,34 +3,33 @@ layout: default
 title: about_its
 ---
 <style>
-  /* Override Cayman’s forced fixed layout */
-  .markdown-body table {
-    table-layout: auto !important;
-    width: auto !important;
+  /* Override Cayman’s global image scaling */
+  .markdown-body table td:first-child img {
+    max-width: 150px !important;  /* or whatever size you want */
+    height: auto !important;
+    display: block;
   }
 
   /* Make the first column shrink to the image width */
   .markdown-body table td:first-child {
-    width: 1px !important;        /* forces shrink-to-fit */
+    width: 1px !important;
     white-space: nowrap !important;
     vertical-align: top;
   }
 
-  /* Scale the image safely */
-  .markdown-body table td:first-child img {
-    max-width: 150px;             /* adjust as needed */
-    height: auto;
-    display: block;
-  }
-
-  /* Ensure text wraps normally in the second cell */
+  /* Ensure text wraps normally */
   .markdown-body table td:nth-child(2) {
     white-space: normal !important;
     line-height: 1.4;
     vertical-align: top;
   }
-</style>
 
+  /* Override Cayman’s table layout rules */
+  .markdown-body table {
+    table-layout: auto !important;
+    width: auto !important;
+  }
+</style>
 <p>
 <a href="/HHC_2025/index.html">Back to Home Page</a>
 <br>
