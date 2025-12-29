@@ -3,31 +3,32 @@ layout: default
 title: about_its
 ---
 <style>
-  /* Override Cayman’s global image scaling */
-  .markdown-body table td:first-child img {
-    max-width: 150px !important;  /* or whatever size you want */
-    height: auto !important;
-    display: block;
-  }
-
-  /* Make the first column shrink to the image width */
-  .markdown-body table td:first-child {
-    width: 1px !important;
-    white-space: nowrap !important;
+  /* Override Cayman's forced 60% width */
+  .main-content table:first-of-type td:first-child {
+    width: auto !important;
+    padding: 0.5rem 1rem; /* optional: match other td padding */
+    white-space: nowrap;
     vertical-align: top;
   }
 
+  /* Scale the image safely */
+  .main-content table:first-of-type td:first-child img {
+    max-width: 150px;   /* or whatever size you want */
+    height: auto;
+    display: block;
+  }
+
   /* Ensure text wraps normally */
-  .markdown-body table td:nth-child(2) {
+  .main-content table:first-of-type td:nth-child(2) {
     white-space: normal !important;
     line-height: 1.4;
     vertical-align: top;
   }
 
-  /* Override Cayman’s table layout rules */
-  .markdown-body table {
+  /* Override Cayman's table layout */
+  .main-content table {
     table-layout: auto !important;
-    width: auto !important;
+    width: 100%;
   }
 </style>
 <p>
