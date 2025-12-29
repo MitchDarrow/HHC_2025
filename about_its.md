@@ -4,30 +4,29 @@ title: about_its
 ---
 <style>
   table {
-    display: table !important;
     table-layout: auto !important;
-    width: 100% !important;
-    border-collapse: collapse;
+    width: auto !important;
   }
 
-  table tr {
-    display: table-row !important;
-  }
-
-  table td {
-    display: table-cell !important;
-    white-space: normal !important;
-    word-wrap: break-word !important;
+  table td:first-child {
+    width: 1px;              /* forces shrink-to-fit */
+    white-space: nowrap;     /* prevents expansion */
     vertical-align: top;
-    line-height: 1.4;
   }
 
   table td:first-child img {
-    max-width: 150px;
+    max-width: 150px;        /* or whatever size you want */
     height: auto;
     display: block;
   }
+
+  table td:nth-child(2) {
+    white-space: normal !important;
+    line-height: 1.4;
+    vertical-align: top;
+  }
 </style>
+
 
 <p>
 <a href="/HHC_2025/index.html">Back to Home Page</a>
