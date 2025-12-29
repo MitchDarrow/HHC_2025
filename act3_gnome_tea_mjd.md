@@ -125,7 +125,7 @@ Collection contains messages, gnome names, and sender UIDS
 <p>
 curl -X GET \
 <br>
-  https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/tea?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
+https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/tea?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
 <br>
 </p>
 <p>
@@ -149,7 +149,7 @@ Looking in the dms collection contains a lot of messages. Searching for the stri
 <p>
 curl -X GET \
 <br>
-  https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk | grep "password"
+https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk | grep "password"
 <br>
 </p>
 <p>
@@ -168,6 +168,12 @@ Searching the gnomes collection reveals Barnabies email address. This is needed 
 <strong>Username: barnabybriefcase@gnomemail.dosis</strong>
 <br>
 </p>
+<p>
+The download URL is needed to access the document, searching the internet indicates that the URL will be of the format: 
+</p>
+<pre><code class="language-html">
+https://firebasestorage.googleapis.com/v0/b/your-bucket/o/path%2Fto%2Ffile.pdf?alt=media&token=XYZ
+</code></pre>  
 <p>
 The correct URL to obtain Barnaby's image is: https://firebasestorage.googleapis.com/v0/b/holidayhack2025.firebasestorage.app/o/gnome-documents%2Fl7VS01K9GKV5ir5S8suDcwOFEpp2_drivers_license.jpeg
 <br>
