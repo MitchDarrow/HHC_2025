@@ -38,14 +38,14 @@ BerryDunn’s cybersecurity team brings deep industry expertise and recognized c
 </p>
 <table>
 <tr>
-<td><img src="/HHC_2025/images/picture1.png" alt="Skilled Team" style="width: 25%; height: auto; display: block;"></td>
+<td><img src="/HHC_2025/images/picture1.png" alt="Skilled Team"></td>
 <td>
 We are skilled in developing actionable intelligence to enable risk mitigation strategies and defensive capabilities. Our consulting team has more than 25 years of combined experience, backed by certifications such as Certified Information Systems Security Professional (CISSP), Certified Information Systems Auditor (CISA), Global Information Assurance Certification (GIAC) Penetration Tester (GPEN), and more.
 <br><br>
 We leverage this experience, knowledge of standards, and certifications to develop recommendations that improve governance structures, organizational capacity, and operational security.</td>
 </tr>
 <tr>
-<td><img src="/HHC_2025/images/picture2.png" alt="Extensive Experience" style="width: 25%; height: auto; display: block;"></td>
+<td><img src="/HHC_2025/images/picture2.png" alt="Extensive Experience"></td>
 <td>
 We bring extensive experience conducting risk assessments for a variety of multiprotocol and platform operating systems. BerryDunn has more than 25 years of information systems auditing and security assessment experience, including more than five years conducting vulnerability scanning and penetration testing.
 <br><br>
