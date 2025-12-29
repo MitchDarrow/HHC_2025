@@ -2,6 +2,7 @@
 layout: default
 title: about_its
 ---
+<style> table td { line-height: 1.4; vertical-align: top; } table img { width: 25%; height: auto; display: block; } </style>
 <p>
 <a href="/HHC_2025/index.html">Back to Home Page</a>
 <br>
