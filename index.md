@@ -8,7 +8,6 @@ title: index
     font-size: 2em !important;       /* match H1 */
     font-weight: normal !important;  /* remove bold */
     color: #003a5d !important;       /* your blue */
-    background: none !important;     /* remove Cayman green */
     border: none !important;         /* remove table border */
     padding: 0 !important;           /* remove table padding */
     text-align: left;
