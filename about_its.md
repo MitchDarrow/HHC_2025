@@ -2,7 +2,28 @@
 layout: default
 title: about_its
 ---
-<style> table td, table th { white-space: normal !important; word-wrap: break-word; line-height: 1.4; vertical-align: top; } </style>
+<style>
+  /* Scale images */
+  table td:first-child img {
+    width: 25%;
+    height: auto;
+    display: block;
+  }
+
+  /* Make the first cell shrink to the width of the image */
+  table td:first-child {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+
+  /* Ensure text wraps normally in the second cell */
+  table td:nth-child(2) {
+    white-space: normal;
+    line-height: 1.4;
+    vertical-align: top;
+  }
+</style>
 <p>
 <a href="/HHC_2025/index.html">Back to Home Page</a>
 <br>
