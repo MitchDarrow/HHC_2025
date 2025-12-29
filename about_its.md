@@ -31,7 +31,7 @@ Our team brings a deep knowledge of industry standards and frameworks, including
 </td>
 </tr>
 <tr>
-td><img src="/HHC_2025/images/picture3.png" alt="Practical Risk Management"></td>
+<td><img src="/HHC_2025/images/picture3.png" alt="Practical Risk Management"></td>
 <td>
 We understand the intricate balance between cybersecurity risk and business objectives. We will leverage lessons learned to help with identifying opportunities to strengthen weaknesses in our client's current cyber-risk management plan.</td>
 </tr></table>
