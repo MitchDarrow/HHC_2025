@@ -3,27 +3,26 @@ layout: default
 title: about_its
 ---
 <style>
-  /* Scale images */
-  table td:first-child img {
-    width: 25%;
+  table img {
+    max-width: 150px;   /* adjust as needed */
     height: auto;
     display: block;
   }
-
-  /* Make the first cell shrink to the width of the image */
+</style>
+<style>
   table td:first-child {
-    width: 1%;
-    white-space: nowrap;
+    width: auto;
     vertical-align: top;
+    white-space: normal;
   }
 
-  /* Ensure text wraps normally in the second cell */
   table td:nth-child(2) {
     white-space: normal;
     line-height: 1.4;
     vertical-align: top;
   }
 </style>
+
 <p>
 <a href="/HHC_2025/index.html">Back to Home Page</a>
 <br>
@@ -53,7 +52,7 @@ Our team brings a deep knowledge of industry standards and frameworks, including
 </td>
 </tr>
 <tr>
-<td><img src="/HHC_2025/images/picture3.png" alt="Practical Risk Management" style="width: 25%; height: auto; display: block;"></td>
+<td><img src="/HHC_2025/images/picture3.png" alt="Practical Risk Management"></td>
 <td>
 We understand the intricate balance between cybersecurity risk and business objectives. We will leverage lessons learned to help with identifying opportunities to strengthen weaknesses in our client's current cyber-risk management plan.</td>
 </tr></table>
