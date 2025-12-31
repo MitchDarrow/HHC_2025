@@ -256,6 +256,10 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 <td>Edge Developer Tools</td>
 <td>Version 142.0.3595.94</td>
 </tr>
+<tr>
+<td>curl</td>
+<td>8.11.0</td>
+</tr> 
 </tbody>
 </table>
 <p>
