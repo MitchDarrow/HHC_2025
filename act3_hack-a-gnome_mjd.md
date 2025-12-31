@@ -369,6 +369,10 @@ With control of the robot, boxes need to be moved so the power switch can be rea
 <td>Webhook.net</td>
 <td>N/A</td>
 </tr>
+<tr>
+<td>sed</td>
+<td>v4.9</td>
+</tr>  
 </tbody>
 </table>
 <p>
