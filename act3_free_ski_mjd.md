@@ -160,10 +160,10 @@ There are <strong>7 mountains</strong> with encoded flags:
 <br>
 </p>
 <ol>
-<li><strong>Find treasure locations</strong> - They're deterministically generated using <code>random.seed(binascii.crc32(mountain_name))</code> in <code>GetTreasureLocations()</code></li>
-<li><strong>Calculate treasure values</strong> - Each treasure's value is <code>(elevation * mountain_width) + horizontal_offset</code></li>
-<li><strong>Compute the product</strong> - XOR the 5 treasure values together with bit shifts</li>
-<li><strong>Decrypt the flag</strong> - Use that product to seed random and XOR-decode the flag</li>
+<li>Trreasure loacations are deterministically generated using <code>random.seed(binascii.crc32(mountain_name))</code> in <code>GetTreasureLocations()</code></li>
+<li>Each treasure's value is <code>(elevation * mountain_width) + horizontal_offset</code></li>
+<li>Compute the product using XOR the 5 treasure values together with bit shifts</li>
+<li>Use that product to seed random and XOR-decode the flag</li>
 </ol>
 <p>
 Interesting strings:
