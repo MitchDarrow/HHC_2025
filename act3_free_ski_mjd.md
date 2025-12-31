@@ -106,7 +106,7 @@ Extract the code: ./pycdas ~/pycdc/FreeSki.exe_extracted/FreeSki.pyc
 <br>
 </p>
 <p>
-<a href="/HHC_2025/resources/FreeSki_SourceCode.txt">Free Ski Source Code</a>
+<a href="/HHC_2025/resources/freeski_sourcecode.txt">Free Ski Source Code</a>
 <br>
 </p>
 <p>
