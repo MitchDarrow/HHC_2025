@@ -400,6 +400,14 @@ With root password, it is a simple matter to escalate privileges using the su co
 <td>Burp Suite Community Edition</td>
 <td>v2024.11.2</td>
 </tr>
+<tr>
+<td>bash</td>
+<td>v5.2.37(1)-release</td>
+</tr>
+<tr>
+<td>python</td>
+<td>v3.12.8</td>
+</tr>
 </tbody>
 </table>
 <p>
