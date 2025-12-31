@@ -243,6 +243,10 @@ The first key listed is the one used with the temperature binary. The second key
 <td>netcat</td>
 <td>v1.10-50</td>
 </tr>
+  <tr>
+<td>bash</td>
+<td>v5.2.37(1)-release</td>
+</tr>
 <tr>
 <td>curl</td>
 <td>8.11.0</td>
