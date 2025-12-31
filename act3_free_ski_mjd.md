@@ -215,6 +215,10 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py.txt">Solve Free Ski</a>
 </thead>
 <tbody>
 <tr>
+<td>python</td>
+<td>v3.12.8</td>
+</tr>
+<tr>
 <td>claude.ai</td>
 <td>v4.5</td>
 </tr>
