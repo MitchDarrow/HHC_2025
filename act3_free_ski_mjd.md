@@ -220,11 +220,11 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py.txt">Solve Free Ski</a>
 </tr>
 <tr>
 <td>PyInstaller Extractor</td>
-<td>?</td>
+<td>v6.17.0</td>
 </tr>
 <tr>
 <td>pycdc</td>
-<td>?</td>
+<td>g20250704</td>
 </tr>
 </tbody>
 </table>
