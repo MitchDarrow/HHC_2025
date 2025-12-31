@@ -387,6 +387,10 @@ Hijacking this session token, the document in wip is accessed.
 <td>Burp Suite Community Edition</td>
 <td>v2024.11.2</td>
 </tr>
+<tr>
+<td>Bash</td>
+<td>v5.2.37(1)-release (x86_64-pc-linux-gnu)</td>
+</tr>
 </tbody>
 </table>
 <p>
