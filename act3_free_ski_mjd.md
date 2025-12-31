@@ -223,7 +223,7 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py.txt">Solve Free Ski</a>
 <td>?</td>
 </tr>
 <tr>
-<td>pycdas</td>
+<td>pycdc</td>
 <td>?</td>
 </tr>
 </tbody>
