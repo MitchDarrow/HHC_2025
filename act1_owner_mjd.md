@@ -110,18 +110,7 @@ az ad group member list --group 631ebd3f-39f9-4492-a780-aef2aec8c94e | less
 <p>
 <img src="/HHC_2025/images/owner_subscriptionadminsgroup.jpg" alt="Azure tenant subscription Admins Group properties">
 <br>
-</p>
-<p>
-IT Admins is a nested group. Let's figure out the membership of the Subscription Admins group.
-<br>
-</p>
-<pre><code class="language-ps">
-az ad group member list --group 631ebd3f-39f9-4492-a780-aef2aec8c94e | less
-</code></pre>
-<p>
-<img src="/HHC_2025/images/owner_subscriptionadminsgroup.jpg" alt="Azure tenant subscription Admins Group properties">
-<br>
-</p>  
+</p> 
 <p>
 <strong>Answer: Use just-in-time elevated access instead of permanent assignments. Permanent Owner roles create persistente attack paths and violate least-privilege principles.  </strong>
 <br>
