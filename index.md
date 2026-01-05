@@ -83,37 +83,37 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 <tbody>
 <tr>
 <td><a href="/HHC_2025/act1_orientation_mjd.html">Holiday Hack Orientation</a></td>
-<td><a href="/HHC_2025/act2_retro_recovery_mjd.html">Retro Recovery</a></td>
+<td><a href="/HHC_2025/act2_retro-recovery_srt.html">Retro Recovery</a></td>
 <td><a href="/HHC_2025/act3_gnome_tea_mjd.html">Gnome Tea</a></td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_its_all_about_defang_mjd.html">Its All About Defang</a></td>
-<td><a href="/HHC_2025/act2_mail_detective_mjd.html">Mail Detective</a></td>
+<td><a href="/HHC_2025/act2_mail-detective_srt.html">Mail Detective</a></td>
 <td><a href="/HHC_2025/act3_hack-a-gnomesnowcat_mjd.html">Hack-a-Gnome</a></td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Neighborhood Watch Bypass</a></td>
-<td><a href="/HHC_2025/act2_idorable_bistro_mjd.html">IDORable Bistro </a></td>
+<td><a href="/HHC_2025/act2_idorable-bistro_srt.html">IDORable Bistro </a></td>
 <td><a href="/HHC_2025/act3_snowcat_mjd.html">Snowcat RCE and Command Injection</a></td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_santas_gift-tracking_service_port_mystery_mjd.html">Santa’s Gift-Tracking Service Port Mystery</a></td>
-<td><a href="/HHC_2025/act2_dosis_network_down_mjd.html">Dosis Network Down</a></td>
+<td><a href="/HHC_2025/act2_dosis-network-down_srt.html">Dosis Network Down</a></td>
 <td><a href="/HHC_2025/act3_schrodingersscope_mjd.html">Schrodinger's Scope</a></td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_visual_networking_mjd.html">Visual Networking</a></td>
-<td><a href="/HHC_2025/act2_rogue_gnome_identity_provider_mjd.html">Rogue Gnome Identity Provider</a></td>
+<td><a href="/HHC_2025/act2_rogue-gnome-identity-provider_srt.html">Rogue Gnome Identity Provider</a></td>
 <td><a href="/HHC_2025/act3_snowglobe_mjd.html">Find and Shutdown Frosty's Snow Globe</a></td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_visual_firewall_mjd.html">Visual Firewall</a></td>
-<td><a href="/HHC_2025/act2_quantgnome_leap_mjd.html">Quantgnome Leap</a></td>
+<td><a href="/HHC_2025/act2_quantgnome-leap_srt.html">Quantgnome Leap</a></td>
 <td><a href="/HHC_2025/act3_onthewire_mjd.html">On The Wire</a></td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_intro_to_nmap_mjd.html">Into to NMAP</a></td>
-<td><a href="/HHC_2025/act2_going_in_reverse_mjd.html">Going in Reverse</a></td>
+<td><a href="/HHC_2025/act2_going-in-reverse_srt.html">Going in Reverse</a></td>
 <td><a href="/HHC_2025/act3_free_ski_mjd.html">Free Ski</a></td>
 </tr>
 <tr>
