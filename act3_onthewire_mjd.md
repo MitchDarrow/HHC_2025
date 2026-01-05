@@ -244,7 +244,7 @@ The data file contains markers, but due to the volume of data, a script was used
 <br>
 </p>
 <p>
-<a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cuniquemarkers.ps1.txt"">I2C Unique Markers</a>
+<a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cuniquemarkers.ps1.txt">I2C Unique Markers</a>
 <br>
 </p>
 <p>
