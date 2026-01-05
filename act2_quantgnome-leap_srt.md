@@ -92,6 +92,7 @@ We use this RSA key to make our first leap. The <code>.ssh</code> directory of t
 To authenticate as <code>gnome3</code>, we use a MAYO2 post-quantum key. While this key type is promising for embedded systems, there is currently no standardized MAYO2 implementation. We next use a hybrid key type, <code>nistp256_sphincssha2128fsimple</code>. This key combines a NIST P-256 ECDSA classical elliptical curve key type with the post-quantum SPHINCS+ key type. This key is unique in that it produces two keys that are both checked together, one classical and one post-quantum. If either key fails authentication, the authentication process fails. 
 To login to the <code>admin</code> account we use a <code>nistp521_mldsa87</code> key. This is another hybrid key type using the NIST P-521 elliptic curve (roughly equivalent to a 15360-bit RSA key) paired with the ML-DSA-87 post-quantum algorithm. ML-DSA-87 is a security level 5 algorithm which is intended for the highest security requirements. This hybrid key is one of the strongest post-quantum algorithms currently available. 
 We are told that the flag is within the configuration directory of the SSH daemon. We typically find configuration data related to optional or non-standard applications under the <code>/opt</code> directory. Using the administrator account, we poke around the <code>/opt/oqs-ssh/flag</code> directory to find the <strong>HHC{L3aping_0v3r_Quantum_Crypto}</strong> flag.
+</p>
 </details>
 <p>
 <h2>Tools Reference</h2>
