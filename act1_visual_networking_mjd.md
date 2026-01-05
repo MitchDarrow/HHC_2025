@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th><a href="/HHC_2025/act1_santas_gift-tracking_service_port_mystery_mjd.html">Previous Objective: Act1 Santa’s Gift-Tracking Service Port Mystery</a></th>
+  <th><a href="/HHC_2025/act1_santas-gift-tracking_srt.html">Previous Objective: Act1 Santa’s Gift-Tracking Service Port Mystery</a></th>
   <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-  <th><a href="/HHC_2025/act1_visual_firewall_mjd.html">Next Objective: Act1 Visual Firewall</a></th>
+  <th><a href="/HHC_2025/act1_visual-firewall_srt.html">Next Objective: Act1 Visual Firewall</a></th>
   </tr>
   </thead>
   <tbody>
