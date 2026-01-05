@@ -31,7 +31,7 @@ Solutions highlighted in green are part of the Official Report.
 </tr>
 <tr>
 <td style="background-color: #A1D038;"><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Act1 Neighborhood Watch Bypass</a></td>
-<td><a href="/HHC_2025/act1_neighborhood-fire-alqarm-system_srt.html">Act1 Neighborhood Watch Bypass</a></td>
+<td><a href="/HHC_2025/act1_neighborhood-fire-alarm-system_srt.html">Act1 Neighborhood Watch Bypass</a></td>
 <td>Completed</td>
 </tr>
 <tr>
