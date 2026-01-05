@@ -155,10 +155,8 @@ openssl genrsa -out attacker_key.pem 2048
 # Extract Public Key (for the JWKS) 
 openssl rsa -in attacker_key.pem -pubout -out attacker_pub.pem
 </code></pre>
-<ul>
 <li>This private key value should be copied to the challenge terminal as <code>private.pem</code></li>
-</ul>
-<li>our <code>jwks.json</code> is in the proper format. ensure the <code>keys</code> object is defined and used to hold the <code>jwks</code> value for spoofing:</li>
+<li>Our <code>jwks.json</code> is in the proper format. ensure the <code>keys</code> object is defined and used to hold the <code>jwks</code> value for spoofing:</li>
 <pre><code class="language-json">
 {
   "keys": [
@@ -172,7 +170,6 @@ openssl rsa -in attacker_key.pem -pubout -out attacker_pub.pem
   ]
 }
 </code></pre>
-<ol>
 <li>The <code>KID</code> value is present and matching between the <code>jwks.json</code> file and the spoofed JWT (see above payload). TBH this error may have been related to step 2 above but thoroughness is never a bad thing. </li>
 </ol>
 After executing these steps and acquiring a successfully forged token that passes the system's inspection, we repeat two <code>curl</code> commands to acquire an admin's session cookie and log into the diagnostic interface. We discover <strong><code>refrigerator-botnet.bin</code></strong> being pushed via firmware update to affected devices. 
