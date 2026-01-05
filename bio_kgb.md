@@ -25,7 +25,7 @@ title: Kodi Berube
 <br>
 </p>
 <p>
-<strong>Started with BerryDunn:</strong>July 2021
+<strong>Started with BerryDunn:</strong> July 2021
 <br>
 </p>
 <p>
