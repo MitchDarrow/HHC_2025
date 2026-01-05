@@ -52,7 +52,7 @@ Solutions highlighted in green are part of the Official Report.
 <tr>
 <td style="background-color: #A1D038;"><a href="/HHC_2025/act1_intro_to_nmap_mjd.html">Act1 Into to NMAP</a></td>
 <td><a href="/HHC_2025/act1_introduction-to-nmap_srt.html">Act1 Into to NMAP</a></td>
-<td>Completed</td>
+<td>Completed: No Write Up</td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_blob_storage_mjd.html">Act1 Blob Storage Challenge in the Neighborhood</a></td>
