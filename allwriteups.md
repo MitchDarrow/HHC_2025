@@ -54,7 +54,7 @@ nav:
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_blob_storage_mjd.html">Act1 Blob Storage Challenge in the Neighborhood</a></td>
-<td>a href="/HHC_2025/act1_blob_storage_srt.html">Act1 Blob Storage Challenge in the Neighborhood</a></td>
+<td><a href="/HHC_2025/act1_blob_storage_srt.html">Act1 Blob Storage Challenge in the Neighborhood</a></td>
 <td> </td>
 </tr>
 <tr>
