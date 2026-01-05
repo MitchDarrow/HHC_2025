@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th><a href="/HHC_2025/act1_intro_to_nmap_mjd.html">Previous Objective: Act1 Intro to Nmap</a></th>
-  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-  <th><a href="/HHC_2025/act1_spare_key_mjd.html">Next Objective: Act1 Spare Key</a></th>
+  <th><a href="/HHC_2025/act2_retro-recovery_srt.html">Previous Objective: Act2 Retro Recovery</a></th>
+  <th><a href="/HHC_2025/index.html">Home Page</a></th>
+  <th><a href="/HHC_2025/act2_idorable-bistro_srt.html">Next Objective: Act 2 IDORable Bistro</a></th>
   </tr>
   </thead>
   <tbody>
