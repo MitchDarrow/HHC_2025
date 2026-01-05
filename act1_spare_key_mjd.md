@@ -104,10 +104,8 @@ az storage blob download \
 <img src="/HHC_2025/images/sparekey_secret.jpg" alt="Long Lived SAS token found">
 <br>
 </p>
-
 <strong>Answer: A migration_sas token within hte /iac/terraform.tfvars file exposed a long-lived SAS token</strong>
 <br>
-</p>
 </details>
 <p>
 <h2>Tools Reference</h2>
