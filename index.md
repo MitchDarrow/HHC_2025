@@ -62,7 +62,7 @@ The list below is a curated list of the best of class solution for each objectiv
 <li>An expandable section with the detailed solution, including screenshots and code snippets</li>
 <li>A summary of tools used</li>
 <li>A summary of hints for the objective</li>
-<li>An acknoledgements summary, thanking other participants for any guidance in solving the objective</li>
+<li>An acknowledgements summary, thanking other participants for any guidance in solving the objective</li>
 </ul>
 <p>
 A matrix of solution write-ups for each objective that team members completed may be found here:<br><a href="/HHC_2025/allwriteups.html"><b>All Solutions</b></a>
