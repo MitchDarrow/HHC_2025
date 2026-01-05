@@ -17,7 +17,7 @@ nav: |
 <table>
 <thead>
 <tr>
-<th>Objective: Visual Neworking</th>
+<th>Objective: Visual Networking</th>
 <th>Difficulty Level: 1</th>
 </tr>
 </thead>
