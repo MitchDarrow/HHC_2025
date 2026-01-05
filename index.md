@@ -155,7 +155,6 @@ Meet the BerryDunn team members who participated in this year's challenge:
 <td style="width:25%;"><a href="/HHC_2025/bio_mjd.html">Mitch Darrow</a></td>
 <td style="width:25%;"><a href="/HHC_2025/bio_srt.html">Spencer Treece</a></td>
 <td style="width:25%;"><a href="/HHC_2025/bio_kgb.html">Kodi Berube</a></td>
-<td style="width:25%;"><a href="/HHC_2025/bio_lk.html">Louis Krupp</a></td>
 </tr>
 <tbody>
 </tbody>
