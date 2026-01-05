@@ -172,13 +172,15 @@ openssl rsa -in attacker_key.pem -pubout -out attacker_pub.pem
 </code></pre>
 <li>The <code>KID</code> value is present and matching between the <code>jwks.json</code> file and the spoofed JWT (see above payload). TBH this error may have been related to step 2 above but thoroughness is never a bad thing. </li>
 </ol>
-After executing these steps and acquiring a successfully forged token that passes the system's inspection, we repeat two <code>curl</code> commands to acquire an admin's session cookie and log into the diagnostic interface. We discover <strong><code>refrigerator-botnet.bin</code></strong> being pushed via firmware update to affected devices. 
+<p>After executing these steps and acquiring a successfully forged token that passes the system's inspection, we repeat two <code>curl</code> commands to acquire an admin's session cookie and log into the diagnostic interface. We discover <strong><code>refrigerator-botnet.bin</code></strong> being pushed via firmware update to affected devices. 
+  </p>
 <pre><code class="language-sh">
 ## Pass Auth Token to Gnome
 curl -v http://gnome-48371.atnascorp/auth?token=[insert-JWT]
 ## Access Gnome Diagnostic Interface
 curl -H 'Cookie: session=[insert-session]' http://gnome-48371.atnascorp/diagnostic-interface
 </code></pre>
+<p>We discover <strong><code>refrigerator-botnet.bin</code></strong> being pushed via firmware update to affected devices.   </p>
 </details>
 <p>
 <h2>Tools Reference</h2>
