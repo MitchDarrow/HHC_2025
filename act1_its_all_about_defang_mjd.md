@@ -100,7 +100,7 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 <br>
 </p>
 <p>
-<strong>Answer: Defanged: 3 domains, 2 addresses, 2 URLs, and 2 email addressesr</strong>
+<strong>Answer: Defanged: 3 domains, 2 addresses, 2 URLs, and 2 email addresses</strong>
 <br>
 </p>
 </details>
