@@ -77,7 +77,6 @@ az network nsg list -o table
 <p>
 <img src="/HHC_2025/images/opendoor_nsgs.jpg" alt="Azure Network Security Groups">
 <br>
-</p>
 Looking at the Production group NSG Rules:
 <br>
 </p>
