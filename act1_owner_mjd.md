@@ -31,8 +31,6 @@ nav: |
 <p>
 <h2>Solution Overview</h2>
 <br>
-</p>
-<p>
 Conduct reconnaisance of an Azure tenant looking for permission misconfigurations. The group IT Admins wass found on subscription the neighborhood-sub-3. Another group was nested inside IT Admins that contained a permanent permission assignment to a user. This violates the principle of least privilege and creates a permanent attack path.
 <br>
 </p>
@@ -91,7 +89,7 @@ In addition to the PIM group, there is a group called IT Admins. Let's figure ou
 az ad group member list --group 6b982f2f-78a0-44a8-b915-79240b2b4796 | less
 </code></pre>
 <p>
-<img src="/HHC_2025/images/owner_itadminsGroup.jpg" alt="Azure tenant IT Admins Group properties">
+<img src="/HHC_2025/images/owner_itadminsgroup.jpg" alt="Azure tenant IT Admins Group properties">
 <br>
 IT Admins is a nested group. Let's figure out the membership of the Subscription Admins group.
 <br>
