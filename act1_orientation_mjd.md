@@ -7,7 +7,7 @@ nav: |
   <tr>
   <th></th>
   <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-  <th><a href="/HHC_2025/act1_its_all_about_defang_mjd.html">Next Objective: Act1 Neighborhood Watch Bypass</a></th>
+  <th><a href="/HHC_2025/act1_its-all-about-defang_srt.html">Next Objective: Act1 Neighborhood Watch Bypass</a></th>
   </tr>
   </thead>
   <tbody>
