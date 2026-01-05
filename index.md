@@ -89,7 +89,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 <tr>
 <td><a href="/HHC_2025/act1_its-all-about-defang_srt.html">Its All About Defang</a></td>
 <td><a href="/HHC_2025/act2_mail-detective_srt.html">Mail Detective</a></td>
-<td><a href="/HHC_2025/act3_hack-a-gnomesnowcat_mjd.html">Hack-a-Gnome</a></td>
+<td><a href="/HHC_2025/act3_hack-a-gnome_mjd.html">Hack-a-Gnome</a></td>
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Neighborhood Watch Bypass</a></td>
