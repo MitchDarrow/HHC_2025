@@ -42,11 +42,11 @@ Some participation statistics from the 2024 HHC:
 <li>Total Players Starting the Prologue: 19,036</li>
 <li>Total participants starting Act 1: 5937</li>
 <li>Total participants starting Act 2: 2659</li>
-<li>Total participants starting Act3: 814</li>
+<li>Total participants starting Act 3: 814</li>
 <li>Total participants completing the HHC: 191</li>
 </ul>
 <p>
-This year's HHC is structured in 3 Acts. Act 1 is intended to practice and polish skills. Some of these tools are old friends, and some of these tools may be new. Act 2 increases the difficulty, in some cases chaining attacks to achieve the objective. Act 3 increases the complexity and difficulty for most of the objectives.  The difficulty of an objective is rated on a 1-5 scale, with 1 being less difficult, and 5 being the most difficult.
+This year's HHC is structured in 3 Acts. Act 1 is intended to practice and polish skills. Some of these tools are old friends, and some of some tools are unfamiliar. Act 2 increases the difficulty, in some cases chaining attacks to achieve the objective. Act 3 increases the complexity and difficulty for most of the objectives.  The difficulty of an objective is rated on a 1-5 scale, with 1 being less difficult, and 5 being the most difficult.
 <br>
 </p>
 <p>
@@ -58,7 +58,7 @@ The list below is a curated list of the best of class solution for each objectiv
 <br>
 </p>
 <ul>
-<li>An high level summary of the solution including a MITRE ATT&CK Mapping</li>
+<li>A high level summary of the solution including a MITRE ATT&CK Mapping</li>
 <li>An expandable section with the detailed solution, including screenshots and code snippets</li>
 <li>A summary of tools used</li>
 <li>A summary of hints for the objective</li>
