@@ -82,16 +82,15 @@ After running a few introductory commands, we are guided to discover a suspiciou
 </p>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
-</p>
 We begin by enumerating a list of storage accounts. One of these storage accounts, <code>neighborhood2</code>, has a container named <code>public</code> with the <code>publicAccess</code> property set to <code>Blob</code>. This configuration allows for public access to blob storage contents within the property's associated container.
 The <code>az storage blob list</code> command can then be used to list the contents of this publicly-accessible blob. We find three files: <code>refrigerator_inventory.pdf, admin_credentials.txt, network_config.json</code>. 
 We then use the <code>az storage blob download</code> command alongside some minor bash I/O redirection syntax to capture the contents of the credentials file. The full command used is as follows:
 <pre><code class="language-sh">
 az storage blob download --container-name public --account-name neighborhood2 --name admin_credentials.txt --file /dev/stdout >> creds.txt
 </code></pre>
+<br>
 By downloading the file contents to <code>/dev/stdout</code> we are able to then use the append operator (<code>>></code>) to create the local <code>creds.txt</code> file. 
 A simple <code>cat creds.txt</code> reveals the Azure Administrator's portal credentials. 
 </details>
