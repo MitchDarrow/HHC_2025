@@ -148,7 +148,7 @@ We must make sure that:
 <br>
 </p>
 <ol>
-<li>we have generated a private/public key pair <em>on our hosting server</em> for this spoofing attack:</li>
+<li>We have generated a private/public key pair <em>on our hosting server</em> for this spoofing attack:</li>
 <pre><code class="language-sh">
 # Generate Private Key 
 openssl genrsa -out attacker_key.pem 2048 
@@ -156,7 +156,7 @@ openssl genrsa -out attacker_key.pem 2048
 openssl rsa -in attacker_key.pem -pubout -out attacker_pub.pem
 </code></pre>
 <ul>
-<li>this private key value should be copied to the challenge terminal as <code>private.pem</code></li>
+<li>This private key value should be copied to the challenge terminal as <code>private.pem</code></li>
 </ul>
 <li>our <code>jwks.json</code> is in the proper format. ensure the <code>keys</code> object is defined and used to hold the <code>jwks</code> value for spoofing:</li>
 <pre><code class="language-json">
