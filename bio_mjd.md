@@ -1,6 +1,6 @@
 ﻿---
 layout: default
-title: bio_mjd
+title: Mitch Darrow
 ---
 <p>
 <a href="/HHC_2025/index.html">Back to Home Page</a>
