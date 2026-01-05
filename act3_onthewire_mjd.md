@@ -210,13 +210,11 @@ SPI has the following characteristics:
 <li>Data is valid on clock edges (rising or falling)</li>
 </ul>
 <p>
-Using Firefox developer tools, the SPI data signal is captrued and exported to the following json file: <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_spidata.xml"">SPI Data</a>
+Using Firefox developer tools, the SPI data signal is captrued and exported to the following json file:</p> <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_spidata.xml"">SPI Data</a>
 <br>
-</p>
 <p>
-The following decoder was written in Powershell: <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_spidecoder.ps1.txt"">SPI Decoder</a>
+The following decoder was written in Powershell:</p> <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_spidecoder.ps1.txt"">SPI Decoder</a>
 <br>
-</p>
 <p>
 Running the decoder:
 <br>
@@ -240,9 +238,8 @@ read and decrypt the I2C bus data using the XOR key: bananza. the temperature se
 <br>
 </p>
 <p>
-The following data file was collected using Edge's Developer Tools:  <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdataV2.json"">I2C Data</a>
+The following data file was collected using Edge's Developer Tools:</p>  <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdataV2.json"">I2C Data</a>
 <br>
-</p>
 <p>
 The data file contains markers, but due to the volume of data, a script was used to identify the unique markers in the data structure.
 <br>
@@ -261,9 +258,8 @@ SCL markers: bus-idle, clock-low, address-sample, address-hold, ack-sample, ack-
 SDA markers: bus-idle, start, address-bit, ack-bit, ack-release, data-bit, stop, gap-start
 </code></pre>
 <p>
-The following decoder was written in Powershell: <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt"">I2C Decoder</a>
+The following decoder was written in Powershell:</p> <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt"">I2C Decoder</a>
 <br>
-</p>
 <p>
 Script Workflow
 <br>
@@ -335,10 +331,8 @@ Separate READ vs WRITE
 The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 characters “banaz”
 <br>
 </p>
-<p>
 <img src="/HHC_2025/images/onthewire_i2cdecoded.jpg" alt="I2C Device 0x3C">
 <br>
-</p>
 <p>
 33 32 2E 38 34 converts to ASCII 32.84
 <br>
