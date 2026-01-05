@@ -106,7 +106,7 @@ When executing commands, we ultimately have to send each request twice. The firs
 With this as our foothold, we want to remember our objective of identifying login credentials from a configuration file. On most unix systems, the <code>/etc/</code> directory serves as a directory for global or system-level configuration data. We send a series of requests to enumerate <code>/etc/</code> before identifying the <code>/etc/config</code> directory, which is not a part of standard naming conventions. This directory contains the <code>wireless</code> text file, containing the password: <strong><code>SprinklesandPackets2025!</code></strong>. 
 The screenshot below displays the contents of the <code>/etc/config/wireless</code> file:
 <br>
-<img src="/HHC_2025/HHC_2025/images/dosis-network_file-contents.png" alt="Caido Replay /etc/config/wireless"> 
+<img src="/HHC_2025/images/dosis-network_file-contents.png" alt="Caido Replay /etc/config/wireless"> 
 <br>
 </details>
 <p>
