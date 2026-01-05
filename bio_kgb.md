@@ -7,7 +7,7 @@ title: Kodi Berube
 <br>
 </p>
 <p>
-<img src="/HHC_2025/images/kodi_berube.png" alt="Image of Mitch Darrow">
+<img src="/HHC_2025/images/kodi_berube.png" alt="Image of Kodi Berube">
 <br>
 <h2>Kodi Donat Gosselin Berube</h2>
 <br>
