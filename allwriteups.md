@@ -24,7 +24,7 @@ nav:
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_its_all_about_defang_mjd.html">Act1 Its All About Defang</a></td>
-<td>a href="/HHC_2025/act1_its_all_about_defang_srt.html">Act1 Its All About Defang</a></td>
+<td><a href="/HHC_2025/act1_its_all_about_defang_srt.html">Act1 Its All About Defang</a></td>
 <td> </td>
 </tr>
 <tr>
