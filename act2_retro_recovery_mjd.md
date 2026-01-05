@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th><a href="/HHC_2025/act1_owner_mjd.html">Previous Objective: Act1 Owner</a></th>
-  <th><a href="/HHC_2025/index.html">Home Page</a></th>
-  <th><a href="/HHC_2025/act2_mail_detective_mjd.html">Next Objective: Act2 Mail Detective</a></th>
+  <th></th>
+  <th><a href="/HHC_2025/allwriteups.html">All Writeups Index</a></th>
+  <th></th>
   </tr>
   </thead>
   <tbody>
