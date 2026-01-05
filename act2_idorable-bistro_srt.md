@@ -71,7 +71,6 @@ Taking this second request to a repeater tool in the proxy we discover a sequenc
 <br>
 </p>
 <details>
-<p>
 <summary>Click to expand</summary>
 <br>
 The first step in this challenge is recovering the crumpled receipt from outside the restaurant. 
