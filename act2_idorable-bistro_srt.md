@@ -72,12 +72,12 @@ Taking this second request to a repeater tool in the proxy we discover a sequenc
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
+<p><br>
 The first step in this challenge is recovering the crumpled receipt from outside the restaurant. 
 <br>
-We load the receipt information in our browser of choice sitting behind the Caido web proxy. Inspecting the request flow when loading this information reveals two <code>GET</code> requests. The first <code>GET</code> request targets a <code>/receipt</code> endpoint with a seemingly unique and randomly-generated ID. However, the second <code>GET</code> request to <code>/api/receipt</code> utilizes an <code>id</code> parameter with the value of <code>103</code>, which appears to be sequentially generated. 
-To validate this, we first load this request into Caido's Replay tool. This allows us to manually replace the value of <code>id</code> with sequential values of <code>104</code>, <code>105</code>, and <code>106</code>, each of which returns a valid receipt. 
-Now, to find the name of the gnome in question, we can use Caido's Automate tool to fuzz the <code>/api/receipt</code> endpoint for valid <code>id</code> values and useful information. 
+We load the receipt information in our browser of choice sitting behind the Caido web proxy. Inspecting the request flow when loading this information reveals two <code>GET</code> requests. The first <code>GET</code> request targets a <code>/receipt</code> endpoint with a seemingly unique and randomly-generated ID. However, the second <code>GET</code> request to <code>/api/receipt</code> utilizes an <code>id</code> parameter with the value of <code>103</code>, which appears to be sequentially generated.<br><br> 
+To validate this, we first load this request into Caido's Replay tool. This allows us to manually replace the value of <code>id</code> with sequential values of <code>104</code>, <code>105</code>, and <code>106</code>, each of which returns a valid receipt.<br> <br>
+Now, to find the name of the gnome in question, we can use Caido's Automate tool to fuzz the <code>/api/receipt</code> endpoint for valid <code>id</code> values and useful information.<br><br> 
 Ultimately, we find a rather distinct name and a distinct order to match it. Remember the gnome described by Josh earlier? He told us the creature was poorly disguised as a human and asking for <em>frozen sushi</em>. Well, <code>/api/receipts/id=139</code> is an order by one <strong>Bartholomew Quibblefrost</strong> insisting on being delivered a <strong>frozen roll</strong>. Case closed. 
 </p>
 </details>
