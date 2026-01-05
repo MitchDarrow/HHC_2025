@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th><a href="/HHC_2025/act2_rogue_gnome_identity_provider_mjd.html">Previous Objective: Act2 Rogue Gnome Identity Provider</a></th>
-  <th><a href="/HHC_2025/index.html">Home Page</a></th>
-  <th><a href="/HHC_2025/act2_going_in_reverse_mjd.html">Next Objective: Act 2 Going in Reverse</a></th>
+  <th></th>
+  <th><a href="/HHC_2025/allwriteups.html">All Writeups Index</a></th>
+  <th></th>
   </tr>
   </thead>
   <tbody>
