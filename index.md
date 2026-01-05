@@ -97,7 +97,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 <td><a href="/HHC_2025/act3_snowcat_mjd.html">Snowcat RCE and Command Injection</a></td>
 </tr>
 <tr>
-<td><a href="/HHC_2025/act1_santa-gift-tracking-_srt.html">Santa’s Gift-Tracking Service Port Mystery</a></td>
+<td><a href="/HHC_2025/act1_santa-gift-tracking_srt.html">Santa’s Gift-Tracking Service Port Mystery</a></td>
 <td><a href="/HHC_2025/act2_dosis-network-down_srt.html">Dosis Network Down</a></td>
 <td><a href="/HHC_2025/act3_schrodingersscope_mjd.html">Schrodinger's Scope</a></td>
 </tr>
