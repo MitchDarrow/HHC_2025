@@ -96,7 +96,6 @@ A simple <code>cat creds.txt</code> reveals the Azure Administrator's portal cre
 <p>
 <h2>Tools Reference</h2>
 </p>
-</p>
 <table>
 <thead>
 <tr>
