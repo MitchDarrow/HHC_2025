@@ -75,10 +75,8 @@ Starting with an account with minimal access to the system, the website was foun
 <h2>Detailed Solution</h2>
 </p>
 <details>
-
 <summary>Click to expand</summary>
 <br>
-
 <p>
 Using a nonexistent URL (http://localhost/nonexistant), an error message was triggered revealing that the system is running a potentially vulnerable version of Tomcat.
 <br>
@@ -219,7 +217,6 @@ The first key listed is the one used with the temperature binary. The second key
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -253,7 +250,6 @@ The first key listed is the one used with the temperature binary. The second key
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -283,7 +279,6 @@ The first key listed is the one used with the temperature binary. The second key
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
