@@ -7,6 +7,7 @@ nav:
 <p>
 <h1>BerryDunn Holiday Hack Challenge All Solutions</h1>
 <br>
+Solutions highlighted in green are part of the Official Report. 
 </p>
 <table>
 <thead>
