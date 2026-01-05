@@ -81,20 +81,9 @@ We begin by listing available resource groups with the <code>az group list -o ta
 <br>
 From here, understanding our objective is centered on the tenant's NSG rules, we want to enumerate the rules associated with each NSG and manually inspect the rules for anything overly permissive. 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</p>
-<br>
-<br>
-<br>
-</p>
-<br>
-</p>
 Most NSGs will contain rules such as <code>Allow-HTTPS-Inbound</code>, with properly restricted ports, protocols, and rule priorities. However, when exploring the rule set of the <code>nsg-production-eastus</code> NSG, we discover an odd-looking <strong><code>Allow-RDP-From-Internet</code></strong> rule. This rule has three suspicious properties:
+<br>
+</p>
 <ol>
 <li><strong><code>"access": "Allow"</code></strong></li>
 <li><strong><code>"destinationPortRange": "3389"</code></strong></li>
@@ -102,7 +91,6 @@ Most NSGs will contain rules such as <code>Allow-HTTPS-Inbound</code>, with prop
 </ol>
 Our first two properties allow for inbound access to port 3389, which is the standard port of access for remote desktop protocol (RDP) software. This is enough to raise the hairs of any security-conscious user, with our third property verifying the insecure nature of this rule. Utilizing the <code>0.0.0.0/0</code> source address prefix allows for the rule to bind on any network interface, effectively allowing access from any local or remote host. 
 <p>
-
 <br>
 <strong>This is the insecure rule targeted by the challenge</strong>. With this rule in effect, attackers and legitimate users alike can arbitrarily initialize RDP connections into any host covered by the NSG. 
 </p>
