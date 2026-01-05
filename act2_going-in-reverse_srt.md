@@ -91,7 +91,7 @@ We are given a text <code>.bas</code> file with a few lines of code:
 This <code>login.bas</code> program is designed to accept an attempt at a login password, which is matched against a string that's obfuscated via function calls that perform a bitwise XOR 7 operation on the ASCII value of each character before converting the ASCII value back to C64-usable characters via <code>CHR()</code>. The bitwise XOR is a symmetrical operation; to find the original value of each character we can perform the same set of operations on the encrypted characters. The below python code below demonstrates this. 
 <pre><code class="language-python">
 enc_pass = "D13URKBT"
-enc_flag = "DSA|auhts</em>wkfi=dhjwubtthut+dhhkfis+hnkz"
+enc_flag = "DSA|auhtswkfi=dhjwubtthut+dhhkfis+hnkz"
 def decrypt(text):
     return "".join([chr(ord(c) ^ 7) for c in text])
 print("Password:", decrypt(enc_pass))
