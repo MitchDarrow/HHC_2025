@@ -13,7 +13,7 @@ title: Kodi Berube
 <br>
 </p>
 <p>
-<strong>Manager, Government Assurance Practice Group, IT Security Consulting Team</strong>
+<strong>Consultant, Government Assurance Practice Group, IT Security Consulting Team</strong>
 <br>
 </p>
 <p>
