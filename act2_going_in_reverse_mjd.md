@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th><a href="/HHC_2025/act2_quantgnome_leap_mjd.html">Previous Objective: Act2 Quantgnome Leap</a></th>
-  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-  <th><a href="/HHC_2025/act3_gnome_tea_mjd.html">Next Objective: Act 3 Gnome Tea</a></th>
+  <th></th>
+  <th><a href="/HHC_2025/allwriteups.html">All Writeups Index</a></th>
+  <th></th>
   </tr>
   </thead>
   <tbody>
