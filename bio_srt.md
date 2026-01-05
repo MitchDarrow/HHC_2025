@@ -9,7 +9,7 @@ title: Spencer Treece
 <p>
 <img src="/HHC_2025/images/spencer_treece.png" alt="Image of Spencer Treece">
 <br>
-<h2>Mitch Darrow</h2>
+<h2>Spencer Treece</h2>
 <br>
 </p>
 <p>
