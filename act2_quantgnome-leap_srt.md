@@ -106,7 +106,7 @@ We are told that the flag is within the configuration directory of the SSH daemo
 </thead>
 <tbody>
 <tr>
-<td><code>pqc-keygen</code></td>
+<td>pqc-keygen</td>
 <td>1.0</td>
 </tr>
 <tr>
