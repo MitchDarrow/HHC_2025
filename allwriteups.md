@@ -9,7 +9,7 @@ nav:
 <br>
 Solutions highlighted in green are part of the Official Report. 
 </p>
-<table>
+<table style="table-layout: fixed; width: 100%;">
 <colgroup> <col style="width:33.33%"> <col style="width:33.33%"> <col style="width:33.33%"> </colgroup>
 <thead>
 <tr>
