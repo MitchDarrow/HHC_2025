@@ -31,7 +31,6 @@ nav: |
 <br>
 <h2>Solution Overview</h2>
 <br>
-</p>
 <br>
 Ed and his team have been working on a new SOC tool that helps triage phishing emails. He asks us to help fix some issues with their detections, where some sketchy emails still made it through. We need to make sure all IoCs are blocked.
 <br>
