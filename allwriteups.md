@@ -10,6 +10,7 @@ nav:
 Solutions highlighted in green are part of the Official Report. 
 </p>
 <table>
+<colgroup> <col style="width:33.33%"> <col style="width:33.33%"> <col style="width:33.33%"> </colgroup>
 <thead>
 <tr>
 <th>Mitch Darrow</th>
