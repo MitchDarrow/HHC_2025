@@ -21,19 +21,15 @@ title: Spencer Treece
 <br>
 </p>
 <p>
-<strong>Education:</strong> Bachelor of Science in Mechanical Engineering, Iowa State University
-<br>
-</p>
-<p>
 <strong>Started with BerryDunn:</strong> December 2023
 <br>
 </p>
 <p>
-Web Application Security Testing, Cloud Security, Social Engineering, Business Continuity and Disaster Recovery
+Web Application Security Testing, Cloud Security Assessments, Social Engineering Assessments, and Business Continuity and Disaster Recovery Plannning Services
 <br>
 </p>
 <p>
-<strong>Certifications:</strong> AZ-500, PNPT, Sec+ 
+<strong>Certifications:</strong> Azure Security Engineer Associate (AZ-500), Practical Network Penetration Tester (PNPT), CompTIA Security+ 
 <br>
 </p>
 <p>
