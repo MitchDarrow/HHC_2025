@@ -80,7 +80,6 @@ After running a few introductory commands, we are guided to discover a suspiciou
 <h2>Detailed Solution</h2>
 <br>
 </p>
-</p>
 <details>
 <summary>Click to expand</summary>
 <br>
