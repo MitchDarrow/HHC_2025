@@ -87,7 +87,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 <td><a href="/HHC_2025/act3_gnome_tea_mjd.html">Gnome Tea</a></td>
 </tr>
 <tr>
-<td><a href="/HHC_2025/act1_its_all_about_defang_mjd.html">Its All About Defang</a></td>
+<td><a href="/HHC_2025/act1_its-all-about-defang_srt.html">Its All About Defang</a></td>
 <td><a href="/HHC_2025/act2_mail-detective_srt.html">Mail Detective</a></td>
 <td><a href="/HHC_2025/act3_hack-a-gnomesnowcat_mjd.html">Hack-a-Gnome</a></td>
 </tr>
@@ -97,7 +97,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 <td><a href="/HHC_2025/act3_snowcat_mjd.html">Snowcat RCE and Command Injection</a></td>
 </tr>
 <tr>
-<td><a href="/HHC_2025/act1_santas_gift-tracking_service_port_mystery_mjd.html">Santa’s Gift-Tracking Service Port Mystery</a></td>
+<td><a href="/HHC_2025/act1_santa-gift-tracking-_srt.html">Santa’s Gift-Tracking Service Port Mystery</a></td>
 <td><a href="/HHC_2025/act2_dosis-network-down_srt.html">Dosis Network Down</a></td>
 <td><a href="/HHC_2025/act3_schrodingersscope_mjd.html">Schrodinger's Scope</a></td>
 </tr>
@@ -107,7 +107,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 <td><a href="/HHC_2025/act3_snowglobe_mjd.html">Find and Shutdown Frosty's Snow Globe</a></td>
 </tr>
 <tr>
-<td><a href="/HHC_2025/act1_visual_firewall_mjd.html">Visual Firewall</a></td>
+<td><a href="/HHC_2025/act1_visual-firewall_srt.html">Visual Firewall</a></td>
 <td><a href="/HHC_2025/act2_quantgnome-leap_srt.html">Quantgnome Leap</a></td>
 <td><a href="/HHC_2025/act3_onthewire_mjd.html">On The Wire</a></td>
 </tr>
@@ -117,7 +117,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 <td><a href="/HHC_2025/act3_free_ski_mjd.html">Free Ski</a></td>
 </tr>
 <tr>
-<td><a href="/HHC_2025/act1_blob_storage_mjd.html">Blob Storage Challenge in the Neighborhood </a></td>
+<td><a href="/HHC_2025/act1_blob-storage_srt.html">Blob Storage Challenge in the Neighborhood </a></td>
 <td> </td>
 <td><a href="/HHC_2025/act3_snowblindambush_mjd.html">SnowBlind Ambush</a></td>
 </tr>
@@ -127,7 +127,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 <td> </td>  
 </tr>
 <tr>
-<td><a href="/HHC_2025/act1_the_open_door_mjd.html">The Open Door </a></td>
+<td><a href="/HHC_2025/act1_the-open-door_srt.html">The Open Door </a></td>
 <td> </td>
 <td> </td>
 </tr>
