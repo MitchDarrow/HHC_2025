@@ -24,7 +24,7 @@ nav: |
 <tbody>
 <tr>
 <td>Chat with Yori near the apartment building about Santa's mysterious gift tracker and unravel the holiday mystery.</td>
-<td>Location: Apratment Building</td>
+<td>Location: Apartment Building</td>
 </tr>
 </tbody>
 </table>
@@ -73,7 +73,7 @@ The objective is to:
 </p>
 <ol>
 <li>Identify the port that the santa_tracker process is running on</li>
-<li>Connecct to the port and verify the servide is running</li>
+<li>Connect to the port and verify the service is running</li>
 </ol>
 <p>
 <img src="/HHC_2025/images/santatracking_instructions.jpg" alt="Objective Instructions">
