@@ -94,14 +94,13 @@ Content-Type: application/x-www-form-urlencoded
 operation=write&country=$(id>/tmp/out)
 </code></pre>
 <ul>
-<li>this is the request included in the Tenable alert, which ultimately does not fire</li>
+<li>This is the request included in the Tenable alert, which ultimately does not fire</li>
 <pre><code class="language-http">
 POST /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(ls%20/etc/config) HTTP/1.1  
 Host: [target router] 
 </code></pre>
-<li>this request fires</li>
+<li>This request fires</li>
 </ul>
-<p>
 <br>
 When executing commands, we ultimately have to send each request twice. The first will return a 200 response with a single line reading <code>OK</code>, while the second will return the command output. 
 With this as our foothold, we want to remember our objective of identifying login credentials from a configuration file. On most unix systems, the <code>/etc/</code> directory serves as a directory for global or system-level configuration data. We send a series of requests to enumerate <code>/etc/</code> before identifying the <code>/etc/config</code> directory, which is not a part of standard naming conventions. This directory contains the <code>wireless</code> text file, containing the password: <strong><code>SprinklesandPackets2025!</code></strong>. 
@@ -109,7 +108,6 @@ The screenshot below displays the contents of the <code>/etc/config/wireless</co
 <br>
 <img src="/HHC_2025/HHC_2025/images/dosis-network_file-contents.png" alt="Caido Replay /etc/config/wireless"> 
 <br>
-</p>
 </details>
 <p>
 <h2>Tools Reference</h2>
