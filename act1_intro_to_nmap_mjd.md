@@ -139,7 +139,9 @@ PORT     STATE SERVICE VERSION
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 6.82 seconds
 </code></pre>
+<p>
 Answer: http
+</p>  
 <li>Use ncat to connect to TCP port 24601 on 127.0.12.25 and view the banner:  ncat 127.0.12.25 24601</li>
 </ol>
 <pre><code class="language-sh">
