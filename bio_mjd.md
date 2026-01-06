@@ -34,7 +34,7 @@ nav: |
 <br>
 </p>
 <p>
-<strong>Started with BerryDunn:</strong>June 2014
+<strong>Started with BerryDunn:</strong> June 2014
 <br>
 </p>
 <p>
