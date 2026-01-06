@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 Mark is an avid collector of things of the past. While cleaning up the Retro Store, he found a FAT12 floppy disk image. These disks were used in machines like the Commodore 64. He tells us we can hide malicious data as deleted files. File system mechanics mean that 'deleted' does not always mean gone forever!
 <br>
 </p>
@@ -68,23 +67,19 @@ Mark is an avid collector of things of the past. While cleaning up the Retro Sto
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 This challenge begins with the receipt of the <code>floppy.img</code> file from Mark. Downloading this file, we have a number of different routes available for exploration. 
 While it may be tempting to mount the <code>.img</code> file to poke around the various <code>.com</code>, <code>.exe</code>, and <code>.ini</code> files, the straightforward path is to use <code>testdisk</code> to analyze the <code>floppy.img</code> file. 
 The <code>testdisk</code> utility allows us to identify and possibly recover deleted files within the analyzed media. Undertaking this, we find and recover an <code>all_i-want_for_christmas.bas</code> file. 
 If we use <code>cat</code> or a similar text processing tool to view the contents of this file, we find an old Quick Basic game called Star Trek (thanks for the hint, Santa!). Peeling through the code, we are able to bounce around the game logic which is an interesting exercise in its own right. However, line 27 contains the following base64 string: <code>bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=</code>
 <p>
 Decoding this string we find the following text: <strong>"merry Christmas to all and to all a good night"</strong>
-<br>
 </p>
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -102,7 +97,6 @@ Decoding this string we find the following text: <strong>"merry Christmas to all
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -128,7 +122,6 @@ Decoding this string we find the following text: <strong>"merry Christmas to all
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
