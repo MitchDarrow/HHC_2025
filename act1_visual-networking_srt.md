@@ -30,10 +30,7 @@ nav: |-
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
-<br>
 This is an interactive visualization serving as a basic introduction to networking concepts.
-<br>
 <br>
 The challenge goes through the building blocks of the HTTP/S request process, starting with a DNS request to resolve the hostname's IP address. Users then construct an HTTP request, a TCP three-way handshake, a TLS certificate exchange, and finally an HTTPS request.
 <br>
@@ -81,21 +78,15 @@ The challenge goes through the building blocks of the HTTP/S request process, st
 </tbody>
 </table>
 <h2>Detailed Solution</h2>
-<br>
-<br>
 <details>
 <summary>Click to expand</summary>
 <p>
-<br>
-<br>
-<br>
 Jared gives us a challenge that provides a visual walkthrough for several steps in the web request and response process. 
 <br></p>
 We begin by constructing a DNS request for the <strong>A record</strong> associated with the domain <strong><code>visual-networking.holidayhackchallenge.com via port</code></strong> <strong>53</strong>. We receive a response giving us the IP <strong>34.160.145.134</strong>. 
 <p>
 <br>
 With the IP address of the web server in hand, we are then prompted to complete a TCP 3-way handshake. We arrange our well-known <strong>SYN-ACKSYN-ACK</strong> sequence to proceed to the next step. 
-<br>
 <br>
 To construct a valid HTTP request, we must select the following:
 <br>
@@ -107,7 +98,6 @@ To construct a valid HTTP request, we must select the following:
 <li>User-Agent</li>
 </ul>
 <br>
-<br>
 By making a <strong>GET</strong> request to the <strong><code>visual-networking.holidayhackchallenge.com</code></strong> host with <strong>HTTP/1.1</strong> and a user agent of <strong>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7</strong> (this can vary so long as it's a valid user agent string), we receive a 302 response redirecting us to upgrade our connection to HTTPS.
 <p>
 <br>
@@ -117,10 +107,7 @@ Completing the TLS Handshake requires us to send a <strong>client hello</strong>
 We must then construct an HTTPS <strong>GET</strong> request with HTTPS version <strong>HTTP/2</strong>. Our host and user agent remain unchanged. Sending this HTTPS request yields a <code>200 OK</code> response. 
 </p>
 </details>
-<br>
-<br>
 <h2>Tools Reference</h2>
-<br>
 <table>
 <thead>
 <tr>
