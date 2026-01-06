@@ -28,9 +28,8 @@ nav: |
 </tr>
 </tbody>
 </table>
-<p><br>
+<p>
 <h2>Solution Overview</h2>
-<br>
 Next to Grace is Barry, who tells us that the Neighborhood HOA hosts a static website on Azure Storage. An admin accidentally uploaded an infrastructure config file containing a long-lived SAS token. We need to use azure cli to find the leak.
 <br>
 We're connected to a read-only AZ CLI session. We find the <code>neighborhoodhoa</code> storage account with a <code>$web</code> container. Listing the blob associated with that container shows an <code>iac/terraform.tfvars</code> file with likely exposed secrets. Downloading the file reveals the long-lived SAS token, expiring <code>2100-01-01</code>.
@@ -65,13 +64,10 @@ We're connected to a read-only AZ CLI session. We find the <code>neighborhoodhoa
 </tr>
 </tbody>
 </table>
-<br>
 <h2>Detailed Solution</h2>
-<br>
 <details>
 <summary>Click to expand</summary>
 <p>
-<br>
 We begin with two introductory discovery commands:
 <br>
 <pre><code class="language-sh">
@@ -98,9 +94,7 @@ The image below displays a subsection of this configuration file's contents, wit
 <br>
 <img src="/HHC_2025/HHC_2025/images/spare-key_sas-token.png" alt="Long-Lived SAS Token"> 
 </details>
-<br>
 <h2>Tools Reference</h2>
-<br>
 <table>
 <thead>
 <tr>
