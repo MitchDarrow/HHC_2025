@@ -26,15 +26,15 @@ title: about_its
     vertical-align: top;
   }
 
-  /* Let the second cell take the remaining space and wrap */
   .main-content table:first-of-type td:nth-child(2) {
+    padding: 10px;   /* adjust to taste */
     width: auto !important;
     white-space: normal !important;
     line-height: 1.4;
     vertical-align: top;
-    padding: 10px;
   }
 </style>
+
 
 <p>
 <a href="/HHC_2025/index.html">Back to Home Page</a>
