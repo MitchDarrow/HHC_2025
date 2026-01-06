@@ -12,7 +12,7 @@ nav: |
   </tbody>
   </table>
 ---
-</p>
+
 <p>
 <h1>About BerryDunn</h1>
 <br>
