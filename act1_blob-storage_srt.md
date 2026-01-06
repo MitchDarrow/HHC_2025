@@ -29,13 +29,9 @@ nav: |
 </tbody>
 </table>
 <p>
-<br>
 <h2>Solution Overview</h2>
-<br>
 </p>
-<br>
 <p>
-<br>
 Grace tells us that the Neighborhood HOA uses Azure storage accounts for its IT operations. We must audit their storage security config to ensure no sensitive data is publicly accessible. Recent security reports suggest some storage accounts could have public blob access enabled, which could be a potential data exposure risk. 
 <br>
 </p>
@@ -78,11 +74,9 @@ After running a few introductory commands, we are guided to discover a suspiciou
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 We begin by enumerating a list of storage accounts. One of these storage accounts, <code>neighborhood2</code>, has a container named <code>public</code> with the <code>publicAccess</code> property set to <code>Blob</code>. This configuration allows for public access to blob storage contents within the property's associated container.
 The <code>az storage blob list</code> command can then be used to list the contents of this publicly-accessible blob. We find three files: <code>refrigerator_inventory.pdf, admin_credentials.txt, network_config.json</code>. 
 We then use the <code>az storage blob download</code> command alongside some minor bash I/O redirection syntax to capture the contents of the credentials file. The full command used is as follows:
