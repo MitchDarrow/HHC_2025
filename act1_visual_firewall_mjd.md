@@ -30,11 +30,9 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 The objective is to correctly configure firewall rules to best security practices. Without proper firewall configuration, security analysts lose a crucial control point for preventing, detecting, and responding to threats.
-<br>
 </p>
 <table>
 <thead>
@@ -56,11 +54,9 @@ The objective is to correctly configure firewall rules to best security practice
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 <p>
 Rule: Internet to DMZ: Allow only HTTP and HTTPS traffic
 <br>
@@ -92,7 +88,6 @@ Rule: Internet to Internal: Block direct Internet to Internal access
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -110,7 +105,6 @@ Rule: Internet to Internal: Block direct Internet to Internal access
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -132,7 +126,6 @@ Rule: Internet to Internal: Block direct Internet to Internal access
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
