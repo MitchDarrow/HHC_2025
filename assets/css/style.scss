@@ -28,6 +28,14 @@ body {
   text-decoration: underline;
 }
 
+.main-content {
+  outline: 2px solid red;
+}
+
+.site-footer {
+  outline: 2px solid blue;
+}
+
 
 /* Make the header table full width */
 .main-content table:first-of-type {
