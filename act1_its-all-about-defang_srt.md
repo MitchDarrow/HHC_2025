@@ -28,9 +28,7 @@ nav: |
 </tr>
 </tbody>
 </table>
-<br>
 <h2>Solution Overview</h2>
-<br>
 Ed and his team have been working on a new SOC tool that helps triage phishing emails. He asks us to help fix some issues with their detections, where some sketchy emails still made it through. We need to make sure all IoCs are blocked.
 <br>
 <p>
@@ -73,9 +71,7 @@ All of our identified IoCs are then manually defanged via a chained <code>sed</c
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 <p>
-<br>
 The Defang tool presents us with an example of an email that made it through Ed's security filters. We are first tasked with identifying malicious content within four classes of indicators of compromise (IoC): 
 </p>
 <br>
@@ -93,7 +89,6 @@ For each of these classes, the tool provides us with a sample regular expression
 To manually identify and exclude friendly assets, we must simply analyze the content within which each identified IoC arises. The <code>dosisneighborhood.corp</code> domain, for example, is indicated as the receiving domain and should **not* be targeted by security filtering tools. 
 By following a process of iterating upon and fine-tuning the regex patterns provided by the Defang tool, we are able to identify malicious nine IoCs within the provided email. These IoCs are manually defanged, or made benign, by the following chained <code>sed</code> command: <strong><code>s/\./[.]/g; s/@/[@]/g; s/http/hxxp/g; s/:\//[://]/g</code></strong>
 </details>
-<br>
 <h2>Tools Reference</h2>
 <table>
 <thead>
