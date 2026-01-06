@@ -30,10 +30,8 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 Kevin was digging through old equipment when he discovered a Commodore 64 disk with a mystery BASIC program on it. He tells us that BASIC programmers of that era were clever, often hiding things in plain sight. He tells us that in these cases, reading the code can often be more valuable than observing how it executes. "Take your time with this one. Those old-school programmers had to be creative within such tight constraints. You'll know the flag by the Christmas phrase that pays."
 <br>
-
 The key here is the name of the challenge. A bitwise XOR is used to encode user-provided strings in order to match these strings against a hard-coded encrypted password. Since XOR is a symmetrical operation, we can <em>go in reverse</em> of the original operation to decrypt these hard-coded credentials. A quick python script allows us to decrypt these values for a password of <code>C64RULES</code> and a flag of <strong><code>CTF{frost-plan:compressors,coolant,oil}</code></strong>. 
 </p>
 <table>
@@ -68,11 +66,9 @@ The key here is the name of the challenge. A bitwise XOR is used to encode user-
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 We are given a text <code>.bas</code> file with a few lines of code:
 <pre><code class="language-BASIC">
 10 REM COMMODORE 64 SECURITY SYSTEM 
@@ -112,7 +108,6 @@ Using this code, we retrive a password of <code>C64RULES</code> and a flag of <s
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
