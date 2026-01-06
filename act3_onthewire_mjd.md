@@ -97,7 +97,7 @@ ws = websocket.WebSocketApp(url,
 ws.run_forever()
 </code></pre>
 <p>
-The data file collected:</p> <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_1wire_data.csv">1-Wire Data</a>
+The data file collected:</p> <a href="/HHC_2025/resources/onthewire_1wire_data.csv">1-Wire Data</a>
 <br>
 <p>
 The data contains the following markers:
@@ -209,10 +209,10 @@ SPI has the following characteristics:
 <li>Data is valid on clock edges (rising or falling)</li>
 </ul>
 <p>
-Using Firefox developer tools, the SPI data signal is captrued and exported to the following json file:</p> <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_spidata.xml">SPI Data</a>
+Using Firefox developer tools, the SPI data signal is captrued and exported to the following json file:</p> <a href="/HHC_2025/resources/onthewire_spidata.xml">SPI Data</a>
 <br>
 <p>
-The following decoder was written in Powershell:</p> <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_spidecoder.ps1.txt">SPI Decoder</a>
+The following decoder was written in Powershell:</p> <a href="/HHC_2025/resources/onthewire_spidecoder.ps1.txt">SPI Decoder</a>
 <br>
 <p>
 Running the decoder:
@@ -237,14 +237,14 @@ read and decrypt the I2C bus data using the XOR key: bananza. the temperature se
 <br>
 </p>
 <p>
-The following data file was collected using Edge's Developer Tools:</p>  <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdataV2.json">I2C Data</a>
+The following data file was collected using Edge's Developer Tools:</p>  <a href="/HHC_2025/resources/onthewire_i2cdataV2.json">I2C Data</a>
 <br>
 <p>
 The data file contains markers, but due to the volume of data, a script was used to identify the unique markers in the data structure.
 <br>
 </p>
 <p>
-<a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cuniquemarkers.ps1.txt">I2C Unique Markers</a>
+<a href="/HHC_2025/resources/onthewire_i2cuniquemarkers.ps1.txt">I2C Unique Markers</a>
 <br>
 </p>
 <p>
@@ -257,7 +257,7 @@ SCL markers: bus-idle, clock-low, address-sample, address-hold, ack-sample, ack-
 SDA markers: bus-idle, start, address-bit, ack-bit, ack-release, data-bit, stop, gap-start
 </code></pre>
 <p>
-The following decoder was written in Powershell:</p> <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_i2cdecoderV3.ps1.txt">I2C Decoder</a>
+The following decoder was written in Powershell:</p> <a href="/HHC_2025/resources/onthewire_i2cdecoderV3.ps1.txt">I2C Decoder</a>
 <br>
 <p>
 Script Workflow
