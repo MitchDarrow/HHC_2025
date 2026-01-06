@@ -135,6 +135,9 @@ body {
 .main-content table tr:nth-child(2n) {
   background-color: #f6f8fa;
 }
+.main-content table tbody:empty {
+    display: none;
+}
 
 /* Responsive */
 @media screen and (max-width: 42em) {
