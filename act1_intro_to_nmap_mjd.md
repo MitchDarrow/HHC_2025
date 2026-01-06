@@ -30,11 +30,9 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 This objective is designed to test fundamental knowledge of the Nmap tool. Nmap is an essential tool in the penetration testers toolkit, used to discover open ports and services.
-<br>
 </p>
 <table>
 <thead>
@@ -56,12 +54,9 @@ This objective is designed to test fundamental knowledge of the Nmap tool. Nmap 
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
-
 <summary>Click to expand</summary>
-
 <ol>
 <li>Run the following command to do a default scan of the top 1000 ports: nmap 127.0.12.25</li>
 <pre><code class="language-sh">
@@ -153,7 +148,6 @@ Welcome to the WarDriver 9000!
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -169,7 +163,6 @@ Welcome to the WarDriver 9000!
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -185,7 +178,6 @@ Welcome to the WarDriver 9000!
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
