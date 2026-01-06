@@ -93,7 +93,6 @@ ws.run_forever()
 </code></pre>
 <p>
 The data file collected: <a href="/HHC_2025/resources/onthewire_1wire_data.txt" download> Download 1-Wire Data</a></p>
-<br>
 <p>
 The data contains the following markers:
 <br>
@@ -103,10 +102,6 @@ The data contains the following markers:
 <li>"presence" at t=551 (presence pulse response)</li>
 <li>"idle" at t=0 (bus idle high)</li>
 </ul>
-<p>
-1-Wire Decoding
-<br>
-</p>
 <p>
 In 1-Wire, data is encoded using pulse width modulation:
 <br>
@@ -190,10 +185,7 @@ The data is not encoded with the key Christmas, the bites translate to the follo
 <strong>read and decrypt the SPI bus data using the XOR key: icy</strong>
 <br>
 </p>
-<p>
 <h3>Part 2: Get the SPI bus data stream and decode.</h3>
-<br>
-</p>
 <p>
 SPI has the following characteristics:
 <br>
@@ -205,10 +197,8 @@ SPI has the following characteristics:
 </ul>
 <p>
 Using Firefox developer tools, the SPI data signal is captrued and exported to the following json file: <a href="/HHC_2025/resources/onthewire_spidata.xml.txt" download> Download SPI Data</a></p>
-<br>
 <p>
 The following decoder was written in Powershell: <a href="/HHC_2025/resources/onthewire_spidecoder.ps1.txt">SPI Decoder</a></p>
-<br>
 <p>
 Running the decoder:
 <br>
@@ -229,18 +219,14 @@ read and decrypt the I2C bus data using the XOR key: bananza. the temperature se
 </p>
 <p>
 <h3>Part 3: I2C Decoding</h3>
-<br>
 </p>
 <p>
 The following data file was collected using Edge's Developer Tools:<a href="/HHC_2025/resources/onthewire_i2cdataV2.json.txt" download> Download I2C Data</a></p> 
-<br>
 <p>
 The data file contains markers, but due to the volume of data, a script was used to identify the unique markers in the data structure.
-<br>
 </p>
 <p>
-<a href="/HHC_2025/resources/onthewire_i2cuniquemarkers.ps1.txt">I2C Unique Markers</a>
-<br>
+<a href="/HHC_2025/resources/onthewire_i2cuniquemarkers.ps1.txt">I2C Unique Markers Script</a>
 </p>
 <p>
 These are the unigue markers:
