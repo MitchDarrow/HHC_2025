@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 The objective is to gain access to the router configuration and the password it contains. The target device appears to be running the patched firmware version (1.1.4 Build 20230219), but testing is still required to verify the patch is effective. The vulnerability exists in the <code>/cgi-bin/luci;stok=/locale</code> endpoint where the country parameter is not properly sanitized before being passed to <code>popen()</code>. An unauthenticated attacker can exploit this by sending crafted GET requests to inject commands that execute with root privileges. The exploit requires sending the malicious request twice: the first sets the command and the second executes it. Publicly available proof-of-concept code demonstrates how to obtain a reverse shell using this vulnerability.  In this case, the attack used a simple payload to read the <code>/etc/config/wireless</code> configuration file, which contains wireless network settings including SSIDs and encryption parameters. The exploitation successfully extracted the WiFi password "SprinklesAndPackets2025!" from the router's configuration.
 <table>
@@ -89,7 +88,6 @@ The objective is to gain access to the router configuration and the password it 
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
@@ -222,12 +220,10 @@ $(cat%20/etc/config/wireless)
 </p>
 <p>
 <strong>Answer: SprinklesAndPackets2025!</strong>
-<br>
 </p>
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -249,7 +245,6 @@ $(cat%20/etc/config/wireless)
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -275,7 +270,6 @@ $(cat%20/etc/config/wireless)
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
