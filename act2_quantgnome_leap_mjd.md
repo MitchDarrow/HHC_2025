@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 Reconnaissance located ssh keys that belonged to another user. These keys were used to move laterally in the system and gain access to another user. This was repeated until admin level access was achieved. The flag was located under the directory where the SSH daemon was running.
@@ -62,7 +61,6 @@ Reconnaissance located ssh keys that belonged to another user. These keys were u
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
@@ -140,12 +138,10 @@ The instructions direct towards the directory where the SSH daemon is running (/
 </p>
 <p>
 <strong>Answer: HHC{L3aping_0v3r_Quantum_Crypt0}</strong>
-<br>
 </p>
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -163,7 +159,6 @@ The instructions direct towards the directory where the SSH daemon is running (/
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -197,7 +192,6 @@ The instructions direct towards the directory where the SSH daemon is running (/
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
