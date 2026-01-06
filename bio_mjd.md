@@ -1,11 +1,20 @@
 ﻿---
 layout: default
 title: Mitch Darrow
+nav: |
+  <table>
+  <thead>
+  <tr>
+  <th></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
-<p>
-<a href="/HHC_2025/index.html">Back to Home Page</a>
-<br>
-</p>
+
 <p>
 <img src="/HHC_2025/images/mitch_darrow.png" alt="Image of Mitch Darrow">
 <br>
