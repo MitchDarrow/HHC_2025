@@ -30,13 +30,11 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 Defanging Indicators of Compromise (IoC)
 <br>
 Defanging is a cybersecurity practice of deliberately modifying malicious indicators such as URLs, IP addresses, email addresses, and domain names to render them non-functional while preserving their investigative value. This technique prevents accidental clicks, automated processing, or unintended execution when sharing threat intelligence in reports, emails, or public forums. Common defanging methods include replacing dots with "[.]" in domains (example[.]com), adding brackets to protocols (hxxp:// or hxxps://), replacing "@" symbols with "[at]" in email addresses, and modifying IP addresses (192[.]168[.]1[.]1). The practice is essential for security analysts, incident responders, and threat intelligence teams who need to document and communicate about malicious infrastructure without risking accidental exposure or triggering security controls. Defanging allows organizations to safely share IoCs across teams, with partners, or in public threat reports while maintaining the ability to quickly "refang" or restore the indicators to their original functional form when needed for analysis or blocking.
-<br>
 </p>
 <table>
 <thead>
@@ -58,11 +56,9 @@ Defanging is a cybersecurity practice of deliberately modifying malicious indica
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 <p>
 Using the Extract IOCs tab:
 <br>
@@ -106,7 +102,6 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -124,7 +119,6 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -150,7 +144,6 @@ The following were defanged: 3 domains, 2 addresses, 2 URLs, and 2 email address
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
