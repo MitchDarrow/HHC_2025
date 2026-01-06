@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 Janusz tells us that the neighborhood's wifi has been sabotged by the gnomes who have changed the admin password and probably other settings as well. We have to take back what is ours. 
 <br>
 Inspecting router login page's elements doesn't reveal much, however we are given a banner with hardware and firmware information on the bottom of the page. A quick search reveals an unauthenticated RCE vulnerability (CVE-2023-1389) in this very same platform!
@@ -75,11 +74,9 @@ We can leverage this vulnerability to execute commands on the router. To solve t
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 <p>
 The challenge presents us with a local login page to an AX1800 WiFI 6 Router. This presents much like a simple single page web app with minimal content. The console gives us some small nudges along the way, but ultimately our breakthrough comes from observing the text located at the bottom of the login page: <code><strong>Firmware Version: 1.1.4 Build 20230219 rel.69802 Hardware Version: Archer AX21 v2.0</strong></code>.
 <br>
@@ -107,11 +104,9 @@ With this as our foothold, we want to remember our objective of identifying logi
 The screenshot below displays the contents of the <code>/etc/config/wireless</code> file:
 <br>
 <img src="/HHC_2025/images/dosis-network_file-contents.png" alt="Caido Replay /etc/config/wireless"> 
-<br>
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -129,7 +124,6 @@ The screenshot below displays the contents of the <code>/etc/config/wireless</co
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -151,7 +145,6 @@ The screenshot below displays the contents of the <code>/etc/config/wireless</co
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
