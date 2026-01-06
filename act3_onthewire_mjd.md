@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 Using browser developer tools, the data for each signal is captured. The data is analyzed using powershell and python scripts and decoded, leveraging the signal descriptions contained in the hints. Decoding each signal enables the decoding of the next signal. The protocols are dq, SPI, and I2C, which are board-level or device-level buses.
@@ -56,13 +55,9 @@ Using browser developer tools, the data for each signal is captured. The data is
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
-
 <summary>Click to expand</summary>
-<br>
-
 <p>
 <h3>Part One: 1-Wire</h3>
 <br>
@@ -338,12 +333,10 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 </p>
 <p>
 <strong>Answer: 32.84</strong>
-<br>
 </p>
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -377,7 +370,6 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -411,7 +403,6 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
