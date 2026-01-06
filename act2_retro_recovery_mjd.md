@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 This objective is a digital forensics investigation involving a floppy disk image file that required data recovery. The investigator used the Linux <code>losetup</code> command to mount the floppy disk image as a loop device, treating the image file as a physical block device. TestDisk was then executed against the loop device <code>/dev/loop0</code> to search for deleted files. After selecting the appropriate disk and partition type settings, the "undelete" function was used to browse recoverable files. Among the deleted files, a BASIC source code file named <code>all_i-want_for_christmas.bas</code> was identified as interesting. Upon opening the recovered BASIC file in a text editor (mousepad), the investigator discovered an embedded base64-encoded string within the source code. The base64 string <code>bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=</code> was decoded to reveal the hidden message: "merry christmas to all and to all a good night". This investigation demonstrates common digital forensics techniques including disk imaging, file carving, and data decoding. <br><br>
 <table>
@@ -65,7 +64,6 @@ This objective is a digital forensics investigation involving a floppy disk imag
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
@@ -85,9 +83,7 @@ sudo testdisk /dev/loop0
 </code></pre>
 <ol>
 <li>Select the disk0 as the media and click proceed</li>
-
 <li>Accept the default "none" as the partition type</li>
-
 <li>Select "undelete" as the action</li>
 </ol>
 <p>
@@ -129,7 +125,6 @@ merry christmas to all and to all a good night
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -151,7 +146,6 @@ merry christmas to all and to all a good night
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -181,7 +175,6 @@ merry christmas to all and to all a good night
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
