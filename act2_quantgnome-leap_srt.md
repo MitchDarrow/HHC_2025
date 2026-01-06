@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 Charlie has spotted a mysterious gnome - he winked and vanished, or maybe he’s still here? We must help him decode cryptic post quantum mysteries. 
 <br>
 This challenge functions more as a demonstration of post-quantum encryption schemes. We first generate a set of PQC keys, observing their bit lengths and NIST security levels. We are then given a clue about viewing the key length which allows us to discover the <code>gnome1</code> username to use with the SSH challenge. 
@@ -74,18 +73,15 @@ From there, it is pretty straightforward to escalate to admin; each <code>gnome{
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 <p>
 We are first given a dazzling quantgnome introduction to load the terminal, then told that there is a tool used to generate post-quantum cryptography (PQC) keys accessible to our user. We are tasked with finding and executing that program.
-<br><br>
-There are many ways to find this command; I simply typed <code>pqc</code> and pressed the tab key repeatedly until the terminal filled in the <code>pqc-keygen</code> command. 
-<br><br>
-Running this command will generate a set of 28 keys of varying strengths, types, and algorithms. Some keys are generated using classical methods, some using post-quantum methods, and some using a mixture of both. 
 <br>
+There are many ways to find this command; I simply typed <code>pqc</code> and pressed the tab key repeatedly until the terminal filled in the <code>pqc-keygen</code> command. 
+<br>
+Running this command will generate a set of 28 keys of varying strengths, types, and algorithms. Some keys are generated using classical methods, some using post-quantum methods, and some using a mixture of both. 
 <br>
 We then use the hint provided by <code>pqc-keygen -t</code> to identify the target user of our first quantgnome leap: <code>gnome1</code>. This is the result of listing detailed information about our <code>.ssh/id_rsa</code> file via <code>ssh-keygen -l -f</code>. <br><br>
 We use this RSA key to make our first leap. The <code>.ssh</code> directory of the <code>gnome1</code> user contains an ED25519 key which we can use to authenticate as <code>gnome2</code> with the <code>ssh -i</code> command. We are told that both the RSA and ED25519 key generation algorithms are not safe in a post-quantum world due to the reduction of the time complexity requirements in solving classical algorithms.<br><br> 
@@ -96,7 +92,6 @@ We are told that the flag is within the configuration directory of the SSH daemo
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
