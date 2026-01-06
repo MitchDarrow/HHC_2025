@@ -28,13 +28,10 @@ body {
   text-decoration: underline;
 }
 
-.main-content {
-  outline: 2px solid red;
+footer.site-footer {
+  padding-top: 0 !important;
 }
 
-.site-footer {
-  outline: 2px solid blue;
-}
 
 
 /* Make the header table full width */
