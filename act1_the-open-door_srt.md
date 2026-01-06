@@ -29,9 +29,7 @@ nav: |
 </tbody>
 </table>
 <p>
-<br>
 <h2>Solution Overview</h2>
-<br>
 Lucas is located just east of the Grand Hotel. We must help him secure the Neighboorhood's Azure network security infrastructure. To do this, we must audit the tenant's NSG rules and ensure nothing is overly permissive.
 <br>
 We use <code>az network nsg rule list</code> and <code>az network nsg rule show</code> to identify a suspicious rule in the <code>nsg-production-eastus</code> nsg, resource group <code>theneighborhood-rg1</code>. <code>Allow-RDP-From-Internet</code>.
@@ -67,12 +65,10 @@ We use <code>az network nsg rule list</code> and <code>az network nsg rule show<
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
 <p>
-<br>
 Guided terminal prompts help us to perform essential enumeration steps for this challenge. 
 <br></p>
 We begin by listing available resource groups with the <code>az group list -o table</code> command (note that <code>-o table</code> simply specifies the format in which data is output). This reveals one neighborhood resource group hosted in the <code>eastus</code> region and one hosted in <code>westus</code>. 
@@ -95,7 +91,6 @@ Our first two properties allow for inbound access to port 3389, which is the sta
 <strong>This is the insecure rule targeted by the challenge</strong>. With this rule in effect, attackers and legitimate users alike can arbitrarily initialize RDP connections into any host covered by the NSG. 
 </p>
 </details>
-<br>
 <h2>Tools Reference</h2>
 <table>
 <thead>
