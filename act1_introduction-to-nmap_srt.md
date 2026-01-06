@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <br>
 Eric Pursley provides an NMAP introduction requiring us to use nmap to discover and connect to the wardriving rig on his motorcycle. We first scan a single IP, then all ports on a single IP, all ports on an IP range. We run a service scan on a discovered port, then use <code>nc [IP][PORT]</code> to connect to the service and grab its banner.  
@@ -53,18 +52,12 @@ Eric Pursley provides an NMAP introduction requiring us to use nmap to discover 
 </tbody>
 </table>
 <p>
-<br>
 <h2>Detailed Solution</h2>
 </p>
-<br>
 <details>
 <summary>Click to expand</summary>
-<br>
-<br>
 </details>
-<br>
 <h2>Tools Reference</h2>
-<br>
 <table>
 <thead>
 <tr>
