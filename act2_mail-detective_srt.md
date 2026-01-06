@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 Maurice has a cool samurai outfit and warthog pet. We need to use curl to help him investigate the gnomes sending JS-enabled emails to everyone in the nieghborhood. We need to connect to the IMAP server and investigate the source.
 <br>
 We can't connect via HTTP, but we can use <code>imap://127.0.01:143</code> within our curl command to use the IMAP protocol instead. We have to poke through the content of each email and find the URL for the pastebin service used by the gnomes. 
@@ -68,7 +67,6 @@ Digging through the inbox and provided emails, we find the URL within the spam f
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
@@ -144,7 +142,6 @@ function establishPersistence() {
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
