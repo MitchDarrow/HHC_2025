@@ -7,7 +7,7 @@ nav:
 <p>
 <h1>BerryDunn Holiday Hack Challenge All Solutions</h1>
 <br>
-Solutions highlighted in green are part of the Official Report. 
+Solutions highlighted in blue are part of the Official Report. 
 </p>
 <table style="table-layout: fixed; width: 100%;">
 <colgroup> <col style="width:33.33%"> <col style="width:33.33%"> <col style="width:33.33%"> </colgroup>
@@ -66,7 +66,7 @@ Solutions highlighted in green are part of the Official Report.
 </tr>
 <tr>
 <td><a href="/HHC_2025/act1_the_open_door_mjd.html">Act1 The Open Door</a></td>
-<td style="background-color: #A1D038;"><a href="/HHC_2025/act1_the-open-door_srt.html">Act1 The Open Door</a></td>
+<td style="background-color: #68a2b9;"><a href="/HHC_2025/act1_the-open-door_srt.html">Act1 The Open Door</a></td>
 <td>Completed: No Write Up</td>
 </tr>
 <tr>
