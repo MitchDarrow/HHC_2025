@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 The code on the outside of the building is binary and decodes to "imanok" which is konami spelled backwards. Konami code is a classic cheat sequence (↑ ↑ ↓ ↓ ← → ← → B A) often repurposed in games and puzzles.  Because the word is inverted, the code sequence is also inverted (Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑). Each door is marked with one of three symbols A, ↑, B.  The konami code gives the choice for working doorways in each room, with the code arrows being interpreted as compass directions.  All doors work in the first room, and is designated the start of the code. Following the code leads to the destination and the flag.
@@ -56,13 +55,9 @@ The code on the outside of the building is binary and decodes to "imanok" which 
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
-
 <summary>Click to expand</summary>
-<br>
-
 <p>
 Viewing the exterior wall of the datacenter, there is a pattern in the bricks that looks binary, six bytes of data:
 <br>
@@ -205,7 +200,6 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -223,7 +217,6 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -245,7 +238,6 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
