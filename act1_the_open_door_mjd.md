@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 Conducted reconnaisance of an Azure tenant. Discovered a Network Sec=urity Group (NSG) misconfiguration allowing Remote Desktop Protocol (RDP) from the public internet. 
@@ -46,16 +45,14 @@ Conducted reconnaisance of an Azure tenant. Discovered a Network Sec=urity Group
 </tr>
 </thead>
 <tbody>
-  <tr><td>Discovering that RDP is exposed to the internet</td><td>Reconnaisance</td><td>T1590.003</td><td>Gather Victim Network Information: Internet Exposed Services</td></tr>
+<tr><td>Discovering that RDP is exposed to the internet</td><td>Reconnaisance</td><td>T1590.003</td><td>Gather Victim Network Information: Internet Exposed Services</td></tr>
 </tbody>
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 <p>
 Start by listing the groups with this command:
 <br>
@@ -96,16 +93,12 @@ Show the rule to complete the objective with this command:
   --name Allow-RDP-From-Internet \
   --output json
 </code></pre>
-
-
 <p>
 <strong>Answer: NSG misconfiguration allowing RDP (port 3389) from the public internet</strong>
-<br>
 </p>
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -123,7 +116,6 @@ Show the rule to complete the objective with this command:
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -141,7 +133,6 @@ Show the rule to complete the objective with this command:
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
