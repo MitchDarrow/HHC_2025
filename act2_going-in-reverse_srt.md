@@ -62,7 +62,7 @@ The key here is the name of the challenge. A bitwise XOR is used to encode user-
 <td>Execute Python Solver</td>
 <td>Execution</td>
 <td>T1059.006</td>
-<td>Command aand Scripting Interpreter: Python</td>
+<td>Command and Scripting Interpreter: Python</td>
 </tr>
 </tbody>
 </table>
