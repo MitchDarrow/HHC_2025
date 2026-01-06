@@ -34,7 +34,7 @@ title: about_its
     vertical-align: top;
   }
 </style>
-<style> .main-content table { padding: 10px; border-collapse: separate; /* required for table padding to work */ border-spacing: 0; /* optional */ } </style>
+
 <p>
 <a href="/HHC_2025/index.html">Back to Home Page</a>
 <br>
