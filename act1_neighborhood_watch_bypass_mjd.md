@@ -30,10 +30,9 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 This objective identifies a path hijacking privilege escalation attack against a Linux system where the user "chiuser" had limited sudo privileges. Initial reconnaissance revealed a bash script called <code>system_status</code> that executed the <code>ps</code> command to display process information. Investigation of the user's sudo privileges using <code>sudo -l</code> revealed critical security misconfigurations in the sudoers file. The secure_path configuration included the user's home directory bin folder (<code>/home/chiuser/bin</code>) in the PATH, and crucially, the PATH environment variable was preserved when executing commands with sudo. This configuration created a path hijacking vulnerability where a malicious binary could be placed in <code>~/bin</code> to intercept legitimate command calls. The attacker created a fake <code>ps</code> binary in the <code>~/bin</code> directory containing a simple bash script that spawned an interactive shell. When the <code>system_status</code> script was executed with sudo privileges, it called the <code>ps</code> command without using an absolute path, causing the system to execute the malicious version from <code>~/bin</code> first. Because the script ran with root privileges, the spawned bash shell inherited those elevated permissions, granting the attacker full root access to the system.
-<br><br>
+<br>
 <table>
 <thead>
 <tr>
@@ -78,7 +77,6 @@ This objective identifies a path hijacking privilege escalation attack against a
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
@@ -144,7 +142,6 @@ Successfully obtained a new shell with root privileges and can run the <code>run
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -162,7 +159,6 @@ Successfully obtained a new shell with root privileges and can run the <code>run
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -188,7 +184,6 @@ Successfully obtained a new shell with root privileges and can run the <code>run
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
