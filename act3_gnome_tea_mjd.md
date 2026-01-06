@@ -5,7 +5,7 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th><a href="/HHC_2025/act2_going_in_reverse_mjd.html">Previous Objective: Act2 Going in Reverse</a></th>
+  <th><a href="/HHC_2025/act2_going-in-reverse_srt.html">Previous Objective: Act2 Going in Reverse</a></th>
   <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
   <th><a href="/HHC_2025/act3_hack-a-gnome_mjd.html">Next Objective: Act3 Hack-a-Gnome</a></th>
   </tr>
