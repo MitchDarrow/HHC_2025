@@ -108,11 +108,10 @@ Key Indicators:
 <li>Microsoft.Azure.Documents.Common/2.14.0 - This is the Azure Cosmos DB SDK</li>
 <li>ActivityId - Cosmos DB uses ActivityIds for tracking queries</li>
 <li>Error code SC1010 - Cosmos DB-specific error code</li>
-<li>"invalid token '$'" - You likely triggered a syntax error in Cosmos DB's SQL-like query language</li>
+<li>"invalid token '$'" - triggered a syntax error in Cosmos DB's SQL-like query language</li>
 </ol>
 <p>
 About Cosmos DB:
-<br>
 </p>
 <ul>
 <li>Microsoft's NoSQL database service</li>
@@ -165,7 +164,7 @@ Harold digest: 07f456ae6a94cb68d740df548847f459
 <br>
 </p>
 <p>
-Usiong crackstation.net, it is possible to crack both hashes.
+Using crackstation.net, it is possible to crack both hashes.
 <br>
 </p>
 <p>
