@@ -189,7 +189,7 @@ The hint indicates that we should be attempting prototype pollution of the stati
 <br>
 </p>
 <p>
-<img src="/HHC_2025/images/hack-a-gnome_statistics_panel.jpg" alt="Hack-a-Gnome Password Statistics Panel">
+<img src="/HHC_2025/images/hack-a-gnome_statisticspanel.jpg" alt="Hack-a-Gnome Password Statistics Panel">
 <br>
 </p>
 <p>
