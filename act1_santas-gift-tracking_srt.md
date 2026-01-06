@@ -29,9 +29,7 @@ nav: |
 </tbody>
 </table>
 <p>
-<br>
 <h2>Solution Overview</h2>
-<br>
 Yori is located in front of Modern Scandinavia with the Santa's Gift-Tracking Machine. Yori tells us that we need to use curl to access the gift tracker system and identify which port the <code>santa_tracker</code> process is running on after the gnome's meddled with the app and changed its port from <code>8080</code> to an unknown value. 
 We use the <code>ss -tlnp</code> command, analagous to a <code>netstat</code> command, and identify port <code>12321</code> on the localhost showing activity. <code>curl 127.0.0.1:12321</code> successfully connects to the service.
 </p>
@@ -66,20 +64,15 @@ We use the <code>ss -tlnp</code> command, analagous to a <code>netstat</code> co
 </tbody>
 </table>
 <p>
-<br>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 <p>
 Utilizing <code>ss -tlnp</code> as indicated in the terminal introductory text, we identify the open port <code>12321</code> listening on <code>0.0.0.0</code>. Since <code>0.0.0.0</code> exposes the service to external connections on all network interfaces, a simple <code>curl 127.0.0.1:12321</code> successfully connects to the gift-tracking service to complete the challenge. 
 </p>
 </details>
-<br>
 <h2>Tools Reference</h2>
-<br>
 <table>
 <thead>
 <tr>
