@@ -5,9 +5,7 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th></th>
   <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-  <th></th>
   </tr>
   </thead>
   <tbody>
