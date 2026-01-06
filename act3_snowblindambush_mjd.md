@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 Starting with only public access to the web application, reconnaisance was conducted to identify weaknesses. The chatbot was exploited to recover the admin password to the website. Once logged in, a file upload mechanism was discovered that allowed for abuse. The redirect after file upload used a parameter, that allowed Server Side Template Injection (SSTI). This was exploited to achieve Remote Code Execution (RCE) and access to the application as the www-data identity. A scheduled job was discovered that ran in the context of the root user. Under specific conditions this job would exfiltrate an encrypted copy of the /etc/shadow file. From this file, the password for the root user was obtained. This was used to elevate permissions and obtain the flag.
@@ -92,13 +91,9 @@ Starting with only public access to the web application, reconnaisance was condu
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
-
 <summary>Click to expand</summary>
-<br>
-
 <p>
 <h2>Step One: Gain Access to web application by abusing Chatbot</h2>
 <br>
@@ -370,7 +365,6 @@ With root password, it is a simple matter to escalate privileges using the su co
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -412,7 +406,6 @@ With root password, it is a simple matter to escalate privileges using the su co
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -438,7 +431,6 @@ With root password, it is a simple matter to escalate privileges using the su co
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
