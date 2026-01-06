@@ -5,7 +5,7 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th><a href="/act1_blob-storage_srt.html">Previous Objective: Act1 Blob Storage Challenge</a></th>
+  <th><a href="/HHC_2025/act1_blob-storage_srt.html">Previous Objective: Act1 Blob Storage Challenge</a></th>
   <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
   <th><a href="/HHC_2025/act1_the-open-door_srt.html">Next Objective: Act1 The Open Door</a></th>
   </tr>
