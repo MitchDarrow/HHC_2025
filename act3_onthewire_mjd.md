@@ -60,7 +60,6 @@ Using browser developer tools, the data for each signal is captured. The data is
 <summary>Click to expand</summary>
 <p>
 <h3>Part One: 1-Wire</h3>
-<br>
 </p>
 <p>
 The following python script connects to the web socket and collects the data into a csv file:
