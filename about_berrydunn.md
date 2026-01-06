@@ -1,10 +1,19 @@
 ﻿---
 layout: default
 title: about_berrydunn
+nav: |
+  <table>
+  <thead>
+  <tr>
+  <th></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
-<p>
- <a href="/HHC_2025/index.html">Back to Home Page</a>
-<br>
 </p>
 <p>
 <h1>About BerryDunn</h1>
