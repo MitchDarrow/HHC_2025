@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 Starting with only public access to the web application, reconnaisance was conducted to identify weaknesses. A comment was found in the page code that indicated some collections may allow insecure access. Probing those collections identified a clue to a user's password that would lead to the password. The username was identified in a collection. The password was decoded from  the latitude and longitude data contained in the image metadata. Once logged into the application as the user, code that determined if a user should have admin access was identified and abused, resulting in identifing the secret passphrase.
@@ -74,12 +73,9 @@ Starting with only public access to the web application, reconnaisance was condu
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
-
 <summary>Click to expand</summary>
-<br>
 <p>
 Using Edge's developer tools, the application code is reviewed. An interesting comment is found on the page:
 <br>
@@ -230,7 +226,6 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -264,7 +259,6 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -298,7 +292,6 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
