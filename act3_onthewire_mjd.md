@@ -97,7 +97,7 @@ ws = websocket.WebSocketApp(url,
 ws.run_forever()
 </code></pre>
 <p>
-The data file collected:</p> <a href="/HHC_2025/HHC_2025_Template/resources/OntheWire_1wire_data.csv">1-Wire Data</a>
+The data file collected:</p> <a href="/HHC_2025/HHC_2025_Template/resources/onthewire_1wire_data.csv">1-Wire Data</a>
 <br>
 <p>
 The data contains the following markers:
