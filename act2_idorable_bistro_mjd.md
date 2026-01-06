@@ -74,7 +74,6 @@ This objective is the exploitation of an Insecure Direct Object Reference (IDOR)
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
@@ -133,12 +132,10 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 </p>
 <p>
 <strong>Answer: Bartholomew Quibblefrost</strong>
-<br>
 </p>
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -160,7 +157,6 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -190,7 +186,6 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
