@@ -29,9 +29,7 @@ nav: |
 </tbody>
 </table>
 <p>
-<br>
 <h2>Solution Overview</h2>
-<br>
 Chris provides us a basic firewall exercise where we must allow specified ports for each connection point based on stated firewall configuration goals. 
 </p>
 <table>
@@ -59,20 +57,14 @@ Chris provides us a basic firewall exercise where we must allow specified ports 
 </tbody>
 </table>
 <p>
-<br>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
 <p>
-<br>
-<br>
 Dropping into the Visual Firewall Thinger tool, we are given six configuration goals that detail specific connections that must be allowed between five different connection points. 
 <br>
-<br>
 Our six configuration goals are:
-<br>
 <br>
 </p>
 <ol>
@@ -97,9 +89,7 @@ Our five connection points, as you may surmise from the above, are:
 </ul>
 <p>
 <br>
-<br>
 Using the GUI provided by the tool, we are able to configure the connections as indicated by the stated configuration goals. The following relevant ports and services are used:
-<br>
 <br>
 </p>
 <ul>
@@ -111,10 +101,7 @@ Using the GUI provided by the tool, we are able to configure the connections as 
 <li>Port 445 - SMB</li>
 </ul>
 </details>
-<br>
-<br>
 <h2>Tools Reference</h2>
-<br>
 <table>
 <thead>
 <tr>
