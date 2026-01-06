@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 Conduct reconnaisance of an Azure tenant looking for for interesting files that might contain valuable information. The $web directory was explored for configuration files. A terraform file contained a long-lived SAS migration token.
@@ -51,11 +50,9 @@ Conduct reconnaisance of an Azure tenant looking for for interesting files that 
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 <p>
 Start by listing all resource groups:
 <br>
@@ -109,7 +106,6 @@ az storage blob download \
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -127,7 +123,6 @@ az storage blob download \
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -145,7 +140,6 @@ az storage blob download \
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
