@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 Paul has tasked us with investigating a suspicious Gnome Diagnostic Interface (<code>gnome-48371.atnascorp</code>) to track down the source of malicious updates. We begin with a set of low-privilege credentials, <code>gnome:SittingOnAShelf</code>, discovered in a local <code>~/notes</code> file, which grants us basic access but restricts administrative functions.
 Traffic analysis reveals that the application manages sessions via JSON Web Tokens (JWT). Inspection of the token header identifies a <code>jku</code> (JSON Key URL) parameter pointing to the trusted Identity Provider. We exploit a vulnerability in the token validation logic by performing a "JKU Header Injection" attack. We generate a malicious RSA key pair using <code>openssl</code> and host a corresponding <code>jwks.json</code> file on our attacker infrastructure. 
@@ -73,11 +72,9 @@ Using <code>jwt_tool.py</code>, we forge a new token with the <code>admin: true<
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 The <code>notes</code> file provided in our terminal provides steps for the usage of <code>curl</code> in accessing and authenticating to the diagnostic interface's login page. 
 <p>
 Following these steps gives us the following JWT:
@@ -184,7 +181,6 @@ curl -H 'Cookie: session=[insert-session]' http://gnome-48371.atnascorp/diagnost
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -202,7 +198,6 @@ curl -H 'Cookie: session=[insert-session]' http://gnome-48371.atnascorp/diagnost
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
