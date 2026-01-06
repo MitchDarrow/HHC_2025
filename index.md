@@ -139,7 +139,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 </tbody>
 </table>
 <p>
-Learn more about our firm at <a href="/HHC_2025/about_berrydunn.html"><b>about BerryDunn</b></a>.
+Learn more <a href="/HHC_2025/about_berrydunn.html"><b>about BerryDunn</b></a>.
 <br>
 </p>
 <p>
