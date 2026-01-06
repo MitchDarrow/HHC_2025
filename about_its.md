@@ -32,8 +32,6 @@ title: about_its
     white-space: normal !important;
     line-height: 1.4;
     vertical-align: top;
-  }
-  .main-content table td {
     padding: 10px;
   }
 </style>
