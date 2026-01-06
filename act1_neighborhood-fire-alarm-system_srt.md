@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 Kyle says that he has been locked out of the neighborhood fire alarm system, which has been giving erroneous data ever since the gnomes came to town. We must restore access by elevating our current access to admin privileges. 
 </p>
 <br>
@@ -71,12 +70,9 @@ Enumeration of scripts in <code>$PATH</code> reveals one script at <code>/usr/lo
 </tr>
 </tbody>
 </table>
-<br>
 <h2>Detailed Solution</h2>
 <details>
-<br>
 <summary>Click to expand</summary>
-<br>
 We are dropped into bash shell with basic user access. We notably are given a local <code>bin/</code> directory, which is included in the list of directories from which we can call scripts and binaries without any directory prefix (colloquially known as our our <code>$PATH</code>). The content of our <code>$PATH</code> environment variable can be enumerated via <code>echo $PATH</code>. We can further drill down to find any scripts in our path with the following bash one liner:
 <pre><code class="language-sh">
 for d in <code>echo $PATH | tr ":" "\n"</code>; do find $d -name "*.sh" 2>/dev/null; done
@@ -94,7 +90,6 @@ To tie these pieces together, we should really understand what <code>/usr/local/
 </p>
 <ol>
 <li>We first place a basic privilege escalation payload into a  new <code>/tmp/w</code> file. For this challenge, our file simply contained the following:</li>
-
 <pre><code class="language-sh">
 #!/bin/bash
 /bin/bash -p
@@ -109,9 +104,7 @@ executing this file with root permissions will spawn a new shell as the root use
 </ol>
 To complete the challenge, we need to run the <code>/home/chiuser/bin/runtoanswer</code> binary as the root user, which promptly restores administrative control over the alarm system to the neighborhood!
 </details>
-<br>
 <h2>Tools Reference</h2>
-<br>
 <table>
 <thead>
 <tr>
