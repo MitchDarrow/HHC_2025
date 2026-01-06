@@ -1,6 +1,18 @@
 ﻿---
 layout: default
 title: about_its
+nav: |
+  <table>
+  <thead>
+  <tr>
+  <th></th>
+  <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
+  <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
 ---
 <style>
   /* Make Cayman table behave like a real table */
@@ -35,11 +47,6 @@ title: about_its
   }
 </style>
 
-
-<p>
-<a href="/HHC_2025/index.html">Back to Home Page</a>
-<br>
-</p>
 <p>
 <h1>About BerryDunn's Cybersecurity Team</h1>
 <br>
