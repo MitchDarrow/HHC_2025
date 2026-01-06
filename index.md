@@ -6,7 +6,7 @@ title: index
   th.hhc-title {
     font-size: 2em !important;        /* match H1 size */
     font-weight: normal !important;   /* remove bold */
-    color: #003a5d !important;        /* your blue */
+    color: #FFFFFF !important;        /* white */
     padding-left: 0.75rem !important; /* add left padding */
     padding-top: 0 !important;
     padding-bottom: 0 !important;
