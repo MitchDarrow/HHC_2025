@@ -96,7 +96,6 @@ Starting with only public access to the web application, reconnaisance was condu
 <summary>Click to expand</summary>
 <p>
 <h2>Step One: Gain Access to web application by abusing Chatbot</h2>
-<br>
 </p>
 <p>
 Initial discovery activities of the website uncovered the following:
@@ -155,7 +154,6 @@ Initial discovery activities of the website uncovered the following:
 </p>
 <p>
 <h2>Step Two: Explore SSTI and achieve RCE : Insecure Software</h2>
-<br>
 The hint indicates that the application is using Flask. There are two helpful resources for understanding SSTI:
 <br>
 </p>
@@ -249,7 +247,6 @@ The following indexes where discovered that would allow RCE:
 </p>
 <p>
 <h2>Step Three: Achieve Shell Access Utilizing Insecure File Upload</h2>
-<br>
 </p>
 <p>
 The following payload was inserted into a file called payload.jpg and uploaded to the admin profile.
@@ -268,7 +265,6 @@ sh /app/static/images/admin\\u005ff1f9cc53781abb79\\u002epng
 </code></pre>
 <p>
 <h2>Step Four: Exfilitrate Data leveraging an Insecure processes / Data Leakage</h2>
-<br>
 </p>
 <p>
 With initial access established, time for more recon. An interesting cron job was located in /etc/cron/cron.d/mycron. It runs a backup script every minute as root.
@@ -312,7 +308,6 @@ The exfiltrated data file is located here: <a href="/HHC_2025/resources/shadow_e
 </p>
 <p>
 <h2>Step Five:  Decode PNG file</h2>
-<br>
 </p>
 <p>
 Since we have the backup script, we know the encryption mechanism. We also know what the first block of data encrypted is "root:$". With this information, we can decode the file.
@@ -332,7 +327,6 @@ The file was damaged or incomplete, so the script suppresses errors and forces t
 </p>
 <p>
 <h2>Step Six: Crack Hash for Root</h2>
-<br>
 </p>
 <p>
 With the password hash, salt, and the algorithm used, we can attempt to crack the hash using John the Ripper and the rockyou word list.
