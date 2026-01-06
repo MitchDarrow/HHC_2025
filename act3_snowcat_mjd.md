@@ -76,7 +76,6 @@ Starting with an account with minimal access to the system, the website was foun
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 <p>
 Using a nonexistent URL (http://localhost/nonexistant), an error message was triggered revealing that the system is running a potentially vulnerable version of Tomcat.
 <br>
