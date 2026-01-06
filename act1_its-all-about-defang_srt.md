@@ -29,9 +29,8 @@ nav: |
 </tbody>
 </table>
 <h2>Solution Overview</h2>
-Ed and his team have been working on a new SOC tool that helps triage phishing emails. He asks us to help fix some issues with their detections, where some sketchy emails still made it through. We need to make sure all IoCs are blocked.
+<p>Ed and his team have been working on a new SOC tool that helps triage phishing emails. He asks us to help fix some issues with their detections, where some sketchy emails still made it through. We need to make sure all IoCs are blocked.
 <br>
-<p>
 We are brought to their Defang tool, where we must analyze a suspicious email. We need to use Regular Expressions (regex) to help the tool identify information such as the domains, IP addresses, URLs, and email addresses contained in the email. We are provided with sample regex patterns to use and must then manually exclude false positives provided by those patterns. 
 </p>
 <br>
@@ -74,7 +73,6 @@ All of our identified IoCs are then manually defanged via a chained <code>sed</c
 <p>
 The Defang tool presents us with an example of an email that made it through Ed's security filters. We are first tasked with identifying malicious content within four classes of indicators of compromise (IoC): 
 </p>
-<br>
 <ul>
 <li>Domains</li>
 <li>IP Addresses</li>
@@ -82,7 +80,6 @@ The Defang tool presents us with an example of an email that made it through Ed'
 <li>Email Addresses</li>
 </ul>
 <p>
-<br>
 For each of these classes, the tool provides us with a sample regular expression (regex) pattern that is used to identify content within the text of the email. After running each provided regex pattern, we must manually exclude friendly assets in our IoC identification. We <em>do</em> need to modify the IP address regex to properly capture the entirety of the field. The supplied query only selects three, not four couplets. 
 <br>
 </p>
