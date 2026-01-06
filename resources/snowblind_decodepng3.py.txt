@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+from PIL import ImageFile, Image
+
+BLOCK_SIZE = 6
+
+def extract_blue_channel(png_path):
+    ImageFile.LOAD_TRUNCATED_IMAGES = True
+    img = Image.open(png_path).convert("RGB")
+    pixels = list(img.getdata())
+    blues = bytes([b for (_, _, b) in pixels])
+    return blues
+
+def decrypt_from_seed(encoded, seed_index, known_plain_block):
+    Ei = encoded[seed_index*BLOCK_SIZE:(seed_index+1)*BLOCK_SIZE]
+    Ki = bytes(e ^ p for e, p in zip(Ei, known_plain_block))
+    out = bytearray()
+    K = Ki
+    for i in range(seed_index, len(encoded)//BLOCK_SIZE):
+        E = encoded[i*BLOCK_SIZE:(i+1)*BLOCK_SIZE]
+        P = bytes(e ^ k for e, k in zip(E, K))
+        out += P
+        K = E
+    return bytes(out)
+
+def extract_root_line(decoded):
+    """Stop at the first ':::' (end of entry) or newline."""
+    text = decoded.decode(errors="replace")
+    end_idx = text.find(":::")
+    if end_idx != -1:
+        return text[:end_idx+3]
+    nl_idx = text.find("\n")
+    if nl_idx != -1:
+        return text[:nl_idx]
+    return text
+
+def parse_password_field(root_line):
+    """Split the shadow line and extract password field components."""
+    parts = root_line.split(":")
+    if len(parts) < 2:
+        return None
+    pw_field = parts[1]
+    if pw_field.startswith("$"):
+        comps = pw_field.split("$")
+        # comps[0] is empty, comps[1]=id, comps[2]=salt, comps[3]=hash
+        algo_id = comps[1]
+        salt = comps[2]
+        hashval = comps[3] if len(comps) > 3 else ""
+        algo_map = {
+            "1": "MD5-crypt",
+            "2a": "Blowfish",
+            "5": "SHA-256-crypt",
+            "6": "SHA-512-crypt",
+            "y": "yescrypt"
+        }
+        algo_name = algo_map.get(algo_id, "Unknown")
+        return {
+            "algorithm_id": algo_id,
+            "algorithm_name": algo_name,
+            "salt": salt,
+            "hash": hashval
+        }
+    return {"algorithm_id": None, "algorithm_name": None, "salt": None, "hash": pw_field}
+
+if __name__ == "__main__":
+    encoded = extract_blue_channel("shadow_exfil.png")
+    print(f"Extracted {len(encoded)} candidate bytes")
+
+    # Seed at block 0 with 'root:$'
+    seed_index = 0
+    known_plain_block = b"root:$"
+    recovered = decrypt_from_seed(encoded, seed_index, known_plain_block)
+
+    root_line = extract_root_line(recovered)
+    print("\n=== Root shadow entry ===")
+    print(root_line)
+
+    pw_info = parse_password_field(root_line)
+    if pw_info:
+        print("\n=== Password field components ===")
+        print(f"Algorithm ID: {pw_info['algorithm_id']}")
+        print(f"Algorithm Name: {pw_info['algorithm_name']}")
+        print(f"Salt: {pw_info['salt']}")
+        print(f"Hash: {pw_info['hash']}")
