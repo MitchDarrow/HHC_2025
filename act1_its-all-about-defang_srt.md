@@ -31,11 +31,9 @@ nav: |
 <br>
 <h2>Solution Overview</h2>
 <br>
-<br>
 Ed and his team have been working on a new SOC tool that helps triage phishing emails. He asks us to help fix some issues with their detections, where some sketchy emails still made it through. We need to make sure all IoCs are blocked.
 <br>
 <p>
-<br>
 We are brought to their Defang tool, where we must analyze a suspicious email. We need to use Regular Expressions (regex) to help the tool identify information such as the domains, IP addresses, URLs, and email addresses contained in the email. We are provided with sample regex patterns to use and must then manually exclude false positives provided by those patterns. 
 </p>
 <br>
@@ -71,11 +69,9 @@ All of our identified IoCs are then manually defanged via a chained <code>sed</c
 </tbody>
 </table>
 <p>
-<br>
 <h2>Detailed Solution</h2>
 </p>
 <details>
-<br>
 <summary>Click to expand</summary>
 <br>
 <p>
@@ -99,7 +95,6 @@ By following a process of iterating upon and fine-tuning the regex patterns prov
 </details>
 <br>
 <h2>Tools Reference</h2>
-<br>
 <table>
 <thead>
 <tr>
