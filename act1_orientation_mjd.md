@@ -30,11 +30,9 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 Orientation information about this year's challenge.
-<br>
 </p>
 <table>
 <thead>
@@ -56,23 +54,19 @@ Orientation information about this year's challenge.
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 <p>
 Type the word "answer" in the terminal
 <br>
 </p>
 <p>
 <strong>Answer: answer</strong>
-<br>
 </p>
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -90,7 +84,6 @@ Type the word "answer" in the terminal
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -108,7 +101,6 @@ Type the word "answer" in the terminal
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
