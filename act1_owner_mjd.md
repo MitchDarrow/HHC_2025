@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 Conduct reconnaisance of an Azure tenant looking for permission misconfigurations. The group IT Admins wass found on subscription the neighborhood-sub-3. Another group was nested inside IT Admins that contained a permanent permission assignment to a user. This violates the principle of least privilege and creates a permanent attack path.
 <br>
 </p>
@@ -49,11 +48,9 @@ Conduct reconnaisance of an Azure tenant looking for permission misconfiguration
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
 <summary>Click to expand</summary>
-<br>
 <p>
 Start by listing the accounts with this command:
 <br>
@@ -106,7 +103,6 @@ az ad group member list --group 631ebd3f-39f9-4492-a780-aef2aec8c94e | less
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -124,7 +120,6 @@ az ad group member list --group 631ebd3f-39f9-4492-a780-aef2aec8c94e | less
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
