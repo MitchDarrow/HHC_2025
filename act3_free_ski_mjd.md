@@ -30,7 +30,6 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-<br>
 </p>
 <p>
 Reverse engineer an executable to reveal hidden information.
@@ -62,12 +61,9 @@ Reverse engineer an executable to reveal hidden information.
 </table>
 <p>
 <h2>Detailed Solution</h2>
-<br>
 </p>
 <details>
-
 <summary>Click to expand</summary>
-<br>
 <p>
 Git clone both repositories to my kali machine.
 <br>
@@ -199,12 +195,10 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py.txt">Solve Free Ski</a>
 </p>
 <p>
 <strong>Answer: frosty_yet_predictably_random</strong>
-<br>
 </p>
 </details>
 <p>
 <h2>Tools Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -234,7 +228,6 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py.txt">Solve Free Ski</a>
 </table>
 <p>
 <h2>Hints Reference</h2>
-<br>
 </p>
 <table>
 <thead>
@@ -260,7 +253,6 @@ Script: <a href="/HHC_2025/act3_solvefreeski.py.txt">Solve Free Ski</a>
 </table>
 <p>
 <h2>Acknowledgements</h2>
-<br>
 </p>
 <table>
 <thead>
