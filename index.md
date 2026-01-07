@@ -159,6 +159,6 @@ Meet the BerryDunn team members who participated in this year's challenge:
 <tbody>
 </tbody>
 </table>
-<img src="https://raw.githubusercontent.com/mitchdarrow/HHC_2025/main/images/pixel.gif" style="display:none;">
+<img src="https://raw.githubusercontent.com/mitchdarrow/HHC_2025/main/images/1.gif" style="display:none;">
 
 
