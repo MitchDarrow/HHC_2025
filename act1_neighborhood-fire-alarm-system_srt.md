@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Neighborhood Watch Bypass</th>
@@ -34,7 +34,7 @@ Kyle says that he has been locked out of the neighborhood fire alarm system, whi
 </p>
 <br>
 Enumeration of scripts in <code>$PATH</code> reveals one script at <code>/usr/local/bin/system_status.sh</code>. <code>sudo --list</code> tells us that this binary can be executed as root for the current user via <code>sudo NOPASS</code>. The script uses local paths to call commands such as <code>free</code>, <code>df</code>, and <code>w</code>. We can exploit this behavior to replace the global binary with a script of the same name containing a simple privilege escalation payload.
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -105,7 +105,7 @@ executing this file with root permissions will spawn a new shell as the root use
 To complete the challenge, we need to run the <code>/home/chiuser/bin/runtoanswer</code> binary as the root user, which promptly restores administrative control over the alarm system to the neighborhood!
 </details>
 <h2>Tools Reference</h2>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
