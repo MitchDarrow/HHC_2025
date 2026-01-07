@@ -9,7 +9,7 @@ nav:
 <br>
 Solutions highlighted in blue are part of the Official Report. 
 </p>
-<table class="quest-table">
+<table class="quest-table equal-cols">
 <thead>
 <tr>
 <th>Mitch Darrow</th>
