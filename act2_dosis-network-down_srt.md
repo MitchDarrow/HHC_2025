@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Dosis Network Down</th>
@@ -36,7 +36,7 @@ Inspecting router login page's elements doesn't reveal much, however we are give
 <br>
 We can leverage this vulnerability to execute commands on the router. To solve the challenge, the objective states that we have to find the password within the router's config files. We identify a nonstandard <code>/etc/config</code> directory, which contains a text file named <code>wireless</code> containing the password.
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -110,7 +110,7 @@ The screenshot below displays the contents of the <code>/etc/config/wireless</co
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -127,7 +127,7 @@ The screenshot below displays the contents of the <code>/etc/config/wireless</co
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -148,7 +148,7 @@ The screenshot below displays the contents of the <code>/etc/config/wireless</co
 <p>
 <h2>Acknowledgements</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
