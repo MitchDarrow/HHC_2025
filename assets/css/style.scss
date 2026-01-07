@@ -123,23 +123,25 @@ footer.site-footer,
 }
 
 /* --------------------------------------------------
-   QUEST TABLES (CLEAN, ISOLATED)
+   QUEST TABLES (FINAL FIXED VERSION)
 -------------------------------------------------- */
 
 .quest-table {
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
   border-collapse: collapse;
   margin: 1.5rem 0;
+  display: table !important; /* prevents Cayman scroll-table behavior */
 }
 
 .quest-table th,
 .quest-table td {
-  padding: 0.75rem 1rem;
-  border: 1px solid #e9ebec;
+  padding: 0.75rem 1rem !important; /* forces padding even when Cayman overrides */
+  border: 1px solid #e9ebec !important;
   text-align: left;
-  white-space: normal;
-  word-break: keep-all;
-  overflow-wrap: break-word;
+  white-space: normal !important;
+  word-break: keep-all !important;      /* prevents mid-word breaks */
+  overflow-wrap: break-word !important; /* wraps long strings safely */
   hyphens: auto;
 }
 
@@ -147,11 +149,17 @@ footer.site-footer,
   background-color: #003a5d !important;
   color: #fff !important;
   font-weight: bold;
-  border: 1px solid #003a5d;
+  border: 1px solid #003a5d !important;
 }
 
 .quest-table tr:nth-child(2n) {
   background-color: #f6f8fa;
+}
+
+/* Prevent parent containers from shrinking quest tables */
+.main-content .quest-table {
+  width: 100% !important;
+  display: table !important;
 }
 
 /* --------------------------------------------------
