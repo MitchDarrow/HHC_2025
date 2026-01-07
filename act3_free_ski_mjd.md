@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Free Ski</th>
@@ -35,7 +35,7 @@ nav: |
 Reverse engineer an executable to reveal hidden information.
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -200,7 +200,7 @@ Script: <a href="/HHC_2025/resources/act3_solvefreeski.py.txt">Solve Free Ski</a
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -229,7 +229,7 @@ Script: <a href="/HHC_2025/resources/act3_solvefreeski.py.txt">Solve Free Ski</a
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -254,7 +254,7 @@ Script: <a href="/HHC_2025/resources/act3_solvefreeski.py.txt">Solve Free Ski</a
 <p>
 <h2>Acknowledgements</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
