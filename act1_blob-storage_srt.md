@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Blob Storage Challenge in the Neighborhood</th>
@@ -36,7 +36,7 @@ Grace tells us that the Neighborhood HOA uses Azure storage accounts for its IT 
 <br>
 </p>
 After running a few introductory commands, we are guided to discover a suspicious storage account <code>neighborhod2</code> with public access enabled, an outdated <code>minimumTlsVersion</code>, and blob encryption disabled. The account has a container <code>public</code>, with an accessible blob containing <code>refrigerator_inventory.pdf, admin_credentials.txt, network_config.json</code>. We are able to download and view the credentials file. 
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -90,7 +90,7 @@ A simple <code>cat creds.txt</code> reveals the Azure Administrator's portal cre
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
