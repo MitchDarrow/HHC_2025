@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Rogue Gnome Identity Provider</th>
@@ -34,7 +34,7 @@ nav: |
 Paul has tasked us with investigating a suspicious Gnome Diagnostic Interface (<code>gnome-48371.atnascorp</code>) to track down the source of malicious updates. We begin with a set of low-privilege credentials, <code>gnome:SittingOnAShelf</code>, discovered in a local <code>~/notes</code> file, which grants us basic access but restricts administrative functions.
 Traffic analysis reveals that the application manages sessions via JSON Web Tokens (JWT). Inspection of the token header identifies a <code>jku</code> (JSON Key URL) parameter pointing to the trusted Identity Provider. We exploit a vulnerability in the token validation logic by performing a "JKU Header Injection" attack. We generate a malicious RSA key pair using <code>openssl</code> and host a corresponding <code>jwks.json</code> file on our attacker infrastructure. 
 Using <code>jwt_tool.py</code>, we forge a new token with the <code>admin: true</code> claim, sign it with our private key, and modify the <code>jku</code> header to point to our malicious key set. Submitting this forged token grants us an administrative session cookie, allowing us to access the protected dashboard and identify the malicious <code>refrigerator-botnet.bin</code> firmware payload.
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -182,7 +182,7 @@ curl -H 'Cookie: session=[insert-session]' http://gnome-48371.atnascorp/diagnost
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -199,7 +199,7 @@ curl -H 'Cookie: session=[insert-session]' http://gnome-48371.atnascorp/diagnost
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
