@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Blob Storage Challenge in the Neighborhood</th>
@@ -35,7 +35,7 @@ nav: |
 The objective of this challenge is to connect using Azure CLI to the "neighborhood" tenant. Investigate and find where a security vulnerability exists. The neighborhood2 storage account was misconfigured to allow public blob access. The security vulnerability was a file named admin_credentials.txt that contained users and unencrypted passwords.
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -112,7 +112,7 @@ az storage blob download \
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -129,7 +129,7 @@ az storage blob download \
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -146,7 +146,7 @@ az storage blob download \
 <p>
 <h2>Acknowledgements</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
