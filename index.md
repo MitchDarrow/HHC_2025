@@ -159,4 +159,5 @@ Meet the BerryDunn team members who participated in this year's challenge:
 <tbody>
 </tbody>
 </table>
-<img src="https://visitor-badge.laobi.icu/badge?page_id=HHC_2025.index" style="display:none;">
+<img src="https://visitor-badge.glitch.me/badge?page_id=mitchdarrow.HHC_2025.index" style="display:none;">
+
