@@ -130,7 +130,7 @@ The Gnomes collection contains email addresses, notes and jpeg pictures
 <br>
 </p>
 <p>
-Looking in the dms collection contains a lot of messages. Searching for the string "password" reveals that Barnaby's image file contains location data that will identify his password.
+The dms collection contains a lot of messages. Searching for the string "password" reveals that Barnaby's image file contains location data that will identify his password.
 <br>
 </p>
 <pre><code class="language-sh">
@@ -141,7 +141,7 @@ curl -X GET https://firestore.googleapis.com/v1/projects/holidayhack2025/databas
 <br>
 </p>
 <p>
-Searching the gnomes collection reveals Barnabies email address. This is needed for login.
+Searching the gnomes collection reveals Barnaby's email address. This is needed for login.
 <br>
 </p>
 <p>
