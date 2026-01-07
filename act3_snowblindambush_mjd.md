@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Snowblind Ambush</th>
@@ -35,7 +35,7 @@ nav: |
 Starting with only public access to the web application, reconnaisance was conducted to identify weaknesses. The chatbot was exploited to recover the admin password to the website. Once logged in, a file upload mechanism was discovered that allowed for abuse. The redirect after file upload used a parameter, that allowed Server Side Template Injection (SSTI). This was exploited to achieve Remote Code Execution (RCE) and access to the application as the www-data identity. A scheduled job was discovered that ran in the context of the root user. Under specific conditions this job would exfiltrate an encrypted copy of the /etc/shadow file. From this file, the password for the root user was obtained. This was used to elevate permissions and obtain the flag.
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -342,7 +342,6 @@ With the password hash, salt, and the algorithm used, we can attempt to crack th
 </p>
 <p>
 <h2>Step Seven: Escalate privileges</h2>
-<br>
 </p>
 <p>
 With root password, it is a simple matter to escalate privileges using the su command. Once root, there is a bash script in the /root directory. Executing the script reveals the flag.
@@ -360,7 +359,7 @@ With root password, it is a simple matter to escalate privileges using the su co
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -401,7 +400,7 @@ With root password, it is a simple matter to escalate privileges using the su co
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -426,7 +425,7 @@ With root password, it is a simple matter to escalate privileges using the su co
 <p>
 <h2>Acknowledgements</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
