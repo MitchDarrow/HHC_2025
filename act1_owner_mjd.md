@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Owner</th>
@@ -33,7 +33,7 @@ nav: |
 Conduct reconnaisance of an Azure tenant looking for permission misconfigurations. The group IT Admins wass found on subscription the neighborhood-sub-3. Another group was nested inside IT Admins that contained a permanent permission assignment to a user. This violates the principle of least privilege and creates a permanent attack path.
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -104,7 +104,7 @@ az ad group member list --group 631ebd3f-39f9-4492-a780-aef2aec8c94e | less
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -121,7 +121,7 @@ az ad group member list --group 631ebd3f-39f9-4492-a780-aef2aec8c94e | less
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -139,7 +139,7 @@ az ad group member list --group 631ebd3f-39f9-4492-a780-aef2aec8c94e | less
 <h2>Acknowledgements</h2>
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
