@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: IDORable Bistro</th>
@@ -36,7 +36,7 @@ nav: |
 This objective is the exploitation of an Insecure Direct Object Reference (IDOR) vulnerability at the IDORable Bistro website. The initial reconnaissance involved scanning a QR code on a restaurant receipt that directed to https://its-idorable.hhc25-ops.com/. Inspection of the page source code revealed a hidden comment containing a sample receipt URL with a predictable identifier pattern. Using Burp Suite, the attacker intercepted HTTP requests and discovered that while initial requests used tokens, the initial request generated additional requests which exposed a numeric ID parameter. Using Burp Suite's Intruder feature to enumerate receipt IDs from 100 to 200, discovering that valid receipts existed from ID 100 to 152. Manual review of the enumerated responses revealed a receipt at ID 139 containing a gnomish customer name "Quibblefrost". The full name extracted from this receipt was "Bartholomew Quibblefrost". This vulnerability demonstrates a classic IDOR flaw where sequential numeric identifiers allow unauthorized access to other users' data without proper access controls. The attack required no authentication bypass and relied solely on predictable resource identifiers.
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -137,7 +137,7 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -158,7 +158,7 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -187,7 +187,7 @@ Reviewing the responses, a gnomish name "Quibblefrost" appears in ID=139.
 <p>
 <h2>Acknowledgements</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
