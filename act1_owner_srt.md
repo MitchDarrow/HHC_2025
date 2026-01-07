@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Owner</th>
@@ -32,7 +32,7 @@ nav: |
 <h2>Solution Overview</h2>
 James is a goose who tells us that we need to audit the neighborhood's RBAC configuration to ensure best practices are being followed. We must verify that all access uses PIM and that there are no permanently assigned Owner roles. Following the prompts we discover permanent owner roles assigned within <code>subscription03</code>.
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -72,7 +72,7 @@ Dropping into the Azure CLI instance, we are given some introductory commands to
 We are ultimately led to the <code>6b982f2f-78a0-44a8-b915-79240b2b4796</code> group. Listing the members of this group via <code>az ad member list --group</code> identifies a Subscription Administrator user whose <code>expirationDateTime</code> property is set to <code>null</code>. This configuration results in a permanent assignment of elevated privileges to whomever is designated this role, which could lead to a number of access control violations. 
 </details>
 <h2>Tools Reference</h2>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
