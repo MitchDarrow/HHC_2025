@@ -57,7 +57,7 @@ footer.site-footer,
 .main-content table:first-of-type {
   margin: 2rem 0;
   width: 100%;
-  display: table; /* override Cayman scroll-table */
+  display: table;
 }
 
 .main-content table:first-of-type td {
@@ -81,7 +81,7 @@ footer.site-footer,
 }
 
 /* --------------------------------------------------
-   PAGE NAVIGATION TABLE
+   PAGE NAVIGATION TABLE (UNCHANGED)
 -------------------------------------------------- */
 
 .page-navigation {
@@ -123,43 +123,34 @@ footer.site-footer,
 }
 
 /* --------------------------------------------------
-   MAIN CONTENT TABLES (CAYMAN OVERRIDES)
+   QUEST TABLES (NEW, CLEAN, ISOLATED)
 -------------------------------------------------- */
 
-/* Remove Cayman’s scroll-table behavior */
-.main-content table {
+.quest-table {
   width: 100%;
-  margin-bottom: 1.5rem;
   border-collapse: collapse;
+  margin: 1.5rem 0;
 }
 
-/* Table header cells */
-.main-content table th {
-  font-weight: bold;
-  background-color: #003a5d;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  border: 1px solid #003a5d;
-}
-
-/* Table body cells */
-.main-content table td {
-  padding: 0.5rem 1rem; /* restores padding for Location cell */
+.quest-table th,
+.quest-table td {
+  padding: 0.75rem 1rem;
   border: 1px solid #e9ebec;
   text-align: left;
-}
-
-/* Row striping */
-.main-content table tr:nth-child(2n) {
-  background-color: #f6f8fa;
-}
-
-/* Modern, safe wrapping */
-.main-content table td,
-.main-content table th {
   white-space: normal;
-  overflow-wrap: anywhere; /* replaces break-word */
+  word-break: keep-all;      /* prevents mid-word breaks */
+  overflow-wrap: break-word; /* wraps long strings safely */
+  hyphens: auto;
+}
+
+.quest-table th {
+  background-color: #003a5d;
+  color: #fff;
+  font-weight: bold;
+}
+
+.quest-table tr:nth-child(2n) {
+  background-color: #f6f8fa;
 }
 
 /* --------------------------------------------------
@@ -271,28 +262,4 @@ footer.site-footer,
 .btn:hover {
   background-color: #5891a7;
   border-color: #5891a7;
-}
-
-/* Fix table layout and padding */
-.main-content table {
-  display: table !important;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-/* Fix word-breaking behavior */
-.main-content table td,
-.main-content table th {
-  padding: 0.5rem 1rem !important; /* ensures Location cell gets padding */
-  white-space: normal !important;
-  word-break: normal !important;
-  overflow-wrap: anywhere;
-}
-
-/* Completely disable Cayman’s forced mid-word breaking */
-.main-content table td,
-.main-content table th {
-  word-break: normal !important;      /* stops breaking inside words */
-  overflow-wrap: anywhere;            /* allows breaking long strings */
-  hyphens: auto;                      /* optional: nicer breaks */
 }
