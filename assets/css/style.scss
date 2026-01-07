@@ -3,23 +3,15 @@
 
 @import "{{ site.theme }}";
 
-/* Override and add custom styles below this line */
+/* --------------------------------------------------
+   GLOBAL TYPOGRAPHY & COLORS
+-------------------------------------------------- */
 
-/* Override body font-family */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #424242;
 }
 
-/* Override page header gradient */
-.page-header {
-  color: #fff;
-  text-align: center;
-  background-color: #003a5d;
-  background-image: linear-gradient(126deg, rgba(0, 58, 93, 1) 57%, rgba(102, 165, 13, 0.68) 100%);
-}
-
-/* Override link colors */
 .main-content a {
   color: #33617d;
 }
@@ -28,18 +20,44 @@ body {
   text-decoration: underline;
 }
 
-footer.site-footer {
-  padding-top: 0 !important;
+img {
+  display: block;
+  margin: 0 auto;
 }
 
-table td { padding: 8px !important; }
+/* --------------------------------------------------
+   PAGE HEADER
+-------------------------------------------------- */
 
-/* Make the header table full width */
+.page-header {
+  color: #fff;
+  text-align: center;
+  background-color: #003a5d;
+  background-image: linear-gradient(
+    126deg,
+    rgba(0, 58, 93, 1) 57%,
+    rgba(102, 165, 13, 0.68) 100%
+  );
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
+footer.site-footer,
+.site-footer {
+  padding-top: 0 !important;
+  background-color: #003a5d;
+}
+
+/* --------------------------------------------------
+   HEADER TABLE (FIRST TABLE ON PAGE)
+-------------------------------------------------- */
+
 .main-content table:first-of-type {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   width: 100%;
-  display: table; /* Override the display: block from general table styles */
+  display: table; /* override Cayman scroll-table */
 }
 
 .main-content table:first-of-type td {
@@ -48,26 +66,24 @@ table td { padding: 8px !important; }
 }
 
 .main-content table:first-of-type td:first-child {
-  /* Text cell - ensure padding */
-  padding: 1rem 1.5rem;
-  width: 60%; /* Optional: control the width ratio between columns */
+  width: 60%;
 }
 
 .main-content table:first-of-type td:last-child {
-  /* Image cell - remove padding and fix image */
   padding: 0;
   line-height: 0;
-  width: 40%; /* Optional: control the width ratio between columns */
+  width: 40%;
 }
 
 .main-content table:first-of-type img {
-  display: block;
   width: 100%;
   height: auto;
-  margin: 0;
 }
 
-/* Center and style the page navigation */
+/* --------------------------------------------------
+   PAGE NAVIGATION TABLE
+-------------------------------------------------- */
+
 .page-navigation {
   margin-top: 2rem;
   width: 100%;
@@ -106,49 +122,50 @@ table td { padding: 8px !important; }
   text-decoration: underline;
 }
 
-/* Fix main content tables */
+/* --------------------------------------------------
+   MAIN CONTENT TABLES (CAYMAN OVERRIDES)
+-------------------------------------------------- */
+
+/* Remove Cayman’s scroll-table behavior */
 .main-content table {
-  display: block;
   width: 100%;
-  overflow: auto;
-  word-break: normal;
-  -webkit-overflow-scrolling: touch;
   margin-bottom: 1.5rem;
+  border-collapse: collapse;
 }
 
+/* Table header cells */
 .main-content table th {
   font-weight: bold;
   background-color: #003a5d;
   color: #fff;
-  padding: 0;
+  padding: 0.5rem 1rem;
   text-align: center;
   border: 1px solid #003a5d;
 }
 
+/* Table body cells */
 .main-content table td {
   padding: 0.5rem 1rem;
   border: 1px solid #e9ebec;
   text-align: left;
 }
 
-.main-content table tr {
-  background-color: #fff;
-  border-top: 1px solid #c6cbd1;
-}
-
+/* Row striping */
 .main-content table tr:nth-child(2n) {
   background-color: #f6f8fa;
 }
 
-/* Force table text to wrap */
+/* Force wrapping everywhere */
 .main-content table td,
 .main-content table th {
   white-space: normal !important;
   word-break: break-word !important;
 }
 
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
 
-/* Responsive */
 @media screen and (max-width: 42em) {
   .page-navigation th {
     display: block;
@@ -156,42 +173,44 @@ table td { padding: 8px !important; }
     padding: 0.5rem !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
+
   .page-navigation th:last-child {
     border-bottom: none;
   }
 }
 
-/* Style headers properly with new colors */
+/* --------------------------------------------------
+   HEADINGS
+-------------------------------------------------- */
+
 .main-content h1 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem;
   font-weight: normal;
   color: #003a5d;
 }
 
 .main-content h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem;
   font-weight: normal;
   color: #66A50D;
 }
 
 .main-content h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 1.5rem 0 1rem;
   font-weight: normal;
   color: #003a5d;
 }
 
 .main-content h4 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 1.5rem 0 1rem;
   font-weight: normal;
   color: #424242;
 }
 
-/* Fix details/summary styling */
+/* --------------------------------------------------
+   DETAILS / SUMMARY
+-------------------------------------------------- */
+
 .main-content details {
   margin-bottom: 1rem;
 }
@@ -209,7 +228,10 @@ table td { padding: 8px !important; }
   background-color: #e9ebec;
 }
 
-/* Code block styling */
+/* --------------------------------------------------
+   CODE BLOCKS
+-------------------------------------------------- */
+
 .main-content pre {
   padding: 0.8rem;
   overflow: auto;
@@ -231,20 +253,16 @@ table td { padding: 8px !important; }
 
 .main-content pre code {
   padding: 0;
-  font-size: 0.9rem;
-  color: #567482;
-  word-break: normal;
-  white-space: pre;
   background: transparent;
   border: 0;
+  white-space: pre;
+  word-break: normal;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
-}
+/* --------------------------------------------------
+   BUTTONS
+-------------------------------------------------- */
 
-/* Button styling (for future use) */
 .btn {
   background-color: #68A2B9;
   border-color: #68A2B9;
@@ -253,9 +271,4 @@ img {
 .btn:hover {
   background-color: #5891a7;
   border-color: #5891a7;
-}
-
-/* Footer styling (for future use) */
-.site-footer {
-  background-color: #003a5d;
 }
