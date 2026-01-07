@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: The Open Door</th>
@@ -35,7 +35,7 @@ nav: |
 Conducted reconnaisance of an Azure tenant. Discovered a Network Sec=urity Group (NSG) misconfiguration allowing Remote Desktop Protocol (RDP) from the public internet. 
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -100,7 +100,7 @@ Show the rule to complete the objective with this command:
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -117,7 +117,7 @@ Show the rule to complete the objective with this command:
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -134,7 +134,7 @@ Show the rule to complete the objective with this command:
 <p>
 <h2>Acknowledgements</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
