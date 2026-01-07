@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Quantgnome Leap</th>
@@ -35,7 +35,7 @@ Charlie has spotted a mysterious gnome - he winked and vanished, or maybe he’s
 This challenge functions more as a demonstration of post-quantum encryption schemes. We first generate a set of PQC keys, observing their bit lengths and NIST security levels. We are then given a clue about viewing the key length which allows us to discover the <code>gnome1</code> username to use with the SSH challenge. 
 From there, it is pretty straightforward to escalate to admin; each <code>gnome{1,2,3,4}</code> user possesses keys of increasing strength. When we log into a new user via ssh (no trickery required), the banner gives us information about each key scheme, its limitations, strengths, etc. After escalating to admin, we check <code>/opt</code> to find the PQC ssh daemon's directory, within which is hidden the flag. 
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -93,7 +93,7 @@ We are told that the flag is within the configuration directory of the SSH daemo
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
