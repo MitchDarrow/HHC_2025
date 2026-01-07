@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Going in Reverse</th>
@@ -34,7 +34,7 @@ Kevin was digging through old equipment when he discovered a Commodore 64 disk w
 <br>
 The key here is the name of the challenge. A bitwise XOR is used to encode user-provided strings in order to match these strings against a hard-coded encrypted password. Since XOR is a symmetrical operation, we can <em>go in reverse</em> of the original operation to decrypt these hard-coded credentials. A quick python script allows us to decrypt these values for a password of <code>C64RULES</code> and a flag of <strong><code>CTF{frost-plan:compressors,coolant,oil}</code></strong>. 
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -109,7 +109,7 @@ Using this code, we retrive a password of <code>C64RULES</code> and a flag of <s
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
