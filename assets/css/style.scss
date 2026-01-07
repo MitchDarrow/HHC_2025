@@ -288,3 +288,11 @@ footer.site-footer,
   word-break: normal !important;
   overflow-wrap: anywhere;
 }
+
+/* Completely disable Cayman’s forced mid-word breaking */
+.main-content table td,
+.main-content table th {
+  word-break: normal !important;      /* stops breaking inside words */
+  overflow-wrap: anywhere;            /* allows breaking long strings */
+  hyphens: auto;                      /* optional: nicer breaks */
+}
