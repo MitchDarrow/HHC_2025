@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: On The Wire</th>
@@ -35,7 +35,7 @@ nav: |
 Using browser developer tools, the data for each signal is captured. The data is analyzed using powershell and python scripts and decoded, leveraging the signal descriptions contained in the hints. Decoding each signal enables the decoding of the next signal. The protocols are dq, SPI, and I2C, which are board-level or device-level buses.
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -323,7 +323,7 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -356,7 +356,7 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -389,7 +389,7 @@ The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 ch
 <p>
 <h2>Acknowledgements</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
