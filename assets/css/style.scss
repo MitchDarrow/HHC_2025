@@ -112,4 +112,163 @@ footer.site-footer,
 }
 
 .page-navigation a {
-  color: rgba
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.page-navigation a:hover {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   MAIN CONTENT TABLES (CAYMAN OVERRIDES)
+-------------------------------------------------- */
+
+/* Remove Cayman’s scroll-table behavior */
+.main-content table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-collapse: collapse;
+}
+
+/* Table header cells */
+.main-content table th {
+  font-weight: bold;
+  background-color: #003a5d;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border: 1px solid #003a5d;
+}
+
+/* Table body cells */
+.main-content table td {
+  padding: 0.5rem 1rem; /* restores padding for Location cell */
+  border: 1px solid #e9ebec;
+  text-align: left;
+}
+
+/* Row striping */
+.main-content table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+/* Modern, safe wrapping */
+.main-content table td,
+.main-content table th {
+  white-space: normal;
+  overflow-wrap: anywhere; /* replaces break-word */
+}
+
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
+
+@media screen and (max-width: 42em) {
+  .page-navigation th {
+    display: block;
+    width: 100%;
+    padding: 0.5rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .page-navigation th:last-child {
+    border-bottom: none;
+  }
+}
+
+/* --------------------------------------------------
+   HEADINGS
+-------------------------------------------------- */
+
+.main-content h1 {
+  margin: 2rem 0 1rem;
+  font-weight: normal;
+  color: #003a5d;
+}
+
+.main-content h2 {
+  margin: 2rem 0 1rem;
+  font-weight: normal;
+  color: #66A50D;
+}
+
+.main-content h3 {
+  margin: 1.5rem 0 1rem;
+  font-weight: normal;
+  color: #003a5d;
+}
+
+.main-content h4 {
+  margin: 1.5rem 0 1rem;
+  font-weight: normal;
+  color: #424242;
+}
+
+/* --------------------------------------------------
+   DETAILS / SUMMARY
+-------------------------------------------------- */
+
+.main-content details {
+  margin-bottom: 1rem;
+}
+
+.main-content summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5rem;
+  background-color: #f6f8fa;
+  border: 1px solid #e9ebec;
+  border-radius: 0.3rem;
+}
+
+.main-content summary:hover {
+  background-color: #e9ebec;
+}
+
+/* --------------------------------------------------
+   CODE BLOCKS
+-------------------------------------------------- */
+
+.main-content pre {
+  padding: 0.8rem;
+  overflow: auto;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  border-radius: 0.3rem;
+  background-color: #f6f8fa;
+  border: 1px solid #e9ebec;
+}
+
+.main-content code {
+  padding: 2px 4px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9rem;
+  color: #567482;
+  background-color: #f3f6fa;
+  border-radius: 0.3rem;
+}
+
+.main-content pre code {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+/* --------------------------------------------------
+   BUTTONS
+-------------------------------------------------- */
+
+.btn {
+  background-color: #68A2B9;
+  border-color: #68A2B9;
+}
+
+.btn:hover {
+  background-color: #5891a7;
+  border-color: #5891a7;
+}
