@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Mail Detective</th>
@@ -35,7 +35,7 @@ Maurice has a cool samurai outfit and warthog pet. We need to use curl to help h
 We can't connect via HTTP, but we can use <code>imap://127.0.01:143</code> within our curl command to use the IMAP protocol instead. We have to poke through the content of each email and find the URL for the pastebin service used by the gnomes. 
 Digging through the inbox and provided emails, we find the URL within the spam folder: <code>https://frostbin.atnas.mail/api/paste</code>.
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -143,7 +143,7 @@ function establishPersistence() {
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
