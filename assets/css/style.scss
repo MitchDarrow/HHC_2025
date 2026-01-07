@@ -272,3 +272,19 @@ footer.site-footer,
   background-color: #5891a7;
   border-color: #5891a7;
 }
+
+/* Fix table layout and padding */
+.main-content table {
+  display: table !important;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Fix word-breaking behavior */
+.main-content table td,
+.main-content table th {
+  padding: 0.5rem 1rem !important; /* ensures Location cell gets padding */
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: anywhere;
+}
