@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Retro Recovery</th>
@@ -35,7 +35,7 @@ Mark is an avid collector of things of the past. While cleaning up the Retro Sto
 </p>
 <code>testdisk</code> must be used to recover the files deleted from the <code>.img</code> partition. We recover an <code>all_i_want_for_christmas.bas</code> file. After some digging, line 21 holds a base64 encoded secret "merry christmas to all and to all a good night".
 <br>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -81,7 +81,7 @@ Decoding this string we find the following text: <strong>"merry Christmas to all
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -98,7 +98,7 @@ Decoding this string we find the following text: <strong>"merry Christmas to all
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -123,7 +123,7 @@ Decoding this string we find the following text: <strong>"merry Christmas to all
 <p>
 <h2>Acknowledgements</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
