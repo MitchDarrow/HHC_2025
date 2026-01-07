@@ -13,18 +13,26 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Fetch GitHub traffic data
+      - name: Fetch GitHub traffic data (authenticated)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           curl -s \
             -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
             https://api.github.com/repos/mitchdarrow/HHC_2025/traffic/popular/paths \
             > paths.json
 
       - name: Extract 1.gif count safely
         id: extract
         run: |
-          # Find any path that ends with 1.gif
-          COUNT=$(jq '[.[] | select(.path | endswith("1.gif"))][0].count // 0' paths.json)
+          COUNT=$(jq -r '
+            if type=="array" then
+              (map(select(.path | endswith("1.gif"))) | .[0].count) // 0
+            else
+              0
+            end
+          ' paths.json)
           echo "count=$COUNT" >> $GITHUB_OUTPUT
 
       - name: Update visitor_count.json
@@ -39,6 +47,4 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add visitor_count.json
-          git commit -m "Update visitor count" || echo "No changes to commit"
-          git push
+          git add visitor
