@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Retro Recovery</th>
@@ -32,7 +32,7 @@ nav: |
 <h2>Solution Overview</h2>
 </p>
 This objective is a digital forensics investigation involving a floppy disk image file that required data recovery. The investigator used the Linux <code>losetup</code> command to mount the floppy disk image as a loop device, treating the image file as a physical block device. TestDisk was then executed against the loop device <code>/dev/loop0</code> to search for deleted files. After selecting the appropriate disk and partition type settings, the "undelete" function was used to browse recoverable files. Among the deleted files, a BASIC source code file named <code>all_i-want_for_christmas.bas</code> was identified as interesting. Upon opening the recovered BASIC file in a text editor (mousepad), the investigator discovered an embedded base64-encoded string within the source code. The base64 string <code>bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=</code> was decoded to reveal the hidden message: "merry christmas to all and to all a good night". This investigation demonstrates common digital forensics techniques including disk imaging, file carving, and data decoding. <br><br>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -126,7 +126,7 @@ merry christmas to all and to all a good night
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -147,7 +147,7 @@ merry christmas to all and to all a good night
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -176,7 +176,7 @@ merry christmas to all and to all a good night
 <p>
 <h2>Acknowledgements</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
