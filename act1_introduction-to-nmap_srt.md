@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Intro to Nmap</th>
@@ -33,7 +33,7 @@ nav: |
 </p>
 <br>
 Eric Pursley provides an NMAP introduction requiring us to use nmap to discover and connect to the wardriving rig on his motorcycle. We first scan a single IP, then all ports on a single IP, all ports on an IP range. We run a service scan on a discovered port, then use <code>nc [IP][PORT]</code> to connect to the service and grab its banner.  
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -58,7 +58,7 @@ Eric Pursley provides an NMAP introduction requiring us to use nmap to discover 
 <summary>Click to expand</summary>
 </details>
 <h2>Tools Reference</h2>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
