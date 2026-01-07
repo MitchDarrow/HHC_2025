@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Spare Key</th>
@@ -34,7 +34,7 @@ Next to Grace is Barry, who tells us that the Neighborhood HOA hosts a static we
 <br>
 We're connected to a read-only AZ CLI session. We find the <code>neighborhoodhoa</code> storage account with a <code>$web</code> container. Listing the blob associated with that container shows an <code>iac/terraform.tfvars</code> file with likely exposed secrets. Downloading the file reveals the long-lived SAS token, expiring <code>2100-01-01</code>.
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -95,7 +95,7 @@ The image below displays a subsection of this configuration file's contents, wit
 <img src="/HHC_2025/HHC_2025/images/spare-key_sas-token.png" alt="Long-Lived SAS Token"> 
 </details>
 <h2>Tools Reference</h2>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
