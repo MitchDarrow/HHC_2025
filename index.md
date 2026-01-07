@@ -19,7 +19,7 @@ title: index
 <p>
 <h1>BerryDunn Holiday Hack Challenge Solution Report</h1>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th class="hhc-title">SANS 2025<br>Holiday Hack Challenge:<br>Revenge of the Gnome(s)</th>
@@ -73,7 +73,7 @@ A matrix of solution write-ups for each objective that team members completed ma
 The following are the BerryDunn IT Security team's official solutions to this year's HHC objectives:
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Act 1 Official Solutions</th>
@@ -154,9 +154,9 @@ Meet the BerryDunn team members who participated in this year's challenge:
 </p>
 <table style="width:100%;">
 <tr>
-<td style="width:25%;"><a href="/HHC_2025/bio_mjd.html">Mitch Darrow</a></td>
-<td style="width:25%;"><a href="/HHC_2025/bio_srt.html">Spencer Treece</a></td>
-<td style="width:25%;"><a href="/HHC_2025/bio_kgb.html">Kodi Berube</a></td>
+<td style="width:33%;"><a href="/HHC_2025/bio_mjd.html">Mitch Darrow</a></td>
+<td style="width:33%;"><a href="/HHC_2025/bio_srt.html">Spencer Treece</a></td>
+<td style="width:33%;"><a href="/HHC_2025/bio_kgb.html">Kodi Berube</a></td>
 </tr>
 <tbody>
 </tbody>
