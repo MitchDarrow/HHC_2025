@@ -141,6 +141,14 @@ table td { padding: 8px !important; }
   background-color: #f6f8fa;
 }
 
+/* Fix table cell wrapping */
+.main-content table,
+.main-content table td,
+.main-content table th {
+  white-space: normal;
+  word-break: break-word;
+}
+
 /* Responsive */
 @media screen and (max-width: 42em) {
   .page-navigation th {
