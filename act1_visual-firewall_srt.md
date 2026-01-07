@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Visual Firewall Thinger</th>
@@ -32,7 +32,7 @@ nav: |
 <h2>Solution Overview</h2>
 Chris provides us a basic firewall exercise where we must allow specified ports for each connection point based on stated firewall configuration goals. 
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -102,7 +102,7 @@ Using the GUI provided by the tool, we are able to configure the connections as 
 </ul>
 </details>
 <h2>Tools Reference</h2>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
