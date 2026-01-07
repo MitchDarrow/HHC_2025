@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: The Open Door</th>
@@ -33,7 +33,7 @@ nav: |
 Lucas is located just east of the Grand Hotel. We must help him secure the Neighboorhood's Azure network security infrastructure. To do this, we must audit the tenant's NSG rules and ensure nothing is overly permissive.
 <br>
 We use <code>az network nsg rule list</code> and <code>az network nsg rule show</code> to identify a suspicious rule in the <code>nsg-production-eastus</code> nsg, resource group <code>theneighborhood-rg1</code>. <code>Allow-RDP-From-Internet</code>.
-</p><table>
+</p><table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -92,7 +92,7 @@ Our first two properties allow for inbound access to port 3389, which is the sta
 </p>
 </details>
 <h2>Tools Reference</h2>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
