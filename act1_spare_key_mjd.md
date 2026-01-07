@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Spare Key</th>
@@ -35,7 +35,7 @@ nav: |
 Conduct reconnaisance of an Azure tenant looking for for interesting files that might contain valuable information. The $web directory was explored for configuration files. A terraform file contained a long-lived SAS migration token.
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -107,7 +107,7 @@ az storage blob download \
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -124,7 +124,7 @@ az storage blob download \
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -141,7 +141,7 @@ az storage blob download \
 <p>
 <h2>Acknowledgements</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
