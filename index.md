@@ -152,11 +152,11 @@ Find out more <a href="/HHC_2025/about_its.html"><b>about BerryDunn's Cybersecur
 Meet the BerryDunn team members who participated in this year's challenge:
 <br>
 </p>
-<table style="width:100%;">
+<table class="quest-table equal-cols">
 <tr>
-<td style="width:33%;"><a href="/HHC_2025/bio_mjd.html">Mitch Darrow</a></td>
-<td style="width:33%;"><a href="/HHC_2025/bio_srt.html">Spencer Treece</a></td>
-<td style="width:33%;"><a href="/HHC_2025/bio_kgb.html">Kodi Berube</a></td>
+<td><a href="/HHC_2025/bio_mjd.html">Mitch Darrow</a></td>
+<td><a href="/HHC_2025/bio_srt.html">Spencer Treece</a></td>
+<td><a href="/HHC_2025/bio_kgb.html">Kodi Berube</a></td>
 </tr>
 <tbody>
 </tbody>
