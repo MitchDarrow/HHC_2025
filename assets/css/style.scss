@@ -162,6 +162,16 @@ footer.site-footer,
   display: table !important;
 }
 
+/* Force equal-width columns for specific tables */
+.equal-cols {
+  table-layout: fixed !important;
+}
+
+.equal-cols th,
+.equal-cols td {
+  width: 33.33% !important;
+}
+
 /* --------------------------------------------------
    RESPONSIVE
 -------------------------------------------------- */
