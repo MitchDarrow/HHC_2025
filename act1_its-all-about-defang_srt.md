@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Its All About Defang</th>
@@ -35,7 +35,7 @@ We are brought to their Defang tool, where we must analyze a suspicious email. W
 </p>
 <br>
 All of our identified IoCs are then manually defanged via a chained <code>sed</code> command: <code>s/\./[.]/g; s/@/[@]/g; s/http/hxxp/g; s/:\//[://]/g</code>.
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -87,7 +87,7 @@ To manually identify and exclude friendly assets, we must simply analyze the con
 By following a process of iterating upon and fine-tuning the regex patterns provided by the Defang tool, we are able to identify malicious nine IoCs within the provided email. These IoCs are manually defanged, or made benign, by the following chained <code>sed</code> command: <strong><code>s/\./[.]/g; s/@/[@]/g; s/http/hxxp/g; s/:\//[://]/g</code></strong>
 </details>
 <h2>Tools Reference</h2>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
