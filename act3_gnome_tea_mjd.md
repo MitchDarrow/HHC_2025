@@ -14,7 +14,7 @@ nav: |
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Gnome Tea</th>
@@ -35,7 +35,7 @@ nav: |
 Starting with only public access to the web application, reconnaisance was conducted to identify weaknesses. A comment was found in the page code that indicated some collections may allow insecure access. Probing those collections identified a clue to a user's password that would lead to the password. The username was identified in a collection. The password was decoded from  the latitude and longitude data contained in the image metadata. Once logged into the application as the user, code that determined if a user should have admin access was identified and abused, resulting in identifing the secret passphrase.
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -227,7 +227,7 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 <p>
 <h2>Tools Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
@@ -260,7 +260,7 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 <p>
 <h2>Hints Reference</h2>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
@@ -289,7 +289,7 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 <td>Say, you wouldn't happen to have time to help me out with something? The gnomes have been oddly suspicious and whispering to each other. In fact, I could've sworn I heard them use some sort of secret phrase. When I laughed right next to one, it said "passphrase denied". I asked what that was all about but it just giggled and ran away. I know they've been using GnomeTea to "spill the tea" on one another, but I can't sign up 'cause I'm obviously not a gnome. I could sure use your expertise to infiltrate this app and figure out what their secret passphrase is. I've tried a few things already, but as usual the whole... Uh, what's the word I'm looking for here? Oh right, "endeavor", ended up with the rest of my unfinished projects.</td>
 </tr>
 </tbody>
-</table>
+</table class="quest-table">
 <p>
 <h2>Acknowledgements</h2>
 </p>
