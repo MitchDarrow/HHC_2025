@@ -30,7 +30,7 @@ title: index
 </tbody>
 </table>
 <p>
-<h3>About the Holiday Hack Challenge (HHC)</h3>
+<h2>About the Holiday Hack Challenge (HHC)</h2>
 The SANS Holiday Hack Challenge is a free, annual cybersecurity competition designed to help participants strengthen their technical skills through practical, hands-on challenges. At its core, the event is a large-scale capture-the-flag (CTF) exercise where players engage in penetration testing, reverse engineering, cryptography, network analysis, and other security disciplines. Each challenge is crafted to simulate real-world scenarios, giving participants the opportunity to practice problem-solving and apply security concepts in a safe environment. Since its early beginnings in the 2000s, the challenge has steadily evolved, incorporating increasingly sophisticated puzzles and interactive environments that encourage both individual learning and team collaboration. Its primary purpose is to make skill development accessible to all levels of expertise, from students just starting out to seasoned professionals looking to refine their techniques. By offering a structured yet engaging platform, the Holiday Hack Challenge has become a respected training ground in the cybersecurity community, fostering growth, knowledge sharing, and the advancement of practical defensive and offensive security skills.
 <br>
 </p>
@@ -64,6 +64,7 @@ The list below is a curated list of the best of class solution for each objectiv
 <li>A summary of hints for the objective</li>
 <li>An acknowledgements summary, thanking other participants for any guidance in solving the objective</li>
 </ul>
+<h2>Hack Challenge Solutions</h2>
 <p>
 A matrix of solution write-ups for each objective that team members completed may be found here:<br><a href="/HHC_2025/allwriteups.html"><b>All Solutions</b></a>
 <br>
@@ -138,6 +139,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 </tr>
 </tbody>
 </table>
+<h2>Who is BerryDunn</h2>
 <p>
 Learn more <a href="/HHC_2025/about_berrydunn.html"><b>about BerryDunn</b></a>.
 <br>
