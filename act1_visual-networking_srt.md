@@ -14,7 +14,7 @@ nav: |-
   </tbody>
   </table>
 ---
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Objective: Visual Networking Thinger</th>
@@ -35,7 +35,7 @@ This is an interactive visualization serving as a basic introduction to networki
 The challenge goes through the building blocks of the HTTP/S request process, starting with a DNS request to resolve the hostname's IP address. Users then construct an HTTP request, a TCP three-way handshake, a TLS certificate exchange, and finally an HTTPS request.
 <br>
 </p>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Activity</th>
@@ -108,7 +108,7 @@ We must then construct an HTTPS <strong>GET</strong> request with HTTPS version 
 </p>
 </details>
 <h2>Tools Reference</h2>
-<table>
+<table class="quest-table">
 <thead>
 <tr>
 <th>Tools Used</th>
