@@ -2,8 +2,8 @@ name: Visitor Counter
 
 on:
   schedule:
-    - cron: "0 * * * *"
-  workflow_dispatch:
+    - cron: "0 * * * *"   # runs every hour
+  workflow_dispatch:      # allows manual runs
 
 jobs:
   count_visits:
@@ -20,10 +20,10 @@ jobs:
             https://api.github.com/repos/mitchdarrow/HHC_2025/traffic/popular/paths \
             > paths.json
 
-      - name: Extract pixel count safely
+      - name: Extract 1.gif count safely
         id: extract
         run: |
-          # Try to find any path ending in pixel.gif
+          # Find any path that ends with 1.gif
           COUNT=$(jq '[.[] | select(.path | endswith("1.gif"))][0].count // 0' paths.json)
           echo "count=$COUNT" >> $GITHUB_OUTPUT
 
