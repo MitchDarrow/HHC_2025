@@ -141,13 +141,13 @@ table td { padding: 8px !important; }
   background-color: #f6f8fa;
 }
 
-/* Fix table cell wrapping */
-.main-content table,
+/* Force table text to wrap */
 .main-content table td,
 .main-content table th {
-  white-space: normal;
-  word-break: break-word;
+  white-space: normal !important;
+  word-break: break-word !important;
 }
+
 
 /* Responsive */
 @media screen and (max-width: 42em) {
