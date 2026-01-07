@@ -2,8 +2,8 @@ name: Visitor Counter
 
 on:
   schedule:
-    - cron: "0 * * * *"   # runs every hour
-  workflow_dispatch:      # allows manual runs
+    - cron: "0 * * * *"
+  workflow_dispatch:
 
 jobs:
   count_visits:
@@ -12,6 +12,16 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Debug: list files
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Files:"
+          ls -R .
 
       - name: Fetch GitHub traffic data (authenticated)
         env:
@@ -35,6 +45,12 @@ jobs:
           ' paths.json)
           echo "count=$COUNT" >> $GITHUB_OUTPUT
 
+      - name: Ensure visitor_count.json exists
+        run: |
+          if [ ! -f visitor_count.json ]; then
+            echo '{"count":0,"last_updated":""}' > visitor_count.json
+          fi
+
       - name: Update visitor_count.json
         run: |
           jq --argjson c "${{ steps.extract.outputs.count }}" \
@@ -47,4 +63,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add visitor
+          git add visitor_count.json
+          git commit -m "Update visitor count" || echo "No changes to commit"
+          git push
