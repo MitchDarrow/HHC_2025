@@ -16,7 +16,7 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Debug: list files
+      - name: Debug list files
         run: |
           echo "Current directory:"
           pwd
