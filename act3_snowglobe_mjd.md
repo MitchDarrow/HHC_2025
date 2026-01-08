@@ -67,7 +67,7 @@ Viewing the exterior wall of the datacenter, there is a pattern in the bricks th
 <br>
 </p>
 <p>
-Assuming black is 0 and light greay is 1, decoding the patterns gives:
+Assuming black is 0 and light gray is 1, decoding the patterns gives:
 <br>
 </p>
 <p>
