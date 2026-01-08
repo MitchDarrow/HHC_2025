@@ -24,7 +24,7 @@ nav: |
 <tbody>
 <tr>
 <td>Chat with Yori near the apartment building about Santa's mysterious gift tracker and unravel the holiday mystery.</td>
-<td>Location:Location:&#8203; Outside the Apartment Building</td>
+<td>Location:&#8203; Outside the Apartment Building</td>
 </tr>
 </tbody>
 </table>
