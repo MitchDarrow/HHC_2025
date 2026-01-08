@@ -228,7 +228,7 @@ The data file contains markers, but due to the volume of data, a script was used
 <a href="/HHC_2025/resources/onthewire_i2cuniquemarkers.ps1.txt">I2C Unique Markers Script</a>
 </p>
 <p>
-These are the unigue markers:
+These are the unique markers:
 <br>
 </p>
 <pre><code class="language-">
