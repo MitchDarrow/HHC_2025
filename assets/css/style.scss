@@ -123,7 +123,7 @@ footer.site-footer,
 }
 
 /* --------------------------------------------------
-   QUEST TABLES (FINAL FIXED VERSION)
+   QUEST TABLES — CLEAN, CONSOLIDATED, WRAP-FRIENDLY
 -------------------------------------------------- */
 
 .quest-table {
@@ -132,25 +132,24 @@ footer.site-footer,
   border-collapse: collapse;
   margin: 1.5rem 0;
   display: table !important; /* prevents Cayman scroll-table behavior */
+  table-layout: fixed;       /* ensures columns wrap properly */
 }
 
-.table-quest td {
-  word-break: break-word !important;
-  overflow-wrap: anywhere !important;
-  white-space: normal !important;
-}
-
+/* Core cell styling */
 .quest-table th,
 .quest-table td {
-  padding: 0.75rem 1rem !important; /* forces padding even when Cayman overrides */
+  padding: 0.75rem 1rem !important;
   border: 1px solid #e9ebec !important;
   text-align: left;
+
+  /* Wrapping rules — these FIX your issue */
   white-space: normal !important;
-  word-break: keep-all !important;      /* prevents mid-word breaks */
-  overflow-wrap: break-word !important; /* wraps long strings safely */
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
   hyphens: auto;
 }
 
+/* Header styling */
 .quest-table th {
   background-color: #003a5d !important;
   color: #fff !important;
@@ -158,6 +157,7 @@ footer.site-footer,
   border: 1px solid #003a5d !important;
 }
 
+/* Zebra striping */
 .quest-table tr:nth-child(2n) {
   background-color: #f6f8fa;
 }
@@ -168,7 +168,7 @@ footer.site-footer,
   display: table !important;
 }
 
-/* Force equal-width columns for specific tables */
+/* Optional: equal-width columns */
 .equal-cols {
   table-layout: fixed !important;
 }
@@ -176,15 +176,6 @@ footer.site-footer,
 .equal-cols th,
 .equal-cols td {
   width: 33.33% !important;
-}
-.quest-table {
-  table-layout: fixed;
-  width: 100%;
-}
-
-.quest-table td {
-  white-space: normal;
-  overflow-wrap: anywhere;
 }
 
 /* --------------------------------------------------
