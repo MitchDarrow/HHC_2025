@@ -134,13 +134,13 @@ Trial and error reveals that all doors in room 1 work. Room 2 testing shows that
 <tr>
 <td>2</td>
 <td>A doors: 3, 6, 7, 10</td>
-<td><strong>A</strong></td>
+<td>A</td>
 <td>All A-type</td>
 </tr>
 <tr>
 <td>3</td>
 <td>B doors: 1, 4, 9, 12</td>
-<td><strong>B</strong></td>
+<td>B</td>
 <td>All B-type</td>
 </tr>
 <tr>
