@@ -134,6 +134,12 @@ footer.site-footer,
   display: table !important; /* prevents Cayman scroll-table behavior */
 }
 
+.table-quest td {
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  white-space: normal !important;
+}
+
 .quest-table th,
 .quest-table td {
   padding: 0.75rem 1rem !important; /* forces padding even when Cayman overrides */
@@ -171,12 +177,12 @@ footer.site-footer,
 .equal-cols td {
   width: 33.33% !important;
 }
-.table-quest {
+.quest-table {
   table-layout: fixed;
   width: 100%;
 }
 
-.table-quest td {
+.quest-table td {
   white-space: normal;
   overflow-wrap: anywhere;
 }
