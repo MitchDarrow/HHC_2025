@@ -289,11 +289,11 @@ Using the console in Edge's developer tools, admin access is achieved by setting
 <td>Say, you wouldn't happen to have time to help me out with something? The gnomes have been oddly suspicious and whispering to each other. In fact, I could've sworn I heard them use some sort of secret phrase. When I laughed right next to one, it said "passphrase denied". I asked what that was all about but it just giggled and ran away. I know they've been using GnomeTea to "spill the tea" on one another, but I can't sign up 'cause I'm obviously not a gnome. I could sure use your expertise to infiltrate this app and figure out what their secret passphrase is. I've tried a few things already, but as usual the whole... Uh, what's the word I'm looking for here? Oh right, "endeavor", ended up with the rest of my unfinished projects.</td>
 </tr>
 </tbody>
-</table class="quest-table">
+</table>
 <p>
 <h2>Acknowledgements</h2>
 </p>
-<table>
+<table  class="quest-table">
 <thead>
 <tr>
 <th>Provided By</th>
