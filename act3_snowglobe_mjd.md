@@ -115,7 +115,7 @@ Reversed Konami Code: A B →←  →← ↓ ↓ ↑ ↑
 Trial and error reveals that all doors in room 1 work. Room 2 testing shows that all A labeled doors work. Room 3 testing indicates that all B labeled doors work.  This confirms that the pattern is a reversed konami code. Finishing the sequence:
 <br>
 </p>
-<table class="quest-table">
+<table class="quest-table equal-cols">
 <thead>
 <tr>
 <th>Room</th>
