@@ -166,7 +166,7 @@ The hint indicates that the application is using Flask. There are two helpful re
 <br>
 </p>
 <p>
-A basic test to see if SSTI is possible is "{{7*7}}". Because the application evaluates the expression and displays the results on the page, the application is likely vulnerable.
+A basic test to see if SSTI is possible is {% raw %}{{7*7}}{% endraw %}. Because the application evaluates the expression and displays the results on the page, the application is likely vulnerable.
 <br>
 </p>
 <p>
