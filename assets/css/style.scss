@@ -171,6 +171,15 @@ footer.site-footer,
 .equal-cols td {
   width: 33.33% !important;
 }
+.table-quest {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-quest td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 
 /* --------------------------------------------------
    RESPONSIVE
