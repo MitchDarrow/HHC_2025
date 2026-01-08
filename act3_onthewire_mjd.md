@@ -238,7 +238,6 @@ SDA markers: bus-idle, start, address-bit, ack-bit, ack-release, data-bit, stop,
 </code></pre>
 <p>
 The following decoder was written in Powershell: <a href="/HHC_2025/resources/onthewire_i2cdecoderV3.ps1.txt">I2C Decoder</a></p>
-<br>
 <p>
 Script Workflow
 <br>
