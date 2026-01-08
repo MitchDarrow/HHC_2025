@@ -191,7 +191,7 @@ curl -H 'Cookie: session=[insert-session]' http://gnome-48371.atnascorp/diagnost
 </thead>
 <tbody>
 <tr>
-<td><code>jwt_tool.py</code></td>
+<td>jwt_tool.py</td>
 <td>2.3.0</td>
 </tr>
 </tbody>
