@@ -152,7 +152,7 @@ function establishPersistence() {
 </thead>
 <tbody>
 <tr>
-<td><code>curl</code></td>
+<td>curl</td>
 <td>8.17.0</td>
 </tr>
 </tbody>
