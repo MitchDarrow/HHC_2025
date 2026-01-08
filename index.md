@@ -39,7 +39,7 @@ Some participation statistics from the 2024 HHC:
 <br>
 </p>
 <ul>
-<li>Total Players Starting the Prologue: 19,036</li>
+<li>Total participants starting the Prologue: 19,036</li>
 <li>Total participants starting Act 1: 5937</li>
 <li>Total participants starting Act 2: 2659</li>
 <li>Total participants starting Act 3: 814</li>
