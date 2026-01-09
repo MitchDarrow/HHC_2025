@@ -306,7 +306,7 @@ Separate READ vs WRITE
 <li>Prints totals, raw hex, and XOR decrypted values using the provided key.</li>
 </ul>
 <p>
-The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 characters “banaz”
+The raw data repeats every 5 bytes, so the XOR key needs to be shortened to 5 characters “banan”
 <br>
 </p>
 <img src="/HHC_2025/images/onthewire_i2cdecoded.jpg" alt="I2C Device 0x3C">
