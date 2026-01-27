@@ -97,7 +97,7 @@ az ad group member list --group 631ebd3f-39f9-4492-a780-aef2aec8c94e | less
 <p>
 <img src="/HHC_2025/images/owner_subscriptionadminsgroup.jpg" alt="Azure tenant subscription Admins Group properties">
 <br>
-<strong>Answer: Use just-in-time elevated access instead of permanent assignments. Permanent Owner roles create persistente attack paths and violate least-privilege principles.  </strong>
+<strong>Answer: Use just-in-time elevated access instead of permanent assignments. Permanent Owner roles create persistent attack paths and violate least-privilege principles.  </strong>
 <br>
 </p>
 </details>
