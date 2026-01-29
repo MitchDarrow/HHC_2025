@@ -166,6 +166,8 @@ The correct URL to obtain Barnaby's image is: https://firebasestorage.googleapis
 curl "https://firebasestorage.googleapis.com/v0/b/holidayhack2025.firebasestorage.app/o/gnome-documents%2Fl7VS01K9GKV5ir5S8suDcwOFEpp2_drivers_license.jpeg?alt=media" -o drivers_license.jpeg
 </code></pre>  
 <p>
+Using the exiftool in kali, the image metadata is surfaced and reveals the GPS coordinates where the image was captured.
+  <br>
 <img src="/HHC_2025/images/gnometea_exifdata.jpg" alt="Image Exifdata">
 <br>
 </p>
