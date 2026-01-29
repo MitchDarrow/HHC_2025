@@ -4,9 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
 <url>
   <loc>https://mitchdarrow.github.io/HHC_2025/</loc>
   <lastmod>2026-01-28T16:51:56+00:00</lastmod>
@@ -173,11 +170,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://mitchdarrow.github.io/HHC_2025/index.html</loc>
-  <lastmod>2026-01-28T16:51:56+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://mitchdarrow.github.io/HHC_2025/act1_its_all_about_defang_mjd.html</loc>
   <lastmod>2026-01-28T16:51:56+00:00</lastmod>
   <priority>0.64</priority>
@@ -262,51 +254,5 @@
   <lastmod>2026-01-28T16:51:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-<url>
-  <loc>https://mitchdarrow.github.io/HHC_2025/resources/onthewire_1wire_data.txt</loc>
-  <lastmod>2026-01-28T16:51:56+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://mitchdarrow.github.io/HHC_2025/resources/onthewire_spidata.xml.txt</loc>
-  <lastmod>2026-01-28T16:51:56+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://mitchdarrow.github.io/HHC_2025/resources/onthewire_spidecoder.ps1.txt</loc>
-  <lastmod>2026-01-28T16:51:56+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://mitchdarrow.github.io/HHC_2025/resources/onthewire_i2cdataV2.json.txt</loc>
-  <lastmod>2026-01-28T16:51:56+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://mitchdarrow.github.io/HHC_2025/resources/onthewire_i2cuniquemarkers.ps1.txt</loc>
-  <lastmod>2026-01-28T16:51:56+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://mitchdarrow.github.io/HHC_2025/resources/onthewire_i2cdecoderV3.ps1.txt</loc>
-  <lastmod>2026-01-28T16:51:56+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://mitchdarrow.github.io/HHC_2025/resources/freeski_sourcecode.txt</loc>
-  <lastmod>2026-01-28T16:51:56+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://mitchdarrow.github.io/HHC_2025/resources/snowblind_enumeration2.py.txt</loc>
-  <lastmod>2026-01-28T16:51:56+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://mitchdarrow.github.io/HHC_2025/resources/snowblind_decodepng3.py.txt</loc>
-  <lastmod>2026-01-28T16:51:56+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
 
 </urlset>
