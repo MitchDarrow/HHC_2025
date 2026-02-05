@@ -1,1 +1,1 @@
-Sitemap: https://mitchdarrow.github.io/HHC_2025/sitemap/sitemap.txt
+Sitemap: https://mitchdarrow.github.io/HHC_2025/sitemap/sitemap_index.txt
