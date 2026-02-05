@@ -34,6 +34,11 @@ title: index
 The SANS Holiday Hack Challenge is a free, annual cybersecurity competition designed to help participants strengthen their technical skills through practical, hands-on challenges. At its core, the event is a large-scale capture-the-flag (CTF) exercise where players engage in penetration testing, reverse engineering, cryptography, network analysis, and other security disciplines. Each challenge is crafted to simulate real-world scenarios, giving participants the opportunity to practice problem-solving and apply security concepts in a safe environment. Since its early beginnings in the 2000s, the challenge has steadily evolved, incorporating increasingly sophisticated puzzles and interactive environments that encourage both individual learning and team collaboration. Its primary purpose is to make skill development accessible to all levels of expertise, from students just starting out to seasoned professionals looking to refine their techniques. By offering a structured yet engaging platform, the Holiday Hack Challenge has become a respected training ground in the cybersecurity community, fostering growth, knowledge sharing, and the advancement of practical defensive and offensive security skills.
 <br>
 </p>
+<p>
+This year's HHC is structured in 3 Acts. Act 1 is intended to practice and polish skills. Some of these tools are old friends, and some of these tools may be unfamiliar. Act 2 increases the difficulty, in some cases chaining attacks to achieve the objective. Act 3 increases the complexity and difficulty for most of the objectives.  The difficulty of an objective is rated on a 1-5 scale, with 1 being less difficult, and 5 being the most difficult. 
+<br>
+The table below shows the number of participants that started the challenge, and how many completed each Act.
+</p>
 <table class="quest-table">
 <thead>
 <tr>
@@ -66,10 +71,6 @@ The SANS Holiday Hack Challenge is a free, annual cybersecurity competition desi
 
 </tbody>
 </table>
-<p>
-This year's HHC is structured in 3 Acts. Act 1 is intended to practice and polish skills. Some of these tools are old friends, and some of these tools may be unfamiliar. Act 2 increases the difficulty, in some cases chaining attacks to achieve the objective. Act 3 increases the complexity and difficulty for most of the objectives.  The difficulty of an objective is rated on a 1-5 scale, with 1 being less difficult, and 5 being the most difficult.
-<br>
-</p>
 <p>
 Members of BerryDunn's IT Security Consulting team have participated in this event the last several years. The team uses the HHC for honing and developing staff member's skills. Each participant works independently. The team gathers once a week for a social hour where we are able to discuss objectives, tools, and techniques.
 <br>
