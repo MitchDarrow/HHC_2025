@@ -34,17 +34,38 @@ title: index
 The SANS Holiday Hack Challenge is a free, annual cybersecurity competition designed to help participants strengthen their technical skills through practical, hands-on challenges. At its core, the event is a large-scale capture-the-flag (CTF) exercise where players engage in penetration testing, reverse engineering, cryptography, network analysis, and other security disciplines. Each challenge is crafted to simulate real-world scenarios, giving participants the opportunity to practice problem-solving and apply security concepts in a safe environment. Since its early beginnings in the 2000s, the challenge has steadily evolved, incorporating increasingly sophisticated puzzles and interactive environments that encourage both individual learning and team collaboration. Its primary purpose is to make skill development accessible to all levels of expertise, from students just starting out to seasoned professionals looking to refine their techniques. By offering a structured yet engaging platform, the Holiday Hack Challenge has become a respected training ground in the cybersecurity community, fostering growth, knowledge sharing, and the advancement of practical defensive and offensive security skills.
 <br>
 </p>
-<p>
-Some participation statistics from the 2024 HHC:
-<br>
-</p>
-<ul>
-<li>Total participants starting the Prologue: 19,036</li>
-<li>Total participants starting Act 1: 5937</li>
-<li>Total participants starting Act 2: 2659</li>
-<li>Total participants starting Act 3: 814</li>
-<li>Total participants completing the HHC: 191</li>
-</ul>
+<table class="quest-table">
+<thead>
+<tr>
+<th></th>
+<th>Number of Particapants</th>
+<th>Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Started the Challenge</td>
+<td>14,100</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Completed Act 1</td>
+<td>3,057</td>
+<td>21.7%</td>
+</tr>
+<tr>
+<td>Completed Act 2</td>
+<td>1202</td>
+<td>8.5%</td>
+</tr>
+<tr>
+<td>Completed Act 3</td>
+<td>136</td>
+<td>0.9%</td>
+</tr>
+
+</tbody>
+</table>
 <p>
 This year's HHC is structured in 3 Acts. Act 1 is intended to practice and polish skills. Some of these tools are old friends, and some of these tools may be unfamiliar. Act 2 increases the difficulty, in some cases chaining attacks to achieve the objective. Act 3 increases the complexity and difficulty for most of the objectives.  The difficulty of an objective is rated on a 1-5 scale, with 1 being less difficult, and 5 being the most difficult.
 <br>
