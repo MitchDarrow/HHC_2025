@@ -43,7 +43,7 @@ The table below shows the number of participants that started the challenge, and
 <thead>
 <tr>
 <th></th>
-<th>Number of Particapants</th>
+<th>Number of Participants</th>
 <th>Percentage</th>
 </tr>
 </thead>
