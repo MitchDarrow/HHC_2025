@@ -36,8 +36,8 @@ The SANS Holiday Hack Challenge is a free, annual cybersecurity competition desi
 </p>
 <p>
 This year's HHC is structured in 3 Acts. Act 1 is intended to practice and polish skills. Some of these tools are old friends, and some of these tools may be unfamiliar. Act 2 increases the difficulty, in some cases chaining attacks to achieve the objective. Act 3 increases the complexity and difficulty for most of the objectives.  The difficulty of an objective is rated on a 1-5 scale, with 1 being less difficult, and 5 being the most difficult. 
-<br>
-The table below shows the number of participants that started the challenge, and how many completed each Act.
+<br><br>
+The table below shows the number of participants that started the challenge, and how many completed each Act. Each member of the BerryDunn team completed Act 1 (21.7% of those who started the HHC).  Mitch Darrow and Spencer Treece completed Act 2 (8.5% of those who started the HHC). Mitch Darrow completed Act 3 (0.9% of those whos started the HHC). This report was 1 of 21 reports to be recognized with a "Super Honorable Mention" Award. This is one step below the 4 Grand prizing winning reports.
 </p>
 <table class="quest-table">
 <thead>
