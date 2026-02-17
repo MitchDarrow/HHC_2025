@@ -91,3 +91,41 @@ Utilizing <code>ss -tlnp</code> as indicated in the terminal introductory text, 
 </tr>
 </tbody>
 </table>
+<p>
+<h2>Hints Reference</h2>
+</p>
+<table class="quest-table">
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Hint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Santa</td>
+<td>Since we don't have a web browser to connect to this HTTP service...There is another common tool that you can use from the cli.</td>
+</tr>
+<tr>
+<td>Yuri</td>
+<td>Think you can check out this terminal for me? I need to use cURL to access the gift tracker system, but it has me stumped.</td>
+</tr>
+</tbody>
+</table>
+<p>
+<h2>Acknowledgements</h2>
+</p>
+<table class="quest-table">
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
