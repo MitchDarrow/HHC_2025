@@ -157,3 +157,41 @@ function establishPersistence() {
 </tr>
 </tbody>
 </table>
+<p>
+<h2>Hints Reference</h2>
+</p>
+<table class="quest-table">
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Hint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Santa</td>
+<td>If I heard this correctly...our sneaky security gurus found a way to interact with the IMAP server using Curl! Yes...the CLI HTTP tool! Here are some helpful docs I found https://everything.curl.dev/usingcurl/reademail.html</td>
+</tr>
+<tr>
+<td>Mo</td>
+<td>So here's our situation: those gnomes have been sending JavaScript-enabled emails to everyone in the neighborhood, and it's causing chaos. We had to shut down all the email clients because they weren't blocking the malicious scripts - kind of like how we'd ground aircraft until we clear a security threat. The only safe way to access the email server now is through curl - yes, the HTTP tool! Think you can help me use curl to connect to the IMAP server and hunt down one of these gnome emails?</td>
+</tr>
+</tbody>
+</table>
+<p>
+<h2>Acknowledgements</h2>
+</p>
+<table class="quest-table">
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
