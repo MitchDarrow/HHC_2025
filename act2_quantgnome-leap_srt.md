@@ -111,3 +111,53 @@ We are told that the flag is within the configuration directory of the SSH daemo
 </tr>
 </tbody>
 </table>
+<p>
+<h2>Hints Reference</h2>
+</p>
+<table class="quest-table">
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Hint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Santa</td>
+<td>When you give a present, you often put a label on it to let someone know that the present is for them. Sometimes you even say who the present is from. The label is always put on the outside of the present so the public knows the present is for a specific person. SSH keys have something similar called a comment. SSH keys sometimes have a comment that can help determine who and where the key can be used.</td>
+</tr>
+<tr>
+<td>Santa</td>
+<td>User keys are like presents. The keys are kept in a hidden location until they need to be used. Hidden files in Linux always start with a dot. Since everything in Linux is a file, directories that start with a dot are also...hidden!</td>
+</tr>
+<tr>
+<td>Santa</td>
+<td>Process information is very useful to determine where an application configuration file is located. I bet there is a secret located in that application directory, you just need the right user to read it!</td>
+</tr>
+<tr>
+<td>Santa</td>
+<td>If you want to create SSH keys, you would use the ssh-keygen tool. We have a special tool that generates post-quantum cryptographic keys. The suffix is the same as ssh-keygen. It is only the first three letters that change.</td>
+</tr>
+<tr>
+<td>JJ</td>
+<td>I just spotted a mysterious gnome - he winked and vanished, or maybe he's still here? Things are getting strange, and I think we've wandered into a quantum conundrum! If you help me unravel these riddles, we might just outsmart future quantum computers. Cryptic puzzles, quirky gnomes, and post-quantum secrets-will you leap with me?</td>
+</tr>
+</tbody>
+</table>
+<p>
+<h2>Acknowledgements</h2>
+</p>
+<table class="quest-table">
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
