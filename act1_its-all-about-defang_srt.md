@@ -105,3 +105,45 @@ By following a process of iterating upon and fine-tuning the regex patterns prov
 </tr>
 </tbody>
 </table>
+<p>
+<h2>Hints Reference</h2>
+</p>
+<table class="quest-table">
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Hint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Santa</td>
+<td>The PTAS does a pretty good job at defanging, however, the feature we are still working on is one that defangs ALL scenarios. For now, you will need to write a custom sed command combining all defang options.</td>
+</tr>
+<tr>
+<td>Santa</td>
+<td>Remember, the new Phishing Threat Analysis Station (PTAS) is still under construction. Even though the regex patterns are provided, they haven't been fine tuned. Some of the matches may need to be manually removed.</td>
+</tr>
+<tr>
+<td>Ed</td>
+<td>Oh gosh, I could talk for hours about this stuff but I really need your help! The team has been working on this new SOC tool that helps triage phishing emails...and there are some...issues. We have had some pretty sketchy emails coming through and we need to make sure we block ALL of the indicators of compromise. Can you help me? No pressure...</td>
+</tr>
+</tbody>
+</table>
+<p>
+<h2>Acknowledgements</h2>
+</p>
+<table class="quest-table">
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
