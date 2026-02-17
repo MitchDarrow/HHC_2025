@@ -76,3 +76,32 @@ Eric Pursley provides an NMAP introduction requiring us to use nmap to discover 
 </tr>
 </tbody>
 </table>
+<p>
+<h2>Hints Reference</h2>
+</p>
+<table class="quest-table">
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Hint</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Santa</td><td>This terminal has built-in hints!</td></tr>
+<tr><td>Eric</td><td>Speaking of tools, let me introduce you to one of the most essential weapons in any pentester's arsenal: Nmap. It's like having X-ray vision for networks, and I've set up a perfect environment for you to learn the fundamentals. Help me find and connect to the wardriving rig's service on my motorcycle!</td></tr>  
+</tbody>
+</table>
+<p>
+<h2>Acknowledgements</h2>
+</p>
+<table class="quest-table">
+<thead>
+<tr>
+<th>Provided By</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>none</td><td>none</td></tr>
+</tbody>
+</table>
