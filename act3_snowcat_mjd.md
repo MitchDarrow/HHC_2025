@@ -85,7 +85,7 @@ Using a nonexistent URL (http://localhost/nonexistant), an error message was tri
 <br>
 </p>
 <p>
-Testing identified the CommonsCollections6 gadget could effectively deliver a payload. The initial approach was to touch a file in the /tmp directory to confirm a successful attack.
+Using the payload below and changing the target gadget, identified that the CommonsCollections6 gadget could effectively be used to deliver a payload. The initial approach was to touch a file in the /tmp directory to confirm a successful attack.
 <br>
 Payload details:
 <br>
