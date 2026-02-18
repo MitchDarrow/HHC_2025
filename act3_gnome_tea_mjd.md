@@ -184,7 +184,7 @@ https://www.google.com/maps?q=-33.464958,115.910450
 <br>
 </p>
 <p>
-Using the information from the image data, Barnaby's password is "Gnomeville". With valid credentials, login is achieved as Barnaby.
+Using the information from the image data, Barnaby's password is "Gnomesville". With valid credentials, login is achieved as Barnaby.
 <br>
 </p>
 <p>
