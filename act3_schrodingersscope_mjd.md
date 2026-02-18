@@ -32,7 +32,7 @@ nav: |
 <h2>Solution Overview</h2>
 </p>
 <p>
-The objective is to conduct a penetration test of a Neighborhood College Registration system. The test is scoped to a specific path of the application, accessing other paths is limited by an active monitoring system. When a threshold is reached, the engagement is reset. This resets the cookies that track the session and achievements. When this occurs, any vulnerabilities achieved are no longer logged and must be redone. The testing begins with reconnaisance of the application. Vulnerabilities are tested and exploited if possible.
+The objective is to conduct a penetration test of a Neighborhood College Registration system. The test is scoped to a specific path of the application, accessing other paths is limited by an active monitoring system. When a threshold is reached, the engagement is reset. This resets the cookies that track the session and achievements. When this occurs, any vulnerabilities achieved are no longer logged and must be redone. The testing begins with reconnaisance of the application. Vulnerabilities are tested and exploited, if possible.
 <br>
 </p>
 <table class="quest-table">
@@ -89,7 +89,7 @@ The objective is to conduct a penetration test of a Neighborhood College Registr
 <details>
 <summary>Click to expand</summary>
 <p>
-The initial step was to identify the bot responsible for the additional scope violations
+While browsing the inscope portion of the application, something in the application was accessing out of scope areas. The initial step was to identify the code that is responsible for creating the additional scope violations. Reviewing the page code in the browser's Developer Tools, an image is being loaded from the out of scope area of the application. 
 <br>
 </p>
 <p>
@@ -97,9 +97,9 @@ The initial step was to identify the bot responsible for the additional scope vi
 <br>
 </p>
 <p>
-With the object pattern identified, it is possible to use browser Developer Tools to block the request.
+With the object pattern identified, it is possible to use the browser's Developer Tools to block the request.
 <br>
-Selecting "Network Request Blocking" from the More Tools menu. The pattern to block is "<em>gnomeU</em>"
+Selecting "Network Request Blocking" from the browser's More Tools menu. The pattern to block is "<em>gnomeU</em>"
 <br>
 </p>
 <p>
@@ -205,7 +205,7 @@ Examining the source code for the courses page, a commented secion of code is di
 <br>
 </p>
 <p>
-Using a snippet of code from the register/js/registerCourses.js in the developer console this feature can be enabled:
+Using a snippet of code from the register/js/registerCourses.js in the Developer Tools Console this feature can be enabled:
 <br>
 </p>
 <pre><code class="language-js">
@@ -224,7 +224,7 @@ function checkAndReportCourseSearch() {
     })
 </code></pre>
 <p>
-Executing the following code in the Developer Console activates the code:
+Executing the following code in the Developer Tools Console activates the code:
 <br>
 </p>
 <pre><code class="language-js">
