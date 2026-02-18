@@ -135,7 +135,7 @@ The following are the BerryDunn IT Security team's official solutions to this ye
 <td><a href="/HHC_2025/act3_onthewire_mjd.html">On The Wire</a></td>
 </tr>
 <tr>
-<td><a href="/HHC_2025/act1_intro_to_nmap_mjd.html">Into to NMAP</a></td>
+<td><a href="/HHC_2025/act1_intro_to_nmap_mjd.html">Intro to NMAP</a></td>
 <td><a href="/HHC_2025/act2_going-in-reverse_srt.html">Going in Reverse</a></td>
 <td><a href="/HHC_2025/act3_free_ski_mjd.html">Free Ski</a></td>
 </tr>
