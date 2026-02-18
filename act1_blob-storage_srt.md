@@ -35,7 +35,7 @@ nav: |
 Grace tells us that the Neighborhood HOA uses Azure storage accounts for its IT operations. We must audit their storage security config to ensure no sensitive data is publicly accessible. Recent security reports suggest some storage accounts could have public blob access enabled, which could be a potential data exposure risk. 
 <br>
 </p>
-After running a few introductory commands, we are guided to discover a suspicious storage account <code>neighborhod2</code> with public access enabled, an outdated <code>minimumTlsVersion</code>, and blob encryption disabled. The account has a container <code>public</code>, with an accessible blob containing <code>refrigerator_inventory.pdf, admin_credentials.txt, network_config.json</code>. We are able to download and view the credentials file. 
+After running a few introductory commands, we are guided to discover a suspicious storage account <code>neighborhod2</code> with public access enabled, an outdated <code>minimumTlsVersion</code>, and blob encryption disabled. The account has a container <code>public</code>, with an accessible blob containing <code>refrigerator_inventory.pdf, admin_credentials.txt, and network_config.json</code>. We are able to download and view the credentials file. 
 <table class="quest-table">
 <thead>
 <tr>
