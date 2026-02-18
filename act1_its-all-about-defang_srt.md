@@ -29,7 +29,7 @@ nav: |
 </tbody>
 </table>
 <h2>Solution Overview</h2>
-<p>Ed and his team have been working on a new SOC tool that helps triage phishing emails. He asks us to help fix some issues with their detections, where some sketchy emails still made it through. We need to make sure all IoCs are blocked.
+<p>Ed and his team have been working on a new Security Operations Center (SOC) tool that helps triage phishing emails. He asks us to help fix some issues with their detections, where some sketchy emails still made it through. We need to make sure all Indicators of Compromise (IoC) are blocked.
 <br>
 We are brought to their Defang tool, where we must analyze a suspicious email. We need to use Regular Expressions (regex) to help the tool identify information such as the domains, IP addresses, URLs, and email addresses contained in the email. We are provided with sample regex patterns to use and must then manually exclude false positives provided by those patterns. 
 </p>
@@ -83,7 +83,7 @@ The Defang tool presents us with an example of an email that made it through Ed'
 For each of these classes, the tool provides us with a sample regular expression (regex) pattern that is used to identify content within the text of the email. After running each provided regex pattern, we must manually exclude friendly assets in our IoC identification. We <em>do</em> need to modify the IP address regex to properly capture the entirety of the field. The supplied query only selects three, not four couplets. 
 <br>
 </p>
-To manually identify and exclude friendly assets, we must simply analyze the content within which each identified IoC arises. The <code>dosisneighborhood.corp</code> domain, for example, is indicated as the receiving domain and should **not* be targeted by security filtering tools. 
+To manually identify and exclude friendly assets, we must simply analyze the content within which each identified IoC arises. The <code>dosisneighborhood.corp</code> domain, for example, is indicated as the receiving domain and should **not** be targeted by security filtering tools. 
 By following a process of iterating upon and fine-tuning the regex patterns provided by the Defang tool, we are able to identify malicious nine IoCs within the provided email. These IoCs are manually defanged, or made benign, by the following chained <code>sed</code> command: <strong><code>s/\./[.]/g; s/@/[@]/g; s/http/hxxp/g; s/:\//[://]/g</code></strong>
 </details>
 <h2>Tools Reference</h2>
