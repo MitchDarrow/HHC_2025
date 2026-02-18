@@ -5,9 +5,9 @@ nav: |
   <table>
   <thead>
   <tr>
-  <th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Previous Objective: Act 1 Neighborhood Watch Bypass</a></th>
+  <th><a href="/HHC_2025/act1_neighborhood_watch_bypass_mjd.html">Next Objective: Act1 Neighborhood Watch Bypass</a></th>
   <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-  <th><a href="/HHC_2025/act1_visual_networking_mjd.html">Previous Objective: Act 1 Visual Networking</a></th>
+  <th><a href="/HHC_2025/act1_visual_networking_mjd.html">Previous Objective: Act1 Visual Networking</a></th>
   </tr>
   </thead>
   <tbody>
@@ -30,7 +30,7 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-Yori is located in front of Modern Scandinavia with the Santa's Gift-Tracking Machine. Yori tells us that we need to use curl to access the gift tracker system and identify which port the <code>santa_tracker</code> process is running on after the gnome's meddled with the app and changed its port from <code>8080</code> to an unknown value. 
+Yori is located in front of Modern Scandinavia with the Santa's Gift-Tracking Machine. Yori tells us that we need to use curl to access the gift tracker system and identify which port the <code>santa_tracker</code> process is running on after the gnomes meddled with the app and changed its port from <code>8080</code> to an unknown value. 
 We use the <code>ss -tlnp</code> command, analagous to a <code>netstat</code> command, and identify port <code>12321</code> on the localhost showing activity. <code>curl 127.0.0.1:12321</code> successfully connects to the service.
 </p>
 <table class="quest-table">
