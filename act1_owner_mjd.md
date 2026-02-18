@@ -70,7 +70,7 @@ az account list --query "[?state=='Enabled'].{Name:name, ID:id}"
 <p>
 <img src="/HHC_2025/images/owner_enabled.jpg" alt="Azure tenant enabled accounts">
 <br>
-Reviewing the Owner's of the each listed subscription: pass in each subscription id.
+Reviewing the Owners of the each listed subscription: pass in each subscription id.
 <br>
 </p>
 <pre><code class="language-ps">
@@ -79,7 +79,7 @@ az role assignment list --scope "/subscriptions/065cc24a-077e-40b9-b666-2f4dd9f3
 <p>
 <img src="/HHC_2025/images/owner_owners.jpg" alt="Azure tenant Subscription iD ownwers">
 <br>
-In addition to the PIM group, there is a group called IT Admins. Let's figure out the membership of the IT Admins group.
+In addition to the PIM group, there is a group called IT Admins. Lets figure out the membership of the IT Admins group.
 <br>
 </p>
 <pre><code class="language-ps">
