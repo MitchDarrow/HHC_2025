@@ -32,7 +32,7 @@ nav: |
 <h2>Solution Overview</h2>
 </p>
 <p>
-Structure Query Language (SQL) injection was used to identify the database type, and then map the structure and contents of the table. This yielded two users and the associated password hashes. The hashes were known and were cracked using crackstation.net. This allowed for login to the application. The hint indicated that the statistics panel used a template. Node.js was identified using server response headers. Embedded JavaScript Templating (EJS) is the most popular template package for use with node.js, and it is vulnerable to remote code execution (RCE) from prototype pollution. Polluting the prototype with a remote shell payload gave access to the server. Once connected, a README.md file was located that mapped the code structure of the controller area network (CAN) bus. Assuming that the direction commands were in their own command range, and that the range started at the beginning of either the 2XX or 5XX range (because they were adjacent to the defined ranges). This allowed for the identification of the correct codes. Once corrected, the robot was manuevered through the maze to the power switch and the factory was powered down.
+SQL injection was used to identify the database type, and then map the structure and contents of the table. This yielded two users and the associated password hashes. The hashes were known and were cracked using crackstation.net. This allowed for login to the application. The hint indicated that the statistics panel used a template. Node.js was identified using server response headers. Embedded JavaScript Templating (EJS) is the most popular template package for use with node.js, and it is vulnerable to remote code execution (RCE) from prototype pollution. Polluting the prototype with a remote shell payload gave access to the server. Once connected, a README.md file was located that mapped the code structure of the controller area network (CAN) bus. Assuming that the direction commands were in their own command range, and that the range started at the beginning of either the 2XX or 5XX range (because they were adjacent to the defined ranges). This allowed for the identification of the correct codes. Once corrected, the robot was manuevered through the maze to the power switch and the factory was powered down.
 <br>
 </p>
 <table class="quest-table">
@@ -89,7 +89,7 @@ Structure Query Language (SQL) injection was used to identify the database type,
 <details>
 <summary>Click to expand</summary>
 <p>
-Starting with the login page, tested several injections attempting to identify the backend database. This nosql injection {“$ne”: null} creates an error:
+Starting with the login page, tested several injections attempting to identify the backend database. This NoSQL injection {“$ne”: null} creates an error:
 <br>
 </p>
 <p>
@@ -164,7 +164,7 @@ Harold digest: 07f456ae6a94cb68d740df548847f459
 <br>
 </p>
 <p>
-Using crackstation.net, it is possible to crack both hashes.
+Using crackstation.net, it is possible to crack both hashes and retrieve the passwords.
 <br>
 </p>
 <p>
@@ -216,7 +216,7 @@ Message: message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C
 <br>
 </p>
 <p>
-Sending via Burp:
+Sending the request using Burp:
 <br>
 </p>
 <p>
