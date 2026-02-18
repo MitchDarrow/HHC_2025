@@ -93,11 +93,7 @@ https://holidayhack2025.firebaseapp.com/__/auth/iframe?<b>apiKey=AIzaSyDvBE5-77e
 <br>
 </p>
 <p>
-apiKey=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
-<br>
-</p>
-<p>
-Using Burp, the configuration is retreived:
+Using Burp, the client side configuration that is used to connect to all the firebase services is retreived:
 <br>
 </p>
 <p>
@@ -105,28 +101,28 @@ const OP={apiKey:"AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk",authDomain:"holidayha
 <br>
 </p>
 <p>
-Following the comment in the page code, lets see what collections are accessible:
+Following the comment in the page code, lets determine what collections are accessible:
 <br>
 </p>
 <pre><code class="language-sh">
 curl -X GET https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/dms?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
 </code></pre>  
 <p>
-The DMS collection contains messages, gnome names, and sender UIDS
+The DMS collection contains messages, gnome names, and sender UIDS.
 <br>
 </p>
 <pre><code class="language-sh">
 curl -X GET https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/tea?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
 </code></pre>  
 <p>
-The TEA collection contains avatars, authids,
+The TEA collection contains avatars, and authids for users.
 <br>
 </p>
 <pre><code class="language-sh">
 curl -X GET https://firestore.googleapis.com/v1/projects/holidayhack2025/databases/(default)/documents/gnomes?key=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk
 </code></pre>  
 <p>
-The Gnomes collection contains email addresses, notes and jpeg pictures
+The Gnomes collection contains email addresses, notes and jpeg pictures.
 <br>
 </p>
 <p>
@@ -188,7 +184,7 @@ https://www.google.com/maps?q=-33.464958,115.910450
 <br>
 </p>
 <p>
-With valid credentials, login is achieved as Barnaby.
+Using the information from the image data, Barnaby's password is "Gnomeville". With valid credentials, login is achieved as Barnaby.
 <br>
 </p>
 <p>
@@ -214,7 +210,7 @@ Following the hint about client side controls, the source code now available is 
     typeof window < "u" && (window.EXPECTED_ADMIN_UID = T),
 </code></pre>
 <p>
-Using the console in Edge's developer tools, admin access is achieved by setting T to 3loaihgxP0VwCTKmkHHFLe6FZ4m2
+Using the console in Edge's developer tools, admin access is achieved by setting T to "3loaihgxP0VwCTKmkHHFLe6FZ4m2".
 <br>
 </p>
 <p>
