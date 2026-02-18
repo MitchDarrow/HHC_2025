@@ -89,7 +89,7 @@ The API key is part of the URL:
 <br>
 </p>
 <p>
-https://holidayhack2025.firebaseapp.com/__/auth/iframe?apiKey=**AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhb**k&appName=%5BDEFAULT%5D&v=11.10.0&eid=p&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.W5qDlPExdtA.O%2Fd%3D1%2Frs%3DAHpOoo8JInlRP_yLzwScb00AozrrUS6gJg%2Fm%3D__features__
+https://holidayhack2025.firebaseapp.com/__/auth/iframe?<b></b>apiKey=AIzaSyDvBE5-77eZO8T18EiJ_MwGAYo5j2bqhbk</b>&appName=%5BDEFAULT%5D&v=11.10.0&eid=p&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.W5qDlPExdtA.O%2Fd%3D1%2Frs%3DAHpOoo8JInlRP_yLzwScb00AozrrUS6gJg%2Fm%3D__features__
 <br>
 </p>
 <p>
