@@ -98,13 +98,13 @@ This code starts with an empty string, then iterates through each character in t
 <br>
 </p>
 <ol>
-<li>convert the character value to its ASCII <strong>integer</strong> value</li>
-<li>bitwise XOR that ASCII value by 7</li>
-<li>convert the resulting value back into its ASCII <strong>character</strong> value (more likely UTF-8 but it's indistinguishable for the purposes of this exercise)</li>
+<li>Convert the character value to its ASCII <strong>integer</strong> value</li>
+<li>Bitwise XOR that ASCII value by 7</li>
+<li>Convert the resulting value back into its ASCII <strong>character</strong> value (more likely UTF-8 but it's indistinguishable for the purposes of this exercise)</li>
 </ol>
 <br>
 Note lines <code>20</code> and <code>30</code> containing <code>ENC_PASS</code> and <code>ENC_FLAG</code> respectively. 
-Using this code, we retrive a password of <code>C64RULES</code> and a flag of <strong><code>CTF{frost-plan:compressors,coolant,oil}</code></strong>.
+Using this code, we retrieve a password of <code>C64RULES</code> and a flag of <strong><code>CTF{frost-plan:compressors,coolant,oil}</code></strong>.
 </details>
 <p>
 <h2>Tools Reference</h2>
