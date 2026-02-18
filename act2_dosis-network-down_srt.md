@@ -32,7 +32,7 @@ nav: |
 <h2>Solution Overview</h2>
 Janusz tells us that the neighborhood's wifi has been sabotged by the gnomes who have changed the admin password and probably other settings as well. We have to take back what is ours. 
 <br>
-Inspecting router login page's elements doesn't reveal much, however we are given a banner with hardware and firmware information on the bottom of the page. A quick search reveals an unauthenticated RCE vulnerability (CVE-2023-1389) in this very same platform!
+Inspecting router login page's elements doesn't reveal much, however we are given a banner with hardware and firmware information on the bottom of the page. A quick search reveals an unauthenticated remote code Execution (RCE) vulnerability (CVE-2023-1389) in this very same platform!
 <br>
 We can leverage this vulnerability to execute commands on the router. To solve the challenge, the objective states that we have to find the password within the router's config files. We identify a nonstandard <code>/etc/config</code> directory, which contains a text file named <code>wireless</code> containing the password.
 </p>
@@ -78,7 +78,7 @@ We can leverage this vulnerability to execute commands on the router. To solve t
 <details>
 <summary>Click to expand</summary>
 <p>
-The challenge presents us with a local login page to an AX1800 WiFI 6 Router. This presents much like a simple single page web app with minimal content. The console gives us some small nudges along the way, but ultimately our breakthrough comes from observing the text located at the bottom of the login page: <code><strong>Firmware Version: 1.1.4 Build 20230219 rel.69802 Hardware Version: Archer AX21 v2.0</strong></code>.
+The challenge presents us with a local login page to an AX1800 WiFi 6 Router. This presents much like a simple single page web app with minimal content. The console gives us some small nudges along the way, but ultimately our breakthrough comes from observing the text located at the bottom of the login page: <code><strong>Firmware Version: 1.1.4 Build 20230219 rel.69802 Hardware Version: Archer AX21 v2.0</strong></code>.
 <br>
 Running a search for part or all of this string should direct the user towards CVE-2023-1389, an unauthenticated remote code execution (RCE) vulnerability affecting our target platform. 
 <br>
