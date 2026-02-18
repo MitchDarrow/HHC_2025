@@ -104,7 +104,7 @@ This code starts with an empty string, then iterates through each character in t
 </ol>
 <br>
 Note lines <code>20</code> and <code>30</code> containing <code>ENC_PASS</code> and <code>ENC_FLAG</code> respectively. 
-Using this code, we retrieve a password of <code>C64RULES</code> and a flag of <strong><code>CTF{frost-plan:compressors,coolant,oil}</code></strong>.
+Using this code, we retrieved a password of <code>C64RULES</code> and a flag of <strong><code>CTF{frost-plan:compressors,coolant,oil}</code></strong>.
 </details>
 <p>
 <h2>Tools Reference</h2>
