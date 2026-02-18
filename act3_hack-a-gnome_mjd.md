@@ -216,7 +216,7 @@ Message: message=%7B%22action%22%3A%22update%22%2C%22key%22%3A%22__proto__%22%2C
 <br>
 </p>
 <p>
-Sending the request using Burp:
+This request is sent to the application using Burp:
 <br>
 </p>
 <p>
@@ -224,7 +224,7 @@ Sending the request using Burp:
 <br>
 </p>
 <p>
-Results in a broken application:
+The request results in a broken application, which indicates the application is vulnerable to prototype pollution.
 <br>
 </p>
 <p>
@@ -232,7 +232,7 @@ Results in a broken application:
 <br>
 </p>
 <p>
-Prototype pollution is possible. Server Headers indicate “Express” which is Node.js. The hint indicates that there are backend templates. Googling "what is the most common template package used with Node.js" indicates that EJS is the most popular package. EJS is also be susceptible to RCE using prototype pollution.
+We need to determine how to exploit prototype pollution to give more than an error. Server Headers indicate “Express” which is Node.js. The hint indicates that there are backend templates. Googling "what is the most common template package used with Node.js" indicates that EJS is the most popular package. EJS is also be susceptible to RCE using prototype pollution.
 <br>
 </p>
 <p>
