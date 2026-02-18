@@ -7,7 +7,7 @@ nav: |
   <tr>
   <th><a href="/HHC_2025/act1_its-all-about-defang_srt.html">Previous Objective: Act1 Its All About Defang</a></th>
   <th><a href="/HHC_2025/index.html">Table of Contents</a></th>
-  <th><a href="/HHC_2025/act1_santas-gift-tracking_srt.html">Next Objective: Act 1 Santa's Gift-Tracking Service Port</a></th>
+  <th><a href="/HHC_2025/act1_santas-gift-tracking_srt.html">Next Objective: Act1 Santa's Gift-Tracking Service Port</a></th>
   </tr>
   </thead>
   <tbody>
@@ -82,7 +82,7 @@ This objective identifies a path hijacking privilege escalation attack against a
 <summary>Click to expand</summary>
 <br>
 <p>
-Access the terminal provided:
+The objective starts with accessing the terminal showndbelow:
 <br>
 </p>
 <p>
@@ -102,7 +102,7 @@ Let's see what chiuser can do:
 sudo -l
 </code></pre>
 <p>
-This is useful:
+The output reveals an attack vector that can be levereged:
 <br>
 </p>
 <pre><code class="language-">
@@ -120,11 +120,7 @@ Matching Defaults entries for chiuser on 633a785ffc6c:
 </ul>
 This means if you create a <strong>fake version of a command</strong> (like <code>ps</code>, <code>head</code>, <code>grep</code>, etc.) in <code>~/bin</code>, and <code>system_status.sh</code> calls that command <strong>without an absolute path</strong>, it might run <strong>the malicious version</strong> instead - <strong>as root</strong>.
 <p>
-Executing the Path Hijacking Attack
-<br>
-</p>
-<p>
-Create a malicious script:
+To begin the path hijacking attack, I created the malicious script: 
 <br>
 </p>
 <pre><code class="language-bash">
