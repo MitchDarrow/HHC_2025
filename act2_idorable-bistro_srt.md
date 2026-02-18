@@ -30,7 +30,7 @@ nav: |
 </table>
 <p>
 <h2>Solution Overview</h2>
-A gnome has come through Sasabune earlier, poorly disguised as a human and asking for frozen sushi. He suspects an IDOR bug could be present in the payment system. We recover a crumpled receipt from the peretrator outside the restaurant, noting that the gnome tried to pay with a rare 'Glimmerfin' trading card. 
+A gnome has come through Sasabune earlier, poorly disguised as a human and asking for frozen sushi. He suspects an IDOR bug could be present in the payment system. We recover a crumpled receipt from the perpetrator outside the restaurant, noting that the gnome tried to pay with a rare 'Glimmerfin' trading card. 
 <br>
 When we load the receipt and inspect the request flow via proxy, we notice two GET requests to retreive the receipt information. The first is a <code>GET /receipt/[uniqueID]</code>, which loads the page that displays the receipt, and the second is a <code>GET /api/receipt?id=[SEQUENTIALID]</code> which retrieves the receipt information.
 Taking this second request to a repeater tool in the proxy we discover a sequence of valid IDs between 101-152. There are a couple easter eggs here ("the flag is delicious"??) but ultimately we are after Bartholomew Quibblefrost on <strong><code>id=139</code></strong>. 
