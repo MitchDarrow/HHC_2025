@@ -156,7 +156,7 @@ There are <strong>7 mountains</strong> with encoded flags:
 <br>
 </p>
 <ol>
-<li>Trreasure loacations are deterministically generated using <code>random.seed(binascii.crc32(mountain_name))</code> in <code>GetTreasureLocations()</code></li>
+<li>Treasure loacations are deterministically generated using <code>random.seed(binascii.crc32(mountain_name))</code> in <code>GetTreasureLocations()</code></li>
 <li>Each treasure's value is <code>(elevation * mountain_width) + horizontal_offset</code></li>
 <li>Compute the product using XOR the 5 treasure values together with bit shifts</li>
 <li>Use that product to seed random and XOR-decode the flag</li>
